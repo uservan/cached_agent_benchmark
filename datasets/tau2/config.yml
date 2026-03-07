@@ -1,0 +1,18 @@
+# Tau2 配置文件
+name: tau2
+description: "Tau2 Task Dataset"
+
+# HuggingFace 数据集配置
+huggingface:
+  task_dataset_name: "your-org/tau2-tasks"  # 替换为实际的 HF 数据集名称
+  response_dataset_name: "your-org/tau2-responses"  # 替换为实际的响应数据集名称
+  task_split: "train"
+  response_split: "train"
+  task_config: null
+  response_config: null
+
+# 任务配置
+task:
+  domain: "tau2"
+  initial_state: {}
+  tools: []
