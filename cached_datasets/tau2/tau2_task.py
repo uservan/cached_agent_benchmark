@@ -124,6 +124,13 @@ class Tau2Task(BaseTask):
 
     def get_user_prompt(self):
         return self.initial_state
+    
+    def is_finished(self, messages):
+        # 根据消息判断任务是否完成
+        for msg in messages:
+            if msg.get("role") == "tool" and msg.get("tool_name") == STOP_FUNCTION_NAME:
+                return True
+        return False
 
     def build_system_prompt(self):
         agent_instruction = AGENT_SOLO_INSTRUCTION.format(

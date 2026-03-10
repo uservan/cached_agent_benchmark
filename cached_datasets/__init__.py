@@ -79,6 +79,11 @@ class BaseTask:
         # 返回系统提示
         pass
 
+    def is_finished(self, messages):
+        # 根据消息判断任务是否完成
+        pass
+
+
 class MergedTask(BaseTask):
     def __init__(self, sub_tasks):
         self.sub_tasks = sub_tasks
@@ -107,6 +112,10 @@ class MergedTask(BaseTask):
         pass
 
     def build_initial_messages(self):
+        pass
+
+    def is_finished(self, messages):
+        # 根据消息判断任务是否完成
         pass
 
     def __len__(self):

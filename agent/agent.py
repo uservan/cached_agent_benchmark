@@ -21,16 +21,14 @@ class AssistantMessage:
         self,
         content: str,
         usage: Optional[dict[str, Any]] = None,
-        elapsed_time: Optional[float] = None,
         raw_messages: Optional[list[dict[str, Any]]] = None,
-        cost: Optional[dict[str, Any]] = None,
     ):
-        self.role = "assistant"
         self.content = content
         self.usage = usage or {}
-        self.elapsed_time = elapsed_time
         self.raw_messages = raw_messages or []
-        self.cost = cost or {}
+
+    def set_score(self, score: Any):
+        self.score = score
 
 
 class Agent:
@@ -76,6 +74,8 @@ class Agent:
             if max_steps is not None and step_count >= max_steps:
                 logger.warning("Max steps reached for task: %s", getattr(task, "task_name", ""))
                 break
+            if task.is_finished(litellm_messages[-2:]):
+                break
             try:
                 response = completion(
                     model=self.model,
@@ -85,7 +85,7 @@ class Agent:
                 )
             except Exception as e:
                 logger.error(e)
-                raise e
+                continue
             step_count += 1
             cost = get_response_cost(response)
             usage = get_response_usage(response)

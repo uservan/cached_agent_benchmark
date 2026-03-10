@@ -2,7 +2,7 @@ import json
 import random
 from typing import Any
 
-from agent.agent import Agent
+from agent.agent import Agent, AssistantMessage
 from cached_datasets import BaseDataset, MergedTask
 
 class CacheEnv:
@@ -27,7 +27,7 @@ class CacheEnv:
         """
         执行单个 task，拿到 messages，用 task.eval 打分，并把分数追加到 messages。
         """
-        assistant_message = agent.generate(
+        assistant_message: AssistantMessage = agent.generate(
             merge_task,
             max_steps=self.max_steps,
             tool_failure_rate=tool_failure_rate,
@@ -35,27 +35,10 @@ class CacheEnv:
         )
         messages = list(getattr(assistant_message, "raw_messages", []) or [])
         score = merge_task.eval(messages)
+        assistant_message.set_score(score)
 
-        messages.append(
-            {
-                "role": "evaluation",
-                "content": self._stringify(score),
-            }
-        )
-
-        return {
-            "dataset": self._get_dataset_name(merge_task),
-            "domain": getattr(merge_task, "domain", ""),
-            "task_name": getattr(merge_task, "task_name", ""),
-            "trial_id": trial_id,
-            "together_task_size": together_task_size,
-            "tool_failure_rate": tool_failure_rate,
-            "messages": messages,
-            "score": score,
-            "usage": getattr(assistant_message, "usage", {}),
-            "elapsed_time": getattr(assistant_message, "elapsed_time", None),
-        }
-
+        return assistant_message
+    
     def run(self, dataset: BaseDataset, agent: Agent, save_path):
         """
         遍历整个 dataset，执行全部 task，汇总结果并保存到 JSON 文件。
@@ -70,7 +53,7 @@ class CacheEnv:
                 results[result_key] = []
                 for merge_task in merged_tasks:
                     for trial_id in range(self.num_trials):
-                        result = self.run_task(
+                        result: AssistantMessage = self.run_task(
                             merge_task,
                             agent,
                             trial_id=trial_id,
@@ -79,7 +62,7 @@ class CacheEnv:
                         )
                         results[result_key].append(result)
 
-                        numeric_score = self._extract_numeric_score(result["score"])
+                        numeric_score = self._extract_numeric_score(result.score)
                         if numeric_score is not None:
                             total_score += numeric_score
                             scored_count += 1
@@ -103,27 +86,3 @@ class CacheEnv:
 
         return output
 
-    
-    def _get_dataset_name(self, task):
-        dataset = getattr(task, "dataset", None)
-        if dataset is None:
-            return ""
-        return getattr(dataset, "name", str(dataset))
-
-    def _extract_numeric_score(self, score: Any):
-        if isinstance(score, (int, float)):
-            return float(score)
-        if isinstance(score, dict):
-            for key in ("score", "final_score", "value"):
-                value = score.get(key)
-                if isinstance(value, (int, float)):
-                    return float(value)
-        return None
-
-    def _stringify(self, value: Any) -> str:
-        if isinstance(value, str):
-            return value
-        try:
-            return json.dumps(value, ensure_ascii=False)
-        except Exception:
-            return str(value)
