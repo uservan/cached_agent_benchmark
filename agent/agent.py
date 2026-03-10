@@ -70,12 +70,12 @@ class Agent:
         start_time = time.perf_counter()
         step_count = 0
         raw_messages = []
+        used_write_tools = []
 
         while True:
             if max_steps is not None and step_count >= max_steps:
                 logger.warning("Max steps reached for task: %s", getattr(task, "task_name", ""))
                 break
-
             try:
                 response = completion(
                     model=self.model,
@@ -89,10 +89,8 @@ class Agent:
             step_count += 1
             cost = get_response_cost(response)
             usage = get_response_usage(response)
-            response = response.choices[0]
 
-
-            usage = self._get_response_usage(response)
+            # usage = self._get_response_usage(response)
             total_usage["prompt_tokens"] += usage.get("prompt_tokens", 0)
             total_usage["completion_tokens"] += usage.get("completion_tokens", 0)
             total_usage["total_tokens"] += usage.get("total_tokens", 0)
@@ -131,19 +129,16 @@ class Agent:
                 ]
             litellm_messages.append(assistant_message)
 
-            if not tool_calls:
-                final_content = assistant_content
-                break
-
             for tool_call in tool_calls:
                 tool_name = tool_call.function.name
                 tool_args = json.loads(tool_call.function.arguments or "{}")
-                tool_result = self._call_task_tool(
-                    task,
-                    tool_name,
-                    tool_args,
-                    tool_failure_rate,
-                )
+                tool_result = task.call_tool(tool_name, tool_args, used_write_tools, tool_failure_rate=tool_failure_rate)
+                # tool_result = self._call_task_tool(
+                #     task,
+                #     tool_name,
+                #     tool_args,
+                #     tool_failure_rate,
+                # )
                 litellm_messages.append(
                     {
                         "role": "tool",
@@ -156,10 +151,10 @@ class Agent:
         elapsed_time = time.perf_counter() - start_time
         total_usage["time"] = elapsed_time
         return AssistantMessage(
-            content=final_content,
+            content=litellm_messages,
             usage=total_usage,
             elapsed_time=elapsed_time,
-            raw_messages=litellm_messages,
+            raw_messages=raw_messages,
             cost=total_usage,
         )
 
@@ -269,26 +264,6 @@ class Agent:
                         }
                     )
         return schemas or None
-
-
-    def _call_task_tool(
-        self,
-        task: Any,
-        tool_name: str,
-        tool_args: dict[str, Any],
-        tool_failure_rate: float,
-    ) -> Any:
-        try:
-            return task.call_tool(
-                tool_name,
-                tool_args,
-                tool_failure_rate=tool_failure_rate,
-            )
-        except TypeError:
-            try:
-                return task.call_tool(tool_name, tool_args, tool_failure_rate)
-            except TypeError:
-                return task.call_tool(tool_name, tool_args)
 
     def _stringify(self, value: Any) -> str:
         if isinstance(value, str):

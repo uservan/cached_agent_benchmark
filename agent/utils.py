@@ -1,7 +1,7 @@
 import re
 from loguru import logger
 from litellm import ModelResponse, Usage, completion_cost
-from typing import Optional
+from typing import Any, Optional
 
 def _parse_ft_model_name(model: str) -> str:
     """

@@ -59,7 +59,7 @@ class BaseTask:
         self.initial_state = initial_state
         self.tools = tools
 
-    def call_tool(self, tool_name, tool_args, tool_failure_rate=0.0):
+    def call_tool(self, tool_name, tool_args, used_write_tools, tool_failure_rate=0.0):
         # 具体的工具调用逻辑
         pass
 
@@ -84,10 +84,10 @@ class MergedTask(BaseTask):
         self.sub_tasks = sub_tasks
         self.main_task = sub_tasks[0]
 
-    def call_tool(self, tool_name, tool_args, tool_failure_rate=0.0):
+    def call_tool(self, tool_name, tool_args, used_write_tools, tool_failure_rate=0.0):
         for task in self.sub_tasks:
             if task.has_tool(tool_name):
-                return task.call_tool(tool_name, tool_args, tool_failure_rate=tool_failure_rate)
+                return task.call_tool(tool_name, tool_args, used_write_tools, tool_failure_rate=tool_failure_rate)
         return {
             "status": "failed",
             "error": f"Unknown tool: {tool_name}",
