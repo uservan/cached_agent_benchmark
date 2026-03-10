@@ -2,7 +2,8 @@ import json
 import random
 from typing import Any
 
-from datasets import CombinedTask, RunnableTask
+from agent.agent import Agent
+from cached_datasets import BaseDataset, MergedTask
 
 class CacheEnv:
     """CacheEnv 负责遍历 dataset、调用 agent，并基于 task 做评估。"""
@@ -13,23 +14,27 @@ class CacheEnv:
         num_trials=1,
         together_tasks=None,
         tool_failure_rates=None,
+        seed=42,
     ):
         self.max_steps = max_steps
         self.num_trials = num_trials
         self.together_tasks = together_tasks or [1]
         self.tool_failure_rates = tool_failure_rates or [0.0]
+        random.seed(seed)
+        self.seeds = [random.randint(0, 1000000) for _ in range(num_trials)]
 
-    def run_task(self, task, agent, trial_id=0, together_task_size=1, tool_failure_rate=0.0):
+    def run_task(self, merge_task:MergedTask, agent:Agent, trial_id=0, together_task_size=1, tool_failure_rate=0.0):
         """
         执行单个 task，拿到 messages，用 task.eval 打分，并把分数追加到 messages。
         """
         assistant_message = agent.generate(
-            task,
+            merge_task,
             max_steps=self.max_steps,
             tool_failure_rate=tool_failure_rate,
+            seed=self.seeds[trial_id],
         )
         messages = list(getattr(assistant_message, "raw_messages", []) or [])
-        score = task.eval(messages)
+        score = merge_task.eval(messages)
 
         messages.append(
             {
@@ -39,9 +44,9 @@ class CacheEnv:
         )
 
         return {
-            "dataset": self._get_dataset_name(task),
-            "domain": getattr(task, "domain", ""),
-            "task_name": getattr(task, "task_name", ""),
+            "dataset": self._get_dataset_name(merge_task),
+            "domain": getattr(merge_task, "domain", ""),
+            "task_name": getattr(merge_task, "task_name", ""),
             "trial_id": trial_id,
             "together_task_size": together_task_size,
             "tool_failure_rate": tool_failure_rate,
@@ -51,27 +56,22 @@ class CacheEnv:
             "elapsed_time": getattr(assistant_message, "elapsed_time", None),
         }
 
-    def run(self, dataset, agent, save_path):
+    def run(self, dataset: BaseDataset, agent: Agent, save_path):
         """
         遍历整个 dataset，执行全部 task，汇总结果并保存到 JSON 文件。
         """
-        base_tasks = [RunnableTask(task) for task in self._get_tasks(dataset)]
         results = {}
         total_score = 0.0
         scored_count = 0
-
         for together_task_size in self.together_tasks:
-            merged_tasks = self._build_combined_tasks(base_tasks, together_task_size)
+            merged_tasks = dataset._build_combined_tasks(dataset, together_task_size)
             for tool_failure_rate in self.tool_failure_rates:
-                result_key = self._build_result_key(
-                    together_task_size=together_task_size,
-                    tool_failure_rate=tool_failure_rate,
-                )
+                result_key = f"task_size={together_task_size},tool_failure_rate={tool_failure_rate}"
                 results[result_key] = []
-                for task in merged_tasks:
+                for merge_task in merged_tasks:
                     for trial_id in range(self.num_trials):
                         result = self.run_task(
-                            task,
+                            merge_task,
                             agent,
                             trial_id=trial_id,
                             together_task_size=together_task_size,
@@ -86,7 +86,7 @@ class CacheEnv:
 
         output = {
             "dataset": getattr(dataset, "name", str(dataset)),
-            "base_task_count": len(base_tasks),
+            "base_task_count": len(dataset),
             "together_tasks": self.together_tasks,
             "tool_failure_rates": self.tool_failure_rates,
             "num_trials": self.num_trials,
@@ -103,28 +103,7 @@ class CacheEnv:
 
         return output
 
-    def _build_combined_tasks(self, tasks, together_task_size):
-        if together_task_size <= 1:
-            return list(tasks)
-
-        combined_tasks = []
-        for index, task in enumerate(tasks):
-            other_tasks = tasks[:index] + tasks[index + 1:]
-            sample_size = min(max(together_task_size - 1, 0), len(other_tasks))
-            sampled_tasks = random.sample(other_tasks, sample_size) if sample_size else []
-            combined_tasks.append(CombinedTask([task] + sampled_tasks))
-        return combined_tasks
-
-    def _get_tasks(self, dataset):
-        if hasattr(dataset, "load_data"):
-            tasks = dataset.load_data()
-            if tasks is not None:
-                return list(tasks)
-        return list(dataset)
-
-    def _build_result_key(self, together_task_size, tool_failure_rate):
-        return f"task_size={together_task_size},tool_failure_rate={tool_failure_rate}"
-
+    
     def _get_dataset_name(self, task):
         dataset = getattr(task, "dataset", None)
         if dataset is None:

@@ -5,6 +5,9 @@ from typing import Any, Optional
 
 from litellm import completion
 
+from agent.utils import get_response_cost, get_response_usage
+from cached_datasets import MergedTask
+
 logger = logging.getLogger(__name__)
 
 DEFAULT_MAX_RETRIES = 3
@@ -40,8 +43,7 @@ class Agent:
 
     def generate(
         self,
-        task: Any,
-        messages: Optional[list[dict[str, Any]]] = None,
+        task: MergedTask,
         **kwargs: Any,
     ) -> AssistantMessage:
         """
@@ -49,49 +51,72 @@ class Agent:
         """
         max_steps = kwargs.pop("max_steps", None)
         tool_failure_rate = kwargs.pop("tool_failure_rate", 0.0)
+
+        tool_schemas = task.get_tool_schemas()
+        litellm_messages = task.build_initial_messages()
+
         request_params = {**self.agent_params, **kwargs}
         if request_params.get("num_retries") is None:
             request_params["num_retries"] = DEFAULT_MAX_RETRIES
-
         if self.model.startswith("claude") and not ALLOW_SONNET_THINKING:
             request_params["thinking"] = {"type": "disabled"}
-
-        tool_schemas = self._get_tool_schemas(task)
+        
         if tool_schemas and request_params.get("tool_choice") is None:
             request_params["tool_choice"] = "auto"
 
-        litellm_messages = self._build_messages(task, messages)
-        total_usage = {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0}
+       
+        total_usage = {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0, 
+                       "cost": 0.0, "time": 0.0}
         start_time = time.perf_counter()
-        final_content = ""
         step_count = 0
+        raw_messages = []
 
         while True:
             if max_steps is not None and step_count >= max_steps:
                 logger.warning("Max steps reached for task: %s", getattr(task, "task_name", ""))
                 break
 
-            response = completion(
-                model=self.model,
-                messages=litellm_messages,
-                tools=tool_schemas,
-                **request_params,
-            )
+            try:
+                response = completion(
+                    model=self.model,
+                    messages=litellm_messages,
+                    tools=tool_schemas,
+                    **request_params,
+                )
+            except Exception as e:
+                logger.error(e)
+                raise e
             step_count += 1
+            cost = get_response_cost(response)
+            usage = get_response_usage(response)
+            response = response.choices[0]
+
 
             usage = self._get_response_usage(response)
             total_usage["prompt_tokens"] += usage.get("prompt_tokens", 0)
             total_usage["completion_tokens"] += usage.get("completion_tokens", 0)
             total_usage["total_tokens"] += usage.get("total_tokens", 0)
+            total_usage["cost"] += cost
 
-            response_message = response.choices[0].message
+            response = response.choices[0]
+            raw_messages.append(response.to_dict())
+            response_message = response.message
+            try:
+                finish_reason = response.finish_reason
+                if finish_reason == "length":
+                    logger.warning("Output might be incomplete due to token limit!")
+            except Exception as e:
+                logger.error(e)
+                raise e
+            assert response_message.role == "assistant", ("The response should be an assistant message")
+            
             assistant_content = response_message.content or ""
-            tool_calls = response_message.tool_calls or []
-
             assistant_message = {
-                "role": "assistant",
-                "content": assistant_content,
-            }
+                    "role": "assistant",
+                    "content": assistant_content,
+                    "tool_calls": None
+                }
+            tool_calls = response_message.tool_calls or []
             if tool_calls:
                 assistant_message["tool_calls"] = [
                     {
@@ -99,7 +124,7 @@ class Agent:
                         "type": "function",
                         "function": {
                             "name": tool_call.function.name,
-                            "arguments": tool_call.function.arguments,
+                            "arguments": json.dumps(tool_call.function.arguments),
                         },
                     }
                     for tool_call in tool_calls
@@ -129,6 +154,7 @@ class Agent:
                 )
 
         elapsed_time = time.perf_counter() - start_time
+        total_usage["time"] = elapsed_time
         return AssistantMessage(
             content=final_content,
             usage=total_usage,
@@ -244,26 +270,6 @@ class Agent:
                     )
         return schemas or None
 
-    def _get_response_usage(self, response: Any) -> dict[str, Any]:
-        try:
-            usage = getattr(response, "usage", None)
-            if usage is None:
-                return {}
-            prompt_tokens = getattr(usage, "prompt_tokens", 0) or 0
-            completion_tokens = getattr(usage, "completion_tokens", 0) or 0
-            total_tokens = getattr(
-                usage,
-                "total_tokens",
-                prompt_tokens + completion_tokens,
-            )
-            return {
-                "prompt_tokens": prompt_tokens,
-                "completion_tokens": completion_tokens,
-                "total_tokens": total_tokens,
-            }
-        except Exception as e:
-            logger.warning("Could not extract usage information: %s", e)
-            return {}
 
     def _call_task_tool(
         self,
@@ -291,3 +297,5 @@ class Agent:
             return json.dumps(value, ensure_ascii=False)
         except Exception:
             return str(value)
+
+

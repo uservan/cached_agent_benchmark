@@ -1,8 +1,38 @@
 import os
 import yaml
 from collections import defaultdict
-from datasets import load_dataset
+from cached_datasets import load_dataset
 from .. import BaseDataset, BaseTask, register_dataset
+
+AGENT_SOLO_INSTRUCTION = """
+You are a customer service agent that helps the user according to the <policy> provided below.
+You will be provided with a ticket that contains the user's request.
+You will need to plan and call the appropriate tools to solve the ticket.
+
+You cannot communicate with the user, only make tool calls.
+Stop when you consider that you have solved the ticket.
+To do so, send a message containing a single tool call to the `{stop_function_name}` tool. Do not include any other tool calls in this last message.
+
+Always follow the policy. Always make sure you generate valid JSON only.
+""".strip()
+
+SYSTEM_PROMPT_SOLO = """
+<instructions>
+{agent_instruction}
+</instructions>
+<policy>
+{domain_policy}
+</policy>
+<ticket>
+{ticket}
+</ticket>
+""".strip()
+
+STOP_FUNCTION_NAME = "done"
+TRANSFER_TOOL_NAME = "transfer_to_human_agents"
+STOP_TOKEN = "###STOP###"
+
+
 
 @register_dataset("tau2")
 class Tau2Dataset(BaseDataset):
@@ -80,12 +110,28 @@ class Tau2Dataset(BaseDataset):
         return self.tasks[idx]
 
 class Tau2Task(BaseTask):
-    def __init__(self, initial_state, tools):
+    def __init__(self, task_name, initial_state, tools, domain_policy):
         super().__init__(
-            dataset=Tau2Dataset(),
-            domain='tau2',
-            task_name='Tau2 Task',
+            task_name=task_name,
             initial_state=initial_state,
             tools=tools
         )
+        self.domain_policy = domain_policy
         # 其他初始化逻辑
+
+    def get_tool_schemas(self): 
+        pass
+
+    def get_user_prompt(self):
+        return self.initial_state
+
+    def build_system_prompt(self):
+        agent_instruction = AGENT_SOLO_INSTRUCTION.format(
+            stop_function_name=STOP_FUNCTION_NAME,
+            stop_token=STOP_TOKEN,
+            )
+        return SYSTEM_PROMPT_SOLO.format(
+            agent_instruction=agent_instruction,
+            domain_policy=self.domain_policy,
+            ticket=self.initial_state,
+        )

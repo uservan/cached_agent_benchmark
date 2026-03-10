@@ -3,7 +3,7 @@ import json
 
 from agent.agent import Agent
 from agent.cache_env import CacheEnv
-from datasets import build_dataset, list_registered_datasets
+from cached_datasets import build_dataset, list_registered_datasets
 
 
 def main(

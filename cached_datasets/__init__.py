@@ -41,10 +41,20 @@ class BaseDataset:
         # 加载数据的逻辑
         pass
 
+    def _build_combined_tasks(self, tasks, together_task_size):
+        if together_task_size <= 1:
+            return [MergedTask([task]) for task in tasks]
+
+        combined_tasks = []
+        for index, task in enumerate(tasks):
+            other_tasks = tasks[:index] + tasks[index + 1:]
+            sample_size = min(max(together_task_size - 1, 0), len(other_tasks))
+            sampled_tasks = random.sample(other_tasks, sample_size) if sample_size else []
+            combined_tasks.append(MergedTask([task] + sampled_tasks))
+        return combined_tasks
+
 class BaseTask:
-    def __init__(self, dataset, domain, task_name, initial_state, tools):
-        self.dataset = dataset
-        self.domain = domain
+    def __init__(self, task_name, initial_state, tools):
         self.task_name = task_name
         self.initial_state = initial_state
         self.tools = tools
@@ -57,6 +67,50 @@ class BaseTask:
         # 评估消息的好坏
         pass
 
+    def get_tool_schemas(self):
+        # 返回工具的 schema 定义
+        pass
+
+    def get_user_prompt(self):
+        # 返回用户提示
+        pass
+
+    def build_system_prompt(self):
+        # 返回系统提示
+        pass
+
+class MergedTask(BaseTask):
+    def __init__(self, sub_tasks):
+        self.sub_tasks = sub_tasks
+        self.main_task = sub_tasks[0]
+
+    def call_tool(self, tool_name, tool_args, tool_failure_rate=0.0):
+        for task in self.sub_tasks:
+            if task.has_tool(tool_name):
+                return task.call_tool(tool_name, tool_args, tool_failure_rate=tool_failure_rate)
+        return {
+            "status": "failed",
+            "error": f"Unknown tool: {tool_name}",
+        }  
+
+    def get_user_prompt(self):
+        pass
+
+    def build_system_prompt(self):
+        # 返回系统提示
+        pass
+
+    def get_tool_schemas(self):
+        pass
+
+    def eval(self, messages):   
+        pass
+
+    def build_initial_messages(self):
+        pass
+
+    def __len__(self):
+        return len(self.sub_tasks)
 
 class RunnableTask:
     """对原始 task 做一层包装，兼容 dict task 和对象 task。"""
