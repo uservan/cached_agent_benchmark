@@ -1,6 +1,12 @@
 import json
 import os
+import sys
 from dataclasses import dataclass
+
+if __package__ in (None, ""):
+    sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+
+from utils.console_display import ConsoleDisplay
 
 
 DEFAULT_DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
@@ -83,19 +89,44 @@ def load_dataset_objects_by_domain(data_dir=DEFAULT_DATA_DIR):
 
 if __name__ == "__main__":
     dataset_objects = load_all_dataset_objects(data_dir=DEFAULT_DATA_DIR)
-    for dataset_object in dataset_objects:
-        print(dataset_object.task_instruction)
-    print(f"Loaded {len(dataset_objects)} dataset objects from {DEFAULT_DATA_DIR}")
+    ConsoleDisplay.print_kv_panel(
+        title="[bold green]Loaded Datasets[/bold green]",
+        items=[
+            ("Data Dir", DEFAULT_DATA_DIR),
+            ("Dataset Objects", len(dataset_objects)),
+        ],
+        border_style="green",
+    )
 
-    for dataset_object in dataset_objects:
-        print(
-            f"- {dataset_object.domain} | {dataset_object.instance_id} | "
-            f"{dataset_object.source_filename}"
-        )
+    ConsoleDisplay.print_table(
+        title="Available dataset objects",
+        headers=("Domain", "Instance ID", "Source File"),
+        rows=[
+            (
+                dataset_object.domain,
+                dataset_object.instance_id,
+                dataset_object.source_filename,
+            )
+            for dataset_object in dataset_objects
+        ],
+        panel_title="[bold blue]Dataset Object List[/bold blue]",
+        border_style="blue",
+    )
 
     if dataset_objects:
         sample = dataset_objects[0]
-        print("\nSample task instruction:\n")
-        print(sample.task_instruction)
+        ConsoleDisplay.print_kv_panel(
+            title="[bold cyan]Sample Dataset Object[/bold cyan]",
+            items=[
+                ("Domain", sample.domain),
+                ("Instance", sample.instance_id),
+                ("Source File", sample.source_filename),
+                ("Rows", sample.meta.get("rows")),
+                ("Cols", sample.meta.get("cols")),
+            ],
+            border_style="cyan",
+        )
+        ConsoleDisplay.console.print(
+            f"[bold white]Sample task instruction[/bold white]\n\n{sample.task_instruction}"
+        )
 
-# 我现在需要写tools，也是在/Users/yangwang/dev_programs/python/cached_agent_benchmark/saved_datasets下面写个文件夹，然后对应每个domain的有着对应的tools。 具体的tools （1）对于每个slot，查询candidate，包括对应的id，name和 category；（2）根据id查询item的信息 （3）在slot写入对应的id （4）在slot去掉对应的id
