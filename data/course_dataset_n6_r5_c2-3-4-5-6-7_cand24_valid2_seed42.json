@@ -16,36 +16,6 @@
         "same_category_week_max": 4
       },
       "item_pool": {
-        "C014": {
-          "course_id": "C014",
-          "name": "Workshop 113",
-          "category": "lab",
-          "difficulty": 2,
-          "credits": 4,
-          "price": 302,
-          "teacher": "Olivia Hall",
-          "workload": 3
-        },
-        "C005": {
-          "course_id": "C005",
-          "name": "Networks 104",
-          "category": "cs",
-          "difficulty": 3,
-          "credits": 3,
-          "price": 179,
-          "teacher": "Grace Taylor",
-          "workload": 6
-        },
-        "C006": {
-          "course_id": "C006",
-          "name": "Algebra 105",
-          "category": "math",
-          "difficulty": 4,
-          "credits": 1,
-          "price": 283,
-          "teacher": "Leo Harris",
-          "workload": 5
-        },
         "C016": {
           "course_id": "C016",
           "name": "Theory 115",
@@ -55,6 +25,16 @@
           "price": 146,
           "teacher": "Bob Smith",
           "workload": 2
+        },
+        "C014": {
+          "course_id": "C014",
+          "name": "Workshop 113",
+          "category": "lab",
+          "difficulty": 2,
+          "credits": 4,
+          "price": 302,
+          "teacher": "Olivia Hall",
+          "workload": 3
         },
         "C001": {
           "course_id": "C001",
@@ -66,15 +46,15 @@
           "teacher": "Henry Moore",
           "workload": 3
         },
-        "C015": {
-          "course_id": "C015",
-          "name": "Theory 114",
-          "category": "core",
-          "difficulty": 2,
+        "C005": {
+          "course_id": "C005",
+          "name": "Networks 104",
+          "category": "cs",
+          "difficulty": 3,
           "credits": 3,
-          "price": 482,
-          "teacher": "Noah Walker",
-          "workload": 7
+          "price": 179,
+          "teacher": "Grace Taylor",
+          "workload": 6
         },
         "C011": {
           "course_id": "C011",
@@ -105,6 +85,26 @@
           "price": 402,
           "teacher": "Noah Walker",
           "workload": 1
+        },
+        "C006": {
+          "course_id": "C006",
+          "name": "Algebra 105",
+          "category": "math",
+          "difficulty": 4,
+          "credits": 1,
+          "price": 283,
+          "teacher": "Leo Harris",
+          "workload": 5
+        },
+        "C015": {
+          "course_id": "C015",
+          "name": "Theory 114",
+          "category": "core",
+          "difficulty": 2,
+          "credits": 3,
+          "price": 482,
+          "teacher": "Noah Walker",
+          "workload": 7
         },
         "C009": {
           "course_id": "C009",
@@ -2934,56 +2934,6 @@
         "same_category_week_max": 8
       },
       "item_pool": {
-        "C014": {
-          "course_id": "C014",
-          "name": "Workshop 113",
-          "category": "lab",
-          "difficulty": 2,
-          "credits": 4,
-          "price": 387,
-          "teacher": "Noah Walker",
-          "workload": 7
-        },
-        "C004": {
-          "course_id": "C004",
-          "name": "Networks 103",
-          "category": "cs",
-          "difficulty": 1,
-          "credits": 1,
-          "price": 132,
-          "teacher": "Peter Young",
-          "workload": 1
-        },
-        "C012": {
-          "course_id": "C012",
-          "name": "Studio 111",
-          "category": "lab",
-          "difficulty": 3,
-          "credits": 3,
-          "price": 340,
-          "teacher": "Alice Johnson",
-          "workload": 8
-        },
-        "C007": {
-          "course_id": "C007",
-          "name": "Discussion 106",
-          "category": "seminar",
-          "difficulty": 2,
-          "credits": 2,
-          "price": 114,
-          "teacher": "Bob Smith",
-          "workload": 6
-        },
-        "C013": {
-          "course_id": "C013",
-          "name": "Business 112",
-          "category": "elective",
-          "difficulty": 1,
-          "credits": 4,
-          "price": 249,
-          "teacher": "Henry Moore",
-          "workload": 1
-        },
         "C003": {
           "course_id": "C003",
           "name": "Calculus 102",
@@ -2993,6 +2943,26 @@
           "price": 480,
           "teacher": "Carol Davis",
           "workload": 4
+        },
+        "C016": {
+          "course_id": "C016",
+          "name": "Media 115",
+          "category": "elective",
+          "difficulty": 5,
+          "credits": 3,
+          "price": 245,
+          "teacher": "Ivy Thomas",
+          "workload": 7
+        },
+        "C014": {
+          "course_id": "C014",
+          "name": "Workshop 113",
+          "category": "lab",
+          "difficulty": 2,
+          "credits": 4,
+          "price": 387,
+          "teacher": "Noah Walker",
+          "workload": 7
         },
         "C005": {
           "course_id": "C005",
@@ -3004,25 +2974,15 @@
           "teacher": "Ivy Thomas",
           "workload": 3
         },
-        "C006": {
-          "course_id": "C006",
-          "name": "Statistics 105",
-          "category": "math",
+        "C018": {
+          "course_id": "C018",
+          "name": "Simulation 117",
+          "category": "lab",
           "difficulty": 3,
-          "credits": 2,
-          "price": 226,
-          "teacher": "Jack Martin",
-          "workload": 8
-        },
-        "C016": {
-          "course_id": "C016",
-          "name": "Media 115",
-          "category": "elective",
-          "difficulty": 5,
-          "credits": 3,
-          "price": 245,
-          "teacher": "Ivy Thomas",
-          "workload": 7
+          "credits": 4,
+          "price": 196,
+          "teacher": "Karen White",
+          "workload": 1
         },
         "C001": {
           "course_id": "C001",
@@ -3044,15 +3004,45 @@
           "teacher": "Daniel Lee",
           "workload": 5
         },
-        "C018": {
-          "course_id": "C018",
-          "name": "Simulation 117",
-          "category": "lab",
-          "difficulty": 3,
+        "C007": {
+          "course_id": "C007",
+          "name": "Discussion 106",
+          "category": "seminar",
+          "difficulty": 2,
+          "credits": 2,
+          "price": 114,
+          "teacher": "Bob Smith",
+          "workload": 6
+        },
+        "C002": {
+          "course_id": "C002",
+          "name": "Business 101",
+          "category": "elective",
+          "difficulty": 5,
           "credits": 4,
-          "price": 196,
-          "teacher": "Karen White",
+          "price": 311,
+          "teacher": "Frank Wilson",
+          "workload": 3
+        },
+        "C013": {
+          "course_id": "C013",
+          "name": "Business 112",
+          "category": "elective",
+          "difficulty": 1,
+          "credits": 4,
+          "price": 249,
+          "teacher": "Henry Moore",
           "workload": 1
+        },
+        "C006": {
+          "course_id": "C006",
+          "name": "Statistics 105",
+          "category": "math",
+          "difficulty": 3,
+          "credits": 2,
+          "price": 226,
+          "teacher": "Jack Martin",
+          "workload": 8
         },
         "C015": {
           "course_id": "C015",
@@ -3064,15 +3054,25 @@
           "teacher": "Ivy Thomas",
           "workload": 2
         },
-        "C002": {
-          "course_id": "C002",
-          "name": "Business 101",
-          "category": "elective",
-          "difficulty": 5,
-          "credits": 4,
-          "price": 311,
-          "teacher": "Frank Wilson",
-          "workload": 3
+        "C004": {
+          "course_id": "C004",
+          "name": "Networks 103",
+          "category": "cs",
+          "difficulty": 1,
+          "credits": 1,
+          "price": 132,
+          "teacher": "Peter Young",
+          "workload": 1
+        },
+        "C012": {
+          "course_id": "C012",
+          "name": "Studio 111",
+          "category": "lab",
+          "difficulty": 3,
+          "credits": 3,
+          "price": 340,
+          "teacher": "Alice Johnson",
+          "workload": 8
         },
         "C009": {
           "course_id": "C009",
@@ -7263,35 +7263,15 @@
         "same_category_week_max": 16
       },
       "item_pool": {
-        "C005": {
-          "course_id": "C005",
-          "name": "Writing 104",
+        "C017": {
+          "course_id": "C017",
+          "name": "Design 116",
           "category": "elective",
-          "difficulty": 4,
-          "credits": 3,
-          "price": 392,
-          "teacher": "Eva Brown",
-          "workload": 2
-        },
-        "C021": {
-          "course_id": "C021",
-          "name": "Foundations 120",
-          "category": "core",
           "difficulty": 3,
-          "credits": 3,
-          "price": 498,
-          "teacher": "Ivy Thomas",
-          "workload": 3
-        },
-        "C004": {
-          "course_id": "C004",
-          "name": "Optimization 103",
-          "category": "math",
-          "difficulty": 5,
           "credits": 4,
-          "price": 240,
-          "teacher": "Daniel Lee",
-          "workload": 3
+          "price": 455,
+          "teacher": "Eva Brown",
+          "workload": 4
         },
         "C007": {
           "course_id": "C007",
@@ -7303,24 +7283,14 @@
           "teacher": "Daniel Lee",
           "workload": 4
         },
-        "C006": {
-          "course_id": "C006",
-          "name": "Foundations 105",
-          "category": "core",
-          "difficulty": 5,
-          "credits": 2,
-          "price": 307,
-          "teacher": "Alice Johnson",
-          "workload": 7
-        },
-        "C010": {
-          "course_id": "C010",
-          "name": "Workshop 109",
+        "C012": {
+          "course_id": "C012",
+          "name": "Workshop 111",
           "category": "lab",
-          "difficulty": 1,
-          "credits": 1,
-          "price": 163,
-          "teacher": "Jack Martin",
+          "difficulty": 5,
+          "credits": 4,
+          "price": 171,
+          "teacher": "Peter Young",
           "workload": 6
         },
         "C009": {
@@ -7333,25 +7303,35 @@
           "teacher": "Frank Wilson",
           "workload": 2
         },
-        "C023": {
-          "course_id": "C023",
-          "name": "Algebra 122",
-          "category": "math",
-          "difficulty": 2,
-          "credits": 3,
-          "price": 401,
-          "teacher": "Peter Young",
+        "C010": {
+          "course_id": "C010",
+          "name": "Workshop 109",
+          "category": "lab",
+          "difficulty": 1,
+          "credits": 1,
+          "price": 163,
+          "teacher": "Jack Martin",
+          "workload": 6
+        },
+        "C019": {
+          "course_id": "C019",
+          "name": "Databases 118",
+          "category": "cs",
+          "difficulty": 4,
+          "credits": 4,
+          "price": 113,
+          "teacher": "Henry Moore",
           "workload": 2
         },
-        "C020": {
-          "course_id": "C020",
-          "name": "Foundations 119",
+        "C021": {
+          "course_id": "C021",
+          "name": "Foundations 120",
           "category": "core",
-          "difficulty": 5,
-          "credits": 1,
-          "price": 450,
-          "teacher": "Noah Walker",
-          "workload": 2
+          "difficulty": 3,
+          "credits": 3,
+          "price": 498,
+          "teacher": "Ivy Thomas",
+          "workload": 3
         },
         "C015": {
           "course_id": "C015",
@@ -7363,45 +7343,25 @@
           "teacher": "Eva Brown",
           "workload": 7
         },
-        "C022": {
-          "course_id": "C022",
-          "name": "Databases 121",
-          "category": "cs",
-          "difficulty": 1,
+        "C020": {
+          "course_id": "C020",
+          "name": "Foundations 119",
+          "category": "core",
+          "difficulty": 5,
           "credits": 1,
-          "price": 293,
-          "teacher": "Henry Moore",
-          "workload": 7
+          "price": 450,
+          "teacher": "Noah Walker",
+          "workload": 2
         },
-        "C017": {
-          "course_id": "C017",
-          "name": "Design 116",
-          "category": "elective",
+        "C016": {
+          "course_id": "C016",
+          "name": "Optimization 115",
+          "category": "math",
           "difficulty": 3,
-          "credits": 4,
-          "price": 455,
-          "teacher": "Eva Brown",
-          "workload": 4
-        },
-        "C011": {
-          "course_id": "C011",
-          "name": "Studio 110",
-          "category": "lab",
-          "difficulty": 4,
-          "credits": 1,
-          "price": 227,
-          "teacher": "Jack Martin",
-          "workload": 1
-        },
-        "C002": {
-          "course_id": "C002",
-          "name": "Topics 101",
-          "category": "seminar",
-          "difficulty": 4,
-          "credits": 4,
-          "price": 240,
-          "teacher": "Olivia Hall",
-          "workload": 6
+          "credits": 3,
+          "price": 295,
+          "teacher": "Frank Wilson",
+          "workload": 7
         },
         "C014": {
           "course_id": "C014",
@@ -7423,15 +7383,45 @@
           "teacher": "Eva Brown",
           "workload": 3
         },
-        "C016": {
-          "course_id": "C016",
-          "name": "Optimization 115",
-          "category": "math",
-          "difficulty": 3,
-          "credits": 3,
-          "price": 295,
-          "teacher": "Frank Wilson",
+        "C002": {
+          "course_id": "C002",
+          "name": "Topics 101",
+          "category": "seminar",
+          "difficulty": 4,
+          "credits": 4,
+          "price": 240,
+          "teacher": "Olivia Hall",
+          "workload": 6
+        },
+        "C022": {
+          "course_id": "C022",
+          "name": "Databases 121",
+          "category": "cs",
+          "difficulty": 1,
+          "credits": 1,
+          "price": 293,
+          "teacher": "Henry Moore",
           "workload": 7
+        },
+        "C005": {
+          "course_id": "C005",
+          "name": "Writing 104",
+          "category": "elective",
+          "difficulty": 4,
+          "credits": 3,
+          "price": 392,
+          "teacher": "Eva Brown",
+          "workload": 2
+        },
+        "C023": {
+          "course_id": "C023",
+          "name": "Algebra 122",
+          "category": "math",
+          "difficulty": 2,
+          "credits": 3,
+          "price": 401,
+          "teacher": "Peter Young",
+          "workload": 2
         },
         "C024": {
           "course_id": "C024",
@@ -7443,25 +7433,35 @@
           "teacher": "Ivy Thomas",
           "workload": 2
         },
-        "C019": {
-          "course_id": "C019",
-          "name": "Databases 118",
-          "category": "cs",
-          "difficulty": 4,
-          "credits": 4,
-          "price": 113,
-          "teacher": "Henry Moore",
-          "workload": 2
-        },
-        "C012": {
-          "course_id": "C012",
-          "name": "Workshop 111",
+        "C011": {
+          "course_id": "C011",
+          "name": "Studio 110",
           "category": "lab",
+          "difficulty": 4,
+          "credits": 1,
+          "price": 227,
+          "teacher": "Jack Martin",
+          "workload": 1
+        },
+        "C006": {
+          "course_id": "C006",
+          "name": "Foundations 105",
+          "category": "core",
+          "difficulty": 5,
+          "credits": 2,
+          "price": 307,
+          "teacher": "Alice Johnson",
+          "workload": 7
+        },
+        "C004": {
+          "course_id": "C004",
+          "name": "Optimization 103",
+          "category": "math",
           "difficulty": 5,
           "credits": 4,
-          "price": 171,
-          "teacher": "Peter Young",
-          "workload": 6
+          "price": 240,
+          "teacher": "Daniel Lee",
+          "workload": 3
         },
         "C028": {
           "course_id": "C028",
@@ -13023,94 +13023,14 @@
         "same_category_week_max": 19
       },
       "item_pool": {
-        "C003": {
-          "course_id": "C003",
-          "name": "Media 102",
-          "category": "elective",
-          "difficulty": 3,
-          "credits": 4,
-          "price": 269,
-          "teacher": "Carol Davis",
-          "workload": 7
-        },
-        "C005": {
-          "course_id": "C005",
-          "name": "Foundations 104",
-          "category": "core",
+        "C017": {
+          "course_id": "C017",
+          "name": "Studio 116",
+          "category": "lab",
           "difficulty": 2,
-          "credits": 2,
-          "price": 421,
-          "teacher": "Peter Young",
-          "workload": 1
-        },
-        "C004": {
-          "course_id": "C004",
-          "name": "Foundations 103",
-          "category": "core",
-          "difficulty": 3,
-          "credits": 2,
-          "price": 143,
+          "credits": 1,
+          "price": 196,
           "teacher": "Eva Brown",
-          "workload": 2
-        },
-        "C007": {
-          "course_id": "C007",
-          "name": "Writing 106",
-          "category": "elective",
-          "difficulty": 1,
-          "credits": 1,
-          "price": 353,
-          "teacher": "Alice Johnson",
-          "workload": 6
-        },
-        "C006": {
-          "course_id": "C006",
-          "name": "Simulation 105",
-          "category": "lab",
-          "difficulty": 5,
-          "credits": 4,
-          "price": 261,
-          "teacher": "Daniel Lee",
-          "workload": 5
-        },
-        "C001": {
-          "course_id": "C001",
-          "name": "Business 100",
-          "category": "elective",
-          "difficulty": 2,
-          "credits": 1,
-          "price": 269,
-          "teacher": "Alice Johnson",
-          "workload": 6
-        },
-        "C010": {
-          "course_id": "C010",
-          "name": "Calculus 109",
-          "category": "math",
-          "difficulty": 3,
-          "credits": 4,
-          "price": 291,
-          "teacher": "Karen White",
-          "workload": 3
-        },
-        "C008": {
-          "course_id": "C008",
-          "name": "Studio 107",
-          "category": "lab",
-          "difficulty": 5,
-          "credits": 4,
-          "price": 337,
-          "teacher": "Bob Smith",
-          "workload": 2
-        },
-        "C029": {
-          "course_id": "C029",
-          "name": "Topics 128",
-          "category": "seminar",
-          "difficulty": 2,
-          "credits": 2,
-          "price": 119,
-          "teacher": "Frank Wilson",
           "workload": 2
         },
         "C025": {
@@ -13123,6 +13043,26 @@
           "teacher": "Karen White",
           "workload": 8
         },
+        "C007": {
+          "course_id": "C007",
+          "name": "Writing 106",
+          "category": "elective",
+          "difficulty": 1,
+          "credits": 1,
+          "price": 353,
+          "teacher": "Alice Johnson",
+          "workload": 6
+        },
+        "C012": {
+          "course_id": "C012",
+          "name": "Foundations 111",
+          "category": "core",
+          "difficulty": 4,
+          "credits": 2,
+          "price": 171,
+          "teacher": "Alice Johnson",
+          "workload": 3
+        },
         "C009": {
           "course_id": "C009",
           "name": "Research 108",
@@ -13133,6 +13073,36 @@
           "teacher": "Mia Clark",
           "workload": 5
         },
+        "C010": {
+          "course_id": "C010",
+          "name": "Calculus 109",
+          "category": "math",
+          "difficulty": 3,
+          "credits": 4,
+          "price": 291,
+          "teacher": "Karen White",
+          "workload": 3
+        },
+        "C001": {
+          "course_id": "C001",
+          "name": "Business 100",
+          "category": "elective",
+          "difficulty": 2,
+          "credits": 1,
+          "price": 269,
+          "teacher": "Alice Johnson",
+          "workload": 6
+        },
+        "C030": {
+          "course_id": "C030",
+          "name": "Foundations 129",
+          "category": "core",
+          "difficulty": 2,
+          "credits": 3,
+          "price": 140,
+          "teacher": "Grace Taylor",
+          "workload": 7
+        },
         "C027": {
           "course_id": "C027",
           "name": "AI 126",
@@ -13141,96 +13111,6 @@
           "credits": 2,
           "price": 451,
           "teacher": "Bob Smith",
-          "workload": 3
-        },
-        "C020": {
-          "course_id": "C020",
-          "name": "Prototyping 119",
-          "category": "lab",
-          "difficulty": 4,
-          "credits": 2,
-          "price": 170,
-          "teacher": "Olivia Hall",
-          "workload": 6
-        },
-        "C023": {
-          "course_id": "C023",
-          "name": "Methods 122",
-          "category": "core",
-          "difficulty": 5,
-          "credits": 3,
-          "price": 278,
-          "teacher": "Alice Johnson",
-          "workload": 1
-        },
-        "C022": {
-          "course_id": "C022",
-          "name": "Discussion 121",
-          "category": "seminar",
-          "difficulty": 4,
-          "credits": 1,
-          "price": 420,
-          "teacher": "Eva Brown",
-          "workload": 5
-        },
-        "C017": {
-          "course_id": "C017",
-          "name": "Studio 116",
-          "category": "lab",
-          "difficulty": 2,
-          "credits": 1,
-          "price": 196,
-          "teacher": "Eva Brown",
-          "workload": 2
-        },
-        "C002": {
-          "course_id": "C002",
-          "name": "Innovation 101",
-          "category": "elective",
-          "difficulty": 3,
-          "credits": 4,
-          "price": 189,
-          "teacher": "Eva Brown",
-          "workload": 2
-        },
-        "C014": {
-          "course_id": "C014",
-          "name": "Calculus 113",
-          "category": "math",
-          "difficulty": 1,
-          "credits": 3,
-          "price": 407,
-          "teacher": "Bob Smith",
-          "workload": 1
-        },
-        "C013": {
-          "course_id": "C013",
-          "name": "Networks 112",
-          "category": "cs",
-          "difficulty": 1,
-          "credits": 1,
-          "price": 209,
-          "teacher": "Carol Davis",
-          "workload": 1
-        },
-        "C026": {
-          "course_id": "C026",
-          "name": "Databases 125",
-          "category": "cs",
-          "difficulty": 3,
-          "credits": 3,
-          "price": 299,
-          "teacher": "Henry Moore",
-          "workload": 2
-        },
-        "C016": {
-          "course_id": "C016",
-          "name": "Methods 115",
-          "category": "core",
-          "difficulty": 4,
-          "credits": 2,
-          "price": 248,
-          "teacher": "Grace Taylor",
           "workload": 3
         },
         "C031": {
@@ -13243,25 +13123,95 @@
           "teacher": "Daniel Lee",
           "workload": 7
         },
-        "C030": {
-          "course_id": "C030",
-          "name": "Foundations 129",
-          "category": "core",
-          "difficulty": 2,
-          "credits": 3,
-          "price": 140,
-          "teacher": "Grace Taylor",
+        "C020": {
+          "course_id": "C020",
+          "name": "Prototyping 119",
+          "category": "lab",
+          "difficulty": 4,
+          "credits": 2,
+          "price": 170,
+          "teacher": "Olivia Hall",
+          "workload": 6
+        },
+        "C003": {
+          "course_id": "C003",
+          "name": "Media 102",
+          "category": "elective",
+          "difficulty": 3,
+          "credits": 4,
+          "price": 269,
+          "teacher": "Carol Davis",
           "workload": 7
         },
-        "C012": {
-          "course_id": "C012",
-          "name": "Foundations 111",
+        "C016": {
+          "course_id": "C016",
+          "name": "Methods 115",
           "category": "core",
           "difficulty": 4,
           "credits": 2,
-          "price": 171,
-          "teacher": "Alice Johnson",
+          "price": 248,
+          "teacher": "Grace Taylor",
           "workload": 3
+        },
+        "C026": {
+          "course_id": "C026",
+          "name": "Databases 125",
+          "category": "cs",
+          "difficulty": 3,
+          "credits": 3,
+          "price": 299,
+          "teacher": "Henry Moore",
+          "workload": 2
+        },
+        "C014": {
+          "course_id": "C014",
+          "name": "Calculus 113",
+          "category": "math",
+          "difficulty": 1,
+          "credits": 3,
+          "price": 407,
+          "teacher": "Bob Smith",
+          "workload": 1
+        },
+        "C002": {
+          "course_id": "C002",
+          "name": "Innovation 101",
+          "category": "elective",
+          "difficulty": 3,
+          "credits": 4,
+          "price": 189,
+          "teacher": "Eva Brown",
+          "workload": 2
+        },
+        "C008": {
+          "course_id": "C008",
+          "name": "Studio 107",
+          "category": "lab",
+          "difficulty": 5,
+          "credits": 4,
+          "price": 337,
+          "teacher": "Bob Smith",
+          "workload": 2
+        },
+        "C022": {
+          "course_id": "C022",
+          "name": "Discussion 121",
+          "category": "seminar",
+          "difficulty": 4,
+          "credits": 1,
+          "price": 420,
+          "teacher": "Eva Brown",
+          "workload": 5
+        },
+        "C005": {
+          "course_id": "C005",
+          "name": "Foundations 104",
+          "category": "core",
+          "difficulty": 2,
+          "credits": 2,
+          "price": 421,
+          "teacher": "Peter Young",
+          "workload": 1
         },
         "C028": {
           "course_id": "C028",
@@ -13271,6 +13221,56 @@
           "credits": 2,
           "price": 450,
           "teacher": "Bob Smith",
+          "workload": 2
+        },
+        "C023": {
+          "course_id": "C023",
+          "name": "Methods 122",
+          "category": "core",
+          "difficulty": 5,
+          "credits": 3,
+          "price": 278,
+          "teacher": "Alice Johnson",
+          "workload": 1
+        },
+        "C029": {
+          "course_id": "C029",
+          "name": "Topics 128",
+          "category": "seminar",
+          "difficulty": 2,
+          "credits": 2,
+          "price": 119,
+          "teacher": "Frank Wilson",
+          "workload": 2
+        },
+        "C013": {
+          "course_id": "C013",
+          "name": "Networks 112",
+          "category": "cs",
+          "difficulty": 1,
+          "credits": 1,
+          "price": 209,
+          "teacher": "Carol Davis",
+          "workload": 1
+        },
+        "C006": {
+          "course_id": "C006",
+          "name": "Simulation 105",
+          "category": "lab",
+          "difficulty": 5,
+          "credits": 4,
+          "price": 261,
+          "teacher": "Daniel Lee",
+          "workload": 5
+        },
+        "C004": {
+          "course_id": "C004",
+          "name": "Foundations 103",
+          "category": "core",
+          "difficulty": 3,
+          "credits": 2,
+          "price": 143,
+          "teacher": "Eva Brown",
           "workload": 2
         },
         "C033": {
@@ -20194,45 +20194,35 @@
         "same_category_week_max": 17
       },
       "item_pool": {
-        "C003": {
-          "course_id": "C003",
-          "name": "Experiments 102",
+        "C025": {
+          "course_id": "C025",
+          "name": "Workshop 124",
           "category": "lab",
-          "difficulty": 4,
-          "credits": 1,
-          "price": 421,
-          "teacher": "Frank Wilson",
-          "workload": 4
-        },
-        "C005": {
-          "course_id": "C005",
-          "name": "Algorithms 104",
-          "category": "cs",
           "difficulty": 2,
-          "credits": 3,
-          "price": 483,
+          "credits": 2,
+          "price": 375,
           "teacher": "Karen White",
-          "workload": 6
+          "workload": 3
         },
-        "C035": {
-          "course_id": "C035",
-          "name": "Business 134",
+        "C007": {
+          "course_id": "C007",
+          "name": "Topics 106",
+          "category": "seminar",
+          "difficulty": 3,
+          "credits": 3,
+          "price": 103,
+          "teacher": "Karen White",
+          "workload": 2
+        },
+        "C012": {
+          "course_id": "C012",
+          "name": "Writing 111",
           "category": "elective",
           "difficulty": 5,
-          "credits": 1,
-          "price": 301,
-          "teacher": "Karen White",
-          "workload": 4
-        },
-        "C021": {
-          "course_id": "C021",
-          "name": "Prototyping 120",
-          "category": "lab",
-          "difficulty": 1,
-          "credits": 1,
-          "price": 105,
-          "teacher": "Daniel Lee",
-          "workload": 8
+          "credits": 4,
+          "price": 275,
+          "teacher": "Ivy Thomas",
+          "workload": 3
         },
         "C036": {
           "course_id": "C036",
@@ -20254,35 +20244,15 @@
           "teacher": "Jack Martin",
           "workload": 2
         },
-        "C004": {
-          "course_id": "C004",
-          "name": "Algorithms 103",
-          "category": "cs",
-          "difficulty": 3,
+        "C010": {
+          "course_id": "C010",
+          "name": "Prototyping 109",
+          "category": "lab",
+          "difficulty": 2,
           "credits": 1,
-          "price": 369,
-          "teacher": "Leo Harris",
-          "workload": 4
-        },
-        "C007": {
-          "course_id": "C007",
-          "name": "Topics 106",
-          "category": "seminar",
-          "difficulty": 3,
-          "credits": 3,
-          "price": 103,
-          "teacher": "Karen White",
-          "workload": 2
-        },
-        "C006": {
-          "course_id": "C006",
-          "name": "Analysis 105",
-          "category": "core",
-          "difficulty": 5,
-          "credits": 2,
-          "price": 187,
-          "teacher": "Karen White",
-          "workload": 8
+          "price": 172,
+          "teacher": "Mia Clark",
+          "workload": 1
         },
         "C001": {
           "course_id": "C001",
@@ -20294,54 +20264,104 @@
           "teacher": "Karen White",
           "workload": 8
         },
-        "C018": {
-          "course_id": "C018",
-          "name": "Innovation 117",
-          "category": "elective",
-          "difficulty": 1,
-          "credits": 4,
-          "price": 461,
+        "C019": {
+          "course_id": "C019",
+          "name": "Practice 118",
+          "category": "core",
+          "difficulty": 5,
+          "credits": 1,
+          "price": 435,
           "teacher": "Leo Harris",
-          "workload": 6
+          "workload": 4
         },
-        "C010": {
-          "course_id": "C010",
-          "name": "Prototyping 109",
+        "C030": {
+          "course_id": "C030",
+          "name": "AI 129",
+          "category": "cs",
+          "difficulty": 3,
+          "credits": 3,
+          "price": 484,
+          "teacher": "Henry Moore",
+          "workload": 8
+        },
+        "C037": {
+          "course_id": "C037",
+          "name": "Workshop 136",
           "category": "lab",
+          "difficulty": 3,
+          "credits": 3,
+          "price": 391,
+          "teacher": "Ivy Thomas",
+          "workload": 8
+        },
+        "C031": {
+          "course_id": "C031",
+          "name": "Design 130",
+          "category": "elective",
           "difficulty": 2,
           "credits": 1,
-          "price": 172,
-          "teacher": "Mia Clark",
-          "workload": 1
+          "price": 137,
+          "teacher": "Noah Walker",
+          "workload": 7
         },
-        "C008": {
-          "course_id": "C008",
-          "name": "Prototyping 107",
+        "C021": {
+          "course_id": "C021",
+          "name": "Prototyping 120",
           "category": "lab",
-          "difficulty": 2,
-          "credits": 2,
-          "price": 328,
-          "teacher": "Karen White",
-          "workload": 6
-        },
-        "C029": {
-          "course_id": "C029",
-          "name": "Perspectives 128",
-          "category": "seminar",
           "difficulty": 1,
+          "credits": 1,
+          "price": 105,
+          "teacher": "Daniel Lee",
+          "workload": 8
+        },
+        "C015": {
+          "course_id": "C015",
+          "name": "Workshop 114",
+          "category": "lab",
+          "difficulty": 4,
           "credits": 2,
-          "price": 408,
-          "teacher": "Karen White",
+          "price": 443,
+          "teacher": "Olivia Hall",
           "workload": 5
         },
-        "C025": {
-          "course_id": "C025",
-          "name": "Workshop 124",
+        "C003": {
+          "course_id": "C003",
+          "name": "Experiments 102",
           "category": "lab",
-          "difficulty": 2,
-          "credits": 2,
-          "price": 375,
+          "difficulty": 4,
+          "credits": 1,
+          "price": 421,
+          "teacher": "Frank Wilson",
+          "workload": 4
+        },
+        "C035": {
+          "course_id": "C035",
+          "name": "Business 134",
+          "category": "elective",
+          "difficulty": 5,
+          "credits": 1,
+          "price": 301,
           "teacher": "Karen White",
+          "workload": 4
+        },
+        "C026": {
+          "course_id": "C026",
+          "name": "Prototyping 125",
+          "category": "lab",
+          "difficulty": 5,
+          "credits": 1,
+          "price": 338,
+          "teacher": "Grace Taylor",
+          "workload": 5
+        },
+        "C002": {
+          "course_id": "C002",
+          "name": "Colloquium 101",
+          "category": "seminar",
+          "difficulty": 1,
+          "credits": 3,
+          "price": 158,
+          "teacher": "Ivy Thomas",
           "workload": 3
         },
         "C033": {
@@ -20354,35 +20374,15 @@
           "teacher": "Grace Taylor",
           "workload": 7
         },
-        "C023": {
-          "course_id": "C023",
-          "name": "Systems 122",
-          "category": "cs",
-          "difficulty": 1,
-          "credits": 3,
-          "price": 144,
-          "teacher": "Eva Brown",
-          "workload": 2
-        },
-        "C015": {
-          "course_id": "C015",
-          "name": "Workshop 114",
+        "C008": {
+          "course_id": "C008",
+          "name": "Prototyping 107",
           "category": "lab",
-          "difficulty": 4,
+          "difficulty": 2,
           "credits": 2,
-          "price": 443,
-          "teacher": "Olivia Hall",
-          "workload": 5
-        },
-        "C037": {
-          "course_id": "C037",
-          "name": "Workshop 136",
-          "category": "lab",
-          "difficulty": 3,
-          "credits": 3,
-          "price": 391,
-          "teacher": "Ivy Thomas",
-          "workload": 8
+          "price": 328,
+          "teacher": "Karen White",
+          "workload": 6
         },
         "C022": {
           "course_id": "C022",
@@ -20394,6 +20394,36 @@
           "teacher": "Frank Wilson",
           "workload": 8
         },
+        "C005": {
+          "course_id": "C005",
+          "name": "Algorithms 104",
+          "category": "cs",
+          "difficulty": 2,
+          "credits": 3,
+          "price": 483,
+          "teacher": "Karen White",
+          "workload": 6
+        },
+        "C028": {
+          "course_id": "C028",
+          "name": "Algorithms 127",
+          "category": "cs",
+          "difficulty": 5,
+          "credits": 4,
+          "price": 212,
+          "teacher": "Bob Smith",
+          "workload": 4
+        },
+        "C023": {
+          "course_id": "C023",
+          "name": "Systems 122",
+          "category": "cs",
+          "difficulty": 1,
+          "credits": 3,
+          "price": 144,
+          "teacher": "Eva Brown",
+          "workload": 2
+        },
         "C011": {
           "course_id": "C011",
           "name": "Discussion 110",
@@ -20404,55 +20434,15 @@
           "teacher": "Olivia Hall",
           "workload": 1
         },
-        "C002": {
-          "course_id": "C002",
-          "name": "Colloquium 101",
-          "category": "seminar",
-          "difficulty": 1,
-          "credits": 3,
-          "price": 158,
-          "teacher": "Ivy Thomas",
-          "workload": 3
-        },
-        "C013": {
-          "course_id": "C013",
-          "name": "Geometry 112",
-          "category": "math",
-          "difficulty": 3,
-          "credits": 2,
-          "price": 356,
-          "teacher": "Ivy Thomas",
-          "workload": 6
-        },
-        "C026": {
-          "course_id": "C026",
-          "name": "Prototyping 125",
-          "category": "lab",
-          "difficulty": 5,
-          "credits": 1,
-          "price": 338,
-          "teacher": "Grace Taylor",
-          "workload": 5
-        },
-        "C031": {
-          "course_id": "C031",
-          "name": "Design 130",
+        "C018": {
+          "course_id": "C018",
+          "name": "Innovation 117",
           "category": "elective",
-          "difficulty": 2,
-          "credits": 1,
-          "price": 137,
-          "teacher": "Noah Walker",
-          "workload": 7
-        },
-        "C019": {
-          "course_id": "C019",
-          "name": "Practice 118",
-          "category": "core",
-          "difficulty": 5,
-          "credits": 1,
-          "price": 435,
+          "difficulty": 1,
+          "credits": 4,
+          "price": 461,
           "teacher": "Leo Harris",
-          "workload": 4
+          "workload": 6
         },
         "C024": {
           "course_id": "C024",
@@ -20464,34 +20454,44 @@
           "teacher": "Grace Taylor",
           "workload": 2
         },
-        "C030": {
-          "course_id": "C030",
-          "name": "AI 129",
-          "category": "cs",
+        "C029": {
+          "course_id": "C029",
+          "name": "Perspectives 128",
+          "category": "seminar",
+          "difficulty": 1,
+          "credits": 2,
+          "price": 408,
+          "teacher": "Karen White",
+          "workload": 5
+        },
+        "C013": {
+          "course_id": "C013",
+          "name": "Geometry 112",
+          "category": "math",
           "difficulty": 3,
-          "credits": 3,
-          "price": 484,
-          "teacher": "Henry Moore",
+          "credits": 2,
+          "price": 356,
+          "teacher": "Ivy Thomas",
+          "workload": 6
+        },
+        "C006": {
+          "course_id": "C006",
+          "name": "Analysis 105",
+          "category": "core",
+          "difficulty": 5,
+          "credits": 2,
+          "price": 187,
+          "teacher": "Karen White",
           "workload": 8
         },
-        "C012": {
-          "course_id": "C012",
-          "name": "Writing 111",
-          "category": "elective",
-          "difficulty": 5,
-          "credits": 4,
-          "price": 275,
-          "teacher": "Ivy Thomas",
-          "workload": 3
-        },
-        "C028": {
-          "course_id": "C028",
-          "name": "Algorithms 127",
+        "C004": {
+          "course_id": "C004",
+          "name": "Algorithms 103",
           "category": "cs",
-          "difficulty": 5,
-          "credits": 4,
-          "price": 212,
-          "teacher": "Bob Smith",
+          "difficulty": 3,
+          "credits": 1,
+          "price": 369,
+          "teacher": "Leo Harris",
           "workload": 4
         },
         "C038": {
@@ -28786,16 +28786,6 @@
         "same_category_week_max": 10
       },
       "item_pool": {
-        "C003": {
-          "course_id": "C003",
-          "name": "Prototyping 102",
-          "category": "lab",
-          "difficulty": 4,
-          "credits": 3,
-          "price": 109,
-          "teacher": "Alice Johnson",
-          "workload": 1
-        },
         "C038": {
           "course_id": "C038",
           "name": "Theory 137",
@@ -28806,135 +28796,15 @@
           "teacher": "Leo Harris",
           "workload": 8
         },
-        "C035": {
-          "course_id": "C035",
-          "name": "Workshop 134",
-          "category": "lab",
-          "difficulty": 2,
-          "credits": 4,
-          "price": 151,
-          "teacher": "Carol Davis",
-          "workload": 1
-        },
-        "C021": {
-          "course_id": "C021",
-          "name": "Algebra 120",
-          "category": "math",
-          "difficulty": 1,
-          "credits": 3,
-          "price": 483,
-          "teacher": "Peter Young",
-          "workload": 6
-        },
-        "C039": {
-          "course_id": "C039",
-          "name": "Calculus 138",
-          "category": "math",
-          "difficulty": 2,
-          "credits": 1,
-          "price": 371,
-          "teacher": "Carol Davis",
-          "workload": 3
-        },
-        "C034": {
-          "course_id": "C034",
-          "name": "Networks 133",
+        "C017": {
+          "course_id": "C017",
+          "name": "AI 116",
           "category": "cs",
-          "difficulty": 3,
-          "credits": 4,
-          "price": 328,
-          "teacher": "Jack Martin",
-          "workload": 5
-        },
-        "C004": {
-          "course_id": "C004",
-          "name": "Optimization 103",
-          "category": "math",
           "difficulty": 1,
-          "credits": 1,
-          "price": 280,
-          "teacher": "Mia Clark",
-          "workload": 2
-        },
-        "C007": {
-          "course_id": "C007",
-          "name": "AI 106",
-          "category": "cs",
-          "difficulty": 3,
-          "credits": 3,
-          "price": 429,
-          "teacher": "Grace Taylor",
-          "workload": 3
-        },
-        "C006": {
-          "course_id": "C006",
-          "name": "Topics 105",
-          "category": "seminar",
-          "difficulty": 4,
-          "credits": 3,
-          "price": 273,
-          "teacher": "Ivy Thomas",
+          "credits": 2,
+          "price": 274,
+          "teacher": "Karen White",
           "workload": 8
-        },
-        "C001": {
-          "course_id": "C001",
-          "name": "AI 100",
-          "category": "cs",
-          "difficulty": 1,
-          "credits": 1,
-          "price": 200,
-          "teacher": "Leo Harris",
-          "workload": 1
-        },
-        "C018": {
-          "course_id": "C018",
-          "name": "AI 117",
-          "category": "cs",
-          "difficulty": 5,
-          "credits": 4,
-          "price": 418,
-          "teacher": "Noah Walker",
-          "workload": 6
-        },
-        "C010": {
-          "course_id": "C010",
-          "name": "Analysis 109",
-          "category": "core",
-          "difficulty": 2,
-          "credits": 4,
-          "price": 277,
-          "teacher": "Alice Johnson",
-          "workload": 6
-        },
-        "C029": {
-          "course_id": "C029",
-          "name": "Media 128",
-          "category": "elective",
-          "difficulty": 2,
-          "credits": 1,
-          "price": 297,
-          "teacher": "Alice Johnson",
-          "workload": 6
-        },
-        "C008": {
-          "course_id": "C008",
-          "name": "Design 107",
-          "category": "elective",
-          "difficulty": 2,
-          "credits": 4,
-          "price": 185,
-          "teacher": "Carol Davis",
-          "workload": 3
-        },
-        "C009": {
-          "course_id": "C009",
-          "name": "Media 108",
-          "category": "elective",
-          "difficulty": 1,
-          "credits": 3,
-          "price": 245,
-          "teacher": "Grace Taylor",
-          "workload": 2
         },
         "C025": {
           "course_id": "C025",
@@ -28946,15 +28816,95 @@
           "teacher": "Ivy Thomas",
           "workload": 7
         },
-        "C032": {
-          "course_id": "C032",
-          "name": "Prototyping 131",
-          "category": "lab",
+        "C007": {
+          "course_id": "C007",
+          "name": "AI 106",
+          "category": "cs",
+          "difficulty": 3,
+          "credits": 3,
+          "price": 429,
+          "teacher": "Grace Taylor",
+          "workload": 3
+        },
+        "C012": {
+          "course_id": "C012",
+          "name": "Algebra 111",
+          "category": "math",
+          "difficulty": 4,
+          "credits": 3,
+          "price": 473,
+          "teacher": "Ivy Thomas",
+          "workload": 2
+        },
+        "C009": {
+          "course_id": "C009",
+          "name": "Media 108",
+          "category": "elective",
           "difficulty": 1,
           "credits": 3,
-          "price": 389,
-          "teacher": "Olivia Hall",
+          "price": 245,
+          "teacher": "Grace Taylor",
+          "workload": 2
+        },
+        "C034": {
+          "course_id": "C034",
+          "name": "Networks 133",
+          "category": "cs",
+          "difficulty": 3,
+          "credits": 4,
+          "price": 328,
+          "teacher": "Jack Martin",
+          "workload": 5
+        },
+        "C010": {
+          "course_id": "C010",
+          "name": "Analysis 109",
+          "category": "core",
+          "difficulty": 2,
+          "credits": 4,
+          "price": 277,
+          "teacher": "Alice Johnson",
+          "workload": 6
+        },
+        "C001": {
+          "course_id": "C001",
+          "name": "AI 100",
+          "category": "cs",
+          "difficulty": 1,
+          "credits": 1,
+          "price": 200,
+          "teacher": "Leo Harris",
           "workload": 1
+        },
+        "C019": {
+          "course_id": "C019",
+          "name": "Writing 118",
+          "category": "elective",
+          "difficulty": 4,
+          "credits": 3,
+          "price": 108,
+          "teacher": "Alice Johnson",
+          "workload": 4
+        },
+        "C040": {
+          "course_id": "C040",
+          "name": "Foundations 139",
+          "category": "core",
+          "difficulty": 1,
+          "credits": 2,
+          "price": 390,
+          "teacher": "Leo Harris",
+          "workload": 6
+        },
+        "C037": {
+          "course_id": "C037",
+          "name": "Topics 136",
+          "category": "seminar",
+          "difficulty": 5,
+          "credits": 1,
+          "price": 277,
+          "teacher": "Alice Johnson",
+          "workload": 2
         },
         "C027": {
           "course_id": "C027",
@@ -28966,14 +28916,44 @@
           "teacher": "Jack Martin",
           "workload": 1
         },
-        "C033": {
-          "course_id": "C033",
-          "name": "Practice 132",
-          "category": "core",
-          "difficulty": 2,
-          "credits": 4,
-          "price": 239,
+        "C031": {
+          "course_id": "C031",
+          "name": "Colloquium 130",
+          "category": "seminar",
+          "difficulty": 3,
+          "credits": 2,
+          "price": 308,
           "teacher": "Peter Young",
+          "workload": 5
+        },
+        "C021": {
+          "course_id": "C021",
+          "name": "Algebra 120",
+          "category": "math",
+          "difficulty": 1,
+          "credits": 3,
+          "price": 483,
+          "teacher": "Peter Young",
+          "workload": 6
+        },
+        "C032": {
+          "course_id": "C032",
+          "name": "Prototyping 131",
+          "category": "lab",
+          "difficulty": 1,
+          "credits": 3,
+          "price": 389,
+          "teacher": "Olivia Hall",
+          "workload": 1
+        },
+        "C015": {
+          "course_id": "C015",
+          "name": "Simulation 114",
+          "category": "lab",
+          "difficulty": 2,
+          "credits": 2,
+          "price": 223,
+          "teacher": "Mia Clark",
           "workload": 4
         },
         "C020": {
@@ -28986,95 +28966,25 @@
           "teacher": "Jack Martin",
           "workload": 3
         },
-        "C015": {
-          "course_id": "C015",
-          "name": "Simulation 114",
+        "C003": {
+          "course_id": "C003",
+          "name": "Prototyping 102",
           "category": "lab",
-          "difficulty": 2,
-          "credits": 2,
-          "price": 223,
-          "teacher": "Mia Clark",
-          "workload": 4
-        },
-        "C037": {
-          "course_id": "C037",
-          "name": "Topics 136",
-          "category": "seminar",
-          "difficulty": 5,
-          "credits": 1,
-          "price": 277,
-          "teacher": "Alice Johnson",
-          "workload": 2
-        },
-        "C017": {
-          "course_id": "C017",
-          "name": "AI 116",
-          "category": "cs",
-          "difficulty": 1,
-          "credits": 2,
-          "price": 274,
-          "teacher": "Karen White",
-          "workload": 8
-        },
-        "C011": {
-          "course_id": "C011",
-          "name": "Geometry 110",
-          "category": "math",
-          "difficulty": 2,
-          "credits": 2,
-          "price": 131,
-          "teacher": "Carol Davis",
-          "workload": 3
-        },
-        "C002": {
-          "course_id": "C002",
-          "name": "AI 101",
-          "category": "cs",
-          "difficulty": 5,
-          "credits": 4,
-          "price": 265,
-          "teacher": "Ivy Thomas",
-          "workload": 5
-        },
-        "C014": {
-          "course_id": "C014",
-          "name": "Workshop 113",
-          "category": "lab",
-          "difficulty": 1,
+          "difficulty": 4,
           "credits": 3,
-          "price": 463,
-          "teacher": "Jack Martin",
-          "workload": 2
-        },
-        "C013": {
-          "course_id": "C013",
-          "name": "Business 112",
-          "category": "elective",
-          "difficulty": 5,
-          "credits": 4,
-          "price": 152,
-          "teacher": "Karen White",
+          "price": 109,
+          "teacher": "Alice Johnson",
           "workload": 1
         },
-        "C042": {
-          "course_id": "C042",
-          "name": "Analysis 141",
-          "category": "core",
+        "C035": {
+          "course_id": "C035",
+          "name": "Workshop 134",
+          "category": "lab",
           "difficulty": 2,
-          "credits": 1,
-          "price": 106,
-          "teacher": "Daniel Lee",
-          "workload": 6
-        },
-        "C026": {
-          "course_id": "C026",
-          "name": "Systems 125",
-          "category": "cs",
-          "difficulty": 1,
-          "credits": 3,
-          "price": 330,
-          "teacher": "Noah Walker",
-          "workload": 6
+          "credits": 4,
+          "price": 151,
+          "teacher": "Carol Davis",
+          "workload": 1
         },
         "C016": {
           "course_id": "C016",
@@ -29086,35 +28996,65 @@
           "teacher": "Mia Clark",
           "workload": 8
         },
-        "C031": {
-          "course_id": "C031",
-          "name": "Colloquium 130",
-          "category": "seminar",
-          "difficulty": 3,
-          "credits": 2,
-          "price": 308,
-          "teacher": "Peter Young",
+        "C026": {
+          "course_id": "C026",
+          "name": "Systems 125",
+          "category": "cs",
+          "difficulty": 1,
+          "credits": 3,
+          "price": 330,
+          "teacher": "Noah Walker",
+          "workload": 6
+        },
+        "C014": {
+          "course_id": "C014",
+          "name": "Workshop 113",
+          "category": "lab",
+          "difficulty": 1,
+          "credits": 3,
+          "price": 463,
+          "teacher": "Jack Martin",
+          "workload": 2
+        },
+        "C002": {
+          "course_id": "C002",
+          "name": "AI 101",
+          "category": "cs",
+          "difficulty": 5,
+          "credits": 4,
+          "price": 265,
+          "teacher": "Ivy Thomas",
           "workload": 5
         },
-        "C019": {
-          "course_id": "C019",
-          "name": "Writing 118",
-          "category": "elective",
-          "difficulty": 4,
-          "credits": 3,
-          "price": 108,
-          "teacher": "Alice Johnson",
+        "C039": {
+          "course_id": "C039",
+          "name": "Calculus 138",
+          "category": "math",
+          "difficulty": 2,
+          "credits": 1,
+          "price": 371,
+          "teacher": "Carol Davis",
+          "workload": 3
+        },
+        "C033": {
+          "course_id": "C033",
+          "name": "Practice 132",
+          "category": "core",
+          "difficulty": 2,
+          "credits": 4,
+          "price": 239,
+          "teacher": "Peter Young",
           "workload": 4
         },
-        "C012": {
-          "course_id": "C012",
-          "name": "Algebra 111",
-          "category": "math",
-          "difficulty": 4,
-          "credits": 3,
-          "price": 473,
-          "teacher": "Ivy Thomas",
-          "workload": 2
+        "C008": {
+          "course_id": "C008",
+          "name": "Design 107",
+          "category": "elective",
+          "difficulty": 2,
+          "credits": 4,
+          "price": 185,
+          "teacher": "Carol Davis",
+          "workload": 3
         },
         "C028": {
           "course_id": "C028",
@@ -29126,15 +29066,75 @@
           "teacher": "Ivy Thomas",
           "workload": 3
         },
-        "C040": {
-          "course_id": "C040",
-          "name": "Foundations 139",
-          "category": "core",
-          "difficulty": 1,
-          "credits": 2,
-          "price": 390,
-          "teacher": "Leo Harris",
+        "C018": {
+          "course_id": "C018",
+          "name": "AI 117",
+          "category": "cs",
+          "difficulty": 5,
+          "credits": 4,
+          "price": 418,
+          "teacher": "Noah Walker",
           "workload": 6
+        },
+        "C011": {
+          "course_id": "C011",
+          "name": "Geometry 110",
+          "category": "math",
+          "difficulty": 2,
+          "credits": 2,
+          "price": 131,
+          "teacher": "Carol Davis",
+          "workload": 3
+        },
+        "C029": {
+          "course_id": "C029",
+          "name": "Media 128",
+          "category": "elective",
+          "difficulty": 2,
+          "credits": 1,
+          "price": 297,
+          "teacher": "Alice Johnson",
+          "workload": 6
+        },
+        "C042": {
+          "course_id": "C042",
+          "name": "Analysis 141",
+          "category": "core",
+          "difficulty": 2,
+          "credits": 1,
+          "price": 106,
+          "teacher": "Daniel Lee",
+          "workload": 6
+        },
+        "C013": {
+          "course_id": "C013",
+          "name": "Business 112",
+          "category": "elective",
+          "difficulty": 5,
+          "credits": 4,
+          "price": 152,
+          "teacher": "Karen White",
+          "workload": 1
+        },
+        "C006": {
+          "course_id": "C006",
+          "name": "Topics 105",
+          "category": "seminar",
+          "difficulty": 4,
+          "credits": 3,
+          "price": 273,
+          "teacher": "Ivy Thomas",
+          "workload": 8
+        },
+        "C004": {
+          "course_id": "C004",
+          "name": "Optimization 103",
+          "category": "math",
+          "difficulty": 1,
+          "credits": 1,
+          "price": 280,
+          "teacher": "Mia Clark",
+          "workload": 2
         },
         "C043": {
           "course_id": "C043",

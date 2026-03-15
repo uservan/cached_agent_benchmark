@@ -1,9 +1,6 @@
 import random
 
-try:
-    from .domains import DOMAIN_SPECS
-except ImportError:
-    from domains import DOMAIN_SPECS
+from data_generation.domains import DOMAIN_SPECS
 
 
 def get_rule_candidates(item, rule):

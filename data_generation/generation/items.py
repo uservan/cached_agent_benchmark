@@ -1,9 +1,6 @@
 import random
 
-try:
-    from .domains import DOMAIN_BUILDERS, DOMAIN_SPECS
-except ImportError:
-    from domains import DOMAIN_BUILDERS, DOMAIN_SPECS
+from data_generation.domains import DOMAIN_BUILDERS, DOMAIN_SPECS
 
 
 def estimate_pool_size(total_cells, min_valid_options, max_valid_options):

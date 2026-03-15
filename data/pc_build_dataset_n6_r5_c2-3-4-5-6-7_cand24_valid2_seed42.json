@@ -16,65 +16,15 @@
         "same_category_max": 4
       },
       "item_pool": {
-        "PC004": {
-          "component_id": "PC004",
-          "name": "Creator GPU 103",
-          "category": "gpu",
-          "price": 501,
-          "performance": 67,
-          "power": 321,
-          "brand": "PixelWare",
-          "compatibility": 60
-        },
-        "PC007": {
-          "component_id": "PC007",
-          "name": "Memory Kit 106",
-          "category": "ram",
-          "price": 990,
-          "performance": 78,
-          "power": 83,
-          "brand": "QuantumEdge",
-          "compatibility": 65
-        },
-        "PC015": {
-          "component_id": "PC015",
-          "name": "Silent Cooler 114",
+        "PC012": {
+          "component_id": "PC012",
+          "name": "Liquid Cooler 111",
           "category": "cooling",
-          "price": 485,
-          "performance": 93,
-          "power": 275,
-          "brand": "QuantumEdge",
-          "compatibility": 89
-        },
-        "PC010": {
-          "component_id": "PC010",
-          "name": "Low Latency RAM 109",
-          "category": "ram",
-          "price": 1351,
-          "performance": 56,
+          "price": 1143,
+          "performance": 41,
           "power": 103,
-          "brand": "IronGrid",
-          "compatibility": 82
-        },
-        "PC002": {
-          "component_id": "PC002",
-          "name": "Air Cooler 101",
-          "category": "cooling",
-          "price": 1435,
-          "performance": 79,
-          "power": 64,
-          "brand": "QuantumEdge",
-          "compatibility": 62
-        },
-        "PC011": {
-          "component_id": "PC011",
-          "name": "Gaming GPU 110",
-          "category": "gpu",
-          "price": 1487,
-          "performance": 97,
-          "power": 351,
-          "brand": "ApexCore",
-          "compatibility": 98
+          "brand": "TitanBit",
+          "compatibility": 84
         },
         "PC017": {
           "component_id": "PC017",
@@ -86,16 +36,6 @@
           "brand": "TitanBit",
           "compatibility": 65
         },
-        "PC012": {
-          "component_id": "PC012",
-          "name": "Liquid Cooler 111",
-          "category": "cooling",
-          "price": 1143,
-          "performance": 41,
-          "power": 103,
-          "brand": "TitanBit",
-          "compatibility": 84
-        },
         "PC014": {
           "component_id": "PC014",
           "name": "Performance CPU 113",
@@ -106,6 +46,26 @@
           "brand": "SkyChip",
           "compatibility": 96
         },
+        "PC007": {
+          "component_id": "PC007",
+          "name": "Memory Kit 106",
+          "category": "ram",
+          "price": 990,
+          "performance": 78,
+          "power": 83,
+          "brand": "QuantumEdge",
+          "compatibility": 65
+        },
+        "PC010": {
+          "component_id": "PC010",
+          "name": "Low Latency RAM 109",
+          "category": "ram",
+          "price": 1351,
+          "performance": 56,
+          "power": 103,
+          "brand": "IronGrid",
+          "compatibility": 82
+        },
         "PC003": {
           "component_id": "PC003",
           "name": "Processor 102",
@@ -115,6 +75,46 @@
           "power": 278,
           "brand": "NovaTech",
           "compatibility": 95
+        },
+        "PC015": {
+          "component_id": "PC015",
+          "name": "Silent Cooler 114",
+          "category": "cooling",
+          "price": 485,
+          "performance": 93,
+          "power": 275,
+          "brand": "QuantumEdge",
+          "compatibility": 89
+        },
+        "PC002": {
+          "component_id": "PC002",
+          "name": "Air Cooler 101",
+          "category": "cooling",
+          "price": 1435,
+          "performance": 79,
+          "power": 64,
+          "brand": "QuantumEdge",
+          "compatibility": 62
+        },
+        "PC004": {
+          "component_id": "PC004",
+          "name": "Creator GPU 103",
+          "category": "gpu",
+          "price": 501,
+          "performance": 67,
+          "power": 321,
+          "brand": "PixelWare",
+          "compatibility": 60
+        },
+        "PC011": {
+          "component_id": "PC011",
+          "name": "Gaming GPU 110",
+          "category": "gpu",
+          "price": 1487,
+          "performance": 97,
+          "power": 351,
+          "brand": "ApexCore",
+          "compatibility": 98
         },
         "PC018": {
           "component_id": "PC018",
@@ -2944,55 +2944,25 @@
         "same_category_max": 5
       },
       "item_pool": {
-        "PC019": {
-          "component_id": "PC019",
-          "name": "Processor 118",
-          "category": "cpu",
-          "price": 1451,
-          "performance": 45,
-          "power": 298,
-          "brand": "NovaTech",
+        "PC005": {
+          "component_id": "PC005",
+          "name": "Gaming GPU 104",
+          "category": "gpu",
+          "price": 396,
+          "performance": 27,
+          "power": 388,
+          "brand": "TitanBit",
           "compatibility": 71
         },
-        "PC004": {
-          "component_id": "PC004",
-          "name": "Compact Board 103",
-          "category": "motherboard",
-          "price": 577,
-          "performance": 72,
-          "power": 390,
-          "brand": "TitanBit",
-          "compatibility": 89
-        },
-        "PC007": {
-          "component_id": "PC007",
-          "name": "Gaming CPU 106",
+        "PC012": {
+          "component_id": "PC012",
+          "name": "Processor 111",
           "category": "cpu",
-          "price": 331,
-          "performance": 90,
-          "power": 138,
-          "brand": "ApexCore",
-          "compatibility": 69
-        },
-        "PC015": {
-          "component_id": "PC015",
-          "name": "Air Cooler 114",
-          "category": "cooling",
-          "price": 1388,
-          "performance": 93,
-          "power": 408,
-          "brand": "NovaTech",
-          "compatibility": 65
-        },
-        "PC013": {
-          "component_id": "PC013",
-          "name": "Compact Board 112",
-          "category": "motherboard",
-          "price": 775,
-          "performance": 44,
-          "power": 427,
-          "brand": "QuantumEdge",
-          "compatibility": 65
+          "price": 1123,
+          "performance": 29,
+          "power": 143,
+          "brand": "SkyChip",
+          "compatibility": 99
         },
         "PC001": {
           "component_id": "PC001",
@@ -3004,6 +2974,46 @@
           "brand": "NovaTech",
           "compatibility": 96
         },
+        "PC013": {
+          "component_id": "PC013",
+          "name": "Compact Board 112",
+          "category": "motherboard",
+          "price": 775,
+          "performance": 44,
+          "power": 427,
+          "brand": "QuantumEdge",
+          "compatibility": 65
+        },
+        "PC006": {
+          "component_id": "PC006",
+          "name": "Mainboard 105",
+          "category": "motherboard",
+          "price": 1123,
+          "performance": 14,
+          "power": 449,
+          "brand": "ApexCore",
+          "compatibility": 63
+        },
+        "PC014": {
+          "component_id": "PC014",
+          "name": "Low Latency RAM 113",
+          "category": "ram",
+          "price": 990,
+          "performance": 82,
+          "power": 144,
+          "brand": "SkyChip",
+          "compatibility": 79
+        },
+        "PC007": {
+          "component_id": "PC007",
+          "name": "Gaming CPU 106",
+          "category": "cpu",
+          "price": 331,
+          "performance": 90,
+          "power": 138,
+          "brand": "ApexCore",
+          "compatibility": 69
+        },
         "PC010": {
           "component_id": "PC010",
           "name": "Performance Board 109",
@@ -3013,6 +3023,36 @@
           "power": 291,
           "brand": "PixelWare",
           "compatibility": 94
+        },
+        "PC019": {
+          "component_id": "PC019",
+          "name": "Processor 118",
+          "category": "cpu",
+          "price": 1451,
+          "performance": 45,
+          "power": 298,
+          "brand": "NovaTech",
+          "compatibility": 71
+        },
+        "PC003": {
+          "component_id": "PC003",
+          "name": "Render GPU 102",
+          "category": "gpu",
+          "price": 725,
+          "performance": 39,
+          "power": 214,
+          "brand": "SkyChip",
+          "compatibility": 91
+        },
+        "PC015": {
+          "component_id": "PC015",
+          "name": "Air Cooler 114",
+          "category": "cooling",
+          "price": 1388,
+          "performance": 93,
+          "power": 408,
+          "brand": "NovaTech",
+          "compatibility": 65
         },
         "PC008": {
           "component_id": "PC008",
@@ -3034,6 +3074,16 @@
           "brand": "QuantumEdge",
           "compatibility": 78
         },
+        "PC004": {
+          "component_id": "PC004",
+          "name": "Compact Board 103",
+          "category": "motherboard",
+          "price": 577,
+          "performance": 72,
+          "power": 390,
+          "brand": "TitanBit",
+          "compatibility": 89
+        },
         "PC011": {
           "component_id": "PC011",
           "name": "Memory Kit 110",
@@ -3043,56 +3093,6 @@
           "power": 365,
           "brand": "QuantumEdge",
           "compatibility": 71
-        },
-        "PC005": {
-          "component_id": "PC005",
-          "name": "Gaming GPU 104",
-          "category": "gpu",
-          "price": 396,
-          "performance": 27,
-          "power": 388,
-          "brand": "TitanBit",
-          "compatibility": 71
-        },
-        "PC006": {
-          "component_id": "PC006",
-          "name": "Mainboard 105",
-          "category": "motherboard",
-          "price": 1123,
-          "performance": 14,
-          "power": 449,
-          "brand": "ApexCore",
-          "compatibility": 63
-        },
-        "PC012": {
-          "component_id": "PC012",
-          "name": "Processor 111",
-          "category": "cpu",
-          "price": 1123,
-          "performance": 29,
-          "power": 143,
-          "brand": "SkyChip",
-          "compatibility": 99
-        },
-        "PC014": {
-          "component_id": "PC014",
-          "name": "Low Latency RAM 113",
-          "category": "ram",
-          "price": 990,
-          "performance": 82,
-          "power": 144,
-          "brand": "SkyChip",
-          "compatibility": 79
-        },
-        "PC003": {
-          "component_id": "PC003",
-          "name": "Render GPU 102",
-          "category": "gpu",
-          "price": 725,
-          "performance": 39,
-          "power": 214,
-          "brand": "SkyChip",
-          "compatibility": 91
         },
         "PC023": {
           "component_id": "PC023",
@@ -7293,25 +7293,125 @@
         "same_category_max": 6
       },
       "item_pool": {
-        "PC025": {
-          "component_id": "PC025",
-          "name": "Liquid Cooler 124",
-          "category": "cooling",
-          "price": 455,
-          "performance": 72,
-          "power": 113,
-          "brand": "ApexCore",
-          "compatibility": 88
+        "PC006": {
+          "component_id": "PC006",
+          "name": "Archive Drive 105",
+          "category": "storage",
+          "price": 1084,
+          "performance": 88,
+          "power": 396,
+          "brand": "QuantumEdge",
+          "compatibility": 69
         },
-        "PC009": {
-          "component_id": "PC009",
-          "name": "Low Latency RAM 108",
+        "PC003": {
+          "component_id": "PC003",
+          "name": "DDR Module 102",
           "category": "ram",
-          "price": 630,
-          "performance": 58,
-          "power": 307,
-          "brand": "TitanBit",
-          "compatibility": 64
+          "price": 454,
+          "performance": 41,
+          "power": 237,
+          "brand": "VoltForge",
+          "compatibility": 98
+        },
+        "PC023": {
+          "component_id": "PC023",
+          "name": "SSD Drive 122",
+          "category": "storage",
+          "price": 248,
+          "performance": 18,
+          "power": 416,
+          "brand": "QuantumEdge",
+          "compatibility": 93
+        },
+        "PC013": {
+          "component_id": "PC013",
+          "name": "Processor 112",
+          "category": "cpu",
+          "price": 838,
+          "performance": 82,
+          "power": 103,
+          "brand": "SkyChip",
+          "compatibility": 87
+        },
+        "PC010": {
+          "component_id": "PC010",
+          "name": "DDR Module 109",
+          "category": "ram",
+          "price": 1011,
+          "performance": 35,
+          "power": 99,
+          "brand": "SkyChip",
+          "compatibility": 60
+        },
+        "PC008": {
+          "component_id": "PC008",
+          "name": "ATX Board 107",
+          "category": "motherboard",
+          "price": 1182,
+          "performance": 32,
+          "power": 151,
+          "brand": "QuantumEdge",
+          "compatibility": 89
+        },
+        "PC004": {
+          "component_id": "PC004",
+          "name": "Gaming GPU 103",
+          "category": "gpu",
+          "price": 634,
+          "performance": 83,
+          "power": 249,
+          "brand": "SkyChip",
+          "compatibility": 77
+        },
+        "PC005": {
+          "component_id": "PC005",
+          "name": "SSD Drive 104",
+          "category": "storage",
+          "price": 786,
+          "performance": 60,
+          "power": 213,
+          "brand": "VoltForge",
+          "compatibility": 90
+        },
+        "PC017": {
+          "component_id": "PC017",
+          "name": "Performance Board 116",
+          "category": "motherboard",
+          "price": 1444,
+          "performance": 28,
+          "power": 150,
+          "brand": "SkyChip",
+          "compatibility": 98
+        },
+        "PC016": {
+          "component_id": "PC016",
+          "name": "Memory Kit 115",
+          "category": "ram",
+          "price": 1478,
+          "performance": 95,
+          "power": 350,
+          "brand": "VoltForge",
+          "compatibility": 76
+        },
+        "PC014": {
+          "component_id": "PC014",
+          "name": "Performance RAM 113",
+          "category": "ram",
+          "price": 1093,
+          "performance": 100,
+          "power": 270,
+          "brand": "IronGrid",
+          "compatibility": 63
+        },
+        "PC018": {
+          "component_id": "PC018",
+          "name": "ATX Board 117",
+          "category": "motherboard",
+          "price": 75,
+          "performance": 24,
+          "power": 414,
+          "brand": "ApexCore",
+          "compatibility": 84
         },
         "PC002": {
           "component_id": "PC002",
@@ -7333,25 +7433,15 @@
           "brand": "QuantumEdge",
           "compatibility": 83
         },
-        "PC023": {
-          "component_id": "PC023",
-          "name": "SSD Drive 122",
-          "category": "storage",
-          "price": 248,
-          "performance": 18,
-          "power": 416,
-          "brand": "QuantumEdge",
-          "compatibility": 93
-        },
-        "PC006": {
-          "component_id": "PC006",
-          "name": "Archive Drive 105",
-          "category": "storage",
-          "price": 1084,
-          "performance": 88,
-          "power": 396,
-          "brand": "QuantumEdge",
-          "compatibility": 69
+        "PC025": {
+          "component_id": "PC025",
+          "name": "Liquid Cooler 124",
+          "category": "cooling",
+          "price": 455,
+          "performance": 72,
+          "power": 113,
+          "brand": "ApexCore",
+          "compatibility": 88
         },
         "PC024": {
           "component_id": "PC024",
@@ -7363,75 +7453,15 @@
           "brand": "IronGrid",
           "compatibility": 71
         },
-        "PC018": {
-          "component_id": "PC018",
-          "name": "ATX Board 117",
-          "category": "motherboard",
-          "price": 75,
-          "performance": 24,
-          "power": 414,
-          "brand": "ApexCore",
-          "compatibility": 84
-        },
-        "PC019": {
-          "component_id": "PC019",
-          "name": "SSD Drive 118",
-          "category": "storage",
-          "price": 1111,
-          "performance": 34,
-          "power": 236,
-          "brand": "VoltForge",
-          "compatibility": 87
-        },
-        "PC005": {
-          "component_id": "PC005",
-          "name": "SSD Drive 104",
-          "category": "storage",
-          "price": 786,
-          "performance": 60,
-          "power": 213,
-          "brand": "VoltForge",
-          "compatibility": 90
-        },
-        "PC014": {
-          "component_id": "PC014",
-          "name": "Performance RAM 113",
+        "PC009": {
+          "component_id": "PC009",
+          "name": "Low Latency RAM 108",
           "category": "ram",
-          "price": 1093,
-          "performance": 100,
-          "power": 270,
-          "brand": "IronGrid",
-          "compatibility": 63
-        },
-        "PC016": {
-          "component_id": "PC016",
-          "name": "Memory Kit 115",
-          "category": "ram",
-          "price": 1478,
-          "performance": 95,
-          "power": 350,
-          "brand": "VoltForge",
-          "compatibility": 76
-        },
-        "PC004": {
-          "component_id": "PC004",
-          "name": "Gaming GPU 103",
-          "category": "gpu",
-          "price": 634,
-          "performance": 83,
-          "power": 249,
-          "brand": "SkyChip",
-          "compatibility": 77
-        },
-        "PC026": {
-          "component_id": "PC026",
-          "name": "ATX Board 125",
-          "category": "motherboard",
-          "price": 430,
-          "performance": 35,
-          "power": 50,
-          "brand": "VoltForge",
-          "compatibility": 72
+          "price": 630,
+          "performance": 58,
+          "power": 307,
+          "brand": "TitanBit",
+          "compatibility": 64
         },
         "PC001": {
           "component_id": "PC001",
@@ -7443,55 +7473,25 @@
           "brand": "VoltForge",
           "compatibility": 65
         },
-        "PC010": {
-          "component_id": "PC010",
-          "name": "DDR Module 109",
-          "category": "ram",
-          "price": 1011,
+        "PC026": {
+          "component_id": "PC026",
+          "name": "ATX Board 125",
+          "category": "motherboard",
+          "price": 430,
           "performance": 35,
-          "power": 99,
-          "brand": "SkyChip",
-          "compatibility": 60
-        },
-        "PC013": {
-          "component_id": "PC013",
-          "name": "Processor 112",
-          "category": "cpu",
-          "price": 838,
-          "performance": 82,
-          "power": 103,
-          "brand": "SkyChip",
-          "compatibility": 87
-        },
-        "PC008": {
-          "component_id": "PC008",
-          "name": "ATX Board 107",
-          "category": "motherboard",
-          "price": 1182,
-          "performance": 32,
-          "power": 151,
-          "brand": "QuantumEdge",
-          "compatibility": 89
-        },
-        "PC017": {
-          "component_id": "PC017",
-          "name": "Performance Board 116",
-          "category": "motherboard",
-          "price": 1444,
-          "performance": 28,
-          "power": 150,
-          "brand": "SkyChip",
-          "compatibility": 98
-        },
-        "PC003": {
-          "component_id": "PC003",
-          "name": "DDR Module 102",
-          "category": "ram",
-          "price": 454,
-          "performance": 41,
-          "power": 237,
+          "power": 50,
           "brand": "VoltForge",
-          "compatibility": 98
+          "compatibility": 72
+        },
+        "PC019": {
+          "component_id": "PC019",
+          "name": "SSD Drive 118",
+          "category": "storage",
+          "price": 1111,
+          "performance": 34,
+          "power": 236,
+          "brand": "VoltForge",
+          "compatibility": 87
         },
         "PC028": {
           "component_id": "PC028",
@@ -13063,45 +13063,15 @@
         "same_category_max": 14
       },
       "item_pool": {
-        "PC028": {
-          "component_id": "PC028",
-          "name": "Air Cooler 127",
-          "category": "cooling",
-          "price": 1162,
-          "performance": 26,
-          "power": 68,
-          "brand": "SkyChip",
-          "compatibility": 89
-        },
-        "PC032": {
-          "component_id": "PC032",
-          "name": "Silent Cooler 131",
-          "category": "cooling",
-          "price": 1126,
-          "performance": 86,
-          "power": 419,
-          "brand": "VoltForge",
-          "compatibility": 96
-        },
-        "PC009": {
-          "component_id": "PC009",
-          "name": "NVMe Drive 108",
-          "category": "storage",
-          "price": 676,
-          "performance": 61,
-          "power": 340,
-          "brand": "IronGrid",
-          "compatibility": 76
-        },
-        "PC011": {
-          "component_id": "PC011",
-          "name": "Compute Chip 110",
+        "PC006": {
+          "component_id": "PC006",
+          "name": "Processor 105",
           "category": "cpu",
-          "price": 884,
-          "performance": 15,
-          "power": 296,
-          "brand": "QuantumEdge",
-          "compatibility": 98
+          "price": 1271,
+          "performance": 36,
+          "power": 398,
+          "brand": "PixelWare",
+          "compatibility": 83
         },
         "PC023": {
           "component_id": "PC023",
@@ -13113,74 +13083,14 @@
           "brand": "TitanBit",
           "compatibility": 82
         },
-        "PC006": {
-          "component_id": "PC006",
-          "name": "Processor 105",
+        "PC029": {
+          "component_id": "PC029",
+          "name": "Processor 128",
           "category": "cpu",
-          "price": 1271,
-          "performance": 36,
-          "power": 398,
-          "brand": "PixelWare",
-          "compatibility": 83
-        },
-        "PC030": {
-          "component_id": "PC030",
-          "name": "Archive Drive 129",
-          "category": "storage",
-          "price": 1183,
-          "performance": 20,
-          "power": 278,
-          "brand": "VoltForge",
-          "compatibility": 85
-        },
-        "PC024": {
-          "component_id": "PC024",
-          "name": "Creator GPU 123",
-          "category": "gpu",
-          "price": 975,
-          "performance": 37,
-          "power": 252,
-          "brand": "PixelWare",
-          "compatibility": 94
-        },
-        "PC018": {
-          "component_id": "PC018",
-          "name": "ARGB Cooler 117",
-          "category": "cooling",
-          "price": 628,
-          "performance": 88,
-          "power": 73,
-          "brand": "SkyChip",
-          "compatibility": 74
-        },
-        "PC019": {
-          "component_id": "PC019",
-          "name": "DDR Module 118",
-          "category": "ram",
-          "price": 1400,
-          "performance": 48,
-          "power": 188,
-          "brand": "TitanBit",
-          "compatibility": 97
-        },
-        "PC005": {
-          "component_id": "PC005",
-          "name": "Graphics Card 104",
-          "category": "gpu",
-          "price": 312,
-          "performance": 76,
-          "power": 99,
-          "brand": "VoltForge",
-          "compatibility": 90
-        },
-        "PC014": {
-          "component_id": "PC014",
-          "name": "Performance Board 113",
-          "category": "motherboard",
-          "price": 325,
-          "performance": 87,
-          "power": 434,
-          "brand": "NovaTech",
+          "price": 1177,
+          "performance": 47,
+          "power": 84,
+          "brand": "IronGrid",
           "compatibility": 79
         },
         "PC012": {
@@ -13193,35 +13103,45 @@
           "brand": "IronGrid",
           "compatibility": 74
         },
-        "PC016": {
-          "component_id": "PC016",
-          "name": "Air Cooler 115",
-          "category": "cooling",
-          "price": 1028,
-          "performance": 73,
-          "power": 403,
-          "brand": "SkyChip",
-          "compatibility": 68
-        },
-        "PC004": {
-          "component_id": "PC004",
-          "name": "Performance CPU 103",
+        "PC013": {
+          "component_id": "PC013",
+          "name": "Gaming CPU 112",
           "category": "cpu",
-          "price": 1375,
-          "performance": 51,
-          "power": 43,
-          "brand": "VoltForge",
-          "compatibility": 75
-        },
-        "PC026": {
-          "component_id": "PC026",
-          "name": "Gaming GPU 125",
-          "category": "gpu",
-          "price": 748,
-          "performance": 72,
-          "power": 415,
+          "price": 185,
+          "performance": 24,
+          "power": 263,
           "brand": "TitanBit",
-          "compatibility": 66
+          "compatibility": 86
+        },
+        "PC032": {
+          "component_id": "PC032",
+          "name": "Silent Cooler 131",
+          "category": "cooling",
+          "price": 1126,
+          "performance": 86,
+          "power": 419,
+          "brand": "VoltForge",
+          "compatibility": 96
+        },
+        "PC007": {
+          "component_id": "PC007",
+          "name": "Performance Board 106",
+          "category": "motherboard",
+          "price": 372,
+          "performance": 63,
+          "power": 108,
+          "brand": "VoltForge",
+          "compatibility": 93
+        },
+        "PC030": {
+          "component_id": "PC030",
+          "name": "Archive Drive 129",
+          "category": "storage",
+          "price": 1183,
+          "performance": 20,
+          "power": 278,
+          "brand": "VoltForge",
+          "compatibility": 85
         },
         "PC015": {
           "component_id": "PC015",
@@ -13233,24 +13153,64 @@
           "brand": "IronGrid",
           "compatibility": 99
         },
-        "PC001": {
-          "component_id": "PC001",
-          "name": "SSD Drive 100",
-          "category": "storage",
-          "price": 64,
-          "performance": 58,
-          "power": 431,
-          "brand": "QuantumEdge",
-          "compatibility": 85
+        "PC008": {
+          "component_id": "PC008",
+          "name": "Render GPU 107",
+          "category": "gpu",
+          "price": 797,
+          "performance": 24,
+          "power": 422,
+          "brand": "VoltForge",
+          "compatibility": 61
         },
-        "PC029": {
-          "component_id": "PC029",
-          "name": "Processor 128",
+        "PC004": {
+          "component_id": "PC004",
+          "name": "Performance CPU 103",
           "category": "cpu",
-          "price": 1177,
-          "performance": 47,
-          "power": 84,
-          "brand": "IronGrid",
+          "price": 1375,
+          "performance": 51,
+          "power": 43,
+          "brand": "VoltForge",
+          "compatibility": 75
+        },
+        "PC005": {
+          "component_id": "PC005",
+          "name": "Graphics Card 104",
+          "category": "gpu",
+          "price": 312,
+          "performance": 76,
+          "power": 99,
+          "brand": "VoltForge",
+          "compatibility": 90
+        },
+        "PC017": {
+          "component_id": "PC017",
+          "name": "Render GPU 116",
+          "category": "gpu",
+          "price": 342,
+          "performance": 38,
+          "power": 357,
+          "brand": "ApexCore",
+          "compatibility": 66
+        },
+        "PC016": {
+          "component_id": "PC016",
+          "name": "Air Cooler 115",
+          "category": "cooling",
+          "price": 1028,
+          "performance": 73,
+          "power": 403,
+          "brand": "SkyChip",
+          "compatibility": 68
+        },
+        "PC014": {
+          "component_id": "PC014",
+          "name": "Performance Board 113",
+          "category": "motherboard",
+          "price": 325,
+          "performance": 87,
+          "power": 434,
+          "brand": "NovaTech",
           "compatibility": 79
         },
         "PC022": {
@@ -13263,6 +13223,56 @@
           "brand": "SkyChip",
           "compatibility": 70
         },
+        "PC018": {
+          "component_id": "PC018",
+          "name": "ARGB Cooler 117",
+          "category": "cooling",
+          "price": 628,
+          "performance": 88,
+          "power": 73,
+          "brand": "SkyChip",
+          "compatibility": 74
+        },
+        "PC011": {
+          "component_id": "PC011",
+          "name": "Compute Chip 110",
+          "category": "cpu",
+          "price": 884,
+          "performance": 15,
+          "power": 296,
+          "brand": "QuantumEdge",
+          "compatibility": 98
+        },
+        "PC024": {
+          "component_id": "PC024",
+          "name": "Creator GPU 123",
+          "category": "gpu",
+          "price": 975,
+          "performance": 37,
+          "power": 252,
+          "brand": "PixelWare",
+          "compatibility": 94
+        },
+        "PC001": {
+          "component_id": "PC001",
+          "name": "SSD Drive 100",
+          "category": "storage",
+          "price": 64,
+          "performance": 58,
+          "power": 431,
+          "brand": "QuantumEdge",
+          "compatibility": 85
+        },
+        "PC009": {
+          "component_id": "PC009",
+          "name": "NVMe Drive 108",
+          "category": "storage",
+          "price": 676,
+          "performance": 61,
+          "power": 340,
+          "brand": "IronGrid",
+          "compatibility": 76
+        },
         "PC027": {
           "component_id": "PC027",
           "name": "Silent Cooler 126",
@@ -13273,45 +13283,35 @@
           "brand": "IronGrid",
           "compatibility": 87
         },
-        "PC007": {
-          "component_id": "PC007",
-          "name": "Performance Board 106",
-          "category": "motherboard",
-          "price": 372,
-          "performance": 63,
-          "power": 108,
-          "brand": "VoltForge",
-          "compatibility": 93
-        },
-        "PC008": {
-          "component_id": "PC008",
-          "name": "Render GPU 107",
+        "PC026": {
+          "component_id": "PC026",
+          "name": "Gaming GPU 125",
           "category": "gpu",
-          "price": 797,
-          "performance": 24,
-          "power": 422,
-          "brand": "VoltForge",
-          "compatibility": 61
-        },
-        "PC017": {
-          "component_id": "PC017",
-          "name": "Render GPU 116",
-          "category": "gpu",
-          "price": 342,
-          "performance": 38,
-          "power": 357,
-          "brand": "ApexCore",
+          "price": 748,
+          "performance": 72,
+          "power": 415,
+          "brand": "TitanBit",
           "compatibility": 66
         },
-        "PC013": {
-          "component_id": "PC013",
-          "name": "Gaming CPU 112",
-          "category": "cpu",
-          "price": 185,
-          "performance": 24,
-          "power": 263,
+        "PC019": {
+          "component_id": "PC019",
+          "name": "DDR Module 118",
+          "category": "ram",
+          "price": 1400,
+          "performance": 48,
+          "power": 188,
           "brand": "TitanBit",
-          "compatibility": 86
+          "compatibility": 97
+        },
+        "PC028": {
+          "component_id": "PC028",
+          "name": "Air Cooler 127",
+          "category": "cooling",
+          "price": 1162,
+          "performance": 26,
+          "power": 68,
+          "brand": "SkyChip",
+          "compatibility": 89
         },
         "PC033": {
           "component_id": "PC033",
@@ -20264,55 +20264,15 @@
         "same_category_max": 30
       },
       "item_pool": {
-        "PC028": {
-          "component_id": "PC028",
-          "name": "Air Cooler 127",
-          "category": "cooling",
-          "price": 1419,
-          "performance": 50,
-          "power": 119,
-          "brand": "VoltForge",
-          "compatibility": 85
-        },
-        "PC035": {
-          "component_id": "PC035",
-          "name": "Archive Drive 134",
-          "category": "storage",
-          "price": 336,
-          "performance": 66,
-          "power": 60,
-          "brand": "SkyChip",
-          "compatibility": 82
-        },
-        "PC032": {
-          "component_id": "PC032",
-          "name": "Memory Kit 131",
-          "category": "ram",
-          "price": 1078,
-          "performance": 25,
-          "power": 41,
-          "brand": "PixelWare",
-          "compatibility": 80
-        },
-        "PC011": {
-          "component_id": "PC011",
-          "name": "Graphics Card 110",
-          "category": "gpu",
-          "price": 1138,
-          "performance": 39,
-          "power": 446,
-          "brand": "IronGrid",
-          "compatibility": 70
-        },
-        "PC023": {
-          "component_id": "PC023",
-          "name": "Processor 122",
-          "category": "cpu",
-          "price": 1233,
+        "PC036": {
+          "component_id": "PC036",
+          "name": "Performance Board 135",
+          "category": "motherboard",
+          "price": 1213,
           "performance": 41,
-          "power": 332,
-          "brand": "TitanBit",
-          "compatibility": 94
+          "power": 127,
+          "brand": "IronGrid",
+          "compatibility": 75
         },
         "PC006": {
           "component_id": "PC006",
@@ -20324,24 +20284,64 @@
           "brand": "QuantumEdge",
           "compatibility": 97
         },
-        "PC030": {
-          "component_id": "PC030",
-          "name": "Render GPU 129",
-          "category": "gpu",
-          "price": 1224,
-          "performance": 70,
-          "power": 177,
-          "brand": "VoltForge",
-          "compatibility": 80
-        },
-        "PC024": {
-          "component_id": "PC024",
-          "name": "Performance CPU 123",
-          "category": "cpu",
-          "price": 739,
-          "performance": 83,
-          "power": 25,
+        "PC031": {
+          "component_id": "PC031",
+          "name": "Memory Kit 130",
+          "category": "ram",
+          "price": 548,
+          "performance": 64,
+          "power": 41,
           "brand": "NovaTech",
+          "compatibility": 93
+        },
+        "PC003": {
+          "component_id": "PC003",
+          "name": "Performance Storage 102",
+          "category": "storage",
+          "price": 1403,
+          "performance": 37,
+          "power": 187,
+          "brand": "SkyChip",
+          "compatibility": 90
+        },
+        "PC023": {
+          "component_id": "PC023",
+          "name": "Processor 122",
+          "category": "cpu",
+          "price": 1233,
+          "performance": 41,
+          "power": 332,
+          "brand": "TitanBit",
+          "compatibility": 94
+        },
+        "PC029": {
+          "component_id": "PC029",
+          "name": "Processor 128",
+          "category": "cpu",
+          "price": 299,
+          "performance": 83,
+          "power": 143,
+          "brand": "ApexCore",
+          "compatibility": 60
+        },
+        "PC012": {
+          "component_id": "PC012",
+          "name": "Processor 111",
+          "category": "cpu",
+          "price": 1156,
+          "performance": 86,
+          "power": 229,
+          "brand": "PixelWare",
+          "compatibility": 78
+        },
+        "PC013": {
+          "component_id": "PC013",
+          "name": "Gaming GPU 112",
+          "category": "gpu",
+          "price": 848,
+          "performance": 45,
+          "power": 396,
+          "brand": "PixelWare",
           "compatibility": 99
         },
         "PC033": {
@@ -20354,145 +20354,15 @@
           "brand": "TitanBit",
           "compatibility": 73
         },
-        "PC019": {
-          "component_id": "PC019",
-          "name": "Performance CPU 118",
-          "category": "cpu",
-          "price": 1239,
-          "performance": 77,
-          "power": 173,
+        "PC032": {
+          "component_id": "PC032",
+          "name": "Memory Kit 131",
+          "category": "ram",
+          "price": 1078,
+          "performance": 25,
+          "power": 41,
           "brand": "PixelWare",
-          "compatibility": 81
-        },
-        "PC036": {
-          "component_id": "PC036",
-          "name": "Performance Board 135",
-          "category": "motherboard",
-          "price": 1213,
-          "performance": 41,
-          "power": 127,
-          "brand": "IronGrid",
-          "compatibility": 75
-        },
-        "PC005": {
-          "component_id": "PC005",
-          "name": "Archive Drive 104",
-          "category": "storage",
-          "price": 435,
-          "performance": 47,
-          "power": 162,
-          "brand": "QuantumEdge",
-          "compatibility": 91
-        },
-        "PC012": {
-          "component_id": "PC012",
-          "name": "Processor 111",
-          "category": "cpu",
-          "price": 1156,
-          "performance": 86,
-          "power": 229,
-          "brand": "PixelWare",
-          "compatibility": 78
-        },
-        "PC016": {
-          "component_id": "PC016",
-          "name": "Graphics Card 115",
-          "category": "gpu",
-          "price": 1263,
-          "performance": 16,
-          "power": 111,
-          "brand": "VoltForge",
-          "compatibility": 64
-        },
-        "PC003": {
-          "component_id": "PC003",
-          "name": "Performance Storage 102",
-          "category": "storage",
-          "price": 1403,
-          "performance": 37,
-          "power": 187,
-          "brand": "SkyChip",
-          "compatibility": 90
-        },
-        "PC004": {
-          "component_id": "PC004",
-          "name": "Mainboard 103",
-          "category": "motherboard",
-          "price": 257,
-          "performance": 75,
-          "power": 309,
-          "brand": "ApexCore",
-          "compatibility": 82
-        },
-        "PC026": {
-          "component_id": "PC026",
-          "name": "DDR Module 125",
-          "category": "ram",
-          "price": 1197,
-          "performance": 64,
-          "power": 236,
-          "brand": "SkyChip",
-          "compatibility": 74
-        },
-        "PC015": {
-          "component_id": "PC015",
-          "name": "Low Latency RAM 114",
-          "category": "ram",
-          "price": 722,
-          "performance": 91,
-          "power": 383,
-          "brand": "IronGrid",
-          "compatibility": 93
-        },
-        "PC001": {
-          "component_id": "PC001",
-          "name": "Archive Drive 100",
-          "category": "storage",
-          "price": 452,
-          "performance": 11,
-          "power": 166,
-          "brand": "QuantumEdge",
-          "compatibility": 71
-        },
-        "PC029": {
-          "component_id": "PC029",
-          "name": "Processor 128",
-          "category": "cpu",
-          "price": 299,
-          "performance": 83,
-          "power": 143,
-          "brand": "ApexCore",
-          "compatibility": 60
-        },
-        "PC022": {
-          "component_id": "PC022",
-          "name": "Compute Chip 121",
-          "category": "cpu",
-          "price": 1131,
-          "performance": 74,
-          "power": 194,
-          "brand": "QuantumEdge",
-          "compatibility": 94
-        },
-        "PC027": {
-          "component_id": "PC027",
-          "name": "Memory Kit 126",
-          "category": "ram",
-          "price": 1336,
-          "performance": 94,
-          "power": 180,
-          "brand": "NovaTech",
-          "compatibility": 89
-        },
-        "PC010": {
-          "component_id": "PC010",
-          "name": "Processor 109",
-          "category": "cpu",
-          "price": 1140,
-          "performance": 86,
-          "power": 303,
-          "brand": "IronGrid",
-          "compatibility": 90
+          "compatibility": 80
         },
         "PC007": {
           "component_id": "PC007",
@@ -20504,25 +20374,35 @@
           "brand": "QuantumEdge",
           "compatibility": 68
         },
-        "PC037": {
-          "component_id": "PC037",
-          "name": "Mainboard 136",
-          "category": "motherboard",
-          "price": 1492,
-          "performance": 10,
-          "power": 340,
-          "brand": "IronGrid",
-          "compatibility": 94
+        "PC030": {
+          "component_id": "PC030",
+          "name": "Render GPU 129",
+          "category": "gpu",
+          "price": 1224,
+          "performance": 70,
+          "power": 177,
+          "brand": "VoltForge",
+          "compatibility": 80
         },
-        "PC021": {
-          "component_id": "PC021",
-          "name": "SSD Drive 120",
-          "category": "storage",
-          "price": 219,
-          "performance": 33,
-          "power": 391,
-          "brand": "SkyChip",
-          "compatibility": 100
+        "PC010": {
+          "component_id": "PC010",
+          "name": "Processor 109",
+          "category": "cpu",
+          "price": 1140,
+          "performance": 86,
+          "power": 303,
+          "brand": "IronGrid",
+          "compatibility": 90
+        },
+        "PC015": {
+          "component_id": "PC015",
+          "name": "Low Latency RAM 114",
+          "category": "ram",
+          "price": 722,
+          "performance": 91,
+          "power": 383,
+          "brand": "IronGrid",
+          "compatibility": 93
         },
         "PC008": {
           "component_id": "PC008",
@@ -20534,6 +20414,36 @@
           "brand": "QuantumEdge",
           "compatibility": 76
         },
+        "PC035": {
+          "component_id": "PC035",
+          "name": "Archive Drive 134",
+          "category": "storage",
+          "price": 336,
+          "performance": 66,
+          "power": 60,
+          "brand": "SkyChip",
+          "compatibility": 82
+        },
+        "PC004": {
+          "component_id": "PC004",
+          "name": "Mainboard 103",
+          "category": "motherboard",
+          "price": 257,
+          "performance": 75,
+          "power": 309,
+          "brand": "ApexCore",
+          "compatibility": 82
+        },
+        "PC005": {
+          "component_id": "PC005",
+          "name": "Archive Drive 104",
+          "category": "storage",
+          "price": 435,
+          "performance": 47,
+          "power": 162,
+          "brand": "QuantumEdge",
+          "compatibility": 91
+        },
         "PC017": {
           "component_id": "PC017",
           "name": "Archive Drive 116",
@@ -20544,25 +20454,115 @@
           "brand": "ApexCore",
           "compatibility": 68
         },
-        "PC031": {
-          "component_id": "PC031",
-          "name": "Memory Kit 130",
-          "category": "ram",
-          "price": 548,
-          "performance": 64,
-          "power": 41,
-          "brand": "NovaTech",
-          "compatibility": 93
-        },
-        "PC013": {
-          "component_id": "PC013",
-          "name": "Gaming GPU 112",
+        "PC016": {
+          "component_id": "PC016",
+          "name": "Graphics Card 115",
           "category": "gpu",
-          "price": 848,
-          "performance": 45,
-          "power": 396,
-          "brand": "PixelWare",
+          "price": 1263,
+          "performance": 16,
+          "power": 111,
+          "brand": "VoltForge",
+          "compatibility": 64
+        },
+        "PC022": {
+          "component_id": "PC022",
+          "name": "Compute Chip 121",
+          "category": "cpu",
+          "price": 1131,
+          "performance": 74,
+          "power": 194,
+          "brand": "QuantumEdge",
+          "compatibility": 94
+        },
+        "PC011": {
+          "component_id": "PC011",
+          "name": "Graphics Card 110",
+          "category": "gpu",
+          "price": 1138,
+          "performance": 39,
+          "power": 446,
+          "brand": "IronGrid",
+          "compatibility": 70
+        },
+        "PC024": {
+          "component_id": "PC024",
+          "name": "Performance CPU 123",
+          "category": "cpu",
+          "price": 739,
+          "performance": 83,
+          "power": 25,
+          "brand": "NovaTech",
           "compatibility": 99
+        },
+        "PC037": {
+          "component_id": "PC037",
+          "name": "Mainboard 136",
+          "category": "motherboard",
+          "price": 1492,
+          "performance": 10,
+          "power": 340,
+          "brand": "IronGrid",
+          "compatibility": 94
+        },
+        "PC001": {
+          "component_id": "PC001",
+          "name": "Archive Drive 100",
+          "category": "storage",
+          "price": 452,
+          "performance": 11,
+          "power": 166,
+          "brand": "QuantumEdge",
+          "compatibility": 71
+        },
+        "PC027": {
+          "component_id": "PC027",
+          "name": "Memory Kit 126",
+          "category": "ram",
+          "price": 1336,
+          "performance": 94,
+          "power": 180,
+          "brand": "NovaTech",
+          "compatibility": 89
+        },
+        "PC021": {
+          "component_id": "PC021",
+          "name": "SSD Drive 120",
+          "category": "storage",
+          "price": 219,
+          "performance": 33,
+          "power": 391,
+          "brand": "SkyChip",
+          "compatibility": 100
+        },
+        "PC026": {
+          "component_id": "PC026",
+          "name": "DDR Module 125",
+          "category": "ram",
+          "price": 1197,
+          "performance": 64,
+          "power": 236,
+          "brand": "SkyChip",
+          "compatibility": 74
+        },
+        "PC019": {
+          "component_id": "PC019",
+          "name": "Performance CPU 118",
+          "category": "cpu",
+          "price": 1239,
+          "performance": 77,
+          "power": 173,
+          "brand": "PixelWare",
+          "compatibility": 81
+        },
+        "PC028": {
+          "component_id": "PC028",
+          "name": "Air Cooler 127",
+          "category": "cooling",
+          "price": 1419,
+          "performance": 50,
+          "power": 119,
+          "brand": "VoltForge",
+          "compatibility": 85
         },
         "PC038": {
           "component_id": "PC038",
@@ -28866,25 +28866,165 @@
         "same_category_max": 8
       },
       "item_pool": {
-        "PC025": {
-          "component_id": "PC025",
-          "name": "Liquid Cooler 124",
-          "category": "cooling",
-          "price": 1065,
-          "performance": 27,
-          "power": 44,
-          "brand": "IronGrid",
-          "compatibility": 73
+        "PC036": {
+          "component_id": "PC036",
+          "name": "Gaming GPU 135",
+          "category": "gpu",
+          "price": 662,
+          "performance": 22,
+          "power": 426,
+          "brand": "PixelWare",
+          "compatibility": 98
         },
-        "PC028": {
-          "component_id": "PC028",
-          "name": "Liquid Cooler 127",
+        "PC006": {
+          "component_id": "PC006",
+          "name": "Performance Storage 105",
+          "category": "storage",
+          "price": 755,
+          "performance": 97,
+          "power": 423,
+          "brand": "IronGrid",
+          "compatibility": 98
+        },
+        "PC040": {
+          "component_id": "PC040",
+          "name": "Archive Drive 139",
+          "category": "storage",
+          "price": 767,
+          "performance": 58,
+          "power": 419,
+          "brand": "IronGrid",
+          "compatibility": 97
+        },
+        "PC031": {
+          "component_id": "PC031",
+          "name": "ATX Board 130",
+          "category": "motherboard",
+          "price": 232,
+          "performance": 30,
+          "power": 217,
+          "brand": "VoltForge",
+          "compatibility": 86
+        },
+        "PC039": {
+          "component_id": "PC039",
+          "name": "Silent Cooler 138",
           "category": "cooling",
-          "price": 1076,
-          "performance": 56,
-          "power": 397,
+          "price": 1407,
+          "performance": 83,
+          "power": 263,
+          "brand": "PixelWare",
+          "compatibility": 88
+        },
+        "PC023": {
+          "component_id": "PC023",
+          "name": "SSD Drive 122",
+          "category": "storage",
+          "price": 756,
+          "performance": 41,
+          "power": 319,
+          "brand": "VoltForge",
+          "compatibility": 85
+        },
+        "PC029": {
+          "component_id": "PC029",
+          "name": "Performance CPU 128",
+          "category": "cpu",
+          "price": 707,
+          "performance": 93,
+          "power": 449,
+          "brand": "SkyChip",
+          "compatibility": 95
+        },
+        "PC012": {
+          "component_id": "PC012",
+          "name": "Performance CPU 111",
+          "category": "cpu",
+          "price": 1363,
+          "performance": 65,
+          "power": 179,
+          "brand": "ApexCore",
+          "compatibility": 99
+        },
+        "PC013": {
+          "component_id": "PC013",
+          "name": "Archive Drive 112",
+          "category": "storage",
+          "price": 1134,
+          "performance": 86,
+          "power": 238,
+          "brand": "SkyChip",
+          "compatibility": 60
+        },
+        "PC033": {
+          "component_id": "PC033",
+          "name": "Performance RAM 132",
+          "category": "ram",
+          "price": 859,
+          "performance": 10,
+          "power": 248,
           "brand": "NovaTech",
-          "compatibility": 70
+          "compatibility": 90
+        },
+        "PC032": {
+          "component_id": "PC032",
+          "name": "DDR Module 131",
+          "category": "ram",
+          "price": 1293,
+          "performance": 57,
+          "power": 223,
+          "brand": "TitanBit",
+          "compatibility": 92
+        },
+        "PC007": {
+          "component_id": "PC007",
+          "name": "Liquid Cooler 106",
+          "category": "cooling",
+          "price": 1080,
+          "performance": 99,
+          "power": 338,
+          "brand": "TitanBit",
+          "compatibility": 77
+        },
+        "PC010": {
+          "component_id": "PC010",
+          "name": "Processor 109",
+          "category": "cpu",
+          "price": 1313,
+          "performance": 89,
+          "power": 272,
+          "brand": "QuantumEdge",
+          "compatibility": 76
+        },
+        "PC030": {
+          "component_id": "PC030",
+          "name": "Graphics Card 129",
+          "category": "gpu",
+          "price": 1429,
+          "performance": 73,
+          "power": 252,
+          "brand": "IronGrid",
+          "compatibility": 80
+        },
+        "PC015": {
+          "component_id": "PC015",
+          "name": "Gaming CPU 114",
+          "category": "cpu",
+          "price": 442,
+          "performance": 14,
+          "power": 63,
+          "brand": "IronGrid",
+          "compatibility": 96
+        },
+        "PC008": {
+          "component_id": "PC008",
+          "name": "Performance Board 107",
+          "category": "motherboard",
+          "price": 616,
+          "performance": 21,
+          "power": 371,
+          "brand": "ApexCore",
+          "compatibility": 100
         },
         "PC035": {
           "component_id": "PC035",
@@ -28896,15 +29036,75 @@
           "brand": "IronGrid",
           "compatibility": 64
         },
-        "PC032": {
-          "component_id": "PC032",
-          "name": "DDR Module 131",
-          "category": "ram",
-          "price": 1293,
-          "performance": 57,
-          "power": 223,
+        "PC004": {
+          "component_id": "PC004",
+          "name": "Silent Cooler 103",
+          "category": "cooling",
+          "price": 1226,
+          "performance": 51,
+          "power": 445,
           "brand": "TitanBit",
-          "compatibility": 92
+          "compatibility": 81
+        },
+        "PC041": {
+          "component_id": "PC041",
+          "name": "Gaming CPU 140",
+          "category": "cpu",
+          "price": 88,
+          "performance": 56,
+          "power": 186,
+          "brand": "PixelWare",
+          "compatibility": 99
+        },
+        "PC005": {
+          "component_id": "PC005",
+          "name": "Graphics Card 104",
+          "category": "gpu",
+          "price": 523,
+          "performance": 55,
+          "power": 345,
+          "brand": "SkyChip",
+          "compatibility": 65
+        },
+        "PC017": {
+          "component_id": "PC017",
+          "name": "DDR Module 116",
+          "category": "ram",
+          "price": 675,
+          "performance": 94,
+          "power": 327,
+          "brand": "VoltForge",
+          "compatibility": 90
+        },
+        "PC016": {
+          "component_id": "PC016",
+          "name": "NVMe Drive 115",
+          "category": "storage",
+          "price": 403,
+          "performance": 45,
+          "power": 94,
+          "brand": "VoltForge",
+          "compatibility": 93
+        },
+        "PC022": {
+          "component_id": "PC022",
+          "name": "ARGB Cooler 121",
+          "category": "cooling",
+          "price": 263,
+          "performance": 54,
+          "power": 187,
+          "brand": "PixelWare",
+          "compatibility": 77
+        },
+        "PC018": {
+          "component_id": "PC018",
+          "name": "Archive Drive 117",
+          "category": "storage",
+          "price": 1183,
+          "performance": 16,
+          "power": 310,
+          "brand": "PixelWare",
+          "compatibility": 87
         },
         "PC002": {
           "component_id": "PC002",
@@ -28926,225 +29126,15 @@
           "brand": "IronGrid",
           "compatibility": 80
         },
-        "PC023": {
-          "component_id": "PC023",
-          "name": "SSD Drive 122",
-          "category": "storage",
-          "price": 756,
-          "performance": 41,
-          "power": 319,
-          "brand": "VoltForge",
-          "compatibility": 85
-        },
-        "PC006": {
-          "component_id": "PC006",
-          "name": "Performance Storage 105",
-          "category": "storage",
-          "price": 755,
-          "performance": 97,
-          "power": 423,
+        "PC025": {
+          "component_id": "PC025",
+          "name": "Liquid Cooler 124",
+          "category": "cooling",
+          "price": 1065,
+          "performance": 27,
+          "power": 44,
           "brand": "IronGrid",
-          "compatibility": 98
-        },
-        "PC030": {
-          "component_id": "PC030",
-          "name": "Graphics Card 129",
-          "category": "gpu",
-          "price": 1429,
-          "performance": 73,
-          "power": 252,
-          "brand": "IronGrid",
-          "compatibility": 80
-        },
-        "PC018": {
-          "component_id": "PC018",
-          "name": "Archive Drive 117",
-          "category": "storage",
-          "price": 1183,
-          "performance": 16,
-          "power": 310,
-          "brand": "PixelWare",
-          "compatibility": 87
-        },
-        "PC033": {
-          "component_id": "PC033",
-          "name": "Performance RAM 132",
-          "category": "ram",
-          "price": 859,
-          "performance": 10,
-          "power": 248,
-          "brand": "NovaTech",
-          "compatibility": 90
-        },
-        "PC019": {
-          "component_id": "PC019",
-          "name": "Air Cooler 118",
-          "category": "cooling",
-          "price": 219,
-          "performance": 91,
-          "power": 279,
-          "brand": "NovaTech",
-          "compatibility": 77
-        },
-        "PC036": {
-          "component_id": "PC036",
-          "name": "Gaming GPU 135",
-          "category": "gpu",
-          "price": 662,
-          "performance": 22,
-          "power": 426,
-          "brand": "PixelWare",
-          "compatibility": 98
-        },
-        "PC042": {
-          "component_id": "PC042",
-          "name": "DDR Module 141",
-          "category": "ram",
-          "price": 1357,
-          "performance": 49,
-          "power": 133,
-          "brand": "QuantumEdge",
-          "compatibility": 94
-        },
-        "PC005": {
-          "component_id": "PC005",
-          "name": "Graphics Card 104",
-          "category": "gpu",
-          "price": 523,
-          "performance": 55,
-          "power": 345,
-          "brand": "SkyChip",
-          "compatibility": 65
-        },
-        "PC012": {
-          "component_id": "PC012",
-          "name": "Performance CPU 111",
-          "category": "cpu",
-          "price": 1363,
-          "performance": 65,
-          "power": 179,
-          "brand": "ApexCore",
-          "compatibility": 99
-        },
-        "PC016": {
-          "component_id": "PC016",
-          "name": "NVMe Drive 115",
-          "category": "storage",
-          "price": 403,
-          "performance": 45,
-          "power": 94,
-          "brand": "VoltForge",
-          "compatibility": 93
-        },
-        "PC004": {
-          "component_id": "PC004",
-          "name": "Silent Cooler 103",
-          "category": "cooling",
-          "price": 1226,
-          "performance": 51,
-          "power": 445,
-          "brand": "TitanBit",
-          "compatibility": 81
-        },
-        "PC026": {
-          "component_id": "PC026",
-          "name": "Performance Storage 125",
-          "category": "storage",
-          "price": 1328,
-          "performance": 83,
-          "power": 52,
-          "brand": "ApexCore",
-          "compatibility": 98
-        },
-        "PC015": {
-          "component_id": "PC015",
-          "name": "Gaming CPU 114",
-          "category": "cpu",
-          "price": 442,
-          "performance": 14,
-          "power": 63,
-          "brand": "IronGrid",
-          "compatibility": 96
-        },
-        "PC001": {
-          "component_id": "PC001",
-          "name": "Compact Board 100",
-          "category": "motherboard",
-          "price": 924,
-          "performance": 78,
-          "power": 392,
-          "brand": "PixelWare",
-          "compatibility": 87
-        },
-        "PC039": {
-          "component_id": "PC039",
-          "name": "Silent Cooler 138",
-          "category": "cooling",
-          "price": 1407,
-          "performance": 83,
-          "power": 263,
-          "brand": "PixelWare",
-          "compatibility": 88
-        },
-        "PC029": {
-          "component_id": "PC029",
-          "name": "Performance CPU 128",
-          "category": "cpu",
-          "price": 707,
-          "performance": 93,
-          "power": 449,
-          "brand": "SkyChip",
-          "compatibility": 95
-        },
-        "PC022": {
-          "component_id": "PC022",
-          "name": "ARGB Cooler 121",
-          "category": "cooling",
-          "price": 263,
-          "performance": 54,
-          "power": 187,
-          "brand": "PixelWare",
-          "compatibility": 77
-        },
-        "PC027": {
-          "component_id": "PC027",
-          "name": "Liquid Cooler 126",
-          "category": "cooling",
-          "price": 1136,
-          "performance": 54,
-          "power": 229,
-          "brand": "TitanBit",
-          "compatibility": 100
-        },
-        "PC041": {
-          "component_id": "PC041",
-          "name": "Gaming CPU 140",
-          "category": "cpu",
-          "price": 88,
-          "performance": 56,
-          "power": 186,
-          "brand": "PixelWare",
-          "compatibility": 99
-        },
-        "PC010": {
-          "component_id": "PC010",
-          "name": "Processor 109",
-          "category": "cpu",
-          "price": 1313,
-          "performance": 89,
-          "power": 272,
-          "brand": "QuantumEdge",
-          "compatibility": 76
-        },
-        "PC007": {
-          "component_id": "PC007",
-          "name": "Liquid Cooler 106",
-          "category": "cooling",
-          "price": 1080,
-          "performance": 99,
-          "power": 338,
-          "brand": "TitanBit",
-          "compatibility": 77
+          "compatibility": 73
         },
         "PC037": {
           "component_id": "PC037",
@@ -29156,6 +29146,36 @@
           "brand": "QuantumEdge",
           "compatibility": 77
         },
+        "PC001": {
+          "component_id": "PC001",
+          "name": "Compact Board 100",
+          "category": "motherboard",
+          "price": 924,
+          "performance": 78,
+          "power": 392,
+          "brand": "PixelWare",
+          "compatibility": 87
+        },
+        "PC042": {
+          "component_id": "PC042",
+          "name": "DDR Module 141",
+          "category": "ram",
+          "price": 1357,
+          "performance": 49,
+          "power": 133,
+          "brand": "QuantumEdge",
+          "compatibility": 94
+        },
+        "PC027": {
+          "component_id": "PC027",
+          "name": "Liquid Cooler 126",
+          "category": "cooling",
+          "price": 1136,
+          "performance": 54,
+          "power": 229,
+          "brand": "TitanBit",
+          "compatibility": 100
+        },
         "PC021": {
           "component_id": "PC021",
           "name": "DDR Module 120",
@@ -29166,55 +29186,35 @@
           "brand": "QuantumEdge",
           "compatibility": 85
         },
-        "PC040": {
-          "component_id": "PC040",
-          "name": "Archive Drive 139",
+        "PC026": {
+          "component_id": "PC026",
+          "name": "Performance Storage 125",
           "category": "storage",
-          "price": 767,
-          "performance": 58,
-          "power": 419,
-          "brand": "IronGrid",
-          "compatibility": 97
-        },
-        "PC008": {
-          "component_id": "PC008",
-          "name": "Performance Board 107",
-          "category": "motherboard",
-          "price": 616,
-          "performance": 21,
-          "power": 371,
+          "price": 1328,
+          "performance": 83,
+          "power": 52,
           "brand": "ApexCore",
-          "compatibility": 100
+          "compatibility": 98
         },
-        "PC017": {
-          "component_id": "PC017",
-          "name": "DDR Module 116",
-          "category": "ram",
-          "price": 675,
-          "performance": 94,
-          "power": 327,
-          "brand": "VoltForge",
-          "compatibility": 90
+        "PC019": {
+          "component_id": "PC019",
+          "name": "Air Cooler 118",
+          "category": "cooling",
+          "price": 219,
+          "performance": 91,
+          "power": 279,
+          "brand": "NovaTech",
+          "compatibility": 77
         },
-        "PC031": {
-          "component_id": "PC031",
-          "name": "ATX Board 130",
-          "category": "motherboard",
-          "price": 232,
-          "performance": 30,
-          "power": 217,
-          "brand": "VoltForge",
-          "compatibility": 86
-        },
-        "PC013": {
-          "component_id": "PC013",
-          "name": "Archive Drive 112",
-          "category": "storage",
-          "price": 1134,
-          "performance": 86,
-          "power": 238,
-          "brand": "SkyChip",
-          "compatibility": 60
+        "PC028": {
+          "component_id": "PC028",
+          "name": "Liquid Cooler 127",
+          "category": "cooling",
+          "price": 1076,
+          "performance": 56,
+          "power": 397,
+          "brand": "NovaTech",
+          "compatibility": 70
         },
         "PC043": {
           "component_id": "PC043",

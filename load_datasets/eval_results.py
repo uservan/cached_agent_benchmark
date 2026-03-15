@@ -1,6 +1,6 @@
 import json
 
-from data_generation.constraints import (
+from data_generation.generation.constraints import (
     aggregate_constraint_satisfied,
     item_matches_slot_constraint,
 )

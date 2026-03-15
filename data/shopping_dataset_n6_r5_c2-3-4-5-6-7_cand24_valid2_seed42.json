@@ -16,6 +16,16 @@
         "same_brand_max": 5
       },
       "item_pool": {
+        "P001": {
+          "product_id": "P001",
+          "name": "Juice 100",
+          "category": "beverage",
+          "price": 2,
+          "calories": 331,
+          "protein": 15,
+          "brand": "PrimeSelect",
+          "weight": 485
+        },
         "P017": {
           "product_id": "P017",
           "name": "Oats 116",
@@ -36,15 +46,25 @@
           "brand": "PrimeSelect",
           "weight": 864
         },
-        "P001": {
-          "product_id": "P001",
-          "name": "Juice 100",
+        "P002": {
+          "product_id": "P002",
+          "name": "Juice 101",
           "category": "beverage",
-          "price": 2,
-          "calories": 331,
-          "protein": 15,
-          "brand": "PrimeSelect",
-          "weight": 485
+          "price": 23,
+          "calories": 608,
+          "protein": 5,
+          "brand": "NutriBest",
+          "weight": 265
+        },
+        "P009": {
+          "product_id": "P009",
+          "name": "Milk 108",
+          "category": "dairy",
+          "price": 3,
+          "calories": 727,
+          "protein": 14,
+          "brand": "UrbanTaste",
+          "weight": 363
         },
         "P003": {
           "product_id": "P003",
@@ -66,25 +86,15 @@
           "brand": "DailyChoice",
           "weight": 975
         },
-        "P002": {
-          "product_id": "P002",
-          "name": "Juice 101",
-          "category": "beverage",
-          "price": 23,
-          "calories": 608,
-          "protein": 5,
-          "brand": "NutriBest",
-          "weight": 265
-        },
-        "P010": {
-          "product_id": "P010",
-          "name": "Milk 109",
+        "P005": {
+          "product_id": "P005",
+          "name": "Butter 104",
           "category": "dairy",
-          "price": 14,
+          "price": 12,
           "calories": 334,
-          "protein": 29,
-          "brand": "HomeHarvest",
-          "weight": 533
+          "protein": 9,
+          "brand": "PrimeSelect",
+          "weight": 889
         },
         "P008": {
           "product_id": "P008",
@@ -96,25 +106,15 @@
           "brand": "HomeHarvest",
           "weight": 1382
         },
-        "P009": {
-          "product_id": "P009",
-          "name": "Milk 108",
+        "P010": {
+          "product_id": "P010",
+          "name": "Milk 109",
           "category": "dairy",
-          "price": 3,
-          "calories": 727,
-          "protein": 14,
-          "brand": "UrbanTaste",
-          "weight": 363
-        },
-        "P005": {
-          "product_id": "P005",
-          "name": "Butter 104",
-          "category": "dairy",
-          "price": 12,
+          "price": 14,
           "calories": 334,
-          "protein": 9,
-          "brand": "PrimeSelect",
-          "weight": 889
+          "protein": 29,
+          "brand": "HomeHarvest",
+          "weight": 533
         },
         "P018": {
           "product_id": "P018",
@@ -2944,25 +2944,25 @@
         "same_brand_max": 13
       },
       "item_pool": {
-        "P019": {
-          "product_id": "P019",
-          "name": "Juice 118",
-          "category": "beverage",
-          "price": 23,
-          "calories": 601,
-          "protein": 24,
-          "brand": "PrimeSelect",
-          "weight": 1273
+        "P001": {
+          "product_id": "P001",
+          "name": "Tomatoes 100",
+          "category": "produce",
+          "price": 14,
+          "calories": 123,
+          "protein": 34,
+          "brand": "PeakMarket",
+          "weight": 571
         },
-        "P020": {
-          "product_id": "P020",
-          "name": "Smoothie 119",
-          "category": "beverage",
+        "P015": {
+          "product_id": "P015",
+          "name": "Pasta 114",
+          "category": "grain",
           "price": 19,
-          "calories": 207,
-          "protein": 39,
-          "brand": "UrbanTaste",
-          "weight": 860
+          "calories": 406,
+          "protein": 20,
+          "brand": "PeakMarket",
+          "weight": 763
         },
         "P017": {
           "product_id": "P017",
@@ -2984,36 +2984,6 @@
           "brand": "UrbanTaste",
           "weight": 280
         },
-        "P006": {
-          "product_id": "P006",
-          "name": "Beans 105",
-          "category": "protein",
-          "price": 8,
-          "calories": 419,
-          "protein": 3,
-          "brand": "PrimeSelect",
-          "weight": 431
-        },
-        "P001": {
-          "product_id": "P001",
-          "name": "Tomatoes 100",
-          "category": "produce",
-          "price": 14,
-          "calories": 123,
-          "protein": 34,
-          "brand": "PeakMarket",
-          "weight": 571
-        },
-        "P016": {
-          "product_id": "P016",
-          "name": "Quinoa 115",
-          "category": "grain",
-          "price": 7,
-          "calories": 120,
-          "protein": 33,
-          "brand": "GreenLeaf",
-          "weight": 1120
-        },
         "P002": {
           "product_id": "P002",
           "name": "Cheese 101",
@@ -3024,55 +2994,15 @@
           "brand": "PrimeSelect",
           "weight": 988
         },
-        "P022": {
-          "product_id": "P022",
-          "name": "Yogurt 121",
-          "category": "dairy",
-          "price": 3,
-          "calories": 256,
-          "protein": 6,
-          "brand": "PeakMarket",
-          "weight": 592
-        },
-        "P021": {
-          "product_id": "P021",
-          "name": "Beans 120",
-          "category": "protein",
-          "price": 5,
-          "calories": 148,
-          "protein": 33,
-          "brand": "DailyChoice",
-          "weight": 289
-        },
-        "P010": {
-          "product_id": "P010",
-          "name": "Water 109",
+        "P019": {
+          "product_id": "P019",
+          "name": "Juice 118",
           "category": "beverage",
-          "price": 12,
-          "calories": 690,
-          "protein": 3,
-          "brand": "FreshFarm",
-          "weight": 928
-        },
-        "P008": {
-          "product_id": "P008",
-          "name": "Berries 107",
-          "category": "produce",
-          "price": 9,
-          "calories": 59,
-          "protein": 2,
-          "brand": "PeakMarket",
-          "weight": 1421
-        },
-        "P015": {
-          "product_id": "P015",
-          "name": "Pasta 114",
-          "category": "grain",
-          "price": 19,
-          "calories": 406,
-          "protein": 20,
-          "brand": "PeakMarket",
-          "weight": 763
+          "price": 23,
+          "calories": 601,
+          "protein": 24,
+          "brand": "PrimeSelect",
+          "weight": 1273
         },
         "P009": {
           "product_id": "P009",
@@ -3084,6 +3014,16 @@
           "brand": "PeakMarket",
           "weight": 387
         },
+        "P021": {
+          "product_id": "P021",
+          "name": "Beans 120",
+          "category": "protein",
+          "price": 5,
+          "calories": 148,
+          "protein": 33,
+          "brand": "DailyChoice",
+          "weight": 289
+        },
         "P004": {
           "product_id": "P004",
           "name": "Pasta 103",
@@ -3093,6 +3033,66 @@
           "protein": 19,
           "brand": "HomeHarvest",
           "weight": 524
+        },
+        "P022": {
+          "product_id": "P022",
+          "name": "Yogurt 121",
+          "category": "dairy",
+          "price": 3,
+          "calories": 256,
+          "protein": 6,
+          "brand": "PeakMarket",
+          "weight": 592
+        },
+        "P016": {
+          "product_id": "P016",
+          "name": "Quinoa 115",
+          "category": "grain",
+          "price": 7,
+          "calories": 120,
+          "protein": 33,
+          "brand": "GreenLeaf",
+          "weight": 1120
+        },
+        "P006": {
+          "product_id": "P006",
+          "name": "Beans 105",
+          "category": "protein",
+          "price": 8,
+          "calories": 419,
+          "protein": 3,
+          "brand": "PrimeSelect",
+          "weight": 431
+        },
+        "P020": {
+          "product_id": "P020",
+          "name": "Smoothie 119",
+          "category": "beverage",
+          "price": 19,
+          "calories": 207,
+          "protein": 39,
+          "brand": "UrbanTaste",
+          "weight": 860
+        },
+        "P008": {
+          "product_id": "P008",
+          "name": "Berries 107",
+          "category": "produce",
+          "price": 9,
+          "calories": 59,
+          "protein": 2,
+          "brand": "PeakMarket",
+          "weight": 1421
+        },
+        "P010": {
+          "product_id": "P010",
+          "name": "Water 109",
+          "category": "beverage",
+          "price": 12,
+          "calories": 690,
+          "protein": 3,
+          "brand": "FreshFarm",
+          "weight": 928
         },
         "P023": {
           "product_id": "P023",
@@ -7273,6 +7273,16 @@
         "same_brand_max": 19
       },
       "item_pool": {
+        "P017": {
+          "product_id": "P017",
+          "name": "Smoothie 116",
+          "category": "beverage",
+          "price": 14,
+          "calories": 401,
+          "protein": 25,
+          "brand": "PrimeSelect",
+          "weight": 1012
+        },
         "P013": {
           "product_id": "P013",
           "name": "Yogurt 112",
@@ -7283,35 +7293,15 @@
           "brand": "UrbanTaste",
           "weight": 336
         },
-        "P006": {
-          "product_id": "P006",
-          "name": "Eggs 105",
-          "category": "protein",
-          "price": 7,
-          "calories": 668,
-          "protein": 36,
-          "brand": "UrbanTaste",
-          "weight": 1403
-        },
-        "P018": {
-          "product_id": "P018",
-          "name": "Apples 117",
-          "category": "produce",
-          "price": 10,
-          "calories": 167,
-          "protein": 8,
-          "brand": "HomeHarvest",
-          "weight": 1150
-        },
-        "P016": {
-          "product_id": "P016",
-          "name": "Bars 115",
-          "category": "snack",
-          "price": 18,
-          "calories": 95,
-          "protein": 29,
-          "brand": "FreshFarm",
-          "weight": 349
+        "P011": {
+          "product_id": "P011",
+          "name": "Butter 110",
+          "category": "dairy",
+          "price": 9,
+          "calories": 233,
+          "protein": 39,
+          "brand": "NutriBest",
+          "weight": 1137
         },
         "P002": {
           "product_id": "P002",
@@ -7323,6 +7313,56 @@
           "brand": "DailyChoice",
           "weight": 1131
         },
+        "P018": {
+          "product_id": "P018",
+          "name": "Apples 117",
+          "category": "produce",
+          "price": 10,
+          "calories": 167,
+          "protein": 8,
+          "brand": "HomeHarvest",
+          "weight": 1150
+        },
+        "P007": {
+          "product_id": "P007",
+          "name": "Cream 106",
+          "category": "dairy",
+          "price": 24,
+          "calories": 751,
+          "protein": 29,
+          "brand": "UrbanTaste",
+          "weight": 613
+        },
+        "P014": {
+          "product_id": "P014",
+          "name": "Tea 113",
+          "category": "beverage",
+          "price": 17,
+          "calories": 471,
+          "protein": 35,
+          "brand": "DailyChoice",
+          "weight": 955
+        },
+        "P016": {
+          "product_id": "P016",
+          "name": "Bars 115",
+          "category": "snack",
+          "price": 18,
+          "calories": 95,
+          "protein": 29,
+          "brand": "FreshFarm",
+          "weight": 349
+        },
+        "P024": {
+          "product_id": "P024",
+          "name": "Juice 123",
+          "category": "beverage",
+          "price": 22,
+          "calories": 585,
+          "protein": 6,
+          "brand": "NutriBest",
+          "weight": 831
+        },
         "P027": {
           "product_id": "P027",
           "name": "Apples 126",
@@ -7333,25 +7373,15 @@
           "brand": "PrimeSelect",
           "weight": 397
         },
-        "P017": {
-          "product_id": "P017",
-          "name": "Smoothie 116",
-          "category": "beverage",
-          "price": 14,
-          "calories": 401,
-          "protein": 25,
-          "brand": "PrimeSelect",
-          "weight": 1012
-        },
-        "P012": {
-          "product_id": "P012",
-          "name": "Tofu 111",
+        "P019": {
+          "product_id": "P019",
+          "name": "Eggs 118",
           "category": "protein",
-          "price": 24,
-          "calories": 632,
-          "protein": 6,
-          "brand": "NutriBest",
-          "weight": 289
+          "price": 4,
+          "calories": 134,
+          "protein": 35,
+          "brand": "PrimeSelect",
+          "weight": 1096
         },
         "P022": {
           "product_id": "P022",
@@ -7373,35 +7403,25 @@
           "brand": "NutriBest",
           "weight": 544
         },
-        "P010": {
-          "product_id": "P010",
-          "name": "Chips 109",
-          "category": "snack",
-          "price": 13,
-          "calories": 767,
-          "protein": 19,
-          "brand": "NutriBest",
-          "weight": 1455
+        "P006": {
+          "product_id": "P006",
+          "name": "Eggs 105",
+          "category": "protein",
+          "price": 7,
+          "calories": 668,
+          "protein": 36,
+          "brand": "UrbanTaste",
+          "weight": 1403
         },
-        "P014": {
-          "product_id": "P014",
-          "name": "Tea 113",
-          "category": "beverage",
-          "price": 17,
-          "calories": 471,
-          "protein": 35,
-          "brand": "DailyChoice",
-          "weight": 955
-        },
-        "P011": {
-          "product_id": "P011",
-          "name": "Butter 110",
+        "P026": {
+          "product_id": "P026",
+          "name": "Cheese 125",
           "category": "dairy",
           "price": 9,
-          "calories": 233,
-          "protein": 39,
-          "brand": "NutriBest",
-          "weight": 1137
+          "calories": 254,
+          "protein": 5,
+          "brand": "FreshFarm",
+          "weight": 1063
         },
         "P009": {
           "product_id": "P009",
@@ -7413,46 +7433,6 @@
           "brand": "FreshFarm",
           "weight": 386
         },
-        "P004": {
-          "product_id": "P004",
-          "name": "Tofu 103",
-          "category": "protein",
-          "price": 5,
-          "calories": 182,
-          "protein": 34,
-          "brand": "NutriBest",
-          "weight": 1179
-        },
-        "P019": {
-          "product_id": "P019",
-          "name": "Eggs 118",
-          "category": "protein",
-          "price": 4,
-          "calories": 134,
-          "protein": 35,
-          "brand": "PrimeSelect",
-          "weight": 1096
-        },
-        "P024": {
-          "product_id": "P024",
-          "name": "Juice 123",
-          "category": "beverage",
-          "price": 22,
-          "calories": 585,
-          "protein": 6,
-          "brand": "NutriBest",
-          "weight": 831
-        },
-        "P007": {
-          "product_id": "P007",
-          "name": "Cream 106",
-          "category": "dairy",
-          "price": 24,
-          "calories": 751,
-          "protein": 29,
-          "brand": "UrbanTaste",
-          "weight": 613
-        },
         "P025": {
           "product_id": "P025",
           "name": "Chicken 124",
@@ -7463,15 +7443,35 @@
           "brand": "NutriBest",
           "weight": 613
         },
-        "P026": {
-          "product_id": "P026",
-          "name": "Cheese 125",
-          "category": "dairy",
-          "price": 9,
-          "calories": 254,
-          "protein": 5,
-          "brand": "FreshFarm",
-          "weight": 1063
+        "P004": {
+          "product_id": "P004",
+          "name": "Tofu 103",
+          "category": "protein",
+          "price": 5,
+          "calories": 182,
+          "protein": 34,
+          "brand": "NutriBest",
+          "weight": 1179
+        },
+        "P012": {
+          "product_id": "P012",
+          "name": "Tofu 111",
+          "category": "protein",
+          "price": 24,
+          "calories": 632,
+          "protein": 6,
+          "brand": "NutriBest",
+          "weight": 289
+        },
+        "P010": {
+          "product_id": "P010",
+          "name": "Chips 109",
+          "category": "snack",
+          "price": 13,
+          "calories": 767,
+          "protein": 19,
+          "brand": "NutriBest",
+          "weight": 1455
         },
         "P028": {
           "product_id": "P028",
@@ -13053,76 +13053,6 @@
         "same_brand_max": 9
       },
       "item_pool": {
-        "P013": {
-          "product_id": "P013",
-          "name": "Pasta 112",
-          "category": "grain",
-          "price": 17,
-          "calories": 541,
-          "protein": 35,
-          "brand": "UrbanTaste",
-          "weight": 708
-        },
-        "P006": {
-          "product_id": "P006",
-          "name": "Cookies 105",
-          "category": "snack",
-          "price": 14,
-          "calories": 172,
-          "protein": 18,
-          "brand": "PeakMarket",
-          "weight": 259
-        },
-        "P018": {
-          "product_id": "P018",
-          "name": "Tomatoes 117",
-          "category": "produce",
-          "price": 6,
-          "calories": 319,
-          "protein": 29,
-          "brand": "PrimeSelect",
-          "weight": 446
-        },
-        "P016": {
-          "product_id": "P016",
-          "name": "Tomatoes 115",
-          "category": "produce",
-          "price": 8,
-          "calories": 711,
-          "protein": 12,
-          "brand": "NutriBest",
-          "weight": 963
-        },
-        "P002": {
-          "product_id": "P002",
-          "name": "Cream 101",
-          "category": "dairy",
-          "price": 17,
-          "calories": 57,
-          "protein": 22,
-          "brand": "DailyChoice",
-          "weight": 1391
-        },
-        "P015": {
-          "product_id": "P015",
-          "name": "Crackers 114",
-          "category": "snack",
-          "price": 11,
-          "calories": 505,
-          "protein": 24,
-          "brand": "GreenLeaf",
-          "weight": 399
-        },
-        "P027": {
-          "product_id": "P027",
-          "name": "Cookies 126",
-          "category": "snack",
-          "price": 4,
-          "calories": 662,
-          "protein": 23,
-          "brand": "PeakMarket",
-          "weight": 1167
-        },
         "P017": {
           "product_id": "P017",
           "name": "Tomatoes 116",
@@ -13133,35 +13063,25 @@
           "brand": "UrbanTaste",
           "weight": 271
         },
-        "P031": {
-          "product_id": "P031",
-          "name": "Chicken 130",
-          "category": "protein",
-          "price": 21,
-          "calories": 309,
-          "protein": 8,
-          "brand": "HomeHarvest",
-          "weight": 934
+        "P013": {
+          "product_id": "P013",
+          "name": "Pasta 112",
+          "category": "grain",
+          "price": 17,
+          "calories": 541,
+          "protein": 35,
+          "brand": "UrbanTaste",
+          "weight": 708
         },
-        "P003": {
-          "product_id": "P003",
-          "name": "Nuts 102",
-          "category": "snack",
-          "price": 7,
-          "calories": 456,
+        "P011": {
+          "product_id": "P011",
+          "name": "Rice 110",
+          "category": "grain",
+          "price": 11,
+          "calories": 62,
           "protein": 13,
           "brand": "GreenLeaf",
-          "weight": 1298
-        },
-        "P032": {
-          "product_id": "P032",
-          "name": "Smoothie 131",
-          "category": "beverage",
-          "price": 16,
-          "calories": 602,
-          "protein": 10,
-          "brand": "FreshFarm",
-          "weight": 903
+          "weight": 883
         },
         "P029": {
           "product_id": "P029",
@@ -13173,35 +13093,55 @@
           "brand": "NutriBest",
           "weight": 962
         },
-        "P001": {
-          "product_id": "P001",
-          "name": "Rice 100",
-          "category": "grain",
-          "price": 3,
-          "calories": 254,
-          "protein": 37,
-          "brand": "FreshFarm",
-          "weight": 627
-        },
-        "P021": {
-          "product_id": "P021",
-          "name": "Greens 120",
-          "category": "produce",
+        "P002": {
+          "product_id": "P002",
+          "name": "Cream 101",
+          "category": "dairy",
           "price": 17,
-          "calories": 114,
-          "protein": 9,
-          "brand": "PrimeSelect",
-          "weight": 333
+          "calories": 57,
+          "protein": 22,
+          "brand": "DailyChoice",
+          "weight": 1391
         },
-        "P010": {
-          "product_id": "P010",
-          "name": "Chicken 109",
+        "P031": {
+          "product_id": "P031",
+          "name": "Chicken 130",
+          "category": "protein",
+          "price": 21,
+          "calories": 309,
+          "protein": 8,
+          "brand": "HomeHarvest",
+          "weight": 934
+        },
+        "P018": {
+          "product_id": "P018",
+          "name": "Tomatoes 117",
+          "category": "produce",
+          "price": 6,
+          "calories": 319,
+          "protein": 29,
+          "brand": "PrimeSelect",
+          "weight": 446
+        },
+        "P003": {
+          "product_id": "P003",
+          "name": "Nuts 102",
+          "category": "snack",
+          "price": 7,
+          "calories": 456,
+          "protein": 13,
+          "brand": "GreenLeaf",
+          "weight": 1298
+        },
+        "P007": {
+          "product_id": "P007",
+          "name": "Fish 106",
           "category": "protein",
           "price": 22,
-          "calories": 691,
-          "protein": 14,
-          "brand": "UrbanTaste",
-          "weight": 644
+          "calories": 737,
+          "protein": 32,
+          "brand": "NutriBest",
+          "weight": 619
         },
         "P014": {
           "product_id": "P014",
@@ -13213,15 +13153,115 @@
           "brand": "FreshFarm",
           "weight": 222
         },
-        "P011": {
-          "product_id": "P011",
-          "name": "Rice 110",
+        "P016": {
+          "product_id": "P016",
+          "name": "Tomatoes 115",
+          "category": "produce",
+          "price": 8,
+          "calories": 711,
+          "protein": 12,
+          "brand": "NutriBest",
+          "weight": 963
+        },
+        "P005": {
+          "product_id": "P005",
+          "name": "Tofu 104",
+          "category": "protein",
+          "price": 8,
+          "calories": 672,
+          "protein": 16,
+          "brand": "HomeHarvest",
+          "weight": 600
+        },
+        "P024": {
+          "product_id": "P024",
+          "name": "Coffee 123",
+          "category": "beverage",
+          "price": 25,
+          "calories": 540,
+          "protein": 12,
+          "brand": "UrbanTaste",
+          "weight": 249
+        },
+        "P032": {
+          "product_id": "P032",
+          "name": "Smoothie 131",
+          "category": "beverage",
+          "price": 16,
+          "calories": 602,
+          "protein": 10,
+          "brand": "FreshFarm",
+          "weight": 903
+        },
+        "P001": {
+          "product_id": "P001",
+          "name": "Rice 100",
           "category": "grain",
+          "price": 3,
+          "calories": 254,
+          "protein": 37,
+          "brand": "FreshFarm",
+          "weight": 627
+        },
+        "P027": {
+          "product_id": "P027",
+          "name": "Cookies 126",
+          "category": "snack",
+          "price": 4,
+          "calories": 662,
+          "protein": 23,
+          "brand": "PeakMarket",
+          "weight": 1167
+        },
+        "P023": {
+          "product_id": "P023",
+          "name": "Tofu 122",
+          "category": "protein",
+          "price": 2,
+          "calories": 640,
+          "protein": 2,
+          "brand": "DailyChoice",
+          "weight": 775
+        },
+        "P019": {
+          "product_id": "P019",
+          "name": "Juice 118",
+          "category": "beverage",
+          "price": 17,
+          "calories": 228,
+          "protein": 0,
+          "brand": "DailyChoice",
+          "weight": 376
+        },
+        "P006": {
+          "product_id": "P006",
+          "name": "Cookies 105",
+          "category": "snack",
+          "price": 14,
+          "calories": 172,
+          "protein": 18,
+          "brand": "PeakMarket",
+          "weight": 259
+        },
+        "P020": {
+          "product_id": "P020",
+          "name": "Tea 119",
+          "category": "beverage",
+          "price": 16,
+          "calories": 643,
+          "protein": 35,
+          "brand": "UrbanTaste",
+          "weight": 753
+        },
+        "P015": {
+          "product_id": "P015",
+          "name": "Crackers 114",
+          "category": "snack",
           "price": 11,
-          "calories": 62,
-          "protein": 13,
+          "calories": 505,
+          "protein": 24,
           "brand": "GreenLeaf",
-          "weight": 883
+          "weight": 399
         },
         "P009": {
           "product_id": "P009",
@@ -13243,65 +13283,25 @@
           "brand": "HomeHarvest",
           "weight": 1246
         },
-        "P020": {
-          "product_id": "P020",
-          "name": "Tea 119",
-          "category": "beverage",
-          "price": 16,
-          "calories": 643,
-          "protein": 35,
-          "brand": "UrbanTaste",
-          "weight": 753
-        },
-        "P019": {
-          "product_id": "P019",
-          "name": "Juice 118",
-          "category": "beverage",
+        "P021": {
+          "product_id": "P021",
+          "name": "Greens 120",
+          "category": "produce",
           "price": 17,
-          "calories": 228,
-          "protein": 0,
-          "brand": "DailyChoice",
-          "weight": 376
+          "calories": 114,
+          "protein": 9,
+          "brand": "PrimeSelect",
+          "weight": 333
         },
-        "P023": {
-          "product_id": "P023",
-          "name": "Tofu 122",
-          "category": "protein",
-          "price": 2,
-          "calories": 640,
-          "protein": 2,
-          "brand": "DailyChoice",
-          "weight": 775
-        },
-        "P024": {
-          "product_id": "P024",
-          "name": "Coffee 123",
-          "category": "beverage",
-          "price": 25,
-          "calories": 540,
-          "protein": 12,
-          "brand": "UrbanTaste",
-          "weight": 249
-        },
-        "P007": {
-          "product_id": "P007",
-          "name": "Fish 106",
+        "P010": {
+          "product_id": "P010",
+          "name": "Chicken 109",
           "category": "protein",
           "price": 22,
-          "calories": 737,
-          "protein": 32,
-          "brand": "NutriBest",
-          "weight": 619
-        },
-        "P005": {
-          "product_id": "P005",
-          "name": "Tofu 104",
-          "category": "protein",
-          "price": 8,
-          "calories": 672,
-          "protein": 16,
-          "brand": "HomeHarvest",
-          "weight": 600
+          "calories": 691,
+          "protein": 14,
+          "brand": "UrbanTaste",
+          "weight": 644
         },
         "P033": {
           "product_id": "P033",
@@ -20244,66 +20244,6 @@
         "same_brand_max": 12
       },
       "item_pool": {
-        "P006": {
-          "product_id": "P006",
-          "name": "Rice 105",
-          "category": "grain",
-          "price": 12,
-          "calories": 292,
-          "protein": 0,
-          "brand": "HomeHarvest",
-          "weight": 1222
-        },
-        "P018": {
-          "product_id": "P018",
-          "name": "Milk 117",
-          "category": "dairy",
-          "price": 12,
-          "calories": 702,
-          "protein": 27,
-          "brand": "UrbanTaste",
-          "weight": 1438
-        },
-        "P016": {
-          "product_id": "P016",
-          "name": "Yogurt 115",
-          "category": "dairy",
-          "price": 9,
-          "calories": 370,
-          "protein": 17,
-          "brand": "PrimeSelect",
-          "weight": 829
-        },
-        "P002": {
-          "product_id": "P002",
-          "name": "Bananas 101",
-          "category": "produce",
-          "price": 2,
-          "calories": 720,
-          "protein": 16,
-          "brand": "HomeHarvest",
-          "weight": 223
-        },
-        "P015": {
-          "product_id": "P015",
-          "name": "Chicken 114",
-          "category": "protein",
-          "price": 18,
-          "calories": 360,
-          "protein": 32,
-          "brand": "PeakMarket",
-          "weight": 817
-        },
-        "P033": {
-          "product_id": "P033",
-          "name": "Bananas 132",
-          "category": "produce",
-          "price": 5,
-          "calories": 756,
-          "protein": 31,
-          "brand": "DailyChoice",
-          "weight": 1407
-        },
         "P017": {
           "product_id": "P017",
           "name": "Tomatoes 116",
@@ -20313,86 +20253,6 @@
           "protein": 24,
           "brand": "GreenLeaf",
           "weight": 426
-        },
-        "P031": {
-          "product_id": "P031",
-          "name": "Fish 130",
-          "category": "protein",
-          "price": 20,
-          "calories": 687,
-          "protein": 38,
-          "brand": "FreshFarm",
-          "weight": 364
-        },
-        "P036": {
-          "product_id": "P036",
-          "name": "Oats 135",
-          "category": "grain",
-          "price": 22,
-          "calories": 527,
-          "protein": 33,
-          "brand": "HomeHarvest",
-          "weight": 946
-        },
-        "P037": {
-          "product_id": "P037",
-          "name": "Apples 136",
-          "category": "produce",
-          "price": 4,
-          "calories": 260,
-          "protein": 28,
-          "brand": "HomeHarvest",
-          "weight": 657
-        },
-        "P029": {
-          "product_id": "P029",
-          "name": "Tofu 128",
-          "category": "protein",
-          "price": 5,
-          "calories": 780,
-          "protein": 32,
-          "brand": "NutriBest",
-          "weight": 308
-        },
-        "P030": {
-          "product_id": "P030",
-          "name": "Bananas 129",
-          "category": "produce",
-          "price": 7,
-          "calories": 113,
-          "protein": 12,
-          "brand": "DailyChoice",
-          "weight": 1417
-        },
-        "P001": {
-          "product_id": "P001",
-          "name": "Yogurt 100",
-          "category": "dairy",
-          "price": 20,
-          "calories": 692,
-          "protein": 27,
-          "brand": "DailyChoice",
-          "weight": 918
-        },
-        "P022": {
-          "product_id": "P022",
-          "name": "Butter 121",
-          "category": "dairy",
-          "price": 9,
-          "calories": 52,
-          "protein": 27,
-          "brand": "PrimeSelect",
-          "weight": 828
-        },
-        "P014": {
-          "product_id": "P014",
-          "name": "Rice 113",
-          "category": "grain",
-          "price": 22,
-          "calories": 262,
-          "protein": 23,
-          "brand": "FreshFarm",
-          "weight": 274
         },
         "P011": {
           "product_id": "P011",
@@ -20404,95 +20264,45 @@
           "brand": "GreenLeaf",
           "weight": 466
         },
-        "P009": {
-          "product_id": "P009",
-          "name": "Pasta 108",
-          "category": "grain",
-          "price": 7,
-          "calories": 375,
-          "protein": 6,
-          "brand": "GreenLeaf",
-          "weight": 1139
-        },
-        "P004": {
-          "product_id": "P004",
-          "name": "Chicken 103",
+        "P029": {
+          "product_id": "P029",
+          "name": "Tofu 128",
           "category": "protein",
-          "price": 11,
-          "calories": 720,
-          "protein": 11,
-          "brand": "GreenLeaf",
-          "weight": 1100
-        },
-        "P028": {
-          "product_id": "P028",
-          "name": "Nuts 127",
-          "category": "snack",
-          "price": 25,
-          "calories": 590,
-          "protein": 27,
-          "brand": "FreshFarm",
-          "weight": 690
-        },
-        "P034": {
-          "product_id": "P034",
-          "name": "Fish 133",
-          "category": "protein",
-          "price": 15,
-          "calories": 96,
-          "protein": 6,
-          "brand": "NutriBest",
-          "weight": 518
-        },
-        "P020": {
-          "product_id": "P020",
-          "name": "Beans 119",
-          "category": "protein",
-          "price": 11,
-          "calories": 708,
-          "protein": 5,
-          "brand": "DailyChoice",
-          "weight": 407
-        },
-        "P019": {
-          "product_id": "P019",
-          "name": "Coffee 118",
-          "category": "beverage",
-          "price": 7,
-          "calories": 415,
-          "protein": 16,
-          "brand": "GreenLeaf",
-          "weight": 235
-        },
-        "P023": {
-          "product_id": "P023",
-          "name": "Cheese 122",
-          "category": "dairy",
-          "price": 23,
-          "calories": 650,
-          "protein": 18,
-          "brand": "GreenLeaf",
-          "weight": 332
-        },
-        "P024": {
-          "product_id": "P024",
-          "name": "Quinoa 123",
-          "category": "grain",
-          "price": 10,
-          "calories": 650,
-          "protein": 26,
-          "brand": "FreshFarm",
-          "weight": 1029
-        },
-        "P035": {
-          "product_id": "P035",
-          "name": "Nuts 134",
-          "category": "snack",
-          "price": 3,
-          "calories": 789,
+          "price": 5,
+          "calories": 780,
           "protein": 32,
+          "brand": "NutriBest",
+          "weight": 308
+        },
+        "P002": {
+          "product_id": "P002",
+          "name": "Bananas 101",
+          "category": "produce",
+          "price": 2,
+          "calories": 720,
+          "protein": 16,
+          "brand": "HomeHarvest",
+          "weight": 223
+        },
+        "P031": {
+          "product_id": "P031",
+          "name": "Fish 130",
+          "category": "protein",
+          "price": 20,
+          "calories": 687,
+          "protein": 38,
+          "brand": "FreshFarm",
+          "weight": 364
+        },
+        "P018": {
+          "product_id": "P018",
+          "name": "Milk 117",
+          "category": "dairy",
+          "price": 12,
+          "calories": 702,
+          "protein": 27,
           "brand": "UrbanTaste",
-          "weight": 401
+          "weight": 1438
         },
         "P007": {
           "product_id": "P007",
@@ -20504,25 +20314,125 @@
           "brand": "GreenLeaf",
           "weight": 731
         },
-        "P025": {
-          "product_id": "P025",
-          "name": "Beans 124",
-          "category": "protein",
-          "price": 2,
-          "calories": 405,
-          "protein": 6,
-          "brand": "DailyChoice",
-          "weight": 289
+        "P014": {
+          "product_id": "P014",
+          "name": "Rice 113",
+          "category": "grain",
+          "price": 22,
+          "calories": 262,
+          "protein": 23,
+          "brand": "FreshFarm",
+          "weight": 274
         },
-        "P008": {
-          "product_id": "P008",
-          "name": "Cheese 107",
+        "P016": {
+          "product_id": "P016",
+          "name": "Yogurt 115",
           "category": "dairy",
-          "price": 19,
-          "calories": 481,
+          "price": 9,
+          "calories": 370,
+          "protein": 17,
+          "brand": "PrimeSelect",
+          "weight": 829
+        },
+        "P005": {
+          "product_id": "P005",
+          "name": "Tofu 104",
+          "category": "protein",
+          "price": 22,
+          "calories": 357,
+          "protein": 24,
+          "brand": "FreshFarm",
+          "weight": 419
+        },
+        "P036": {
+          "product_id": "P036",
+          "name": "Oats 135",
+          "category": "grain",
+          "price": 22,
+          "calories": 527,
+          "protein": 33,
+          "brand": "HomeHarvest",
+          "weight": 946
+        },
+        "P024": {
+          "product_id": "P024",
+          "name": "Quinoa 123",
+          "category": "grain",
+          "price": 10,
+          "calories": 650,
+          "protein": 26,
+          "brand": "FreshFarm",
+          "weight": 1029
+        },
+        "P001": {
+          "product_id": "P001",
+          "name": "Yogurt 100",
+          "category": "dairy",
+          "price": 20,
+          "calories": 692,
+          "protein": 27,
+          "brand": "DailyChoice",
+          "weight": 918
+        },
+        "P023": {
+          "product_id": "P023",
+          "name": "Cheese 122",
+          "category": "dairy",
+          "price": 23,
+          "calories": 650,
+          "protein": 18,
+          "brand": "GreenLeaf",
+          "weight": 332
+        },
+        "P019": {
+          "product_id": "P019",
+          "name": "Coffee 118",
+          "category": "beverage",
+          "price": 7,
+          "calories": 415,
+          "protein": 16,
+          "brand": "GreenLeaf",
+          "weight": 235
+        },
+        "P022": {
+          "product_id": "P022",
+          "name": "Butter 121",
+          "category": "dairy",
+          "price": 9,
+          "calories": 52,
+          "protein": 27,
+          "brand": "PrimeSelect",
+          "weight": 828
+        },
+        "P006": {
+          "product_id": "P006",
+          "name": "Rice 105",
+          "category": "grain",
+          "price": 12,
+          "calories": 292,
+          "protein": 0,
+          "brand": "HomeHarvest",
+          "weight": 1222
+        },
+        "P020": {
+          "product_id": "P020",
+          "name": "Beans 119",
+          "category": "protein",
+          "price": 11,
+          "calories": 708,
           "protein": 5,
+          "brand": "DailyChoice",
+          "weight": 407
+        },
+        "P015": {
+          "product_id": "P015",
+          "name": "Chicken 114",
+          "category": "protein",
+          "price": 18,
+          "calories": 360,
+          "protein": 32,
           "brand": "PeakMarket",
-          "weight": 1039
+          "weight": 817
         },
         "P026": {
           "product_id": "P026",
@@ -20534,15 +20444,105 @@
           "brand": "PrimeSelect",
           "weight": 771
         },
-        "P005": {
-          "product_id": "P005",
-          "name": "Tofu 104",
+        "P037": {
+          "product_id": "P037",
+          "name": "Apples 136",
+          "category": "produce",
+          "price": 4,
+          "calories": 260,
+          "protein": 28,
+          "brand": "HomeHarvest",
+          "weight": 657
+        },
+        "P009": {
+          "product_id": "P009",
+          "name": "Pasta 108",
+          "category": "grain",
+          "price": 7,
+          "calories": 375,
+          "protein": 6,
+          "brand": "GreenLeaf",
+          "weight": 1139
+        },
+        "P025": {
+          "product_id": "P025",
+          "name": "Beans 124",
           "category": "protein",
-          "price": 22,
-          "calories": 357,
-          "protein": 24,
+          "price": 2,
+          "calories": 405,
+          "protein": 6,
+          "brand": "DailyChoice",
+          "weight": 289
+        },
+        "P033": {
+          "product_id": "P033",
+          "name": "Bananas 132",
+          "category": "produce",
+          "price": 5,
+          "calories": 756,
+          "protein": 31,
+          "brand": "DailyChoice",
+          "weight": 1407
+        },
+        "P008": {
+          "product_id": "P008",
+          "name": "Cheese 107",
+          "category": "dairy",
+          "price": 19,
+          "calories": 481,
+          "protein": 5,
+          "brand": "PeakMarket",
+          "weight": 1039
+        },
+        "P034": {
+          "product_id": "P034",
+          "name": "Fish 133",
+          "category": "protein",
+          "price": 15,
+          "calories": 96,
+          "protein": 6,
+          "brand": "NutriBest",
+          "weight": 518
+        },
+        "P030": {
+          "product_id": "P030",
+          "name": "Bananas 129",
+          "category": "produce",
+          "price": 7,
+          "calories": 113,
+          "protein": 12,
+          "brand": "DailyChoice",
+          "weight": 1417
+        },
+        "P028": {
+          "product_id": "P028",
+          "name": "Nuts 127",
+          "category": "snack",
+          "price": 25,
+          "calories": 590,
+          "protein": 27,
           "brand": "FreshFarm",
-          "weight": 419
+          "weight": 690
+        },
+        "P004": {
+          "product_id": "P004",
+          "name": "Chicken 103",
+          "category": "protein",
+          "price": 11,
+          "calories": 720,
+          "protein": 11,
+          "brand": "GreenLeaf",
+          "weight": 1100
+        },
+        "P035": {
+          "product_id": "P035",
+          "name": "Nuts 134",
+          "category": "snack",
+          "price": 3,
+          "calories": 789,
+          "protein": 32,
+          "brand": "UrbanTaste",
+          "weight": 401
         },
         "P038": {
           "product_id": "P038",
@@ -28876,15 +28876,15 @@
         "same_brand_max": 29
       },
       "item_pool": {
-        "P039": {
-          "product_id": "P039",
-          "name": "Bread 138",
-          "category": "grain",
-          "price": 14,
-          "calories": 752,
-          "protein": 38,
-          "brand": "PrimeSelect",
-          "weight": 480
+        "P017": {
+          "product_id": "P017",
+          "name": "Water 116",
+          "category": "beverage",
+          "price": 15,
+          "calories": 758,
+          "protein": 11,
+          "brand": "PeakMarket",
+          "weight": 1075
         },
         "P013": {
           "product_id": "P013",
@@ -28896,146 +28896,6 @@
           "brand": "GreenLeaf",
           "weight": 684
         },
-        "P006": {
-          "product_id": "P006",
-          "name": "Fish 105",
-          "category": "protein",
-          "price": 10,
-          "calories": 524,
-          "protein": 12,
-          "brand": "FreshFarm",
-          "weight": 1250
-        },
-        "P018": {
-          "product_id": "P018",
-          "name": "Bread 117",
-          "category": "grain",
-          "price": 4,
-          "calories": 240,
-          "protein": 31,
-          "brand": "PrimeSelect",
-          "weight": 794
-        },
-        "P016": {
-          "product_id": "P016",
-          "name": "Oats 115",
-          "category": "grain",
-          "price": 17,
-          "calories": 120,
-          "protein": 12,
-          "brand": "PrimeSelect",
-          "weight": 1430
-        },
-        "P002": {
-          "product_id": "P002",
-          "name": "Coffee 101",
-          "category": "beverage",
-          "price": 6,
-          "calories": 113,
-          "protein": 29,
-          "brand": "GreenLeaf",
-          "weight": 352
-        },
-        "P015": {
-          "product_id": "P015",
-          "name": "Rice 114",
-          "category": "grain",
-          "price": 5,
-          "calories": 258,
-          "protein": 19,
-          "brand": "PrimeSelect",
-          "weight": 736
-        },
-        "P040": {
-          "product_id": "P040",
-          "name": "Yogurt 139",
-          "category": "dairy",
-          "price": 24,
-          "calories": 522,
-          "protein": 3,
-          "brand": "FreshFarm",
-          "weight": 1209
-        },
-        "P033": {
-          "product_id": "P033",
-          "name": "Smoothie 132",
-          "category": "beverage",
-          "price": 16,
-          "calories": 405,
-          "protein": 9,
-          "brand": "HomeHarvest",
-          "weight": 1140
-        },
-        "P017": {
-          "product_id": "P017",
-          "name": "Water 116",
-          "category": "beverage",
-          "price": 15,
-          "calories": 758,
-          "protein": 11,
-          "brand": "PeakMarket",
-          "weight": 1075
-        },
-        "P012": {
-          "product_id": "P012",
-          "name": "Fish 111",
-          "category": "protein",
-          "price": 12,
-          "calories": 646,
-          "protein": 36,
-          "brand": "FreshFarm",
-          "weight": 255
-        },
-        "P005": {
-          "product_id": "P005",
-          "name": "Bananas 104",
-          "category": "produce",
-          "price": 3,
-          "calories": 730,
-          "protein": 8,
-          "brand": "PeakMarket",
-          "weight": 1491
-        },
-        "P042": {
-          "product_id": "P042",
-          "name": "Crackers 141",
-          "category": "snack",
-          "price": 19,
-          "calories": 480,
-          "protein": 12,
-          "brand": "PrimeSelect",
-          "weight": 573
-        },
-        "P041": {
-          "product_id": "P041",
-          "name": "Tomatoes 140",
-          "category": "produce",
-          "price": 18,
-          "calories": 59,
-          "protein": 1,
-          "brand": "PeakMarket",
-          "weight": 334
-        },
-        "P037": {
-          "product_id": "P037",
-          "name": "Quinoa 136",
-          "category": "grain",
-          "price": 14,
-          "calories": 260,
-          "protein": 3,
-          "brand": "NutriBest",
-          "weight": 1017
-        },
-        "P032": {
-          "product_id": "P032",
-          "name": "Tomatoes 131",
-          "category": "produce",
-          "price": 18,
-          "calories": 536,
-          "protein": 25,
-          "brand": "HomeHarvest",
-          "weight": 318
-        },
         "P029": {
           "product_id": "P029",
           "name": "Greens 128",
@@ -29045,66 +28905,6 @@
           "protein": 2,
           "brand": "HomeHarvest",
           "weight": 261
-        },
-        "P030": {
-          "product_id": "P030",
-          "name": "Bananas 129",
-          "category": "produce",
-          "price": 25,
-          "calories": 260,
-          "protein": 10,
-          "brand": "FreshFarm",
-          "weight": 709
-        },
-        "P001": {
-          "product_id": "P001",
-          "name": "Pasta 100",
-          "category": "grain",
-          "price": 21,
-          "calories": 403,
-          "protein": 10,
-          "brand": "HomeHarvest",
-          "weight": 468
-        },
-        "P022": {
-          "product_id": "P022",
-          "name": "Quinoa 121",
-          "category": "grain",
-          "price": 3,
-          "calories": 619,
-          "protein": 34,
-          "brand": "DailyChoice",
-          "weight": 1384
-        },
-        "P021": {
-          "product_id": "P021",
-          "name": "Nuts 120",
-          "category": "snack",
-          "price": 11,
-          "calories": 623,
-          "protein": 2,
-          "brand": "GreenLeaf",
-          "weight": 1465
-        },
-        "P010": {
-          "product_id": "P010",
-          "name": "Cheese 109",
-          "category": "dairy",
-          "price": 22,
-          "calories": 72,
-          "protein": 36,
-          "brand": "UrbanTaste",
-          "weight": 384
-        },
-        "P014": {
-          "product_id": "P014",
-          "name": "Cheese 113",
-          "category": "dairy",
-          "price": 11,
-          "calories": 466,
-          "protein": 0,
-          "brand": "DailyChoice",
-          "weight": 1333
         },
         "P011": {
           "product_id": "P011",
@@ -29116,45 +28916,105 @@
           "brand": "GreenLeaf",
           "weight": 924
         },
-        "P009": {
-          "product_id": "P009",
-          "name": "Crackers 108",
+        "P002": {
+          "product_id": "P002",
+          "name": "Coffee 101",
+          "category": "beverage",
+          "price": 6,
+          "calories": 113,
+          "protein": 29,
+          "brand": "GreenLeaf",
+          "weight": 352
+        },
+        "P031": {
+          "product_id": "P031",
+          "name": "Cookies 130",
           "category": "snack",
-          "price": 25,
-          "calories": 769,
-          "protein": 11,
-          "brand": "PrimeSelect",
-          "weight": 1093
+          "price": 20,
+          "calories": 426,
+          "protein": 27,
+          "brand": "FreshFarm",
+          "weight": 1209
         },
-        "P028": {
-          "product_id": "P028",
-          "name": "Apples 127",
-          "category": "produce",
-          "price": 22,
-          "calories": 272,
-          "protein": 35,
-          "brand": "DailyChoice",
-          "weight": 1466
-        },
-        "P034": {
-          "product_id": "P034",
-          "name": "Yogurt 133",
-          "category": "dairy",
+        "P018": {
+          "product_id": "P018",
+          "name": "Bread 117",
+          "category": "grain",
           "price": 4,
-          "calories": 436,
-          "protein": 13,
-          "brand": "DailyChoice",
-          "weight": 1007
+          "calories": 240,
+          "protein": 31,
+          "brand": "PrimeSelect",
+          "weight": 794
         },
-        "P020": {
-          "product_id": "P020",
-          "name": "Bananas 119",
+        "P014": {
+          "product_id": "P014",
+          "name": "Cheese 113",
+          "category": "dairy",
+          "price": 11,
+          "calories": 466,
+          "protein": 0,
+          "brand": "DailyChoice",
+          "weight": 1333
+        },
+        "P016": {
+          "product_id": "P016",
+          "name": "Oats 115",
+          "category": "grain",
+          "price": 17,
+          "calories": 120,
+          "protein": 12,
+          "brand": "PrimeSelect",
+          "weight": 1430
+        },
+        "P005": {
+          "product_id": "P005",
+          "name": "Bananas 104",
+          "category": "produce",
+          "price": 3,
+          "calories": 730,
+          "protein": 8,
+          "brand": "PeakMarket",
+          "weight": 1491
+        },
+        "P040": {
+          "product_id": "P040",
+          "name": "Yogurt 139",
+          "category": "dairy",
+          "price": 24,
+          "calories": 522,
+          "protein": 3,
+          "brand": "FreshFarm",
+          "weight": 1209
+        },
+        "P024": {
+          "product_id": "P024",
+          "name": "Rice 123",
+          "category": "grain",
+          "price": 23,
+          "calories": 639,
+          "protein": 37,
+          "brand": "FreshFarm",
+          "weight": 1250
+        },
+        "P032": {
+          "product_id": "P032",
+          "name": "Tomatoes 131",
           "category": "produce",
           "price": 18,
-          "calories": 135,
-          "protein": 14,
-          "brand": "FreshFarm",
-          "weight": 388
+          "calories": 536,
+          "protein": 25,
+          "brand": "HomeHarvest",
+          "weight": 318
+        },
+        "P001": {
+          "product_id": "P001",
+          "name": "Pasta 100",
+          "category": "grain",
+          "price": 21,
+          "calories": 403,
+          "protein": 10,
+          "brand": "HomeHarvest",
+          "weight": 468
         },
         "P019": {
           "product_id": "P019",
@@ -29166,25 +29026,105 @@
           "brand": "GreenLeaf",
           "weight": 1468
         },
-        "P035": {
-          "product_id": "P035",
-          "name": "Bananas 134",
-          "category": "produce",
-          "price": 23,
-          "calories": 559,
-          "protein": 32,
-          "brand": "DailyChoice",
-          "weight": 390
-        },
-        "P024": {
-          "product_id": "P024",
-          "name": "Rice 123",
+        "P022": {
+          "product_id": "P022",
+          "name": "Quinoa 121",
           "category": "grain",
-          "price": 23,
-          "calories": 639,
-          "protein": 37,
+          "price": 3,
+          "calories": 619,
+          "protein": 34,
+          "brand": "DailyChoice",
+          "weight": 1384
+        },
+        "P042": {
+          "product_id": "P042",
+          "name": "Crackers 141",
+          "category": "snack",
+          "price": 19,
+          "calories": 480,
+          "protein": 12,
+          "brand": "PrimeSelect",
+          "weight": 573
+        },
+        "P006": {
+          "product_id": "P006",
+          "name": "Fish 105",
+          "category": "protein",
+          "price": 10,
+          "calories": 524,
+          "protein": 12,
           "brand": "FreshFarm",
           "weight": 1250
+        },
+        "P020": {
+          "product_id": "P020",
+          "name": "Bananas 119",
+          "category": "produce",
+          "price": 18,
+          "calories": 135,
+          "protein": 14,
+          "brand": "FreshFarm",
+          "weight": 388
+        },
+        "P015": {
+          "product_id": "P015",
+          "name": "Rice 114",
+          "category": "grain",
+          "price": 5,
+          "calories": 258,
+          "protein": 19,
+          "brand": "PrimeSelect",
+          "weight": 736
+        },
+        "P041": {
+          "product_id": "P041",
+          "name": "Tomatoes 140",
+          "category": "produce",
+          "price": 18,
+          "calories": 59,
+          "protein": 1,
+          "brand": "PeakMarket",
+          "weight": 334
+        },
+        "P039": {
+          "product_id": "P039",
+          "name": "Bread 138",
+          "category": "grain",
+          "price": 14,
+          "calories": 752,
+          "protein": 38,
+          "brand": "PrimeSelect",
+          "weight": 480
+        },
+        "P026": {
+          "product_id": "P026",
+          "name": "Pasta 125",
+          "category": "grain",
+          "price": 5,
+          "calories": 502,
+          "protein": 9,
+          "brand": "PrimeSelect",
+          "weight": 1082
+        },
+        "P037": {
+          "product_id": "P037",
+          "name": "Quinoa 136",
+          "category": "grain",
+          "price": 14,
+          "calories": 260,
+          "protein": 3,
+          "brand": "NutriBest",
+          "weight": 1017
+        },
+        "P009": {
+          "product_id": "P009",
+          "name": "Crackers 108",
+          "category": "snack",
+          "price": 25,
+          "calories": 769,
+          "protein": 11,
+          "brand": "PrimeSelect",
+          "weight": 1093
         },
         "P025": {
           "product_id": "P025",
@@ -29206,25 +29146,85 @@
           "brand": "GreenLeaf",
           "weight": 782
         },
-        "P026": {
-          "product_id": "P026",
-          "name": "Pasta 125",
-          "category": "grain",
-          "price": 5,
-          "calories": 502,
+        "P033": {
+          "product_id": "P033",
+          "name": "Smoothie 132",
+          "category": "beverage",
+          "price": 16,
+          "calories": 405,
           "protein": 9,
-          "brand": "PrimeSelect",
-          "weight": 1082
+          "brand": "HomeHarvest",
+          "weight": 1140
         },
-        "P031": {
-          "product_id": "P031",
-          "name": "Cookies 130",
-          "category": "snack",
-          "price": 20,
-          "calories": 426,
-          "protein": 27,
+        "P034": {
+          "product_id": "P034",
+          "name": "Yogurt 133",
+          "category": "dairy",
+          "price": 4,
+          "calories": 436,
+          "protein": 13,
+          "brand": "DailyChoice",
+          "weight": 1007
+        },
+        "P030": {
+          "product_id": "P030",
+          "name": "Bananas 129",
+          "category": "produce",
+          "price": 25,
+          "calories": 260,
+          "protein": 10,
           "brand": "FreshFarm",
-          "weight": 1209
+          "weight": 709
+        },
+        "P012": {
+          "product_id": "P012",
+          "name": "Fish 111",
+          "category": "protein",
+          "price": 12,
+          "calories": 646,
+          "protein": 36,
+          "brand": "FreshFarm",
+          "weight": 255
+        },
+        "P028": {
+          "product_id": "P028",
+          "name": "Apples 127",
+          "category": "produce",
+          "price": 22,
+          "calories": 272,
+          "protein": 35,
+          "brand": "DailyChoice",
+          "weight": 1466
+        },
+        "P035": {
+          "product_id": "P035",
+          "name": "Bananas 134",
+          "category": "produce",
+          "price": 23,
+          "calories": 559,
+          "protein": 32,
+          "brand": "DailyChoice",
+          "weight": 390
+        },
+        "P021": {
+          "product_id": "P021",
+          "name": "Nuts 120",
+          "category": "snack",
+          "price": 11,
+          "calories": 623,
+          "protein": 2,
+          "brand": "GreenLeaf",
+          "weight": 1465
+        },
+        "P010": {
+          "product_id": "P010",
+          "name": "Cheese 109",
+          "category": "dairy",
+          "price": 22,
+          "calories": 72,
+          "protein": 36,
+          "brand": "UrbanTaste",
+          "weight": 384
         },
         "P043": {
           "product_id": "P043",

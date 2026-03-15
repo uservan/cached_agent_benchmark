@@ -1,216 +1,95 @@
+import argparse
+import json
+import os
+import sys
+
+if __package__ in (None, ""):
+    sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+
+DEFAULT_VALIDATION_EXAMPLE_PATH = os.path.join(
+    os.path.dirname(os.path.dirname(__file__)),
+    "data",
+    "course_dataset_n6_r5_c2-3-4-5-6-7_cand24_valid2_seed42.json",
+)
+
 try:
-    from . import (
-        DEFAULT_CANDIDATES_PER_SLOT,
-        DEFAULT_VALID_OPTIONS,
-    )
-    from .constraints import (
-        aggregate_constraint_satisfied,
-        item_matches_slot_constraint,
-    )
     from .domains import DOMAIN_SPECS
+    from .generation.constants import DEFAULT_CANDIDATES_PER_SLOT, DEFAULT_VALID_OPTIONS
+    from .valid.dataset_checks import validate_dataset_structure
+    from .valid.scoped import validate_scope_constraints
+    from .valid.utils import build_slot_map
+    from utils.console_display import ConsoleDisplay
 except ImportError:
-    from __init__ import (
-        DEFAULT_CANDIDATES_PER_SLOT,
-        DEFAULT_VALID_OPTIONS,
-    )
-    from constraints import (
-        aggregate_constraint_satisfied,
-        item_matches_slot_constraint,
-    )
     from domains import DOMAIN_SPECS
-
-
-DOMAIN_ITEM_LABELS = {
-    "course": ("course", "courses"),
-    "shopping": ("product", "products"),
-    "travel": ("activity", "activities"),
-    "workforce": ("worker", "workers"),
-    "meal": ("dish", "dishes"),
-    "pc_build": ("component", "components"),
-}
-
-
-def _label_for_attr(attr_name):
-    return attr_name.replace("_", " ")
-
-
-def _format_rule_message(domain, rule, value, scope_text):
-    item_singular, item_plural = DOMAIN_ITEM_LABELS[domain]
-    rule_type = rule["type"]
-
-    if rule_type == "sum_min":
-        return f"the total {_label_for_attr(rule['attr'])} of all {item_plural} in {scope_text} must be at least {value}"
-    if rule_type == "sum_max":
-        return f"the total {_label_for_attr(rule['attr'])} of all {item_plural} in {scope_text} must be at most {value}"
-    if rule_type == "max_cap":
-        return f"the maximum {_label_for_attr(rule['attr'])} of any {item_singular} in {scope_text} must be at most {value}"
-    if rule_type == "repeat_max":
-        return f"the same {_label_for_attr(rule['attr'])} can appear at most {value} times in {scope_text}"
-    if rule_type == "count_min":
-        return (
-            f"there must be at least {value} {item_plural} in {scope_text} whose "
-            f"{_label_for_attr(rule['predicate_key'])} is {rule['predicate_value']}"
-        )
-    if rule_type == "count_min_threshold":
-        return (
-            f"there must be at least {value} {item_plural} in {scope_text} whose "
-            f"{_label_for_attr(rule['attr'])} is at least {rule['threshold']}"
-        )
-    if rule_type == "max_row_sum":
-        return f"for any single row in {scope_text}, the total {_label_for_attr(rule['attr'])} must be at most {value}"
-    return f"constraint '{rule['name']}' failed in {scope_text}"
-
-
-def _build_constraint_maps(dataset):
-    slot_map = {(slot["row"], slot["col"]): slot for slot in dataset["slots"]}
-    row_map = {constraint["row"]: constraint for constraint in dataset["row_constraints"]}
-    col_map = {constraint["col"]: constraint for constraint in dataset["col_constraints"]}
-    return slot_map, row_map, col_map
-
-
-def _build_slot_map(slots):
-    return {(slot["row"], slot["col"]): slot for slot in slots}
-
-
-def _active_rules(rule_specs, constraint):
-    return [rule for rule in rule_specs if rule["name"] in constraint]
-
-
-def _ids_to_items(item_ids, item_pool):
-    items = []
-    for item_id in item_ids:
-        if item_id is None:
-            continue
-        if item_id not in item_pool:
-            raise KeyError(item_id)
-        items.append(item_pool[item_id])
-    return items
-
-
-def _partial_max_row_sum(solution, item_pool, attr):
-    row_totals = []
-    for row in solution:
-        row_total = 0
-        for item_id in row:
-            if item_id is None:
-                continue
-            row_total += item_pool[item_id][attr]
-        row_totals.append(row_total)
-    return max(row_totals) if row_totals else 0
-
-
-def _rule_satisfied(rule, constraint_value, items, is_complete, solution, item_pool):
-    if rule["type"] in ("sum_min", "count_min", "count_min_threshold") and not is_complete:
-        return True
-    if rule["type"] == "max_row_sum" and not is_complete:
-        return _partial_max_row_sum(solution, item_pool, rule["attr"]) <= constraint_value
-    return aggregate_constraint_satisfied(
-        rule,
-        constraint_value,
-        items,
-        truth_solution=solution,
-        item_lookup=item_pool,
-    )
+    from generation.constants import DEFAULT_CANDIDATES_PER_SLOT, DEFAULT_VALID_OPTIONS
+    from valid.dataset_checks import validate_dataset_structure
+    from valid.scoped import validate_scope_constraints
+    from valid.utils import build_slot_map
+    from utils.console_display import ConsoleDisplay
 
 
 def validate_row_constraints(solution, domain, row_index, row_constraints, item_pool, slots):
     if row_index < 0 or row_index >= len(solution):
         return False, f"row {row_index} is out of range"
-    rule_specs = DOMAIN_SPECS[domain]["row_rules"]
-    row_constraint = row_constraints[row_index]
-    row_ids = list(solution[row_index])
-    slot_map = _build_slot_map(slots)
-    for col_index, item_id in enumerate(row_ids):
-        if item_id is None:
-            continue
-        if item_id not in slot_map[(row_index, col_index)]["candidate_ids"]:
-            return False, (
-                f"slot ({row_index}, {col_index}) contains id '{item_id}', "
-                "which is not one of the candidate options for that slot"
-            )
-    try:
-        row_items = _ids_to_items(row_ids, item_pool)
-    except KeyError as exc:
-        return False, f"unknown item id '{exc.args[0]}' appears in row {row_index}"
 
-    is_complete = all(item_id is not None for item_id in row_ids)
-    for rule in _active_rules(rule_specs, row_constraint):
-        if not _rule_satisfied(
-            rule,
-            row_constraint[rule["name"]],
-            row_items,
-            is_complete,
-            solution,
-            item_pool,
-        ):
-            return False, _format_rule_message(domain, rule, row_constraint[rule["name"]], f"row {row_index}")
-    return True, None
+    row_ids = list(solution[row_index])
+    positions = [(row_index, col_index, item_id) for col_index, item_id in enumerate(row_ids)]
+    return validate_scope_constraints(
+        solution=solution,
+        domain=domain,
+        index=row_index,
+        ids=row_ids,
+        positions=positions,
+        constraint=row_constraints[row_index],
+        rule_specs=DOMAIN_SPECS[domain]["row_rules"],
+        item_pool=item_pool,
+        slot_map=build_slot_map(slots),
+        unknown_id_scope="row {index}",
+        scope_text="row {index}",
+    )
 
 
 def validate_col_constraints(solution, domain, col_index, col_constraints, item_pool, slots):
     if not solution or col_index < 0 or col_index >= len(solution[0]):
         return False, f"column {col_index} is out of range"
-    rule_specs = DOMAIN_SPECS[domain]["col_rules"]
-    col_constraint = col_constraints[col_index]
-    col_ids = [solution[row_index][col_index] for row_index in range(len(solution))]
-    slot_map = _build_slot_map(slots)
-    for row_index, item_id in enumerate(col_ids):
-        if item_id is None:
-            continue
-        if item_id not in slot_map[(row_index, col_index)]["candidate_ids"]:
-            return False, (
-                f"slot ({row_index}, {col_index}) contains id '{item_id}', "
-                "which is not one of the candidate options for that slot"
-            )
-    try:
-        col_items = _ids_to_items(col_ids, item_pool)
-    except KeyError as exc:
-        return False, f"unknown item id '{exc.args[0]}' appears in column {col_index}"
 
-    is_complete = all(item_id is not None for item_id in col_ids)
-    for rule in _active_rules(rule_specs, col_constraint):
-        if not _rule_satisfied(
-            rule,
-            col_constraint[rule["name"]],
-            col_items,
-            is_complete,
-            solution,
-            item_pool,
-        ):
-            return False, _format_rule_message(domain, rule, col_constraint[rule["name"]], f"column {col_index}")
-    return True, None
+    col_ids = [solution[row_index][col_index] for row_index in range(len(solution))]
+    positions = [(row_index, col_index, item_id) for row_index, item_id in enumerate(col_ids)]
+    return validate_scope_constraints(
+        solution=solution,
+        domain=domain,
+        index=col_index,
+        ids=col_ids,
+        positions=positions,
+        constraint=col_constraints[col_index],
+        rule_specs=DOMAIN_SPECS[domain]["col_rules"],
+        item_pool=item_pool,
+        slot_map=build_slot_map(slots),
+        unknown_id_scope="column {index}",
+        scope_text="column {index}",
+    )
 
 
 def validate_global_constraints(solution, domain, global_constraints, item_pool, slots):
-    rule_specs = DOMAIN_SPECS[domain]["global_rules"]
     global_ids = [item_id for row in solution for item_id in row]
-    slot_map = _build_slot_map(slots)
-    for row_index, row in enumerate(solution):
-        for col_index, item_id in enumerate(row):
-            if item_id is None:
-                continue
-            if item_id not in slot_map[(row_index, col_index)]["candidate_ids"]:
-                return False, (
-                    f"slot ({row_index}, {col_index}) contains id '{item_id}', "
-                    "which is not one of the candidate options for that slot"
-                )
-    try:
-        all_items = _ids_to_items(global_ids, item_pool)
-    except KeyError as exc:
-        return False, f"unknown item id '{exc.args[0]}' appears in the solution"
-
-    is_complete = all(item_id is not None for item_id in global_ids)
-    for rule in _active_rules(rule_specs, global_constraints):
-        if not _rule_satisfied(
-            rule,
-            global_constraints[rule["name"]],
-            all_items,
-            is_complete,
-            solution,
-            item_pool,
-        ):
-            return False, _format_rule_message(domain, rule, global_constraints[rule["name"]], "the whole grid")
-    return True, None
+    positions = [
+        (row_index, col_index, item_id)
+        for row_index, row in enumerate(solution)
+        for col_index, item_id in enumerate(row)
+    ]
+    return validate_scope_constraints(
+        solution=solution,
+        domain=domain,
+        index=None,
+        ids=global_ids,
+        positions=positions,
+        constraint=global_constraints,
+        rule_specs=DOMAIN_SPECS[domain]["global_rules"],
+        item_pool=item_pool,
+        slot_map=build_slot_map(slots),
+        unknown_id_scope="the solution",
+        scope_text="the whole grid",
+    )
 
 
 def validate_dataset(
@@ -218,112 +97,197 @@ def validate_dataset(
     candidates_per_slot=DEFAULT_CANDIDATES_PER_SLOT,
     valid_options=DEFAULT_VALID_OPTIONS,
 ):
-    domain = dataset["domain"]
-    spec = DOMAIN_SPECS[domain]
-    item_pool = dataset["item_pool"]
-    truth_solution = dataset["truth_solution"]
-    rows = dataset["meta"]["rows"]
-    cols = dataset["meta"]["cols"]
-    slot_map, row_map, col_map = _build_constraint_maps(dataset)
+    return validate_dataset_structure(
+        dataset,
+        candidates_per_slot=candidates_per_slot,
+        valid_options=valid_options,
+        validate_row_constraints=validate_row_constraints,
+        validate_col_constraints=validate_col_constraints,
+        validate_global_constraints=validate_global_constraints,
+    )
 
-    for row_index in range(rows):
-        for col_index in range(cols):
-            truth_id = truth_solution[row_index][col_index]
-            if truth_id not in item_pool:
-                return False
-            slot_entry = slot_map[(row_index, col_index)]
-            if slot_entry["truth_id"] != truth_id:
-                return False
-            if len(slot_entry["candidate_ids"]) != candidates_per_slot:
-                return False
-            if len(set(slot_entry["candidate_ids"])) != len(slot_entry["candidate_ids"]):
-                return False
-            valid_candidate_ids = slot_entry.get("valid_candidate_ids")
-            if valid_candidate_ids is None or len(set(valid_candidate_ids)) != len(valid_candidate_ids):
-                return False
-            if truth_id not in slot_entry["candidate_ids"] or truth_id not in valid_candidate_ids:
-                return False
-            if any(candidate_id not in slot_entry["candidate_ids"] for candidate_id in valid_candidate_ids):
-                return False
-            if any(candidate_id not in item_pool for candidate_id in slot_entry["candidate_ids"]):
-                return False
-            if any(
-                not item_matches_slot_constraint(
-                    item_pool[candidate_id],
-                    slot_entry["slot_constraints"],
-                    spec["slot_rules"],
-                )
-                for candidate_id in slot_entry["candidate_ids"]
-            ):
-                return False
 
-            computed_valid_ids = []
-            for candidate_id in slot_entry["candidate_ids"]:
-                trial_solution = [row[:] for row in truth_solution]
-                trial_solution[row_index][col_index] = candidate_id
-                row_ok, _ = validate_row_constraints(
-                    trial_solution,
-                    domain,
-                    row_index,
-                    dataset["row_constraints"],
-                    item_pool,
-                    dataset["slots"],
-                )
-                if not row_ok:
-                    continue
-                col_ok, _ = validate_col_constraints(
-                    trial_solution,
-                    domain,
-                    col_index,
-                    dataset["col_constraints"],
-                    item_pool,
-                    dataset["slots"],
-                )
-                if not col_ok:
-                    continue
-                global_ok, _ = validate_global_constraints(
-                    trial_solution,
-                    domain,
-                    dataset["global_constraints"],
-                    item_pool,
-                    dataset["slots"],
-                )
-                if global_ok:
-                    computed_valid_ids.append(candidate_id)
-            if set(computed_valid_ids) != set(valid_candidate_ids):
-                return False
-            if len(computed_valid_ids) != valid_options:
-                return False
+def _load_instance(path, instance_index):
+    with open(path, "r", encoding="utf-8") as input_file:
+        payload = json.load(input_file)
 
-    for row_index in range(rows):
-        row_ok, _ = validate_row_constraints(
-            truth_solution,
-            domain,
+    if "instances" not in payload or not payload["instances"]:
+        raise ValueError(f"Dataset file does not contain instances: {path}")
+    if instance_index < 0 or instance_index >= len(payload["instances"]):
+        raise IndexError(f"instance_index {instance_index} is out of range for {path}")
+    return payload["instances"][instance_index]
+
+
+def _replace_slot(solution, row_index, col_index, candidate_id):
+    trial_solution = [row[:] for row in solution]
+    trial_solution[row_index][col_index] = candidate_id
+    return trial_solution
+
+
+def _check_solution(dataset, solution):
+    row_results = []
+    for row_index in range(len(solution)):
+        ok, reason = validate_row_constraints(
+            solution,
+            dataset["domain"],
             row_index,
             dataset["row_constraints"],
-            item_pool,
+            dataset["item_pool"],
             dataset["slots"],
         )
-        if not row_ok:
-            return False
+        row_results.append({"row": row_index, "ok": ok, "reason": reason})
 
-    for col_index in range(cols):
-        col_ok, _ = validate_col_constraints(
-            truth_solution,
-            domain,
-            col_index,
-            dataset["col_constraints"],
-            item_pool,
-            dataset["slots"],
-        )
-        if not col_ok:
-            return False
+    col_results = []
+    if solution:
+        for col_index in range(len(solution[0])):
+            ok, reason = validate_col_constraints(
+                solution,
+                dataset["domain"],
+                col_index,
+                dataset["col_constraints"],
+                dataset["item_pool"],
+                dataset["slots"],
+            )
+            col_results.append({"col": col_index, "ok": ok, "reason": reason})
 
-    global_ok, _ = validate_global_constraints(
-        truth_solution,
-        domain,
+    global_ok, global_reason = validate_global_constraints(
+        solution,
+        dataset["domain"],
         dataset["global_constraints"],
-        item_pool,
+        dataset["item_pool"],
         dataset["slots"],
     )
-    return global_ok
+
+    return {
+        "rows": row_results,
+        "cols": col_results,
+        "global": {"ok": global_ok, "reason": global_reason},
+    }
+
+
+def _build_slot_examples(dataset, max_examples_per_slot=4):
+    examples = []
+    truth_solution = dataset["truth_solution"]
+
+    for slot in dataset["slots"]:
+        row_index = slot["row"]
+        col_index = slot["col"]
+        slot_examples = []
+
+        for candidate_id in slot["candidate_ids"]:
+            if candidate_id == slot["truth_id"]:
+                continue
+
+            trial_solution = _replace_slot(truth_solution, row_index, col_index, candidate_id)
+            row_ok, row_reason = validate_row_constraints(
+                trial_solution,
+                dataset["domain"],
+                row_index,
+                dataset["row_constraints"],
+                dataset["item_pool"],
+                dataset["slots"],
+            )
+            col_ok, col_reason = validate_col_constraints(
+                trial_solution,
+                dataset["domain"],
+                col_index,
+                dataset["col_constraints"],
+                dataset["item_pool"],
+                dataset["slots"],
+            )
+            global_ok, global_reason = validate_global_constraints(
+                trial_solution,
+                dataset["domain"],
+                dataset["global_constraints"],
+                dataset["item_pool"],
+                dataset["slots"],
+            )
+
+            slot_examples.append({
+                "candidate_id": candidate_id,
+                "is_valid_candidate": candidate_id in slot.get("valid_candidate_ids", []),
+                "row_ok": row_ok,
+                "row_reason": row_reason,
+                "col_ok": col_ok,
+                "col_reason": col_reason,
+                "global_ok": global_ok,
+                "global_reason": global_reason,
+            })
+
+            if len(slot_examples) >= max_examples_per_slot:
+                break
+
+        examples.append({
+            "row": row_index,
+            "col": col_index,
+            "truth_id": slot["truth_id"],
+            "valid_candidate_ids": slot.get("valid_candidate_ids", []),
+            "examples": slot_examples,
+        })
+
+    return examples
+
+
+def _print_solution_report(title, solution_report):
+    ConsoleDisplay.print_solution_report(title, solution_report)
+
+
+def _print_slot_examples(slot_examples):
+    ConsoleDisplay.print_slot_examples(slot_examples)
+
+
+def build_arg_parser():
+    parser = argparse.ArgumentParser(
+        description="Validate and inspect a generated dataset instance.",
+        formatter_class=argparse.RawTextHelpFormatter,
+        epilog=(
+            "Examples:\n"
+            f"  python data_generation/validation.py {DEFAULT_VALIDATION_EXAMPLE_PATH}\n"
+            f"  python data_generation/validation.py {DEFAULT_VALIDATION_EXAMPLE_PATH} --instance-index 1 --max-examples-per-slot 2"
+        ),
+    )
+    parser.add_argument(
+        "dataset_path",
+        nargs="?",
+        default=DEFAULT_VALIDATION_EXAMPLE_PATH,
+        help=f"Path to a generated dataset JSON file. Default example: {DEFAULT_VALIDATION_EXAMPLE_PATH}",
+    )
+    parser.add_argument(
+        "--instance-index",
+        type=int,
+        default=0,
+        help="Instance index in the dataset file. Default: 0.",
+    )
+    parser.add_argument(
+        "--max-examples-per-slot",
+        type=int,
+        default=4,
+        help="Maximum number of alternative candidate substitutions to print for each slot. Default: 4.",
+    )
+    return parser
+
+
+def main():
+    parser = build_arg_parser()
+    args = parser.parse_args()
+
+    dataset = _load_instance(args.dataset_path, args.instance_index)
+    is_valid = validate_dataset(dataset)
+    ConsoleDisplay.print_validation_summary(
+        dataset.get("instance_id", str(args.instance_index)),
+        dataset["domain"],
+        is_valid,
+    )
+
+    truth_report = _check_solution(dataset, dataset["truth_solution"])
+    _print_solution_report("Truth solution report:", truth_report)
+
+    slot_examples = _build_slot_examples(
+        dataset,
+        max_examples_per_slot=args.max_examples_per_slot,
+    )
+    _print_slot_examples(slot_examples)
+
+
+if __name__ == "__main__":
+    main()

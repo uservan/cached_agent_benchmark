@@ -1,7 +1,4 @@
-try:
-    from .domains import DOMAIN_SPECS
-except ImportError:
-    from domains import DOMAIN_SPECS
+from data_generation.domains import DOMAIN_SPECS
 
 
 DOMAIN_GRID_DESCRIPTIONS = {

@@ -16,13 +16,23 @@
         "same_department_week_max": 7
       },
       "item_pool": {
-        "W012": {
-          "worker_id": "W012",
-          "name": "Worker 111",
-          "skill": 3,
-          "hourly_cost": 78,
-          "experience": 12,
-          "department": "sales",
+        "W005": {
+          "worker_id": "W005",
+          "name": "Worker 104",
+          "skill": 2,
+          "hourly_cost": 77,
+          "experience": 19,
+          "department": "operations",
+          "reliability": 1,
+          "overtime_capacity": 2
+        },
+        "W007": {
+          "worker_id": "W007",
+          "name": "Worker 106",
+          "skill": 1,
+          "hourly_cost": 31,
+          "experience": 13,
+          "department": "support",
           "reliability": 3,
           "overtime_capacity": 5
         },
@@ -36,45 +46,35 @@
           "reliability": 2,
           "overtime_capacity": 8
         },
-        "W009": {
-          "worker_id": "W009",
-          "name": "Worker 108",
+        "W004": {
+          "worker_id": "W004",
+          "name": "Worker 103",
           "skill": 1,
-          "hourly_cost": 68,
-          "experience": 3,
-          "department": "logistics",
-          "reliability": 3,
-          "overtime_capacity": 10
+          "hourly_cost": 91,
+          "experience": 7,
+          "department": "maintenance",
+          "reliability": 5,
+          "overtime_capacity": 6
         },
-        "W007": {
-          "worker_id": "W007",
-          "name": "Worker 106",
-          "skill": 1,
-          "hourly_cost": 31,
-          "experience": 13,
-          "department": "support",
+        "W010": {
+          "worker_id": "W010",
+          "name": "Worker 109",
+          "skill": 5,
+          "hourly_cost": 66,
+          "experience": 19,
+          "department": "sales",
+          "reliability": 1,
+          "overtime_capacity": 0
+        },
+        "W012": {
+          "worker_id": "W012",
+          "name": "Worker 111",
+          "skill": 3,
+          "hourly_cost": 78,
+          "experience": 12,
+          "department": "sales",
           "reliability": 3,
           "overtime_capacity": 5
-        },
-        "W017": {
-          "worker_id": "W017",
-          "name": "Worker 116",
-          "skill": 3,
-          "hourly_cost": 47,
-          "experience": 16,
-          "department": "security",
-          "reliability": 4,
-          "overtime_capacity": 2
-        },
-        "W005": {
-          "worker_id": "W005",
-          "name": "Worker 104",
-          "skill": 2,
-          "hourly_cost": 77,
-          "experience": 19,
-          "department": "operations",
-          "reliability": 1,
-          "overtime_capacity": 2
         },
         "W014": {
           "worker_id": "W014",
@@ -86,15 +86,15 @@
           "reliability": 3,
           "overtime_capacity": 10
         },
-        "W004": {
-          "worker_id": "W004",
-          "name": "Worker 103",
+        "W009": {
+          "worker_id": "W009",
+          "name": "Worker 108",
           "skill": 1,
-          "hourly_cost": 91,
-          "experience": 7,
-          "department": "maintenance",
-          "reliability": 5,
-          "overtime_capacity": 6
+          "hourly_cost": 68,
+          "experience": 3,
+          "department": "logistics",
+          "reliability": 3,
+          "overtime_capacity": 10
         },
         "W016": {
           "worker_id": "W016",
@@ -106,15 +106,15 @@
           "reliability": 2,
           "overtime_capacity": 9
         },
-        "W010": {
-          "worker_id": "W010",
-          "name": "Worker 109",
-          "skill": 5,
-          "hourly_cost": 66,
-          "experience": 19,
-          "department": "sales",
-          "reliability": 1,
-          "overtime_capacity": 0
+        "W017": {
+          "worker_id": "W017",
+          "name": "Worker 116",
+          "skill": 3,
+          "hourly_cost": 47,
+          "experience": 16,
+          "department": "security",
+          "reliability": 4,
+          "overtime_capacity": 2
         },
         "W018": {
           "worker_id": "W018",
@@ -2944,55 +2944,15 @@
         "same_department_week_max": 5
       },
       "item_pool": {
-        "W002": {
-          "worker_id": "W002",
-          "name": "Worker 101",
-          "skill": 3,
-          "hourly_cost": 56,
-          "experience": 16,
-          "department": "logistics",
-          "reliability": 4,
-          "overtime_capacity": 7
-        },
-        "W012": {
-          "worker_id": "W012",
-          "name": "Worker 111",
-          "skill": 5,
-          "hourly_cost": 75,
-          "experience": 19,
-          "department": "maintenance",
-          "reliability": 1,
-          "overtime_capacity": 4
-        },
-        "W009": {
-          "worker_id": "W009",
-          "name": "Worker 108",
-          "skill": 3,
-          "hourly_cost": 62,
-          "experience": 18,
-          "department": "operations",
-          "reliability": 3,
-          "overtime_capacity": 7
-        },
-        "W022": {
-          "worker_id": "W022",
-          "name": "Worker 121",
-          "skill": 3,
-          "hourly_cost": 78,
-          "experience": 16,
-          "department": "sales",
-          "reliability": 3,
-          "overtime_capacity": 0
-        },
-        "W017": {
-          "worker_id": "W017",
-          "name": "Worker 116",
-          "skill": 3,
-          "hourly_cost": 38,
-          "experience": 15,
+        "W005": {
+          "worker_id": "W005",
+          "name": "Worker 104",
+          "skill": 4,
+          "hourly_cost": 48,
+          "experience": 12,
           "department": "security",
-          "reliability": 1,
-          "overtime_capacity": 3
+          "reliability": 5,
+          "overtime_capacity": 10
         },
         "W006": {
           "worker_id": "W006",
@@ -3004,45 +2964,15 @@
           "reliability": 5,
           "overtime_capacity": 1
         },
-        "W005": {
-          "worker_id": "W005",
-          "name": "Worker 104",
-          "skill": 4,
-          "hourly_cost": 48,
-          "experience": 12,
-          "department": "security",
-          "reliability": 5,
-          "overtime_capacity": 10
-        },
-        "W004": {
-          "worker_id": "W004",
-          "name": "Worker 103",
-          "skill": 1,
-          "hourly_cost": 85,
-          "experience": 18,
-          "department": "logistics",
-          "reliability": 2,
-          "overtime_capacity": 0
-        },
-        "W014": {
-          "worker_id": "W014",
-          "name": "Worker 113",
-          "skill": 1,
-          "hourly_cost": 68,
-          "experience": 3,
-          "department": "maintenance",
-          "reliability": 1,
-          "overtime_capacity": 6
-        },
-        "W019": {
-          "worker_id": "W019",
-          "name": "Worker 118",
-          "skill": 1,
-          "hourly_cost": 37,
-          "experience": 12,
+        "W022": {
+          "worker_id": "W022",
+          "name": "Worker 121",
+          "skill": 3,
+          "hourly_cost": 78,
+          "experience": 16,
           "department": "sales",
-          "reliability": 1,
-          "overtime_capacity": 8
+          "reliability": 3,
+          "overtime_capacity": 0
         },
         "W018": {
           "worker_id": "W018",
@@ -3054,24 +2984,24 @@
           "reliability": 5,
           "overtime_capacity": 8
         },
-        "W010": {
-          "worker_id": "W010",
-          "name": "Worker 109",
+        "W002": {
+          "worker_id": "W002",
+          "name": "Worker 101",
           "skill": 3,
-          "hourly_cost": 95,
-          "experience": 19,
-          "department": "operations",
-          "reliability": 1,
-          "overtime_capacity": 8
-        },
-        "W008": {
-          "worker_id": "W008",
-          "name": "Worker 107",
-          "skill": 3,
-          "hourly_cost": 50,
-          "experience": 13,
+          "hourly_cost": 56,
+          "experience": 16,
           "department": "logistics",
-          "reliability": 5,
+          "reliability": 4,
+          "overtime_capacity": 7
+        },
+        "W004": {
+          "worker_id": "W004",
+          "name": "Worker 103",
+          "skill": 1,
+          "hourly_cost": 85,
+          "experience": 18,
+          "department": "logistics",
+          "reliability": 2,
           "overtime_capacity": 0
         },
         "W020": {
@@ -3084,6 +3014,36 @@
           "reliability": 4,
           "overtime_capacity": 9
         },
+        "W010": {
+          "worker_id": "W010",
+          "name": "Worker 109",
+          "skill": 3,
+          "hourly_cost": 95,
+          "experience": 19,
+          "department": "operations",
+          "reliability": 1,
+          "overtime_capacity": 8
+        },
+        "W012": {
+          "worker_id": "W012",
+          "name": "Worker 111",
+          "skill": 5,
+          "hourly_cost": 75,
+          "experience": 19,
+          "department": "maintenance",
+          "reliability": 1,
+          "overtime_capacity": 4
+        },
+        "W014": {
+          "worker_id": "W014",
+          "name": "Worker 113",
+          "skill": 1,
+          "hourly_cost": 68,
+          "experience": 3,
+          "department": "maintenance",
+          "reliability": 1,
+          "overtime_capacity": 6
+        },
         "W001": {
           "worker_id": "W001",
           "name": "Worker 100",
@@ -3093,6 +3053,46 @@
           "department": "logistics",
           "reliability": 1,
           "overtime_capacity": 10
+        },
+        "W009": {
+          "worker_id": "W009",
+          "name": "Worker 108",
+          "skill": 3,
+          "hourly_cost": 62,
+          "experience": 18,
+          "department": "operations",
+          "reliability": 3,
+          "overtime_capacity": 7
+        },
+        "W008": {
+          "worker_id": "W008",
+          "name": "Worker 107",
+          "skill": 3,
+          "hourly_cost": 50,
+          "experience": 13,
+          "department": "logistics",
+          "reliability": 5,
+          "overtime_capacity": 0
+        },
+        "W019": {
+          "worker_id": "W019",
+          "name": "Worker 118",
+          "skill": 1,
+          "hourly_cost": 37,
+          "experience": 12,
+          "department": "sales",
+          "reliability": 1,
+          "overtime_capacity": 8
+        },
+        "W017": {
+          "worker_id": "W017",
+          "name": "Worker 116",
+          "skill": 3,
+          "hourly_cost": 38,
+          "experience": 15,
+          "department": "security",
+          "reliability": 1,
+          "overtime_capacity": 3
         },
         "W023": {
           "worker_id": "W023",
@@ -7283,16 +7283,6 @@
         "same_department_week_max": 11
       },
       "item_pool": {
-        "W027": {
-          "worker_id": "W027",
-          "name": "Worker 126",
-          "skill": 3,
-          "hourly_cost": 58,
-          "experience": 4,
-          "department": "operations",
-          "reliability": 5,
-          "overtime_capacity": 2
-        },
         "W007": {
           "worker_id": "W007",
           "name": "Worker 106",
@@ -7302,66 +7292,6 @@
           "department": "maintenance",
           "reliability": 1,
           "overtime_capacity": 1
-        },
-        "W006": {
-          "worker_id": "W006",
-          "name": "Worker 105",
-          "skill": 4,
-          "hourly_cost": 68,
-          "experience": 14,
-          "department": "logistics",
-          "reliability": 1,
-          "overtime_capacity": 9
-        },
-        "W016": {
-          "worker_id": "W016",
-          "name": "Worker 115",
-          "skill": 5,
-          "hourly_cost": 28,
-          "experience": 4,
-          "department": "logistics",
-          "reliability": 2,
-          "overtime_capacity": 8
-        },
-        "W018": {
-          "worker_id": "W018",
-          "name": "Worker 117",
-          "skill": 3,
-          "hourly_cost": 25,
-          "experience": 6,
-          "department": "support",
-          "reliability": 3,
-          "overtime_capacity": 5
-        },
-        "W011": {
-          "worker_id": "W011",
-          "name": "Worker 110",
-          "skill": 4,
-          "hourly_cost": 33,
-          "experience": 12,
-          "department": "operations",
-          "reliability": 3,
-          "overtime_capacity": 4
-        },
-        "W017": {
-          "worker_id": "W017",
-          "name": "Worker 116",
-          "skill": 3,
-          "hourly_cost": 72,
-          "experience": 15,
-          "department": "maintenance",
-          "reliability": 2,
-          "overtime_capacity": 8
-        },
-        "W015": {
-          "worker_id": "W015",
-          "name": "Worker 114",
-          "skill": 3,
-          "hourly_cost": 46,
-          "experience": 13,
-          "department": "maintenance",
-          "reliability": 3,
-          "overtime_capacity": 9
         },
         "W005": {
           "worker_id": "W005",
@@ -7373,25 +7303,25 @@
           "reliability": 5,
           "overtime_capacity": 2
         },
-        "W019": {
-          "worker_id": "W019",
-          "name": "Worker 118",
-          "skill": 2,
-          "hourly_cost": 91,
-          "experience": 8,
-          "department": "support",
-          "reliability": 4,
-          "overtime_capacity": 7
+        "W006": {
+          "worker_id": "W006",
+          "name": "Worker 105",
+          "skill": 4,
+          "hourly_cost": 68,
+          "experience": 14,
+          "department": "logistics",
+          "reliability": 1,
+          "overtime_capacity": 9
         },
-        "W004": {
-          "worker_id": "W004",
-          "name": "Worker 103",
-          "skill": 2,
-          "hourly_cost": 42,
-          "experience": 9,
-          "department": "sales",
-          "reliability": 2,
-          "overtime_capacity": 8
+        "W015": {
+          "worker_id": "W015",
+          "name": "Worker 114",
+          "skill": 3,
+          "hourly_cost": 46,
+          "experience": 13,
+          "department": "maintenance",
+          "reliability": 3,
+          "overtime_capacity": 9
         },
         "W008": {
           "worker_id": "W008",
@@ -7403,6 +7333,96 @@
           "reliability": 2,
           "overtime_capacity": 3
         },
+        "W016": {
+          "worker_id": "W016",
+          "name": "Worker 115",
+          "skill": 5,
+          "hourly_cost": 28,
+          "experience": 4,
+          "department": "logistics",
+          "reliability": 2,
+          "overtime_capacity": 8
+        },
+        "W017": {
+          "worker_id": "W017",
+          "name": "Worker 116",
+          "skill": 3,
+          "hourly_cost": 72,
+          "experience": 15,
+          "department": "maintenance",
+          "reliability": 2,
+          "overtime_capacity": 8
+        },
+        "W004": {
+          "worker_id": "W004",
+          "name": "Worker 103",
+          "skill": 2,
+          "hourly_cost": 42,
+          "experience": 9,
+          "department": "sales",
+          "reliability": 2,
+          "overtime_capacity": 8
+        },
+        "W010": {
+          "worker_id": "W010",
+          "name": "Worker 109",
+          "skill": 4,
+          "hourly_cost": 50,
+          "experience": 12,
+          "department": "logistics",
+          "reliability": 4,
+          "overtime_capacity": 6
+        },
+        "W009": {
+          "worker_id": "W009",
+          "name": "Worker 108",
+          "skill": 3,
+          "hourly_cost": 90,
+          "experience": 1,
+          "department": "support",
+          "reliability": 3,
+          "overtime_capacity": 3
+        },
+        "W022": {
+          "worker_id": "W022",
+          "name": "Worker 121",
+          "skill": 3,
+          "hourly_cost": 70,
+          "experience": 16,
+          "department": "maintenance",
+          "reliability": 5,
+          "overtime_capacity": 4
+        },
+        "W019": {
+          "worker_id": "W019",
+          "name": "Worker 118",
+          "skill": 2,
+          "hourly_cost": 91,
+          "experience": 8,
+          "department": "support",
+          "reliability": 4,
+          "overtime_capacity": 7
+        },
+        "W018": {
+          "worker_id": "W018",
+          "name": "Worker 117",
+          "skill": 3,
+          "hourly_cost": 25,
+          "experience": 6,
+          "department": "support",
+          "reliability": 3,
+          "overtime_capacity": 5
+        },
+        "W026": {
+          "worker_id": "W026",
+          "name": "Worker 125",
+          "skill": 3,
+          "hourly_cost": 67,
+          "experience": 3,
+          "department": "sales",
+          "reliability": 5,
+          "overtime_capacity": 10
+        },
         "W020": {
           "worker_id": "W020",
           "name": "Worker 119",
@@ -7411,6 +7431,16 @@
           "experience": 18,
           "department": "sales",
           "reliability": 1,
+          "overtime_capacity": 2
+        },
+        "W027": {
+          "worker_id": "W027",
+          "name": "Worker 126",
+          "skill": 3,
+          "hourly_cost": 58,
+          "experience": 4,
+          "department": "operations",
+          "reliability": 5,
           "overtime_capacity": 2
         },
         "W013": {
@@ -7423,35 +7453,15 @@
           "reliability": 4,
           "overtime_capacity": 4
         },
-        "W009": {
-          "worker_id": "W009",
-          "name": "Worker 108",
-          "skill": 3,
-          "hourly_cost": 90,
-          "experience": 1,
-          "department": "support",
-          "reliability": 3,
-          "overtime_capacity": 3
-        },
-        "W026": {
-          "worker_id": "W026",
-          "name": "Worker 125",
-          "skill": 3,
-          "hourly_cost": 67,
-          "experience": 3,
-          "department": "sales",
-          "reliability": 5,
-          "overtime_capacity": 10
-        },
-        "W022": {
-          "worker_id": "W022",
-          "name": "Worker 121",
-          "skill": 3,
-          "hourly_cost": 70,
-          "experience": 16,
-          "department": "maintenance",
-          "reliability": 5,
-          "overtime_capacity": 4
+        "W021": {
+          "worker_id": "W021",
+          "name": "Worker 120",
+          "skill": 4,
+          "hourly_cost": 43,
+          "experience": 14,
+          "department": "operations",
+          "reliability": 2,
+          "overtime_capacity": 9
         },
         "W014": {
           "worker_id": "W014",
@@ -7463,25 +7473,15 @@
           "reliability": 1,
           "overtime_capacity": 10
         },
-        "W021": {
-          "worker_id": "W021",
-          "name": "Worker 120",
+        "W011": {
+          "worker_id": "W011",
+          "name": "Worker 110",
           "skill": 4,
-          "hourly_cost": 43,
-          "experience": 14,
-          "department": "operations",
-          "reliability": 2,
-          "overtime_capacity": 9
-        },
-        "W010": {
-          "worker_id": "W010",
-          "name": "Worker 109",
-          "skill": 4,
-          "hourly_cost": 50,
+          "hourly_cost": 33,
           "experience": 12,
-          "department": "logistics",
-          "reliability": 4,
-          "overtime_capacity": 6
+          "department": "operations",
+          "reliability": 3,
+          "overtime_capacity": 4
         },
         "W028": {
           "worker_id": "W028",
@@ -13083,15 +13083,15 @@
         "same_department_week_max": 23
       },
       "item_pool": {
-        "W027": {
-          "worker_id": "W027",
-          "name": "Worker 126",
+        "W005": {
+          "worker_id": "W005",
+          "name": "Worker 104",
           "skill": 5,
-          "hourly_cost": 45,
-          "experience": 7,
-          "department": "security",
+          "hourly_cost": 93,
+          "experience": 5,
+          "department": "operations",
           "reliability": 3,
-          "overtime_capacity": 9
+          "overtime_capacity": 8
         },
         "W007": {
           "worker_id": "W007",
@@ -13113,46 +13113,6 @@
           "reliability": 3,
           "overtime_capacity": 8
         },
-        "W016": {
-          "worker_id": "W016",
-          "name": "Worker 115",
-          "skill": 4,
-          "hourly_cost": 48,
-          "experience": 14,
-          "department": "support",
-          "reliability": 4,
-          "overtime_capacity": 4
-        },
-        "W001": {
-          "worker_id": "W001",
-          "name": "Worker 100",
-          "skill": 5,
-          "hourly_cost": 72,
-          "experience": 19,
-          "department": "support",
-          "reliability": 5,
-          "overtime_capacity": 10
-        },
-        "W030": {
-          "worker_id": "W030",
-          "name": "Worker 129",
-          "skill": 2,
-          "hourly_cost": 97,
-          "experience": 1,
-          "department": "logistics",
-          "reliability": 2,
-          "overtime_capacity": 3
-        },
-        "W023": {
-          "worker_id": "W023",
-          "name": "Worker 122",
-          "skill": 5,
-          "hourly_cost": 29,
-          "experience": 19,
-          "department": "sales",
-          "reliability": 4,
-          "overtime_capacity": 7
-        },
         "W015": {
           "worker_id": "W015",
           "name": "Worker 114",
@@ -13163,55 +13123,15 @@
           "reliability": 2,
           "overtime_capacity": 0
         },
-        "W005": {
-          "worker_id": "W005",
-          "name": "Worker 104",
+        "W032": {
+          "worker_id": "W032",
+          "name": "Worker 131",
           "skill": 5,
-          "hourly_cost": 93,
-          "experience": 5,
-          "department": "operations",
-          "reliability": 3,
-          "overtime_capacity": 8
-        },
-        "W019": {
-          "worker_id": "W019",
-          "name": "Worker 118",
-          "skill": 1,
-          "hourly_cost": 27,
-          "experience": 1,
-          "department": "support",
-          "reliability": 1,
-          "overtime_capacity": 3
-        },
-        "W004": {
-          "worker_id": "W004",
-          "name": "Worker 103",
-          "skill": 4,
-          "hourly_cost": 55,
-          "experience": 6,
-          "department": "sales",
-          "reliability": 1,
-          "overtime_capacity": 6
-        },
-        "W031": {
-          "worker_id": "W031",
-          "name": "Worker 130",
-          "skill": 5,
-          "hourly_cost": 36,
-          "experience": 13,
-          "department": "operations",
-          "reliability": 4,
-          "overtime_capacity": 1
-        },
-        "W028": {
-          "worker_id": "W028",
-          "name": "Worker 127",
-          "skill": 4,
-          "hourly_cost": 59,
-          "experience": 16,
-          "department": "support",
+          "hourly_cost": 80,
+          "experience": 18,
+          "department": "maintenance",
           "reliability": 5,
-          "overtime_capacity": 1
+          "overtime_capacity": 6
         },
         "W008": {
           "worker_id": "W008",
@@ -13223,55 +13143,105 @@
           "reliability": 1,
           "overtime_capacity": 0
         },
-        "W020": {
-          "worker_id": "W020",
-          "name": "Worker 119",
-          "skill": 2,
-          "hourly_cost": 27,
-          "experience": 6,
-          "department": "maintenance",
-          "reliability": 1,
-          "overtime_capacity": 4
-        },
-        "W025": {
-          "worker_id": "W025",
-          "name": "Worker 124",
-          "skill": 3,
-          "hourly_cost": 61,
-          "experience": 13,
-          "department": "support",
-          "reliability": 5,
-          "overtime_capacity": 4
-        },
-        "W013": {
-          "worker_id": "W013",
-          "name": "Worker 112",
-          "skill": 5,
-          "hourly_cost": 30,
-          "experience": 18,
+        "W016": {
+          "worker_id": "W016",
+          "name": "Worker 115",
+          "skill": 4,
+          "hourly_cost": 48,
+          "experience": 14,
           "department": "support",
           "reliability": 4,
+          "overtime_capacity": 4
+        },
+        "W028": {
+          "worker_id": "W028",
+          "name": "Worker 127",
+          "skill": 4,
+          "hourly_cost": 59,
+          "experience": 16,
+          "department": "support",
+          "reliability": 5,
+          "overtime_capacity": 1
+        },
+        "W031": {
+          "worker_id": "W031",
+          "name": "Worker 130",
+          "skill": 5,
+          "hourly_cost": 36,
+          "experience": 13,
+          "department": "operations",
+          "reliability": 4,
+          "overtime_capacity": 1
+        },
+        "W004": {
+          "worker_id": "W004",
+          "name": "Worker 103",
+          "skill": 4,
+          "hourly_cost": 55,
+          "experience": 6,
+          "department": "sales",
+          "reliability": 1,
+          "overtime_capacity": 6
+        },
+        "W001": {
+          "worker_id": "W001",
+          "name": "Worker 100",
+          "skill": 5,
+          "hourly_cost": 72,
+          "experience": 19,
+          "department": "support",
+          "reliability": 5,
           "overtime_capacity": 10
         },
-        "W012": {
-          "worker_id": "W012",
-          "name": "Worker 111",
-          "skill": 1,
-          "hourly_cost": 83,
-          "experience": 19,
-          "department": "maintenance",
-          "reliability": 2,
-          "overtime_capacity": 2
-        },
-        "W032": {
-          "worker_id": "W032",
-          "name": "Worker 131",
+        "W023": {
+          "worker_id": "W023",
+          "name": "Worker 122",
           "skill": 5,
-          "hourly_cost": 80,
-          "experience": 18,
-          "department": "maintenance",
-          "reliability": 5,
-          "overtime_capacity": 6
+          "hourly_cost": 29,
+          "experience": 19,
+          "department": "sales",
+          "reliability": 4,
+          "overtime_capacity": 7
+        },
+        "W009": {
+          "worker_id": "W009",
+          "name": "Worker 108",
+          "skill": 5,
+          "hourly_cost": 86,
+          "experience": 12,
+          "department": "sales",
+          "reliability": 3,
+          "overtime_capacity": 8
+        },
+        "W022": {
+          "worker_id": "W022",
+          "name": "Worker 121",
+          "skill": 1,
+          "hourly_cost": 51,
+          "experience": 19,
+          "department": "sales",
+          "reliability": 1,
+          "overtime_capacity": 5
+        },
+        "W019": {
+          "worker_id": "W019",
+          "name": "Worker 118",
+          "skill": 1,
+          "hourly_cost": 27,
+          "experience": 1,
+          "department": "support",
+          "reliability": 1,
+          "overtime_capacity": 3
+        },
+        "W030": {
+          "worker_id": "W030",
+          "name": "Worker 129",
+          "skill": 2,
+          "hourly_cost": 97,
+          "experience": 1,
+          "department": "logistics",
+          "reliability": 2,
+          "overtime_capacity": 3
         },
         "W029": {
           "worker_id": "W029",
@@ -13293,25 +13263,55 @@
           "reliability": 3,
           "overtime_capacity": 10
         },
-        "W009": {
-          "worker_id": "W009",
-          "name": "Worker 108",
-          "skill": 5,
-          "hourly_cost": 86,
-          "experience": 12,
-          "department": "sales",
-          "reliability": 3,
-          "overtime_capacity": 8
-        },
-        "W022": {
-          "worker_id": "W022",
-          "name": "Worker 121",
-          "skill": 1,
-          "hourly_cost": 51,
-          "experience": 19,
-          "department": "sales",
+        "W020": {
+          "worker_id": "W020",
+          "name": "Worker 119",
+          "skill": 2,
+          "hourly_cost": 27,
+          "experience": 6,
+          "department": "maintenance",
           "reliability": 1,
-          "overtime_capacity": 5
+          "overtime_capacity": 4
+        },
+        "W012": {
+          "worker_id": "W012",
+          "name": "Worker 111",
+          "skill": 1,
+          "hourly_cost": 83,
+          "experience": 19,
+          "department": "maintenance",
+          "reliability": 2,
+          "overtime_capacity": 2
+        },
+        "W025": {
+          "worker_id": "W025",
+          "name": "Worker 124",
+          "skill": 3,
+          "hourly_cost": 61,
+          "experience": 13,
+          "department": "support",
+          "reliability": 5,
+          "overtime_capacity": 4
+        },
+        "W027": {
+          "worker_id": "W027",
+          "name": "Worker 126",
+          "skill": 5,
+          "hourly_cost": 45,
+          "experience": 7,
+          "department": "security",
+          "reliability": 3,
+          "overtime_capacity": 9
+        },
+        "W013": {
+          "worker_id": "W013",
+          "name": "Worker 112",
+          "skill": 5,
+          "hourly_cost": 30,
+          "experience": 18,
+          "department": "support",
+          "reliability": 4,
+          "overtime_capacity": 10
         },
         "W021": {
           "worker_id": "W021",
@@ -20284,15 +20284,15 @@
         "same_department_week_max": 18
       },
       "item_pool": {
-        "W027": {
-          "worker_id": "W027",
-          "name": "Worker 126",
-          "skill": 5,
-          "hourly_cost": 88,
-          "experience": 20,
-          "department": "maintenance",
-          "reliability": 2,
-          "overtime_capacity": 6
+        "W035": {
+          "worker_id": "W035",
+          "name": "Worker 134",
+          "skill": 4,
+          "hourly_cost": 68,
+          "experience": 7,
+          "department": "security",
+          "reliability": 1,
+          "overtime_capacity": 2
         },
         "W007": {
           "worker_id": "W007",
@@ -20302,116 +20302,6 @@
           "experience": 18,
           "department": "logistics",
           "reliability": 3,
-          "overtime_capacity": 5
-        },
-        "W010": {
-          "worker_id": "W010",
-          "name": "Worker 109",
-          "skill": 1,
-          "hourly_cost": 44,
-          "experience": 7,
-          "department": "support",
-          "reliability": 4,
-          "overtime_capacity": 7
-        },
-        "W006": {
-          "worker_id": "W006",
-          "name": "Worker 105",
-          "skill": 2,
-          "hourly_cost": 81,
-          "experience": 1,
-          "department": "logistics",
-          "reliability": 1,
-          "overtime_capacity": 4
-        },
-        "W016": {
-          "worker_id": "W016",
-          "name": "Worker 115",
-          "skill": 5,
-          "hourly_cost": 94,
-          "experience": 7,
-          "department": "logistics",
-          "reliability": 4,
-          "overtime_capacity": 2
-        },
-        "W018": {
-          "worker_id": "W018",
-          "name": "Worker 117",
-          "skill": 4,
-          "hourly_cost": 58,
-          "experience": 3,
-          "department": "security",
-          "reliability": 2,
-          "overtime_capacity": 8
-        },
-        "W002": {
-          "worker_id": "W002",
-          "name": "Worker 101",
-          "skill": 3,
-          "hourly_cost": 88,
-          "experience": 6,
-          "department": "logistics",
-          "reliability": 1,
-          "overtime_capacity": 4
-        },
-        "W001": {
-          "worker_id": "W001",
-          "name": "Worker 100",
-          "skill": 1,
-          "hourly_cost": 94,
-          "experience": 20,
-          "department": "logistics",
-          "reliability": 4,
-          "overtime_capacity": 3
-        },
-        "W030": {
-          "worker_id": "W030",
-          "name": "Worker 129",
-          "skill": 4,
-          "hourly_cost": 68,
-          "experience": 4,
-          "department": "logistics",
-          "reliability": 4,
-          "overtime_capacity": 3
-        },
-        "W023": {
-          "worker_id": "W023",
-          "name": "Worker 122",
-          "skill": 1,
-          "hourly_cost": 30,
-          "experience": 2,
-          "department": "maintenance",
-          "reliability": 3,
-          "overtime_capacity": 5
-        },
-        "W033": {
-          "worker_id": "W033",
-          "name": "Worker 132",
-          "skill": 4,
-          "hourly_cost": 96,
-          "experience": 9,
-          "department": "logistics",
-          "reliability": 1,
-          "overtime_capacity": 2
-        },
-        "W017": {
-          "worker_id": "W017",
-          "name": "Worker 116",
-          "skill": 3,
-          "hourly_cost": 33,
-          "experience": 1,
-          "department": "logistics",
-          "reliability": 5,
-          "overtime_capacity": 6
-        },
-        "W015": {
-          "worker_id": "W015",
-          "name": "Worker 114",
-          "skill": 4,
-          "hourly_cost": 99,
-          "experience": 19,
-          "department": "maintenance",
-          "reliability": 5,
           "overtime_capacity": 5
         },
         "W005": {
@@ -20424,45 +20314,35 @@
           "reliability": 2,
           "overtime_capacity": 2
         },
-        "W004": {
-          "worker_id": "W004",
-          "name": "Worker 103",
-          "skill": 4,
-          "hourly_cost": 70,
-          "experience": 7,
-          "department": "support",
-          "reliability": 3,
-          "overtime_capacity": 6
+        "W006": {
+          "worker_id": "W006",
+          "name": "Worker 105",
+          "skill": 2,
+          "hourly_cost": 81,
+          "experience": 1,
+          "department": "logistics",
+          "reliability": 1,
+          "overtime_capacity": 4
         },
-        "W031": {
-          "worker_id": "W031",
-          "name": "Worker 130",
-          "skill": 5,
+        "W015": {
+          "worker_id": "W015",
+          "name": "Worker 114",
+          "skill": 4,
           "hourly_cost": 99,
-          "experience": 13,
-          "department": "operations",
-          "reliability": 1,
-          "overtime_capacity": 7
-        },
-        "W035": {
-          "worker_id": "W035",
-          "name": "Worker 134",
-          "skill": 4,
-          "hourly_cost": 68,
-          "experience": 7,
-          "department": "security",
-          "reliability": 1,
-          "overtime_capacity": 2
-        },
-        "W028": {
-          "worker_id": "W028",
-          "name": "Worker 127",
-          "skill": 3,
-          "hourly_cost": 34,
-          "experience": 20,
-          "department": "operations",
-          "reliability": 4,
+          "experience": 19,
+          "department": "maintenance",
+          "reliability": 5,
           "overtime_capacity": 5
+        },
+        "W003": {
+          "worker_id": "W003",
+          "name": "Worker 102",
+          "skill": 3,
+          "hourly_cost": 21,
+          "experience": 12,
+          "department": "security",
+          "reliability": 2,
+          "overtime_capacity": 2
         },
         "W008": {
           "worker_id": "W008",
@@ -20474,34 +20354,94 @@
           "reliability": 4,
           "overtime_capacity": 0
         },
-        "W020": {
-          "worker_id": "W020",
-          "name": "Worker 119",
-          "skill": 3,
-          "hourly_cost": 61,
-          "experience": 8,
+        "W016": {
+          "worker_id": "W016",
+          "name": "Worker 115",
+          "skill": 5,
+          "hourly_cost": 94,
+          "experience": 7,
           "department": "logistics",
-          "reliability": 3,
-          "overtime_capacity": 5
-        },
-        "W025": {
-          "worker_id": "W025",
-          "name": "Worker 124",
-          "skill": 2,
-          "hourly_cost": 51,
-          "experience": 9,
-          "department": "support",
-          "reliability": 2,
+          "reliability": 4,
           "overtime_capacity": 2
         },
-        "W012": {
-          "worker_id": "W012",
-          "name": "Worker 111",
-          "skill": 4,
-          "hourly_cost": 64,
-          "experience": 2,
+        "W017": {
+          "worker_id": "W017",
+          "name": "Worker 116",
+          "skill": 3,
+          "hourly_cost": 33,
+          "experience": 1,
+          "department": "logistics",
+          "reliability": 5,
+          "overtime_capacity": 6
+        },
+        "W028": {
+          "worker_id": "W028",
+          "name": "Worker 127",
+          "skill": 3,
+          "hourly_cost": 34,
+          "experience": 20,
           "department": "operations",
+          "reliability": 4,
+          "overtime_capacity": 5
+        },
+        "W031": {
+          "worker_id": "W031",
+          "name": "Worker 130",
+          "skill": 5,
+          "hourly_cost": 99,
+          "experience": 13,
+          "department": "operations",
+          "reliability": 1,
+          "overtime_capacity": 7
+        },
+        "W034": {
+          "worker_id": "W034",
+          "name": "Worker 133",
+          "skill": 1,
+          "hourly_cost": 26,
+          "experience": 7,
+          "department": "sales",
           "reliability": 3,
+          "overtime_capacity": 8
+        },
+        "W033": {
+          "worker_id": "W033",
+          "name": "Worker 132",
+          "skill": 4,
+          "hourly_cost": 96,
+          "experience": 9,
+          "department": "logistics",
+          "reliability": 1,
+          "overtime_capacity": 2
+        },
+        "W004": {
+          "worker_id": "W004",
+          "name": "Worker 103",
+          "skill": 4,
+          "hourly_cost": 70,
+          "experience": 7,
+          "department": "support",
+          "reliability": 3,
+          "overtime_capacity": 6
+        },
+        "W010": {
+          "worker_id": "W010",
+          "name": "Worker 109",
+          "skill": 1,
+          "hourly_cost": 44,
+          "experience": 7,
+          "department": "support",
+          "reliability": 4,
+          "overtime_capacity": 7
+        },
+        "W001": {
+          "worker_id": "W001",
+          "name": "Worker 100",
+          "skill": 1,
+          "hourly_cost": 94,
+          "experience": 20,
+          "department": "logistics",
+          "reliability": 4,
           "overtime_capacity": 3
         },
         "W009": {
@@ -20514,25 +20454,15 @@
           "reliability": 1,
           "overtime_capacity": 9
         },
-        "W026": {
-          "worker_id": "W026",
-          "name": "Worker 125",
-          "skill": 3,
-          "hourly_cost": 40,
-          "experience": 14,
-          "department": "maintenance",
-          "reliability": 2,
-          "overtime_capacity": 8
-        },
-        "W034": {
-          "worker_id": "W034",
-          "name": "Worker 133",
+        "W023": {
+          "worker_id": "W023",
+          "name": "Worker 122",
           "skill": 1,
-          "hourly_cost": 26,
-          "experience": 7,
-          "department": "sales",
+          "hourly_cost": 30,
+          "experience": 2,
+          "department": "maintenance",
           "reliability": 3,
-          "overtime_capacity": 8
+          "overtime_capacity": 5
         },
         "W036": {
           "worker_id": "W036",
@@ -20544,6 +20474,36 @@
           "reliability": 5,
           "overtime_capacity": 7
         },
+        "W030": {
+          "worker_id": "W030",
+          "name": "Worker 129",
+          "skill": 4,
+          "hourly_cost": 68,
+          "experience": 4,
+          "department": "logistics",
+          "reliability": 4,
+          "overtime_capacity": 3
+        },
+        "W018": {
+          "worker_id": "W018",
+          "name": "Worker 117",
+          "skill": 4,
+          "hourly_cost": 58,
+          "experience": 3,
+          "department": "security",
+          "reliability": 2,
+          "overtime_capacity": 8
+        },
+        "W026": {
+          "worker_id": "W026",
+          "name": "Worker 125",
+          "skill": 3,
+          "hourly_cost": 40,
+          "experience": 14,
+          "department": "maintenance",
+          "reliability": 2,
+          "overtime_capacity": 8
+        },
         "W037": {
           "worker_id": "W037",
           "name": "Worker 136",
@@ -20552,6 +20512,56 @@
           "experience": 3,
           "department": "sales",
           "reliability": 4,
+          "overtime_capacity": 6
+        },
+        "W002": {
+          "worker_id": "W002",
+          "name": "Worker 101",
+          "skill": 3,
+          "hourly_cost": 88,
+          "experience": 6,
+          "department": "logistics",
+          "reliability": 1,
+          "overtime_capacity": 4
+        },
+        "W020": {
+          "worker_id": "W020",
+          "name": "Worker 119",
+          "skill": 3,
+          "hourly_cost": 61,
+          "experience": 8,
+          "department": "logistics",
+          "reliability": 3,
+          "overtime_capacity": 5
+        },
+        "W012": {
+          "worker_id": "W012",
+          "name": "Worker 111",
+          "skill": 4,
+          "hourly_cost": 64,
+          "experience": 2,
+          "department": "operations",
+          "reliability": 3,
+          "overtime_capacity": 3
+        },
+        "W025": {
+          "worker_id": "W025",
+          "name": "Worker 124",
+          "skill": 2,
+          "hourly_cost": 51,
+          "experience": 9,
+          "department": "support",
+          "reliability": 2,
+          "overtime_capacity": 2
+        },
+        "W027": {
+          "worker_id": "W027",
+          "name": "Worker 126",
+          "skill": 5,
+          "hourly_cost": 88,
+          "experience": 20,
+          "department": "maintenance",
+          "reliability": 2,
           "overtime_capacity": 6
         },
         "W021": {
@@ -20563,16 +20573,6 @@
           "department": "sales",
           "reliability": 2,
           "overtime_capacity": 8
-        },
-        "W003": {
-          "worker_id": "W003",
-          "name": "Worker 102",
-          "skill": 3,
-          "hourly_cost": 21,
-          "experience": 12,
-          "department": "security",
-          "reliability": 2,
-          "overtime_capacity": 2
         },
         "W014": {
           "worker_id": "W014",
@@ -28896,6 +28896,16 @@
         "same_department_week_max": 11
       },
       "item_pool": {
+        "W035": {
+          "worker_id": "W035",
+          "name": "Worker 134",
+          "skill": 2,
+          "hourly_cost": 49,
+          "experience": 15,
+          "department": "operations",
+          "reliability": 1,
+          "overtime_capacity": 1
+        },
         "W007": {
           "worker_id": "W007",
           "name": "Worker 106",
@@ -28905,6 +28915,16 @@
           "department": "sales",
           "reliability": 2,
           "overtime_capacity": 4
+        },
+        "W005": {
+          "worker_id": "W005",
+          "name": "Worker 104",
+          "skill": 2,
+          "hourly_cost": 36,
+          "experience": 17,
+          "department": "support",
+          "reliability": 2,
+          "overtime_capacity": 9
         },
         "W006": {
           "worker_id": "W006",
@@ -28916,15 +28936,55 @@
           "reliability": 1,
           "overtime_capacity": 2
         },
-        "W038": {
-          "worker_id": "W038",
-          "name": "Worker 137",
+        "W015": {
+          "worker_id": "W015",
+          "name": "Worker 114",
+          "skill": 5,
+          "hourly_cost": 56,
+          "experience": 18,
+          "department": "support",
+          "reliability": 3,
+          "overtime_capacity": 3
+        },
+        "W040": {
+          "worker_id": "W040",
+          "name": "Worker 139",
           "skill": 3,
-          "hourly_cost": 97,
-          "experience": 16,
-          "department": "security",
+          "hourly_cost": 36,
+          "experience": 8,
+          "department": "logistics",
+          "reliability": 5,
+          "overtime_capacity": 9
+        },
+        "W042": {
+          "worker_id": "W042",
+          "name": "Worker 141",
+          "skill": 2,
+          "hourly_cost": 79,
+          "experience": 9,
+          "department": "support",
           "reliability": 2,
           "overtime_capacity": 10
+        },
+        "W032": {
+          "worker_id": "W032",
+          "name": "Worker 131",
+          "skill": 1,
+          "hourly_cost": 79,
+          "experience": 6,
+          "department": "security",
+          "reliability": 3,
+          "overtime_capacity": 10
+        },
+        "W008": {
+          "worker_id": "W008",
+          "name": "Worker 107",
+          "skill": 5,
+          "hourly_cost": 56,
+          "experience": 15,
+          "department": "maintenance",
+          "reliability": 1,
+          "overtime_capacity": 2
         },
         "W016": {
           "worker_id": "W016",
@@ -28936,64 +28996,24 @@
           "reliability": 3,
           "overtime_capacity": 3
         },
-        "W018": {
-          "worker_id": "W018",
-          "name": "Worker 117",
+        "W039": {
+          "worker_id": "W039",
+          "name": "Worker 138",
           "skill": 2,
-          "hourly_cost": 61,
-          "experience": 19,
-          "department": "operations",
+          "hourly_cost": 25,
+          "experience": 6,
+          "department": "support",
           "reliability": 3,
-          "overtime_capacity": 8
+          "overtime_capacity": 4
         },
-        "W002": {
-          "worker_id": "W002",
-          "name": "Worker 101",
+        "W031": {
+          "worker_id": "W031",
+          "name": "Worker 130",
           "skill": 3,
-          "hourly_cost": 79,
-          "experience": 13,
-          "department": "logistics",
-          "reliability": 2,
-          "overtime_capacity": 2
-        },
-        "W024": {
-          "worker_id": "W024",
-          "name": "Worker 123",
-          "skill": 5,
-          "hourly_cost": 20,
-          "experience": 8,
-          "department": "security",
-          "reliability": 2,
-          "overtime_capacity": 1
-        },
-        "W001": {
-          "worker_id": "W001",
-          "name": "Worker 100",
-          "skill": 1,
-          "hourly_cost": 54,
-          "experience": 10,
-          "department": "logistics",
-          "reliability": 4,
-          "overtime_capacity": 9
-        },
-        "W011": {
-          "worker_id": "W011",
-          "name": "Worker 110",
-          "skill": 4,
-          "hourly_cost": 60,
-          "experience": 12,
+          "hourly_cost": 82,
+          "experience": 6,
           "department": "maintenance",
           "reliability": 1,
-          "overtime_capacity": 5
-        },
-        "W023": {
-          "worker_id": "W023",
-          "name": "Worker 122",
-          "skill": 2,
-          "hourly_cost": 42,
-          "experience": 2,
-          "department": "operations",
-          "reliability": 3,
           "overtime_capacity": 8
         },
         "W033": {
@@ -29006,36 +29026,6 @@
           "reliability": 5,
           "overtime_capacity": 3
         },
-        "W015": {
-          "worker_id": "W015",
-          "name": "Worker 114",
-          "skill": 5,
-          "hourly_cost": 56,
-          "experience": 18,
-          "department": "support",
-          "reliability": 3,
-          "overtime_capacity": 3
-        },
-        "W005": {
-          "worker_id": "W005",
-          "name": "Worker 104",
-          "skill": 2,
-          "hourly_cost": 36,
-          "experience": 17,
-          "department": "support",
-          "reliability": 2,
-          "overtime_capacity": 9
-        },
-        "W019": {
-          "worker_id": "W019",
-          "name": "Worker 118",
-          "skill": 2,
-          "hourly_cost": 88,
-          "experience": 11,
-          "department": "sales",
-          "reliability": 1,
-          "overtime_capacity": 4
-        },
         "W004": {
           "worker_id": "W004",
           "name": "Worker 103",
@@ -29046,95 +29036,25 @@
           "reliability": 2,
           "overtime_capacity": 5
         },
-        "W031": {
-          "worker_id": "W031",
-          "name": "Worker 130",
-          "skill": 3,
-          "hourly_cost": 82,
+        "W010": {
+          "worker_id": "W010",
+          "name": "Worker 109",
+          "skill": 4,
+          "hourly_cost": 100,
           "experience": 6,
-          "department": "maintenance",
-          "reliability": 1,
-          "overtime_capacity": 8
-        },
-        "W035": {
-          "worker_id": "W035",
-          "name": "Worker 134",
-          "skill": 2,
-          "hourly_cost": 49,
-          "experience": 15,
-          "department": "operations",
-          "reliability": 1,
-          "overtime_capacity": 1
-        },
-        "W008": {
-          "worker_id": "W008",
-          "name": "Worker 107",
-          "skill": 5,
-          "hourly_cost": 56,
-          "experience": 15,
-          "department": "maintenance",
-          "reliability": 1,
-          "overtime_capacity": 2
-        },
-        "W020": {
-          "worker_id": "W020",
-          "name": "Worker 119",
-          "skill": 5,
-          "hourly_cost": 64,
-          "experience": 15,
-          "department": "maintenance",
+          "department": "security",
           "reliability": 5,
           "overtime_capacity": 5
         },
-        "W040": {
-          "worker_id": "W040",
-          "name": "Worker 139",
-          "skill": 3,
-          "hourly_cost": 36,
-          "experience": 8,
-          "department": "logistics",
-          "reliability": 5,
-          "overtime_capacity": 9
-        },
-        "W039": {
-          "worker_id": "W039",
-          "name": "Worker 138",
+        "W023": {
+          "worker_id": "W023",
+          "name": "Worker 122",
           "skill": 2,
-          "hourly_cost": 25,
-          "experience": 6,
-          "department": "support",
+          "hourly_cost": 42,
+          "experience": 2,
+          "department": "operations",
           "reliability": 3,
-          "overtime_capacity": 4
-        },
-        "W025": {
-          "worker_id": "W025",
-          "name": "Worker 124",
-          "skill": 4,
-          "hourly_cost": 91,
-          "experience": 17,
-          "department": "security",
-          "reliability": 5,
-          "overtime_capacity": 4
-        },
-        "W012": {
-          "worker_id": "W012",
-          "name": "Worker 111",
-          "skill": 2,
-          "hourly_cost": 86,
-          "experience": 9,
-          "department": "sales",
-          "reliability": 1,
-          "overtime_capacity": 4
-        },
-        "W013": {
-          "worker_id": "W013",
-          "name": "Worker 112",
-          "skill": 3,
-          "hourly_cost": 51,
-          "experience": 10,
-          "department": "sales",
-          "reliability": 3,
-          "overtime_capacity": 6
+          "overtime_capacity": 8
         },
         "W009": {
           "worker_id": "W009",
@@ -29146,15 +29066,45 @@
           "reliability": 4,
           "overtime_capacity": 8
         },
-        "W032": {
-          "worker_id": "W032",
-          "name": "Worker 131",
+        "W001": {
+          "worker_id": "W001",
+          "name": "Worker 100",
           "skill": 1,
-          "hourly_cost": 79,
-          "experience": 6,
-          "department": "security",
-          "reliability": 3,
-          "overtime_capacity": 10
+          "hourly_cost": 54,
+          "experience": 10,
+          "department": "logistics",
+          "reliability": 4,
+          "overtime_capacity": 9
+        },
+        "W022": {
+          "worker_id": "W022",
+          "name": "Worker 121",
+          "skill": 3,
+          "hourly_cost": 56,
+          "experience": 2,
+          "department": "support",
+          "reliability": 1,
+          "overtime_capacity": 4
+        },
+        "W019": {
+          "worker_id": "W019",
+          "name": "Worker 118",
+          "skill": 2,
+          "hourly_cost": 88,
+          "experience": 11,
+          "department": "sales",
+          "reliability": 1,
+          "overtime_capacity": 4
+        },
+        "W036": {
+          "worker_id": "W036",
+          "name": "Worker 135",
+          "skill": 1,
+          "hourly_cost": 43,
+          "experience": 4,
+          "department": "sales",
+          "reliability": 5,
+          "overtime_capacity": 5
         },
         "W029": {
           "worker_id": "W029",
@@ -29164,6 +29114,36 @@
           "experience": 15,
           "department": "operations",
           "reliability": 3,
+          "overtime_capacity": 4
+        },
+        "W024": {
+          "worker_id": "W024",
+          "name": "Worker 123",
+          "skill": 5,
+          "hourly_cost": 20,
+          "experience": 8,
+          "department": "security",
+          "reliability": 2,
+          "overtime_capacity": 1
+        },
+        "W018": {
+          "worker_id": "W018",
+          "name": "Worker 117",
+          "skill": 2,
+          "hourly_cost": 61,
+          "experience": 19,
+          "department": "operations",
+          "reliability": 3,
+          "overtime_capacity": 8
+        },
+        "W041": {
+          "worker_id": "W041",
+          "name": "Worker 140",
+          "skill": 2,
+          "hourly_cost": 54,
+          "experience": 15,
+          "department": "operations",
+          "reliability": 5,
           "overtime_capacity": 4
         },
         "W026": {
@@ -29176,36 +29156,6 @@
           "reliability": 1,
           "overtime_capacity": 5
         },
-        "W022": {
-          "worker_id": "W022",
-          "name": "Worker 121",
-          "skill": 3,
-          "hourly_cost": 56,
-          "experience": 2,
-          "department": "support",
-          "reliability": 1,
-          "overtime_capacity": 4
-        },
-        "W042": {
-          "worker_id": "W042",
-          "name": "Worker 141",
-          "skill": 2,
-          "hourly_cost": 79,
-          "experience": 9,
-          "department": "support",
-          "reliability": 2,
-          "overtime_capacity": 10
-        },
-        "W036": {
-          "worker_id": "W036",
-          "name": "Worker 135",
-          "skill": 1,
-          "hourly_cost": 43,
-          "experience": 4,
-          "department": "sales",
-          "reliability": 5,
-          "overtime_capacity": 5
-        },
         "W037": {
           "worker_id": "W037",
           "name": "Worker 136",
@@ -29215,6 +29165,66 @@
           "department": "security",
           "reliability": 2,
           "overtime_capacity": 7
+        },
+        "W002": {
+          "worker_id": "W002",
+          "name": "Worker 101",
+          "skill": 3,
+          "hourly_cost": 79,
+          "experience": 13,
+          "department": "logistics",
+          "reliability": 2,
+          "overtime_capacity": 2
+        },
+        "W020": {
+          "worker_id": "W020",
+          "name": "Worker 119",
+          "skill": 5,
+          "hourly_cost": 64,
+          "experience": 15,
+          "department": "maintenance",
+          "reliability": 5,
+          "overtime_capacity": 5
+        },
+        "W012": {
+          "worker_id": "W012",
+          "name": "Worker 111",
+          "skill": 2,
+          "hourly_cost": 86,
+          "experience": 9,
+          "department": "sales",
+          "reliability": 1,
+          "overtime_capacity": 4
+        },
+        "W025": {
+          "worker_id": "W025",
+          "name": "Worker 124",
+          "skill": 4,
+          "hourly_cost": 91,
+          "experience": 17,
+          "department": "security",
+          "reliability": 5,
+          "overtime_capacity": 4
+        },
+        "W038": {
+          "worker_id": "W038",
+          "name": "Worker 137",
+          "skill": 3,
+          "hourly_cost": 97,
+          "experience": 16,
+          "department": "security",
+          "reliability": 2,
+          "overtime_capacity": 10
+        },
+        "W013": {
+          "worker_id": "W013",
+          "name": "Worker 112",
+          "skill": 3,
+          "hourly_cost": 51,
+          "experience": 10,
+          "department": "sales",
+          "reliability": 3,
+          "overtime_capacity": 6
         },
         "W021": {
           "worker_id": "W021",
@@ -29226,24 +29236,14 @@
           "reliability": 1,
           "overtime_capacity": 2
         },
-        "W041": {
-          "worker_id": "W041",
-          "name": "Worker 140",
-          "skill": 2,
-          "hourly_cost": 54,
-          "experience": 15,
-          "department": "operations",
-          "reliability": 5,
-          "overtime_capacity": 4
-        },
-        "W010": {
-          "worker_id": "W010",
-          "name": "Worker 109",
+        "W011": {
+          "worker_id": "W011",
+          "name": "Worker 110",
           "skill": 4,
-          "hourly_cost": 100,
-          "experience": 6,
-          "department": "security",
-          "reliability": 5,
+          "hourly_cost": 60,
+          "experience": 12,
+          "department": "maintenance",
+          "reliability": 1,
           "overtime_capacity": 5
         },
         "W043": {

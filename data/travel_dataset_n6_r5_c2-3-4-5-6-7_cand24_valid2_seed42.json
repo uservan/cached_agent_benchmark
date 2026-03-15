@@ -16,6 +16,16 @@
         "daily_duration_max": 9
       },
       "item_pool": {
+        "A016": {
+          "activity_id": "A016",
+          "name": "Castle Stop 115",
+          "category": "landmark",
+          "cost": 119,
+          "duration": 4,
+          "crowd_level": 5,
+          "location": "Hill District",
+          "rating": 5
+        },
         "A014": {
           "activity_id": "A014",
           "name": "History Hall 113",
@@ -25,6 +35,56 @@
           "crowd_level": 3,
           "location": "Garden Area",
           "rating": 1
+        },
+        "A008": {
+          "activity_id": "A008",
+          "name": "Art Museum 107",
+          "category": "museum",
+          "cost": 173,
+          "duration": 4,
+          "crowd_level": 3,
+          "location": "Old Town",
+          "rating": 4
+        },
+        "A011": {
+          "activity_id": "A011",
+          "name": "Mountain Trail 110",
+          "category": "outdoor",
+          "cost": 23,
+          "duration": 4,
+          "crowd_level": 5,
+          "location": "Museum Quarter",
+          "rating": 2
+        },
+        "A017": {
+          "activity_id": "A017",
+          "name": "Bridge Tour 116",
+          "category": "landmark",
+          "cost": 24,
+          "duration": 1,
+          "crowd_level": 3,
+          "location": "Old Town",
+          "rating": 5
+        },
+        "A005": {
+          "activity_id": "A005",
+          "name": "Dance Show 104",
+          "category": "show",
+          "cost": 91,
+          "duration": 2,
+          "crowd_level": 4,
+          "location": "Old Town",
+          "rating": 5
+        },
+        "A006": {
+          "activity_id": "A006",
+          "name": "Beach Visit 105",
+          "category": "outdoor",
+          "cost": 131,
+          "duration": 5,
+          "crowd_level": 3,
+          "location": "Garden Area",
+          "rating": 4
         },
         "A004": {
           "activity_id": "A004",
@@ -55,66 +115,6 @@
           "crowd_level": 2,
           "location": "Old Town",
           "rating": 3
-        },
-        "A017": {
-          "activity_id": "A017",
-          "name": "Bridge Tour 116",
-          "category": "landmark",
-          "cost": 24,
-          "duration": 1,
-          "crowd_level": 3,
-          "location": "Old Town",
-          "rating": 5
-        },
-        "A008": {
-          "activity_id": "A008",
-          "name": "Art Museum 107",
-          "category": "museum",
-          "cost": 173,
-          "duration": 4,
-          "crowd_level": 3,
-          "location": "Old Town",
-          "rating": 4
-        },
-        "A011": {
-          "activity_id": "A011",
-          "name": "Mountain Trail 110",
-          "category": "outdoor",
-          "cost": 23,
-          "duration": 4,
-          "crowd_level": 5,
-          "location": "Museum Quarter",
-          "rating": 2
-        },
-        "A006": {
-          "activity_id": "A006",
-          "name": "Beach Visit 105",
-          "category": "outdoor",
-          "cost": 131,
-          "duration": 5,
-          "crowd_level": 3,
-          "location": "Garden Area",
-          "rating": 4
-        },
-        "A016": {
-          "activity_id": "A016",
-          "name": "Castle Stop 115",
-          "category": "landmark",
-          "cost": 119,
-          "duration": 4,
-          "crowd_level": 5,
-          "location": "Hill District",
-          "rating": 5
-        },
-        "A005": {
-          "activity_id": "A005",
-          "name": "Dance Show 104",
-          "category": "show",
-          "cost": 91,
-          "duration": 2,
-          "crowd_level": 4,
-          "location": "Old Town",
-          "rating": 5
         },
         "A018": {
           "activity_id": "A018",
@@ -2944,35 +2944,15 @@
         "daily_duration_max": 15
       },
       "item_pool": {
-        "A019": {
-          "activity_id": "A019",
-          "name": "History Hall 118",
-          "category": "museum",
-          "cost": 103,
-          "duration": 2,
-          "crowd_level": 5,
+        "A021": {
+          "activity_id": "A021",
+          "name": "Beach Visit 120",
+          "category": "outdoor",
+          "cost": 150,
+          "duration": 1,
+          "crowd_level": 4,
           "location": "Hill District",
-          "rating": 2
-        },
-        "A004": {
-          "activity_id": "A004",
-          "name": "Concert 103",
-          "category": "show",
-          "cost": 118,
-          "duration": 2,
-          "crowd_level": 2,
-          "location": "Harbor",
           "rating": 3
-        },
-        "A007": {
-          "activity_id": "A007",
-          "name": "Bazaar 106",
-          "category": "market",
-          "cost": 170,
-          "duration": 5,
-          "crowd_level": 5,
-          "location": "Museum Quarter",
-          "rating": 1
         },
         "A003": {
           "activity_id": "A003",
@@ -2983,66 +2963,6 @@
           "crowd_level": 3,
           "location": "Downtown",
           "rating": 5
-        },
-        "A010": {
-          "activity_id": "A010",
-          "name": "Cafe Visit 109",
-          "category": "food",
-          "cost": 79,
-          "duration": 1,
-          "crowd_level": 4,
-          "location": "Riverside",
-          "rating": 2
-        },
-        "A013": {
-          "activity_id": "A013",
-          "name": "Dance Show 112",
-          "category": "show",
-          "cost": 141,
-          "duration": 2,
-          "crowd_level": 5,
-          "location": "Harbor",
-          "rating": 4
-        },
-        "A015": {
-          "activity_id": "A015",
-          "name": "Dance Show 114",
-          "category": "show",
-          "cost": 170,
-          "duration": 6,
-          "crowd_level": 5,
-          "location": "Downtown",
-          "rating": 4
-        },
-        "A012": {
-          "activity_id": "A012",
-          "name": "Night Market 111",
-          "category": "market",
-          "cost": 82,
-          "duration": 6,
-          "crowd_level": 1,
-          "location": "Downtown",
-          "rating": 1
-        },
-        "A017": {
-          "activity_id": "A017",
-          "name": "Dance Show 116",
-          "category": "show",
-          "cost": 59,
-          "duration": 3,
-          "crowd_level": 2,
-          "location": "City Center",
-          "rating": 4
-        },
-        "A021": {
-          "activity_id": "A021",
-          "name": "Beach Visit 120",
-          "category": "outdoor",
-          "cost": 150,
-          "duration": 1,
-          "crowd_level": 4,
-          "location": "Hill District",
-          "rating": 3
         },
         "A005": {
           "activity_id": "A005",
@@ -3064,6 +2984,16 @@
           "location": "Old Town",
           "rating": 4
         },
+        "A017": {
+          "activity_id": "A017",
+          "name": "Dance Show 116",
+          "category": "show",
+          "cost": 59,
+          "duration": 3,
+          "crowd_level": 2,
+          "location": "City Center",
+          "rating": 4
+        },
         "A020": {
           "activity_id": "A020",
           "name": "Mountain Trail 119",
@@ -3073,6 +3003,66 @@
           "crowd_level": 3,
           "location": "City Center",
           "rating": 4
+        },
+        "A013": {
+          "activity_id": "A013",
+          "name": "Dance Show 112",
+          "category": "show",
+          "cost": 141,
+          "duration": 2,
+          "crowd_level": 5,
+          "location": "Harbor",
+          "rating": 4
+        },
+        "A015": {
+          "activity_id": "A015",
+          "name": "Dance Show 114",
+          "category": "show",
+          "cost": 170,
+          "duration": 6,
+          "crowd_level": 5,
+          "location": "Downtown",
+          "rating": 4
+        },
+        "A004": {
+          "activity_id": "A004",
+          "name": "Concert 103",
+          "category": "show",
+          "cost": 118,
+          "duration": 2,
+          "crowd_level": 2,
+          "location": "Harbor",
+          "rating": 3
+        },
+        "A019": {
+          "activity_id": "A019",
+          "name": "History Hall 118",
+          "category": "museum",
+          "cost": 103,
+          "duration": 2,
+          "crowd_level": 5,
+          "location": "Hill District",
+          "rating": 2
+        },
+        "A022": {
+          "activity_id": "A022",
+          "name": "Science Center 121",
+          "category": "museum",
+          "cost": 171,
+          "duration": 5,
+          "crowd_level": 5,
+          "location": "Museum Quarter",
+          "rating": 3
+        },
+        "A007": {
+          "activity_id": "A007",
+          "name": "Bazaar 106",
+          "category": "market",
+          "cost": 170,
+          "duration": 5,
+          "crowd_level": 5,
+          "location": "Museum Quarter",
+          "rating": 1
         },
         "A002": {
           "activity_id": "A002",
@@ -3084,15 +3074,25 @@
           "location": "Museum Quarter",
           "rating": 5
         },
-        "A022": {
-          "activity_id": "A022",
-          "name": "Science Center 121",
-          "category": "museum",
-          "cost": 171,
-          "duration": 5,
-          "crowd_level": 5,
-          "location": "Museum Quarter",
-          "rating": 3
+        "A012": {
+          "activity_id": "A012",
+          "name": "Night Market 111",
+          "category": "market",
+          "cost": 82,
+          "duration": 6,
+          "crowd_level": 1,
+          "location": "Downtown",
+          "rating": 1
+        },
+        "A010": {
+          "activity_id": "A010",
+          "name": "Cafe Visit 109",
+          "category": "food",
+          "cost": 79,
+          "duration": 1,
+          "crowd_level": 4,
+          "location": "Riverside",
+          "rating": 2
         },
         "A027": {
           "activity_id": "A027",
@@ -7273,25 +7273,45 @@
         "daily_duration_max": 20
       },
       "item_pool": {
-        "A019": {
-          "activity_id": "A019",
-          "name": "Monument Walk 118",
-          "category": "landmark",
-          "cost": 155,
-          "duration": 5,
-          "crowd_level": 5,
-          "location": "City Center",
-          "rating": 4
-        },
-        "A004": {
-          "activity_id": "A004",
-          "name": "Bazaar 103",
+        "A011": {
+          "activity_id": "A011",
+          "name": "Night Market 110",
           "category": "market",
-          "cost": 10,
-          "duration": 2,
-          "crowd_level": 3,
-          "location": "Old Town",
-          "rating": 3
+          "cost": 65,
+          "duration": 4,
+          "crowd_level": 4,
+          "location": "Riverside",
+          "rating": 2
+        },
+        "A006": {
+          "activity_id": "A006",
+          "name": "Craft Market 105",
+          "category": "market",
+          "cost": 27,
+          "duration": 6,
+          "crowd_level": 2,
+          "location": "Garden Area",
+          "rating": 5
+        },
+        "A015": {
+          "activity_id": "A015",
+          "name": "Concert 114",
+          "category": "show",
+          "cost": 189,
+          "duration": 5,
+          "crowd_level": 4,
+          "location": "Hill District",
+          "rating": 5
+        },
+        "A009": {
+          "activity_id": "A009",
+          "name": "Concert 108",
+          "category": "show",
+          "cost": 165,
+          "duration": 6,
+          "crowd_level": 1,
+          "location": "Garden Area",
+          "rating": 5
         },
         "A021": {
           "activity_id": "A021",
@@ -7303,16 +7323,6 @@
           "location": "Hill District",
           "rating": 1
         },
-        "A001": {
-          "activity_id": "A001",
-          "name": "Bridge Tour 100",
-          "category": "landmark",
-          "cost": 30,
-          "duration": 2,
-          "crowd_level": 5,
-          "location": "Old Town",
-          "rating": 5
-        },
         "A016": {
           "activity_id": "A016",
           "name": "Tower Visit 115",
@@ -7323,35 +7333,15 @@
           "location": "Museum Quarter",
           "rating": 3
         },
-        "A005": {
-          "activity_id": "A005",
-          "name": "Dinner Cruise 104",
-          "category": "food",
-          "cost": 167,
-          "duration": 3,
-          "crowd_level": 2,
-          "location": "Museum Quarter",
-          "rating": 3
-        },
-        "A026": {
-          "activity_id": "A026",
-          "name": "Dinner Cruise 125",
-          "category": "food",
-          "cost": 182,
-          "duration": 4,
-          "crowd_level": 4,
+        "A019": {
+          "activity_id": "A019",
+          "name": "Monument Walk 118",
+          "category": "landmark",
+          "cost": 155,
+          "duration": 5,
+          "crowd_level": 5,
           "location": "City Center",
-          "rating": 1
-        },
-        "A018": {
-          "activity_id": "A018",
-          "name": "Cafe Visit 117",
-          "category": "food",
-          "cost": 56,
-          "duration": 1,
-          "crowd_level": 1,
-          "location": "Hill District",
-          "rating": 2
+          "rating": 4
         },
         "A022": {
           "activity_id": "A022",
@@ -7363,36 +7353,6 @@
           "location": "Old Town",
           "rating": 2
         },
-        "A010": {
-          "activity_id": "A010",
-          "name": "Beach Visit 109",
-          "category": "outdoor",
-          "cost": 88,
-          "duration": 4,
-          "crowd_level": 3,
-          "location": "Harbor",
-          "rating": 5
-        },
-        "A012": {
-          "activity_id": "A012",
-          "name": "Art Museum 111",
-          "category": "museum",
-          "cost": 129,
-          "duration": 5,
-          "crowd_level": 1,
-          "location": "City Center",
-          "rating": 3
-        },
-        "A017": {
-          "activity_id": "A017",
-          "name": "Concert 116",
-          "category": "show",
-          "cost": 101,
-          "duration": 2,
-          "crowd_level": 5,
-          "location": "Downtown",
-          "rating": 4
-        },
         "A027": {
           "activity_id": "A027",
           "name": "Mountain Trail 126",
@@ -7403,34 +7363,14 @@
           "location": "Hill District",
           "rating": 2
         },
-        "A011": {
-          "activity_id": "A011",
-          "name": "Night Market 110",
-          "category": "market",
-          "cost": 65,
-          "duration": 4,
-          "crowd_level": 4,
-          "location": "Riverside",
-          "rating": 2
-        },
-        "A007": {
-          "activity_id": "A007",
-          "name": "Art Museum 106",
-          "category": "museum",
-          "cost": 196,
-          "duration": 3,
-          "crowd_level": 4,
-          "location": "Garden Area",
-          "rating": 1
-        },
-        "A015": {
-          "activity_id": "A015",
-          "name": "Concert 114",
-          "category": "show",
-          "cost": 189,
-          "duration": 5,
-          "crowd_level": 4,
-          "location": "Hill District",
+        "A001": {
+          "activity_id": "A001",
+          "name": "Bridge Tour 100",
+          "category": "landmark",
+          "cost": 30,
+          "duration": 2,
+          "crowd_level": 5,
+          "location": "Old Town",
           "rating": 5
         },
         "A023": {
@@ -7443,6 +7383,66 @@
           "location": "Downtown",
           "rating": 1
         },
+        "A005": {
+          "activity_id": "A005",
+          "name": "Dinner Cruise 104",
+          "category": "food",
+          "cost": 167,
+          "duration": 3,
+          "crowd_level": 2,
+          "location": "Museum Quarter",
+          "rating": 3
+        },
+        "A017": {
+          "activity_id": "A017",
+          "name": "Concert 116",
+          "category": "show",
+          "cost": 101,
+          "duration": 2,
+          "crowd_level": 5,
+          "location": "Downtown",
+          "rating": 4
+        },
+        "A018": {
+          "activity_id": "A018",
+          "name": "Cafe Visit 117",
+          "category": "food",
+          "cost": 56,
+          "duration": 1,
+          "crowd_level": 1,
+          "location": "Hill District",
+          "rating": 2
+        },
+        "A007": {
+          "activity_id": "A007",
+          "name": "Art Museum 106",
+          "category": "museum",
+          "cost": 196,
+          "duration": 3,
+          "crowd_level": 4,
+          "location": "Garden Area",
+          "rating": 1
+        },
+        "A026": {
+          "activity_id": "A026",
+          "name": "Dinner Cruise 125",
+          "category": "food",
+          "cost": 182,
+          "duration": 4,
+          "crowd_level": 4,
+          "location": "City Center",
+          "rating": 1
+        },
+        "A004": {
+          "activity_id": "A004",
+          "name": "Bazaar 103",
+          "category": "market",
+          "cost": 10,
+          "duration": 2,
+          "crowd_level": 3,
+          "location": "Old Town",
+          "rating": 3
+        },
         "A002": {
           "activity_id": "A002",
           "name": "Farmers Market 101",
@@ -7453,24 +7453,24 @@
           "location": "Harbor",
           "rating": 1
         },
-        "A009": {
-          "activity_id": "A009",
-          "name": "Concert 108",
-          "category": "show",
-          "cost": 165,
-          "duration": 6,
+        "A012": {
+          "activity_id": "A012",
+          "name": "Art Museum 111",
+          "category": "museum",
+          "cost": 129,
+          "duration": 5,
           "crowd_level": 1,
-          "location": "Garden Area",
-          "rating": 5
+          "location": "City Center",
+          "rating": 3
         },
-        "A006": {
-          "activity_id": "A006",
-          "name": "Craft Market 105",
-          "category": "market",
-          "cost": 27,
-          "duration": 6,
-          "crowd_level": 2,
-          "location": "Garden Area",
+        "A010": {
+          "activity_id": "A010",
+          "name": "Beach Visit 109",
+          "category": "outdoor",
+          "cost": 88,
+          "duration": 4,
+          "crowd_level": 3,
+          "location": "Harbor",
           "rating": 5
         },
         "A028": {
@@ -13033,34 +13033,74 @@
         "daily_duration_max": 25
       },
       "item_pool": {
-        "A004": {
-          "activity_id": "A004",
-          "name": "Castle Stop 103",
-          "category": "landmark",
-          "cost": 105,
-          "duration": 2,
-          "crowd_level": 3,
-          "location": "Harbor",
-          "rating": 5
+        "A029": {
+          "activity_id": "A029",
+          "name": "Beach Visit 128",
+          "category": "outdoor",
+          "cost": 178,
+          "duration": 3,
+          "crowd_level": 1,
+          "location": "Old Town",
+          "rating": 4
         },
-        "A013": {
-          "activity_id": "A013",
-          "name": "Dinner Cruise 112",
+        "A008": {
+          "activity_id": "A008",
+          "name": "Jazz Night 107",
+          "category": "show",
+          "cost": 151,
+          "duration": 5,
+          "crowd_level": 1,
+          "location": "Museum Quarter",
+          "rating": 1
+        },
+        "A011": {
+          "activity_id": "A011",
+          "name": "Mountain Trail 110",
+          "category": "outdoor",
+          "cost": 94,
+          "duration": 1,
+          "crowd_level": 3,
+          "location": "City Center",
+          "rating": 2
+        },
+        "A006": {
+          "activity_id": "A006",
+          "name": "Street Food 105",
           "category": "food",
-          "cost": 137,
+          "cost": 175,
           "duration": 6,
+          "crowd_level": 4,
+          "location": "Riverside",
+          "rating": 2
+        },
+        "A012": {
+          "activity_id": "A012",
+          "name": "Castle Stop 111",
+          "category": "landmark",
+          "cost": 157,
+          "duration": 1,
           "crowd_level": 5,
+          "location": "Hill District",
+          "rating": 3
+        },
+        "A015": {
+          "activity_id": "A015",
+          "name": "Concert 114",
+          "category": "show",
+          "cost": 182,
+          "duration": 4,
+          "crowd_level": 3,
           "location": "City Center",
           "rating": 5
         },
-        "A001": {
-          "activity_id": "A001",
-          "name": "Tower Visit 100",
-          "category": "landmark",
-          "cost": 33,
-          "duration": 6,
-          "crowd_level": 1,
-          "location": "Riverside",
+        "A009": {
+          "activity_id": "A009",
+          "name": "Cafe Visit 108",
+          "category": "food",
+          "cost": 173,
+          "duration": 1,
+          "crowd_level": 5,
+          "location": "City Center",
           "rating": 5
         },
         "A016": {
@@ -13073,15 +13113,15 @@
           "location": "Garden Area",
           "rating": 4
         },
-        "A005": {
-          "activity_id": "A005",
-          "name": "Monument Walk 104",
-          "category": "landmark",
-          "cost": 20,
-          "duration": 3,
-          "crowd_level": 4,
-          "location": "Museum Quarter",
-          "rating": 4
+        "A013": {
+          "activity_id": "A013",
+          "name": "Dinner Cruise 112",
+          "category": "food",
+          "cost": 137,
+          "duration": 6,
+          "crowd_level": 5,
+          "location": "City Center",
+          "rating": 5
         },
         "A022": {
           "activity_id": "A022",
@@ -13093,14 +13133,14 @@
           "location": "Old Town",
           "rating": 2
         },
-        "A018": {
-          "activity_id": "A018",
-          "name": "Bazaar 117",
-          "category": "market",
-          "cost": 29,
-          "duration": 4,
-          "crowd_level": 3,
-          "location": "Downtown",
+        "A001": {
+          "activity_id": "A001",
+          "name": "Tower Visit 100",
+          "category": "landmark",
+          "cost": 33,
+          "duration": 6,
+          "crowd_level": 1,
+          "location": "Riverside",
           "rating": 5
         },
         "A014": {
@@ -13113,26 +13153,6 @@
           "location": "Harbor",
           "rating": 5
         },
-        "A010": {
-          "activity_id": "A010",
-          "name": "Monument Walk 109",
-          "category": "landmark",
-          "cost": 58,
-          "duration": 6,
-          "crowd_level": 5,
-          "location": "Hill District",
-          "rating": 3
-        },
-        "A012": {
-          "activity_id": "A012",
-          "name": "Castle Stop 111",
-          "category": "landmark",
-          "cost": 157,
-          "duration": 1,
-          "crowd_level": 5,
-          "location": "Hill District",
-          "rating": 3
-        },
         "A017": {
           "activity_id": "A017",
           "name": "History Hall 116",
@@ -13142,46 +13162,6 @@
           "crowd_level": 2,
           "location": "Downtown",
           "rating": 3
-        },
-        "A011": {
-          "activity_id": "A011",
-          "name": "Mountain Trail 110",
-          "category": "outdoor",
-          "cost": 94,
-          "duration": 1,
-          "crowd_level": 3,
-          "location": "City Center",
-          "rating": 2
-        },
-        "A029": {
-          "activity_id": "A029",
-          "name": "Beach Visit 128",
-          "category": "outdoor",
-          "cost": 178,
-          "duration": 3,
-          "crowd_level": 1,
-          "location": "Old Town",
-          "rating": 4
-        },
-        "A024": {
-          "activity_id": "A024",
-          "name": "Science Center 123",
-          "category": "museum",
-          "cost": 48,
-          "duration": 4,
-          "crowd_level": 4,
-          "location": "Harbor",
-          "rating": 4
-        },
-        "A007": {
-          "activity_id": "A007",
-          "name": "Concert 106",
-          "category": "show",
-          "cost": 99,
-          "duration": 5,
-          "crowd_level": 5,
-          "location": "Harbor",
-          "rating": 1
         },
         "A031": {
           "activity_id": "A031",
@@ -13193,74 +13173,24 @@
           "location": "City Center",
           "rating": 5
         },
-        "A015": {
-          "activity_id": "A015",
-          "name": "Concert 114",
-          "category": "show",
-          "cost": 182,
+        "A005": {
+          "activity_id": "A005",
+          "name": "Monument Walk 104",
+          "category": "landmark",
+          "cost": 20,
+          "duration": 3,
+          "crowd_level": 4,
+          "location": "Museum Quarter",
+          "rating": 4
+        },
+        "A018": {
+          "activity_id": "A018",
+          "name": "Bazaar 117",
+          "category": "market",
+          "cost": 29,
           "duration": 4,
           "crowd_level": 3,
-          "location": "City Center",
-          "rating": 5
-        },
-        "A025": {
-          "activity_id": "A025",
-          "name": "Craft Market 124",
-          "category": "market",
-          "cost": 107,
-          "duration": 5,
-          "crowd_level": 2,
-          "location": "Harbor",
-          "rating": 1
-        },
-        "A032": {
-          "activity_id": "A032",
-          "name": "Gallery Tour 131",
-          "category": "museum",
-          "cost": 100,
-          "duration": 6,
-          "crowd_level": 4,
-          "location": "Old Town",
-          "rating": 3
-        },
-        "A008": {
-          "activity_id": "A008",
-          "name": "Jazz Night 107",
-          "category": "show",
-          "cost": 151,
-          "duration": 5,
-          "crowd_level": 1,
-          "location": "Museum Quarter",
-          "rating": 1
-        },
-        "A030": {
-          "activity_id": "A030",
-          "name": "Castle Stop 129",
-          "category": "landmark",
-          "cost": 73,
-          "duration": 4,
-          "crowd_level": 5,
           "location": "Downtown",
-          "rating": 3
-        },
-        "A003": {
-          "activity_id": "A003",
-          "name": "Farmers Market 102",
-          "category": "market",
-          "cost": 125,
-          "duration": 6,
-          "crowd_level": 2,
-          "location": "Harbor",
-          "rating": 2
-        },
-        "A009": {
-          "activity_id": "A009",
-          "name": "Cafe Visit 108",
-          "category": "food",
-          "cost": 173,
-          "duration": 1,
-          "crowd_level": 5,
-          "location": "City Center",
           "rating": 5
         },
         "A020": {
@@ -13273,15 +13203,85 @@
           "location": "Old Town",
           "rating": 2
         },
-        "A006": {
-          "activity_id": "A006",
-          "name": "Street Food 105",
-          "category": "food",
-          "cost": 175,
+        "A007": {
+          "activity_id": "A007",
+          "name": "Concert 106",
+          "category": "show",
+          "cost": 99,
+          "duration": 5,
+          "crowd_level": 5,
+          "location": "Harbor",
+          "rating": 1
+        },
+        "A030": {
+          "activity_id": "A030",
+          "name": "Castle Stop 129",
+          "category": "landmark",
+          "cost": 73,
+          "duration": 4,
+          "crowd_level": 5,
+          "location": "Downtown",
+          "rating": 3
+        },
+        "A032": {
+          "activity_id": "A032",
+          "name": "Gallery Tour 131",
+          "category": "museum",
+          "cost": 100,
           "duration": 6,
           "crowd_level": 4,
-          "location": "Riverside",
+          "location": "Old Town",
+          "rating": 3
+        },
+        "A003": {
+          "activity_id": "A003",
+          "name": "Farmers Market 102",
+          "category": "market",
+          "cost": 125,
+          "duration": 6,
+          "crowd_level": 2,
+          "location": "Harbor",
           "rating": 2
+        },
+        "A025": {
+          "activity_id": "A025",
+          "name": "Craft Market 124",
+          "category": "market",
+          "cost": 107,
+          "duration": 5,
+          "crowd_level": 2,
+          "location": "Harbor",
+          "rating": 1
+        },
+        "A004": {
+          "activity_id": "A004",
+          "name": "Castle Stop 103",
+          "category": "landmark",
+          "cost": 105,
+          "duration": 2,
+          "crowd_level": 3,
+          "location": "Harbor",
+          "rating": 5
+        },
+        "A024": {
+          "activity_id": "A024",
+          "name": "Science Center 123",
+          "category": "museum",
+          "cost": 48,
+          "duration": 4,
+          "crowd_level": 4,
+          "location": "Harbor",
+          "rating": 4
+        },
+        "A010": {
+          "activity_id": "A010",
+          "name": "Monument Walk 109",
+          "category": "landmark",
+          "cost": 58,
+          "duration": 6,
+          "crowd_level": 5,
+          "location": "Hill District",
+          "rating": 3
         },
         "A033": {
           "activity_id": "A033",
@@ -20204,23 +20204,83 @@
         "daily_duration_max": 25
       },
       "item_pool": {
-        "A019": {
-          "activity_id": "A019",
-          "name": "Street Food 118",
-          "category": "food",
-          "cost": 154,
-          "duration": 2,
-          "crowd_level": 5,
-          "location": "Downtown",
+        "A024": {
+          "activity_id": "A024",
+          "name": "Craft Market 123",
+          "category": "market",
+          "cost": 130,
+          "duration": 3,
+          "crowd_level": 4,
+          "location": "Hill District",
           "rating": 2
         },
-        "A004": {
-          "activity_id": "A004",
-          "name": "Science Center 103",
+        "A008": {
+          "activity_id": "A008",
+          "name": "Gallery Tour 107",
           "category": "museum",
-          "cost": 121,
-          "duration": 5,
+          "cost": 151,
+          "duration": 3,
+          "crowd_level": 5,
+          "location": "Museum Quarter",
+          "rating": 5
+        },
+        "A011": {
+          "activity_id": "A011",
+          "name": "Night Market 110",
+          "category": "market",
+          "cost": 16,
+          "duration": 1,
           "crowd_level": 4,
+          "location": "Hill District",
+          "rating": 4
+        },
+        "A015": {
+          "activity_id": "A015",
+          "name": "Park Walk 114",
+          "category": "outdoor",
+          "cost": 72,
+          "duration": 1,
+          "crowd_level": 2,
+          "location": "Old Town",
+          "rating": 1
+        },
+        "A033": {
+          "activity_id": "A033",
+          "name": "Tasting Tour 132",
+          "category": "food",
+          "cost": 186,
+          "duration": 1,
+          "crowd_level": 4,
+          "location": "Garden Area",
+          "rating": 3
+        },
+        "A009": {
+          "activity_id": "A009",
+          "name": "Farmers Market 108",
+          "category": "market",
+          "cost": 68,
+          "duration": 4,
+          "crowd_level": 1,
+          "location": "Hill District",
+          "rating": 5
+        },
+        "A021": {
+          "activity_id": "A021",
+          "name": "Castle Stop 120",
+          "category": "landmark",
+          "cost": 115,
+          "duration": 3,
+          "crowd_level": 1,
+          "location": "Garden Area",
+          "rating": 1
+        },
+        "A016": {
+          "activity_id": "A016",
+          "name": "Farmers Market 115",
+          "category": "market",
+          "cost": 54,
+          "duration": 4,
+          "crowd_level": 2,
           "location": "City Center",
           "rating": 3
         },
@@ -20234,35 +20294,25 @@
           "location": "Old Town",
           "rating": 3
         },
-        "A021": {
-          "activity_id": "A021",
-          "name": "Castle Stop 120",
-          "category": "landmark",
-          "cost": 115,
-          "duration": 3,
-          "crowd_level": 1,
-          "location": "Garden Area",
-          "rating": 1
-        },
-        "A001": {
-          "activity_id": "A001",
-          "name": "History Hall 100",
-          "category": "museum",
-          "cost": 89,
-          "duration": 2,
-          "crowd_level": 3,
-          "location": "City Center",
+        "A034": {
+          "activity_id": "A034",
+          "name": "Bazaar 133",
+          "category": "market",
+          "cost": 63,
+          "duration": 1,
+          "crowd_level": 2,
+          "location": "Harbor",
           "rating": 2
         },
-        "A016": {
-          "activity_id": "A016",
-          "name": "Farmers Market 115",
-          "category": "market",
-          "cost": 54,
-          "duration": 4,
-          "crowd_level": 2,
-          "location": "City Center",
-          "rating": 3
+        "A019": {
+          "activity_id": "A019",
+          "name": "Street Food 118",
+          "category": "food",
+          "cost": 154,
+          "duration": 2,
+          "crowd_level": 5,
+          "location": "Downtown",
+          "rating": 2
         },
         "A022": {
           "activity_id": "A022",
@@ -20274,6 +20324,46 @@
           "location": "Riverside",
           "rating": 2
         },
+        "A027": {
+          "activity_id": "A027",
+          "name": "Jazz Night 126",
+          "category": "show",
+          "cost": 107,
+          "duration": 5,
+          "crowd_level": 5,
+          "location": "Garden Area",
+          "rating": 2
+        },
+        "A001": {
+          "activity_id": "A001",
+          "name": "History Hall 100",
+          "category": "museum",
+          "cost": 89,
+          "duration": 2,
+          "crowd_level": 3,
+          "location": "City Center",
+          "rating": 2
+        },
+        "A023": {
+          "activity_id": "A023",
+          "name": "Park Walk 122",
+          "category": "outdoor",
+          "cost": 186,
+          "duration": 2,
+          "crowd_level": 5,
+          "location": "Old Town",
+          "rating": 5
+        },
+        "A037": {
+          "activity_id": "A037",
+          "name": "Mountain Trail 136",
+          "category": "outdoor",
+          "cost": 23,
+          "duration": 4,
+          "crowd_level": 1,
+          "location": "Museum Quarter",
+          "rating": 1
+        },
         "A005": {
           "activity_id": "A005",
           "name": "Concert 104",
@@ -20283,6 +20373,16 @@
           "crowd_level": 4,
           "location": "Harbor",
           "rating": 2
+        },
+        "A031": {
+          "activity_id": "A031",
+          "name": "Beach Visit 130",
+          "category": "outdoor",
+          "cost": 119,
+          "duration": 4,
+          "crowd_level": 1,
+          "location": "Hill District",
+          "rating": 5
         },
         "A018": {
           "activity_id": "A018",
@@ -20304,26 +20404,6 @@
           "location": "City Center",
           "rating": 5
         },
-        "A010": {
-          "activity_id": "A010",
-          "name": "Science Center 109",
-          "category": "museum",
-          "cost": 122,
-          "duration": 2,
-          "crowd_level": 2,
-          "location": "Hill District",
-          "rating": 5
-        },
-        "A012": {
-          "activity_id": "A012",
-          "name": "Castle Stop 111",
-          "category": "landmark",
-          "cost": 47,
-          "duration": 5,
-          "crowd_level": 3,
-          "location": "Old Town",
-          "rating": 4
-        },
         "A017": {
           "activity_id": "A017",
           "name": "Art Museum 116",
@@ -20334,44 +20414,14 @@
           "location": "Harbor",
           "rating": 3
         },
-        "A034": {
-          "activity_id": "A034",
-          "name": "Bazaar 133",
-          "category": "market",
-          "cost": 63,
-          "duration": 1,
-          "crowd_level": 2,
-          "location": "Harbor",
-          "rating": 2
-        },
-        "A027": {
-          "activity_id": "A027",
-          "name": "Jazz Night 126",
-          "category": "show",
-          "cost": 107,
-          "duration": 5,
-          "crowd_level": 5,
-          "location": "Garden Area",
-          "rating": 2
-        },
-        "A011": {
-          "activity_id": "A011",
-          "name": "Night Market 110",
-          "category": "market",
-          "cost": 16,
-          "duration": 1,
-          "crowd_level": 4,
-          "location": "Hill District",
-          "rating": 4
-        },
-        "A024": {
-          "activity_id": "A024",
-          "name": "Craft Market 123",
-          "category": "market",
-          "cost": 130,
+        "A020": {
+          "activity_id": "A020",
+          "name": "Science Center 119",
+          "category": "museum",
+          "cost": 19,
           "duration": 3,
-          "crowd_level": 4,
-          "location": "Hill District",
+          "crowd_level": 3,
+          "location": "City Center",
           "rating": 2
         },
         "A007": {
@@ -20384,35 +20434,15 @@
           "location": "Old Town",
           "rating": 3
         },
-        "A031": {
-          "activity_id": "A031",
-          "name": "Beach Visit 130",
-          "category": "outdoor",
-          "cost": 119,
-          "duration": 4,
-          "crowd_level": 1,
-          "location": "Hill District",
-          "rating": 5
-        },
-        "A015": {
-          "activity_id": "A015",
-          "name": "Park Walk 114",
-          "category": "outdoor",
-          "cost": 72,
-          "duration": 1,
-          "crowd_level": 2,
-          "location": "Old Town",
-          "rating": 1
-        },
-        "A028": {
-          "activity_id": "A028",
-          "name": "Concert 127",
+        "A030": {
+          "activity_id": "A030",
+          "name": "Dance Show 129",
           "category": "show",
-          "cost": 139,
-          "duration": 2,
-          "crowd_level": 2,
-          "location": "Hill District",
-          "rating": 2
+          "cost": 193,
+          "duration": 5,
+          "crowd_level": 5,
+          "location": "Old Town",
+          "rating": 3
         },
         "A025": {
           "activity_id": "A025",
@@ -20424,35 +20454,25 @@
           "location": "City Center",
           "rating": 5
         },
-        "A008": {
-          "activity_id": "A008",
-          "name": "Gallery Tour 107",
+        "A004": {
+          "activity_id": "A004",
+          "name": "Science Center 103",
           "category": "museum",
-          "cost": 151,
-          "duration": 3,
-          "crowd_level": 5,
-          "location": "Museum Quarter",
-          "rating": 5
-        },
-        "A023": {
-          "activity_id": "A023",
-          "name": "Park Walk 122",
-          "category": "outdoor",
-          "cost": 186,
-          "duration": 2,
-          "crowd_level": 5,
-          "location": "Old Town",
-          "rating": 5
-        },
-        "A030": {
-          "activity_id": "A030",
-          "name": "Dance Show 129",
-          "category": "show",
-          "cost": 193,
+          "cost": 121,
           "duration": 5,
-          "crowd_level": 5,
-          "location": "Old Town",
+          "crowd_level": 4,
+          "location": "City Center",
           "rating": 3
+        },
+        "A028": {
+          "activity_id": "A028",
+          "name": "Concert 127",
+          "category": "show",
+          "cost": 139,
+          "duration": 2,
+          "crowd_level": 2,
+          "location": "Hill District",
+          "rating": 2
         },
         "A002": {
           "activity_id": "A002",
@@ -20464,45 +20484,25 @@
           "location": "Garden Area",
           "rating": 2
         },
-        "A033": {
-          "activity_id": "A033",
-          "name": "Tasting Tour 132",
-          "category": "food",
-          "cost": 186,
-          "duration": 1,
-          "crowd_level": 4,
-          "location": "Garden Area",
-          "rating": 3
+        "A012": {
+          "activity_id": "A012",
+          "name": "Castle Stop 111",
+          "category": "landmark",
+          "cost": 47,
+          "duration": 5,
+          "crowd_level": 3,
+          "location": "Old Town",
+          "rating": 4
         },
-        "A037": {
-          "activity_id": "A037",
-          "name": "Mountain Trail 136",
-          "category": "outdoor",
-          "cost": 23,
-          "duration": 4,
-          "crowd_level": 1,
-          "location": "Museum Quarter",
-          "rating": 1
-        },
-        "A009": {
-          "activity_id": "A009",
-          "name": "Farmers Market 108",
-          "category": "market",
-          "cost": 68,
-          "duration": 4,
-          "crowd_level": 1,
+        "A010": {
+          "activity_id": "A010",
+          "name": "Science Center 109",
+          "category": "museum",
+          "cost": 122,
+          "duration": 2,
+          "crowd_level": 2,
           "location": "Hill District",
           "rating": 5
-        },
-        "A020": {
-          "activity_id": "A020",
-          "name": "Science Center 119",
-          "category": "museum",
-          "cost": 19,
-          "duration": 3,
-          "crowd_level": 3,
-          "location": "City Center",
-          "rating": 2
         },
         "A038": {
           "activity_id": "A038",
@@ -28806,154 +28806,24 @@
         "daily_duration_max": 27
       },
       "item_pool": {
-        "A019": {
-          "activity_id": "A019",
-          "name": "Park Walk 118",
-          "category": "outdoor",
-          "cost": 94,
+        "A029": {
+          "activity_id": "A029",
+          "name": "Craft Market 128",
+          "category": "market",
+          "cost": 136,
+          "duration": 5,
+          "crowd_level": 5,
+          "location": "Hill District",
+          "rating": 2
+        },
+        "A008": {
+          "activity_id": "A008",
+          "name": "Concert 107",
+          "category": "show",
+          "cost": 129,
           "duration": 5,
           "crowd_level": 4,
-          "location": "Downtown",
-          "rating": 4
-        },
-        "A004": {
-          "activity_id": "A004",
-          "name": "Tower Visit 103",
-          "category": "landmark",
-          "cost": 127,
-          "duration": 3,
-          "crowd_level": 4,
-          "location": "Museum Quarter",
-          "rating": 2
-        },
-        "A013": {
-          "activity_id": "A013",
-          "name": "Night Market 112",
-          "category": "market",
-          "cost": 172,
-          "duration": 6,
-          "crowd_level": 3,
-          "location": "Riverside",
-          "rating": 1
-        },
-        "A021": {
-          "activity_id": "A021",
-          "name": "Farmers Market 120",
-          "category": "market",
-          "cost": 96,
-          "duration": 1,
-          "crowd_level": 2,
-          "location": "Museum Quarter",
-          "rating": 1
-        },
-        "A001": {
-          "activity_id": "A001",
-          "name": "Tower Visit 100",
-          "category": "landmark",
-          "cost": 33,
-          "duration": 1,
-          "crowd_level": 1,
-          "location": "Downtown",
-          "rating": 4
-        },
-        "A035": {
-          "activity_id": "A035",
-          "name": "Tower Visit 134",
-          "category": "landmark",
-          "cost": 127,
-          "duration": 6,
-          "crowd_level": 2,
-          "location": "Old Town",
-          "rating": 1
-        },
-        "A016": {
-          "activity_id": "A016",
-          "name": "Art Museum 115",
-          "category": "museum",
-          "cost": 173,
-          "duration": 1,
-          "crowd_level": 2,
-          "location": "Harbor",
-          "rating": 1
-        },
-        "A026": {
-          "activity_id": "A026",
-          "name": "Mountain Trail 125",
-          "category": "outdoor",
-          "cost": 58,
-          "duration": 4,
-          "crowd_level": 2,
-          "location": "Harbor",
-          "rating": 2
-        },
-        "A022": {
-          "activity_id": "A022",
-          "name": "Bazaar 121",
-          "category": "market",
-          "cost": 152,
-          "duration": 3,
-          "crowd_level": 4,
-          "location": "City Center",
-          "rating": 4
-        },
-        "A018": {
-          "activity_id": "A018",
-          "name": "Dinner Cruise 117",
-          "category": "food",
-          "cost": 134,
-          "duration": 6,
-          "crowd_level": 3,
-          "location": "Riverside",
-          "rating": 1
-        },
-        "A005": {
-          "activity_id": "A005",
-          "name": "Night Market 104",
-          "category": "market",
-          "cost": 39,
-          "duration": 4,
-          "crowd_level": 5,
-          "location": "Museum Quarter",
-          "rating": 2
-        },
-        "A012": {
-          "activity_id": "A012",
-          "name": "Beach Visit 111",
-          "category": "outdoor",
-          "cost": 93,
-          "duration": 4,
-          "crowd_level": 3,
-          "location": "Garden Area",
-          "rating": 2
-        },
-        "A038": {
-          "activity_id": "A038",
-          "name": "Bridge Tour 137",
-          "category": "landmark",
-          "cost": 116,
-          "duration": 1,
-          "crowd_level": 3,
-          "location": "Garden Area",
-          "rating": 5
-        },
-        "A034": {
-          "activity_id": "A034",
-          "name": "Art Museum 133",
-          "category": "museum",
-          "cost": 120,
-          "duration": 1,
-          "crowd_level": 5,
-          "location": "City Center",
-          "rating": 2
-        },
-        "A027": {
-          "activity_id": "A027",
-          "name": "Concert 126",
-          "category": "show",
-          "cost": 140,
-          "duration": 2,
-          "crowd_level": 3,
-          "location": "Downtown",
+          "location": "Hill District",
           "rating": 1
         },
         "A011": {
@@ -28966,124 +28836,24 @@
           "location": "Garden Area",
           "rating": 2
         },
-        "A029": {
-          "activity_id": "A029",
-          "name": "Craft Market 128",
-          "category": "market",
-          "cost": 136,
-          "duration": 5,
-          "crowd_level": 5,
-          "location": "Hill District",
-          "rating": 2
-        },
-        "A024": {
-          "activity_id": "A024",
-          "name": "Beach Visit 123",
-          "category": "outdoor",
-          "cost": 179,
-          "duration": 3,
-          "crowd_level": 1,
-          "location": "City Center",
-          "rating": 5
-        },
-        "A007": {
-          "activity_id": "A007",
-          "name": "Gallery Tour 106",
-          "category": "museum",
-          "cost": 93,
-          "duration": 5,
-          "crowd_level": 2,
-          "location": "Harbor",
-          "rating": 4
-        },
-        "A036": {
-          "activity_id": "A036",
-          "name": "Theater 135",
-          "category": "show",
-          "cost": 187,
-          "duration": 6,
-          "crowd_level": 2,
-          "location": "Old Town",
-          "rating": 4
-        },
-        "A031": {
-          "activity_id": "A031",
-          "name": "Tasting Tour 130",
-          "category": "food",
-          "cost": 198,
-          "duration": 3,
-          "crowd_level": 3,
-          "location": "Harbor",
-          "rating": 4
-        },
-        "A028": {
-          "activity_id": "A028",
-          "name": "Mountain Trail 127",
-          "category": "outdoor",
-          "cost": 132,
-          "duration": 5,
-          "crowd_level": 1,
-          "location": "Hill District",
-          "rating": 1
-        },
-        "A025": {
-          "activity_id": "A025",
-          "name": "Bazaar 124",
-          "category": "market",
-          "cost": 101,
-          "duration": 2,
-          "crowd_level": 2,
-          "location": "Riverside",
-          "rating": 2
-        },
-        "A032": {
-          "activity_id": "A032",
-          "name": "Bridge Tour 131",
+        "A006": {
+          "activity_id": "A006",
+          "name": "Tower Visit 105",
           "category": "landmark",
-          "cost": 147,
-          "duration": 3,
-          "crowd_level": 5,
-          "location": "Museum Quarter",
-          "rating": 5
-        },
-        "A008": {
-          "activity_id": "A008",
-          "name": "Concert 107",
-          "category": "show",
-          "cost": 129,
-          "duration": 5,
+          "cost": 128,
+          "duration": 1,
           "crowd_level": 4,
-          "location": "Hill District",
-          "rating": 1
+          "location": "Garden Area",
+          "rating": 3
         },
-        "A023": {
-          "activity_id": "A023",
-          "name": "Gallery Tour 122",
-          "category": "museum",
-          "cost": 169,
-          "duration": 5,
+        "A012": {
+          "activity_id": "A012",
+          "name": "Beach Visit 111",
+          "category": "outdoor",
+          "cost": 93,
+          "duration": 4,
           "crowd_level": 3,
-          "location": "Harbor",
-          "rating": 1
-        },
-        "A030": {
-          "activity_id": "A030",
-          "name": "Craft Market 129",
-          "category": "market",
-          "cost": 182,
-          "duration": 3,
-          "crowd_level": 3,
-          "location": "Old Town",
-          "rating": 2
-        },
-        "A002": {
-          "activity_id": "A002",
-          "name": "Farmers Market 101",
-          "category": "market",
-          "cost": 51,
-          "duration": 3,
-          "crowd_level": 1,
-          "location": "Riverside",
+          "location": "Garden Area",
           "rating": 2
         },
         "A033": {
@@ -29096,6 +28866,126 @@
           "location": "Garden Area",
           "rating": 3
         },
+        "A036": {
+          "activity_id": "A036",
+          "name": "Theater 135",
+          "category": "show",
+          "cost": 187,
+          "duration": 6,
+          "crowd_level": 2,
+          "location": "Old Town",
+          "rating": 4
+        },
+        "A009": {
+          "activity_id": "A009",
+          "name": "Bridge Tour 108",
+          "category": "landmark",
+          "cost": 81,
+          "duration": 1,
+          "crowd_level": 4,
+          "location": "Hill District",
+          "rating": 4
+        },
+        "A021": {
+          "activity_id": "A021",
+          "name": "Farmers Market 120",
+          "category": "market",
+          "cost": 96,
+          "duration": 1,
+          "crowd_level": 2,
+          "location": "Museum Quarter",
+          "rating": 1
+        },
+        "A016": {
+          "activity_id": "A016",
+          "name": "Art Museum 115",
+          "category": "museum",
+          "cost": 173,
+          "duration": 1,
+          "crowd_level": 2,
+          "location": "Harbor",
+          "rating": 1
+        },
+        "A013": {
+          "activity_id": "A013",
+          "name": "Night Market 112",
+          "category": "market",
+          "cost": 172,
+          "duration": 6,
+          "crowd_level": 3,
+          "location": "Riverside",
+          "rating": 1
+        },
+        "A034": {
+          "activity_id": "A034",
+          "name": "Art Museum 133",
+          "category": "museum",
+          "cost": 120,
+          "duration": 1,
+          "crowd_level": 5,
+          "location": "City Center",
+          "rating": 2
+        },
+        "A019": {
+          "activity_id": "A019",
+          "name": "Park Walk 118",
+          "category": "outdoor",
+          "cost": 94,
+          "duration": 5,
+          "crowd_level": 4,
+          "location": "Downtown",
+          "rating": 4
+        },
+        "A022": {
+          "activity_id": "A022",
+          "name": "Bazaar 121",
+          "category": "market",
+          "cost": 152,
+          "duration": 3,
+          "crowd_level": 4,
+          "location": "City Center",
+          "rating": 4
+        },
+        "A027": {
+          "activity_id": "A027",
+          "name": "Concert 126",
+          "category": "show",
+          "cost": 140,
+          "duration": 2,
+          "crowd_level": 3,
+          "location": "Downtown",
+          "rating": 1
+        },
+        "A001": {
+          "activity_id": "A001",
+          "name": "Tower Visit 100",
+          "category": "landmark",
+          "cost": 33,
+          "duration": 1,
+          "crowd_level": 1,
+          "location": "Downtown",
+          "rating": 4
+        },
+        "A038": {
+          "activity_id": "A038",
+          "name": "Bridge Tour 137",
+          "category": "landmark",
+          "cost": 116,
+          "duration": 1,
+          "crowd_level": 3,
+          "location": "Garden Area",
+          "rating": 5
+        },
+        "A023": {
+          "activity_id": "A023",
+          "name": "Gallery Tour 122",
+          "category": "museum",
+          "cost": 169,
+          "duration": 5,
+          "crowd_level": 3,
+          "location": "Harbor",
+          "rating": 1
+        },
         "A037": {
           "activity_id": "A037",
           "name": "Castle Stop 136",
@@ -29106,15 +28996,15 @@
           "location": "Old Town",
           "rating": 5
         },
-        "A003": {
-          "activity_id": "A003",
-          "name": "Tasting Tour 102",
-          "category": "food",
-          "cost": 171,
-          "duration": 1,
-          "crowd_level": 3,
-          "location": "Hill District",
-          "rating": 5
+        "A005": {
+          "activity_id": "A005",
+          "name": "Night Market 104",
+          "category": "market",
+          "cost": 39,
+          "duration": 4,
+          "crowd_level": 5,
+          "location": "Museum Quarter",
+          "rating": 2
         },
         "A040": {
           "activity_id": "A040",
@@ -29126,14 +29016,24 @@
           "location": "Garden Area",
           "rating": 1
         },
-        "A009": {
-          "activity_id": "A009",
-          "name": "Bridge Tour 108",
-          "category": "landmark",
-          "cost": 81,
-          "duration": 1,
-          "crowd_level": 4,
-          "location": "Hill District",
+        "A018": {
+          "activity_id": "A018",
+          "name": "Dinner Cruise 117",
+          "category": "food",
+          "cost": 134,
+          "duration": 6,
+          "crowd_level": 3,
+          "location": "Riverside",
+          "rating": 1
+        },
+        "A031": {
+          "activity_id": "A031",
+          "name": "Tasting Tour 130",
+          "category": "food",
+          "cost": 198,
+          "duration": 3,
+          "crowd_level": 3,
+          "location": "Harbor",
           "rating": 4
         },
         "A020": {
@@ -29146,15 +29046,115 @@
           "location": "Downtown",
           "rating": 1
         },
-        "A006": {
-          "activity_id": "A006",
-          "name": "Tower Visit 105",
+        "A007": {
+          "activity_id": "A007",
+          "name": "Gallery Tour 106",
+          "category": "museum",
+          "cost": 93,
+          "duration": 5,
+          "crowd_level": 2,
+          "location": "Harbor",
+          "rating": 4
+        },
+        "A030": {
+          "activity_id": "A030",
+          "name": "Craft Market 129",
+          "category": "market",
+          "cost": 182,
+          "duration": 3,
+          "crowd_level": 3,
+          "location": "Old Town",
+          "rating": 2
+        },
+        "A032": {
+          "activity_id": "A032",
+          "name": "Bridge Tour 131",
           "category": "landmark",
-          "cost": 128,
+          "cost": 147,
+          "duration": 3,
+          "crowd_level": 5,
+          "location": "Museum Quarter",
+          "rating": 5
+        },
+        "A003": {
+          "activity_id": "A003",
+          "name": "Tasting Tour 102",
+          "category": "food",
+          "cost": 171,
           "duration": 1,
+          "crowd_level": 3,
+          "location": "Hill District",
+          "rating": 5
+        },
+        "A026": {
+          "activity_id": "A026",
+          "name": "Mountain Trail 125",
+          "category": "outdoor",
+          "cost": 58,
+          "duration": 4,
+          "crowd_level": 2,
+          "location": "Harbor",
+          "rating": 2
+        },
+        "A035": {
+          "activity_id": "A035",
+          "name": "Tower Visit 134",
+          "category": "landmark",
+          "cost": 127,
+          "duration": 6,
+          "crowd_level": 2,
+          "location": "Old Town",
+          "rating": 1
+        },
+        "A025": {
+          "activity_id": "A025",
+          "name": "Bazaar 124",
+          "category": "market",
+          "cost": 101,
+          "duration": 2,
+          "crowd_level": 2,
+          "location": "Riverside",
+          "rating": 2
+        },
+        "A004": {
+          "activity_id": "A004",
+          "name": "Tower Visit 103",
+          "category": "landmark",
+          "cost": 127,
+          "duration": 3,
           "crowd_level": 4,
-          "location": "Garden Area",
-          "rating": 3
+          "location": "Museum Quarter",
+          "rating": 2
+        },
+        "A028": {
+          "activity_id": "A028",
+          "name": "Mountain Trail 127",
+          "category": "outdoor",
+          "cost": 132,
+          "duration": 5,
+          "crowd_level": 1,
+          "location": "Hill District",
+          "rating": 1
+        },
+        "A002": {
+          "activity_id": "A002",
+          "name": "Farmers Market 101",
+          "category": "market",
+          "cost": 51,
+          "duration": 3,
+          "crowd_level": 1,
+          "location": "Riverside",
+          "rating": 2
+        },
+        "A024": {
+          "activity_id": "A024",
+          "name": "Beach Visit 123",
+          "category": "outdoor",
+          "cost": 179,
+          "duration": 3,
+          "crowd_level": 1,
+          "location": "City Center",
+          "rating": 5
         },
         "A043": {
           "activity_id": "A043",

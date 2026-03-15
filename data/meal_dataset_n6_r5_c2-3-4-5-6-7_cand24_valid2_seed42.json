@@ -16,54 +16,24 @@
         "same_chef_max": 8
       },
       "item_pool": {
-        "D006": {
-          "dish_id": "D006",
-          "name": "Sandwich Box 105",
-          "calories": 309,
-          "protein": 18,
-          "price": 35,
-          "cuisine": "american",
-          "chef": "Chef Morgan",
-          "spiciness": 1
-        },
-        "D015": {
-          "dish_id": "D015",
-          "name": "Rice Plate 114",
-          "calories": 182,
-          "protein": 56,
-          "price": 15,
-          "cuisine": "asian",
-          "chef": "Chef Baker",
+        "D014": {
+          "dish_id": "D014",
+          "name": "Quesadilla Set 113",
+          "calories": 805,
+          "protein": 49,
+          "price": 22,
+          "cuisine": "mexican",
+          "chef": "Chef Rossi",
           "spiciness": 3
         },
-        "D010": {
-          "dish_id": "D010",
-          "name": "Salad Plate 109",
-          "calories": 196,
-          "protein": 47,
-          "price": 12,
-          "cuisine": "mediterranean",
-          "chef": "Chef Patel",
-          "spiciness": 1
-        },
-        "D004": {
-          "dish_id": "D004",
-          "name": "Pasta Dish 103",
-          "calories": 724,
-          "protein": 17,
-          "price": 27,
-          "cuisine": "italian",
-          "chef": "Chef Baker",
-          "spiciness": 2
-        },
-        "D007": {
-          "dish_id": "D007",
-          "name": "Curry Dish 106",
-          "calories": 249,
-          "protein": 27,
-          "price": 32,
-          "cuisine": "asian",
-          "chef": "Chef Morgan",
+        "D003": {
+          "dish_id": "D003",
+          "name": "Taco Plate 102",
+          "calories": 180,
+          "protein": 10,
+          "price": 11,
+          "cuisine": "mexican",
+          "chef": "Chef Rossi",
           "spiciness": 5
         },
         "D017": {
@@ -76,24 +46,34 @@
           "chef": "Chef Rossi",
           "spiciness": 5
         },
-        "D003": {
-          "dish_id": "D003",
-          "name": "Taco Plate 102",
-          "calories": 180,
-          "protein": 10,
-          "price": 11,
-          "cuisine": "mexican",
-          "chef": "Chef Rossi",
+        "D008": {
+          "dish_id": "D008",
+          "name": "Burger Plate 107",
+          "calories": 897,
+          "protein": 34,
+          "price": 22,
+          "cuisine": "american",
+          "chef": "Chef Carter",
+          "spiciness": 4
+        },
+        "D007": {
+          "dish_id": "D007",
+          "name": "Curry Dish 106",
+          "calories": 249,
+          "protein": 27,
+          "price": 32,
+          "cuisine": "asian",
+          "chef": "Chef Morgan",
           "spiciness": 5
         },
-        "D014": {
-          "dish_id": "D014",
-          "name": "Quesadilla Set 113",
-          "calories": 805,
-          "protein": 49,
-          "price": 22,
-          "cuisine": "mexican",
-          "chef": "Chef Rossi",
+        "D015": {
+          "dish_id": "D015",
+          "name": "Rice Plate 114",
+          "calories": 182,
+          "protein": 56,
+          "price": 15,
+          "cuisine": "asian",
+          "chef": "Chef Baker",
           "spiciness": 3
         },
         "D009": {
@@ -106,15 +86,35 @@
           "chef": "Chef Morgan",
           "spiciness": 5
         },
-        "D008": {
-          "dish_id": "D008",
-          "name": "Burger Plate 107",
-          "calories": 897,
-          "protein": 34,
-          "price": 22,
+        "D006": {
+          "dish_id": "D006",
+          "name": "Sandwich Box 105",
+          "calories": 309,
+          "protein": 18,
+          "price": 35,
           "cuisine": "american",
-          "chef": "Chef Carter",
-          "spiciness": 4
+          "chef": "Chef Morgan",
+          "spiciness": 1
+        },
+        "D004": {
+          "dish_id": "D004",
+          "name": "Pasta Dish 103",
+          "calories": 724,
+          "protein": 17,
+          "price": 27,
+          "cuisine": "italian",
+          "chef": "Chef Baker",
+          "spiciness": 2
+        },
+        "D010": {
+          "dish_id": "D010",
+          "name": "Salad Plate 109",
+          "calories": 196,
+          "protein": 47,
+          "price": 12,
+          "cuisine": "mediterranean",
+          "chef": "Chef Patel",
+          "spiciness": 1
         },
         "D018": {
           "dish_id": "D018",
@@ -2934,35 +2934,35 @@
         "same_chef_max": 9
       },
       "item_pool": {
-        "D011": {
-          "dish_id": "D011",
-          "name": "Pizza Slice 110",
-          "calories": 670,
-          "protein": 40,
-          "price": 11,
-          "cuisine": "italian",
-          "chef": "Chef Rivera",
-          "spiciness": 3
-        },
-        "D006": {
-          "dish_id": "D006",
-          "name": "Curry Dish 105",
-          "calories": 478,
-          "protein": 20,
-          "price": 15,
+        "D014": {
+          "dish_id": "D014",
+          "name": "Rice Plate 113",
+          "calories": 152,
+          "protein": 26,
+          "price": 16,
           "cuisine": "asian",
           "chef": "Chef Patel",
-          "spiciness": 1
+          "spiciness": 5
         },
-        "D018": {
-          "dish_id": "D018",
-          "name": "Curry Dish 117",
-          "calories": 197,
-          "protein": 45,
+        "D005": {
+          "dish_id": "D005",
+          "name": "Power Bowl 104",
+          "calories": 667,
+          "protein": 59,
+          "price": 20,
+          "cuisine": "fusion",
+          "chef": "Chef Rivera",
+          "spiciness": 2
+        },
+        "D017": {
+          "dish_id": "D017",
+          "name": "Curry Dish 116",
+          "calories": 370,
+          "protein": 34,
           "price": 31,
           "cuisine": "asian",
-          "chef": "Chef Carter",
-          "spiciness": 4
+          "chef": "Chef Rossi",
+          "spiciness": 3
         },
         "D020": {
           "dish_id": "D020",
@@ -2972,6 +2972,16 @@
           "price": 34,
           "cuisine": "mexican",
           "chef": "Chef Gomez",
+          "spiciness": 5
+        },
+        "D012": {
+          "dish_id": "D012",
+          "name": "Burger Plate 111",
+          "calories": 378,
+          "protein": 59,
+          "price": 19,
+          "cuisine": "american",
+          "chef": "Chef Morgan",
           "spiciness": 5
         },
         "D015": {
@@ -2984,45 +2994,45 @@
           "chef": "Chef Gomez",
           "spiciness": 4
         },
-        "D010": {
-          "dish_id": "D010",
-          "name": "Salsa Meal 109",
-          "calories": 186,
-          "protein": 40,
-          "price": 22,
+        "D009": {
+          "dish_id": "D009",
+          "name": "Salsa Meal 108",
+          "calories": 473,
+          "protein": 12,
+          "price": 20,
           "cuisine": "mexican",
           "chef": "Chef Lin",
           "spiciness": 1
         },
-        "D013": {
-          "dish_id": "D013",
-          "name": "Lasagna Tray 112",
-          "calories": 883,
-          "protein": 47,
-          "price": 16,
+        "D011": {
+          "dish_id": "D011",
+          "name": "Pizza Slice 110",
+          "calories": 670,
+          "protein": 40,
+          "price": 11,
           "cuisine": "italian",
           "chef": "Chef Rivera",
-          "spiciness": 1
-        },
-        "D022": {
-          "dish_id": "D022",
-          "name": "Salsa Meal 121",
-          "calories": 773,
-          "protein": 49,
-          "price": 29,
-          "cuisine": "mexican",
-          "chef": "Chef Rossi",
           "spiciness": 3
         },
-        "D017": {
-          "dish_id": "D017",
-          "name": "Curry Dish 116",
-          "calories": 370,
-          "protein": 34,
+        "D018": {
+          "dish_id": "D018",
+          "name": "Curry Dish 117",
+          "calories": 197,
+          "protein": 45,
           "price": 31,
           "cuisine": "asian",
-          "chef": "Chef Rossi",
-          "spiciness": 3
+          "chef": "Chef Carter",
+          "spiciness": 4
+        },
+        "D006": {
+          "dish_id": "D006",
+          "name": "Curry Dish 105",
+          "calories": 478,
+          "protein": 20,
+          "price": 15,
+          "cuisine": "asian",
+          "chef": "Chef Patel",
+          "spiciness": 1
         },
         "D004": {
           "dish_id": "D004",
@@ -3044,45 +3054,35 @@
           "chef": "Chef Rossi",
           "spiciness": 2
         },
-        "D012": {
-          "dish_id": "D012",
-          "name": "Burger Plate 111",
-          "calories": 378,
-          "protein": 59,
-          "price": 19,
-          "cuisine": "american",
-          "chef": "Chef Morgan",
-          "spiciness": 5
+        "D022": {
+          "dish_id": "D022",
+          "name": "Salsa Meal 121",
+          "calories": 773,
+          "protein": 49,
+          "price": 29,
+          "cuisine": "mexican",
+          "chef": "Chef Rossi",
+          "spiciness": 3
         },
-        "D009": {
-          "dish_id": "D009",
-          "name": "Salsa Meal 108",
-          "calories": 473,
-          "protein": 12,
-          "price": 20,
+        "D010": {
+          "dish_id": "D010",
+          "name": "Salsa Meal 109",
+          "calories": 186,
+          "protein": 40,
+          "price": 22,
           "cuisine": "mexican",
           "chef": "Chef Lin",
           "spiciness": 1
         },
-        "D014": {
-          "dish_id": "D014",
-          "name": "Rice Plate 113",
-          "calories": 152,
-          "protein": 26,
+        "D013": {
+          "dish_id": "D013",
+          "name": "Lasagna Tray 112",
+          "calories": 883,
+          "protein": 47,
           "price": 16,
-          "cuisine": "asian",
-          "chef": "Chef Patel",
-          "spiciness": 5
-        },
-        "D005": {
-          "dish_id": "D005",
-          "name": "Power Bowl 104",
-          "calories": 667,
-          "protein": 59,
-          "price": 20,
-          "cuisine": "fusion",
+          "cuisine": "italian",
           "chef": "Chef Rivera",
-          "spiciness": 2
+          "spiciness": 1
         },
         "D023": {
           "dish_id": "D023",
@@ -7283,54 +7283,24 @@
         "same_chef_max": 9
       },
       "item_pool": {
-        "D015": {
-          "dish_id": "D015",
-          "name": "Dumpling Set 114",
-          "calories": 323,
-          "protein": 6,
-          "price": 22,
-          "cuisine": "asian",
-          "chef": "Chef Morgan",
-          "spiciness": 1
-        },
-        "D027": {
-          "dish_id": "D027",
-          "name": "Power Bowl 126",
-          "calories": 740,
-          "protein": 36,
-          "price": 11,
-          "cuisine": "fusion",
-          "chef": "Chef Rivera",
-          "spiciness": 3
-        },
-        "D026": {
-          "dish_id": "D026",
-          "name": "Quesadilla Set 125",
-          "calories": 789,
-          "protein": 37,
-          "price": 19,
-          "cuisine": "mexican",
-          "chef": "Chef Gomez",
-          "spiciness": 1
-        },
-        "D016": {
-          "dish_id": "D016",
-          "name": "Salsa Meal 115",
-          "calories": 731,
-          "protein": 37,
-          "price": 33,
+        "D005": {
+          "dish_id": "D005",
+          "name": "Taco Plate 104",
+          "calories": 542,
+          "protein": 33,
+          "price": 15,
           "cuisine": "mexican",
           "chef": "Chef Baker",
-          "spiciness": 3
+          "spiciness": 4
         },
-        "D012": {
-          "dish_id": "D012",
-          "name": "Chef Special 111",
-          "calories": 790,
-          "protein": 26,
-          "price": 17,
-          "cuisine": "fusion",
-          "chef": "Chef Carter",
+        "D007": {
+          "dish_id": "D007",
+          "name": "Salsa Meal 106",
+          "calories": 287,
+          "protein": 24,
+          "price": 27,
+          "cuisine": "mexican",
+          "chef": "Chef Baker",
           "spiciness": 4
         },
         "D011": {
@@ -7343,74 +7313,24 @@
           "chef": "Chef Morgan",
           "spiciness": 3
         },
-        "D018": {
-          "dish_id": "D018",
-          "name": "Quesadilla Set 117",
-          "calories": 736,
-          "protein": 11,
-          "price": 30,
+        "D006": {
+          "dish_id": "D006",
+          "name": "Taco Plate 105",
+          "calories": 183,
+          "protein": 16,
+          "price": 22,
           "cuisine": "mexican",
-          "chef": "Chef Rivera",
-          "spiciness": 1
-        },
-        "D019": {
-          "dish_id": "D019",
-          "name": "Power Bowl 118",
-          "calories": 494,
-          "protein": 36,
-          "price": 21,
-          "cuisine": "fusion",
-          "chef": "Chef Morgan",
+          "chef": "Chef Patel",
           "spiciness": 2
         },
-        "D017": {
-          "dish_id": "D017",
-          "name": "Curry Dish 116",
-          "calories": 752,
-          "protein": 6,
-          "price": 15,
-          "cuisine": "asian",
-          "chef": "Chef Baker",
-          "spiciness": 5
-        },
-        "D007": {
-          "dish_id": "D007",
-          "name": "Salsa Meal 106",
-          "calories": 287,
-          "protein": 24,
-          "price": 27,
+        "D016": {
+          "dish_id": "D016",
+          "name": "Salsa Meal 115",
+          "calories": 731,
+          "protein": 37,
+          "price": 33,
           "cuisine": "mexican",
           "chef": "Chef Baker",
-          "spiciness": 4
-        },
-        "D023": {
-          "dish_id": "D023",
-          "name": "Dumpling Set 122",
-          "calories": 429,
-          "protein": 9,
-          "price": 23,
-          "cuisine": "asian",
-          "chef": "Chef Rivera",
-          "spiciness": 4
-        },
-        "D002": {
-          "dish_id": "D002",
-          "name": "Mix Grill 101",
-          "calories": 306,
-          "protein": 24,
-          "price": 24,
-          "cuisine": "fusion",
-          "chef": "Chef Carter",
-          "spiciness": 1
-        },
-        "D014": {
-          "dish_id": "D014",
-          "name": "Wrap Meal 113",
-          "calories": 756,
-          "protein": 10,
-          "price": 34,
-          "cuisine": "mediterranean",
-          "chef": "Chef Carter",
           "spiciness": 3
         },
         "D021": {
@@ -7423,6 +7343,16 @@
           "chef": "Chef Patel",
           "spiciness": 5
         },
+        "D014": {
+          "dish_id": "D014",
+          "name": "Wrap Meal 113",
+          "calories": 756,
+          "protein": 10,
+          "price": 34,
+          "cuisine": "mediterranean",
+          "chef": "Chef Carter",
+          "spiciness": 3
+        },
         "D003": {
           "dish_id": "D003",
           "name": "Seasonal Plate 102",
@@ -7433,16 +7363,6 @@
           "chef": "Chef Rivera",
           "spiciness": 4
         },
-        "D006": {
-          "dish_id": "D006",
-          "name": "Taco Plate 105",
-          "calories": 183,
-          "protein": 16,
-          "price": 22,
-          "cuisine": "mexican",
-          "chef": "Chef Patel",
-          "spiciness": 2
-        },
         "D020": {
           "dish_id": "D020",
           "name": "Pizza Slice 119",
@@ -7451,6 +7371,46 @@
           "price": 11,
           "cuisine": "italian",
           "chef": "Chef Rivera",
+          "spiciness": 1
+        },
+        "D027": {
+          "dish_id": "D027",
+          "name": "Power Bowl 126",
+          "calories": 740,
+          "protein": 36,
+          "price": 11,
+          "cuisine": "fusion",
+          "chef": "Chef Rivera",
+          "spiciness": 3
+        },
+        "D019": {
+          "dish_id": "D019",
+          "name": "Power Bowl 118",
+          "calories": 494,
+          "protein": 36,
+          "price": 21,
+          "cuisine": "fusion",
+          "chef": "Chef Morgan",
+          "spiciness": 2
+        },
+        "D026": {
+          "dish_id": "D026",
+          "name": "Quesadilla Set 125",
+          "calories": 789,
+          "protein": 37,
+          "price": 19,
+          "cuisine": "mexican",
+          "chef": "Chef Gomez",
+          "spiciness": 1
+        },
+        "D004": {
+          "dish_id": "D004",
+          "name": "Pizza Slice 103",
+          "calories": 705,
+          "protein": 26,
+          "price": 30,
+          "cuisine": "italian",
+          "chef": "Chef Lin",
           "spiciness": 1
         },
         "D010": {
@@ -7463,25 +7423,65 @@
           "chef": "Chef Patel",
           "spiciness": 3
         },
-        "D004": {
-          "dish_id": "D004",
-          "name": "Pizza Slice 103",
-          "calories": 705,
-          "protein": 26,
-          "price": 30,
-          "cuisine": "italian",
-          "chef": "Chef Lin",
+        "D017": {
+          "dish_id": "D017",
+          "name": "Curry Dish 116",
+          "calories": 752,
+          "protein": 6,
+          "price": 15,
+          "cuisine": "asian",
+          "chef": "Chef Baker",
+          "spiciness": 5
+        },
+        "D015": {
+          "dish_id": "D015",
+          "name": "Dumpling Set 114",
+          "calories": 323,
+          "protein": 6,
+          "price": 22,
+          "cuisine": "asian",
+          "chef": "Chef Morgan",
           "spiciness": 1
         },
-        "D005": {
-          "dish_id": "D005",
-          "name": "Taco Plate 104",
-          "calories": 542,
-          "protein": 33,
-          "price": 15,
-          "cuisine": "mexican",
-          "chef": "Chef Baker",
+        "D023": {
+          "dish_id": "D023",
+          "name": "Dumpling Set 122",
+          "calories": 429,
+          "protein": 9,
+          "price": 23,
+          "cuisine": "asian",
+          "chef": "Chef Rivera",
           "spiciness": 4
+        },
+        "D012": {
+          "dish_id": "D012",
+          "name": "Chef Special 111",
+          "calories": 790,
+          "protein": 26,
+          "price": 17,
+          "cuisine": "fusion",
+          "chef": "Chef Carter",
+          "spiciness": 4
+        },
+        "D018": {
+          "dish_id": "D018",
+          "name": "Quesadilla Set 117",
+          "calories": 736,
+          "protein": 11,
+          "price": 30,
+          "cuisine": "mexican",
+          "chef": "Chef Rivera",
+          "spiciness": 1
+        },
+        "D002": {
+          "dish_id": "D002",
+          "name": "Mix Grill 101",
+          "calories": 306,
+          "protein": 24,
+          "price": 24,
+          "cuisine": "fusion",
+          "chef": "Chef Carter",
+          "spiciness": 1
         },
         "D028": {
           "dish_id": "D028",
@@ -13033,42 +13033,42 @@
         "same_chef_max": 8
       },
       "item_pool": {
-        "D015": {
-          "dish_id": "D015",
-          "name": "Wrap Meal 114",
-          "calories": 705,
-          "protein": 51,
-          "price": 6,
-          "cuisine": "mediterranean",
-          "chef": "Chef Patel",
+        "D005": {
+          "dish_id": "D005",
+          "name": "Salsa Meal 104",
+          "calories": 380,
+          "protein": 10,
+          "price": 31,
+          "cuisine": "mexican",
+          "chef": "Chef Rossi",
           "spiciness": 4
         },
-        "D027": {
-          "dish_id": "D027",
-          "name": "Lasagna Tray 126",
-          "calories": 837,
-          "protein": 55,
-          "price": 32,
-          "cuisine": "italian",
-          "chef": "Chef Morgan",
-          "spiciness": 3
-        },
-        "D022": {
-          "dish_id": "D022",
-          "name": "Dumpling Set 121",
-          "calories": 323,
-          "protein": 16,
-          "price": 14,
-          "cuisine": "asian",
-          "chef": "Chef Baker",
-          "spiciness": 3
-        },
-        "D026": {
-          "dish_id": "D026",
-          "name": "Pasta Dish 125",
-          "calories": 541,
-          "protein": 8,
+        "D007": {
+          "dish_id": "D007",
+          "name": "Steak Meal 106",
+          "calories": 244,
+          "protein": 33,
           "price": 16,
+          "cuisine": "american",
+          "chef": "Chef Baker",
+          "spiciness": 1
+        },
+        "D006": {
+          "dish_id": "D006",
+          "name": "Noodle Bowl 105",
+          "calories": 891,
+          "protein": 49,
+          "price": 27,
+          "cuisine": "asian",
+          "chef": "Chef Carter",
+          "spiciness": 4
+        },
+        "D032": {
+          "dish_id": "D032",
+          "name": "Pasta Dish 131",
+          "calories": 866,
+          "protein": 27,
+          "price": 32,
           "cuisine": "italian",
           "chef": "Chef Lin",
           "spiciness": 1
@@ -13082,6 +13082,156 @@
           "cuisine": "asian",
           "chef": "Chef Lin",
           "spiciness": 1
+        },
+        "D021": {
+          "dish_id": "D021",
+          "name": "Sandwich Box 120",
+          "calories": 535,
+          "protein": 14,
+          "price": 15,
+          "cuisine": "american",
+          "chef": "Chef Rivera",
+          "spiciness": 3
+        },
+        "D024": {
+          "dish_id": "D024",
+          "name": "Seasonal Plate 123",
+          "calories": 495,
+          "protein": 59,
+          "price": 13,
+          "cuisine": "fusion",
+          "chef": "Chef Carter",
+          "spiciness": 5
+        },
+        "D014": {
+          "dish_id": "D014",
+          "name": "Rice Plate 113",
+          "calories": 815,
+          "protein": 25,
+          "price": 32,
+          "cuisine": "asian",
+          "chef": "Chef Carter",
+          "spiciness": 3
+        },
+        "D020": {
+          "dish_id": "D020",
+          "name": "Salsa Meal 119",
+          "calories": 771,
+          "protein": 32,
+          "price": 18,
+          "cuisine": "mexican",
+          "chef": "Chef Lin",
+          "spiciness": 3
+        },
+        "D027": {
+          "dish_id": "D027",
+          "name": "Lasagna Tray 126",
+          "calories": 837,
+          "protein": 55,
+          "price": 32,
+          "cuisine": "italian",
+          "chef": "Chef Morgan",
+          "spiciness": 3
+        },
+        "D019": {
+          "dish_id": "D019",
+          "name": "Falafel Box 118",
+          "calories": 565,
+          "protein": 43,
+          "price": 29,
+          "cuisine": "mediterranean",
+          "chef": "Chef Rossi",
+          "spiciness": 3
+        },
+        "D026": {
+          "dish_id": "D026",
+          "name": "Pasta Dish 125",
+          "calories": 541,
+          "protein": 8,
+          "price": 16,
+          "cuisine": "italian",
+          "chef": "Chef Lin",
+          "spiciness": 1
+        },
+        "D009": {
+          "dish_id": "D009",
+          "name": "Falafel Box 108",
+          "calories": 368,
+          "protein": 20,
+          "price": 31,
+          "cuisine": "mediterranean",
+          "chef": "Chef Rivera",
+          "spiciness": 1
+        },
+        "D004": {
+          "dish_id": "D004",
+          "name": "Noodle Bowl 103",
+          "calories": 886,
+          "protein": 25,
+          "price": 21,
+          "cuisine": "asian",
+          "chef": "Chef Patel",
+          "spiciness": 3
+        },
+        "D010": {
+          "dish_id": "D010",
+          "name": "Noodle Bowl 109",
+          "calories": 250,
+          "protein": 47,
+          "price": 33,
+          "cuisine": "asian",
+          "chef": "Chef Patel",
+          "spiciness": 5
+        },
+        "D017": {
+          "dish_id": "D017",
+          "name": "Sandwich Box 116",
+          "calories": 203,
+          "protein": 10,
+          "price": 33,
+          "cuisine": "american",
+          "chef": "Chef Morgan",
+          "spiciness": 2
+        },
+        "D008": {
+          "dish_id": "D008",
+          "name": "Burrito Bowl 107",
+          "calories": 156,
+          "protein": 16,
+          "price": 35,
+          "cuisine": "mexican",
+          "chef": "Chef Carter",
+          "spiciness": 4
+        },
+        "D015": {
+          "dish_id": "D015",
+          "name": "Wrap Meal 114",
+          "calories": 705,
+          "protein": 51,
+          "price": 6,
+          "cuisine": "mediterranean",
+          "chef": "Chef Patel",
+          "spiciness": 4
+        },
+        "D031": {
+          "dish_id": "D031",
+          "name": "Seasonal Plate 130",
+          "calories": 655,
+          "protein": 55,
+          "price": 25,
+          "cuisine": "fusion",
+          "chef": "Chef Lin",
+          "spiciness": 5
+        },
+        "D028": {
+          "dish_id": "D028",
+          "name": "Taco Plate 127",
+          "calories": 720,
+          "protein": 15,
+          "price": 17,
+          "cuisine": "mexican",
+          "chef": "Chef Rivera",
+          "spiciness": 5
         },
         "D012": {
           "dish_id": "D012",
@@ -13103,46 +13253,6 @@
           "chef": "Chef Baker",
           "spiciness": 1
         },
-        "D019": {
-          "dish_id": "D019",
-          "name": "Falafel Box 118",
-          "calories": 565,
-          "protein": 43,
-          "price": 29,
-          "cuisine": "mediterranean",
-          "chef": "Chef Rossi",
-          "spiciness": 3
-        },
-        "D032": {
-          "dish_id": "D032",
-          "name": "Pasta Dish 131",
-          "calories": 866,
-          "protein": 27,
-          "price": 32,
-          "cuisine": "italian",
-          "chef": "Chef Lin",
-          "spiciness": 1
-        },
-        "D017": {
-          "dish_id": "D017",
-          "name": "Sandwich Box 116",
-          "calories": 203,
-          "protein": 10,
-          "price": 33,
-          "cuisine": "american",
-          "chef": "Chef Morgan",
-          "spiciness": 2
-        },
-        "D007": {
-          "dish_id": "D007",
-          "name": "Steak Meal 106",
-          "calories": 244,
-          "protein": 33,
-          "price": 16,
-          "cuisine": "american",
-          "chef": "Chef Baker",
-          "spiciness": 1
-        },
         "D002": {
           "dish_id": "D002",
           "name": "Lasagna Tray 101",
@@ -13152,46 +13262,6 @@
           "cuisine": "italian",
           "chef": "Chef Morgan",
           "spiciness": 1
-        },
-        "D031": {
-          "dish_id": "D031",
-          "name": "Seasonal Plate 130",
-          "calories": 655,
-          "protein": 55,
-          "price": 25,
-          "cuisine": "fusion",
-          "chef": "Chef Lin",
-          "spiciness": 5
-        },
-        "D014": {
-          "dish_id": "D014",
-          "name": "Rice Plate 113",
-          "calories": 815,
-          "protein": 25,
-          "price": 32,
-          "cuisine": "asian",
-          "chef": "Chef Carter",
-          "spiciness": 3
-        },
-        "D009": {
-          "dish_id": "D009",
-          "name": "Falafel Box 108",
-          "calories": 368,
-          "protein": 20,
-          "price": 31,
-          "cuisine": "mediterranean",
-          "chef": "Chef Rivera",
-          "spiciness": 1
-        },
-        "D008": {
-          "dish_id": "D008",
-          "name": "Burrito Bowl 107",
-          "calories": 156,
-          "protein": 16,
-          "price": 35,
-          "cuisine": "mexican",
-          "chef": "Chef Carter",
-          "spiciness": 4
         },
         "D025": {
           "dish_id": "D025",
@@ -13203,85 +13273,15 @@
           "chef": "Chef Carter",
           "spiciness": 3
         },
-        "D021": {
-          "dish_id": "D021",
-          "name": "Sandwich Box 120",
-          "calories": 535,
-          "protein": 14,
-          "price": 15,
-          "cuisine": "american",
-          "chef": "Chef Rivera",
-          "spiciness": 3
-        },
-        "D028": {
-          "dish_id": "D028",
-          "name": "Taco Plate 127",
-          "calories": 720,
-          "protein": 15,
-          "price": 17,
-          "cuisine": "mexican",
-          "chef": "Chef Rivera",
-          "spiciness": 5
-        },
-        "D006": {
-          "dish_id": "D006",
-          "name": "Noodle Bowl 105",
-          "calories": 891,
-          "protein": 49,
-          "price": 27,
+        "D022": {
+          "dish_id": "D022",
+          "name": "Dumpling Set 121",
+          "calories": 323,
+          "protein": 16,
+          "price": 14,
           "cuisine": "asian",
-          "chef": "Chef Carter",
-          "spiciness": 4
-        },
-        "D020": {
-          "dish_id": "D020",
-          "name": "Salsa Meal 119",
-          "calories": 771,
-          "protein": 32,
-          "price": 18,
-          "cuisine": "mexican",
-          "chef": "Chef Lin",
+          "chef": "Chef Baker",
           "spiciness": 3
-        },
-        "D010": {
-          "dish_id": "D010",
-          "name": "Noodle Bowl 109",
-          "calories": 250,
-          "protein": 47,
-          "price": 33,
-          "cuisine": "asian",
-          "chef": "Chef Patel",
-          "spiciness": 5
-        },
-        "D004": {
-          "dish_id": "D004",
-          "name": "Noodle Bowl 103",
-          "calories": 886,
-          "protein": 25,
-          "price": 21,
-          "cuisine": "asian",
-          "chef": "Chef Patel",
-          "spiciness": 3
-        },
-        "D024": {
-          "dish_id": "D024",
-          "name": "Seasonal Plate 123",
-          "calories": 495,
-          "protein": 59,
-          "price": 13,
-          "cuisine": "fusion",
-          "chef": "Chef Carter",
-          "spiciness": 5
-        },
-        "D005": {
-          "dish_id": "D005",
-          "name": "Salsa Meal 104",
-          "calories": 380,
-          "protein": 10,
-          "price": 31,
-          "cuisine": "mexican",
-          "chef": "Chef Rossi",
-          "spiciness": 4
         },
         "D033": {
           "dish_id": "D033",
@@ -20214,65 +20214,15 @@
         "same_chef_max": 15
       },
       "item_pool": {
-        "D015": {
-          "dish_id": "D015",
-          "name": "Salad Plate 114",
-          "calories": 657,
-          "protein": 57,
-          "price": 6,
-          "cuisine": "mediterranean",
-          "chef": "Chef Patel",
-          "spiciness": 2
-        },
-        "D027": {
-          "dish_id": "D027",
-          "name": "Mix Grill 126",
-          "calories": 282,
-          "protein": 34,
-          "price": 23,
-          "cuisine": "fusion",
-          "chef": "Chef Rossi",
-          "spiciness": 2
-        },
-        "D022": {
-          "dish_id": "D022",
-          "name": "Power Bowl 121",
-          "calories": 362,
-          "protein": 38,
-          "price": 12,
-          "cuisine": "fusion",
-          "chef": "Chef Morgan",
-          "spiciness": 2
-        },
-        "D026": {
-          "dish_id": "D026",
-          "name": "Rice Plate 125",
-          "calories": 578,
-          "protein": 11,
-          "price": 17,
+        "D005": {
+          "dish_id": "D005",
+          "name": "Dumpling Set 104",
+          "calories": 900,
+          "protein": 5,
+          "price": 18,
           "cuisine": "asian",
           "chef": "Chef Morgan",
-          "spiciness": 3
-        },
-        "D016": {
-          "dish_id": "D016",
-          "name": "Noodle Bowl 115",
-          "calories": 616,
-          "protein": 34,
-          "price": 10,
-          "cuisine": "asian",
-          "chef": "Chef Gomez",
-          "spiciness": 2
-        },
-        "D012": {
-          "dish_id": "D012",
-          "name": "Burger Plate 111",
-          "calories": 766,
-          "protein": 29,
-          "price": 20,
-          "cuisine": "american",
-          "chef": "Chef Gomez",
-          "spiciness": 5
+          "spiciness": 1
         },
         "D011": {
           "dish_id": "D011",
@@ -20284,6 +20234,56 @@
           "chef": "Chef Carter",
           "spiciness": 4
         },
+        "D006": {
+          "dish_id": "D006",
+          "name": "Salsa Meal 105",
+          "calories": 793,
+          "protein": 12,
+          "price": 26,
+          "cuisine": "mexican",
+          "chef": "Chef Morgan",
+          "spiciness": 5
+        },
+        "D032": {
+          "dish_id": "D032",
+          "name": "Falafel Box 131",
+          "calories": 626,
+          "protein": 60,
+          "price": 6,
+          "cuisine": "mediterranean",
+          "chef": "Chef Gomez",
+          "spiciness": 5
+        },
+        "D016": {
+          "dish_id": "D016",
+          "name": "Noodle Bowl 115",
+          "calories": 616,
+          "protein": 34,
+          "price": 10,
+          "cuisine": "asian",
+          "chef": "Chef Gomez",
+          "spiciness": 2
+        },
+        "D021": {
+          "dish_id": "D021",
+          "name": "Noodle Bowl 120",
+          "calories": 361,
+          "protein": 7,
+          "price": 25,
+          "cuisine": "asian",
+          "chef": "Chef Morgan",
+          "spiciness": 2
+        },
+        "D037": {
+          "dish_id": "D037",
+          "name": "Noodle Bowl 136",
+          "calories": 564,
+          "protein": 25,
+          "price": 29,
+          "cuisine": "asian",
+          "chef": "Chef Baker",
+          "spiciness": 2
+        },
         "D029": {
           "dish_id": "D029",
           "name": "Curry Dish 128",
@@ -20294,14 +20294,64 @@
           "chef": "Chef Lin",
           "spiciness": 3
         },
-        "D018": {
-          "dish_id": "D018",
-          "name": "Risotto Plate 117",
-          "calories": 559,
-          "protein": 36,
-          "price": 34,
-          "cuisine": "italian",
+        "D024": {
+          "dish_id": "D024",
+          "name": "Burger Plate 123",
+          "calories": 557,
+          "protein": 46,
+          "price": 12,
+          "cuisine": "american",
+          "chef": "Chef Gomez",
+          "spiciness": 3
+        },
+        "D036": {
+          "dish_id": "D036",
+          "name": "Dumpling Set 135",
+          "calories": 700,
+          "protein": 53,
+          "price": 33,
+          "cuisine": "asian",
+          "chef": "Chef Morgan",
+          "spiciness": 1
+        },
+        "D003": {
+          "dish_id": "D003",
+          "name": "Noodle Bowl 102",
+          "calories": 737,
+          "protein": 20,
+          "price": 10,
+          "cuisine": "asian",
+          "chef": "Chef Carter",
+          "spiciness": 5
+        },
+        "D014": {
+          "dish_id": "D014",
+          "name": "Dumpling Set 113",
+          "calories": 845,
+          "protein": 55,
+          "price": 11,
+          "cuisine": "asian",
           "chef": "Chef Patel",
+          "spiciness": 2
+        },
+        "D020": {
+          "dish_id": "D020",
+          "name": "Seasonal Plate 119",
+          "calories": 368,
+          "protein": 37,
+          "price": 29,
+          "cuisine": "fusion",
+          "chef": "Chef Lin",
+          "spiciness": 1
+        },
+        "D027": {
+          "dish_id": "D027",
+          "name": "Mix Grill 126",
+          "calories": 282,
+          "protein": 34,
+          "price": 23,
+          "cuisine": "fusion",
+          "chef": "Chef Rossi",
           "spiciness": 2
         },
         "D019": {
@@ -20314,15 +20364,35 @@
           "chef": "Chef Baker",
           "spiciness": 4
         },
-        "D032": {
-          "dish_id": "D032",
-          "name": "Falafel Box 131",
-          "calories": 626,
-          "protein": 60,
-          "price": 6,
-          "cuisine": "mediterranean",
-          "chef": "Chef Gomez",
-          "spiciness": 5
+        "D026": {
+          "dish_id": "D026",
+          "name": "Rice Plate 125",
+          "calories": 578,
+          "protein": 11,
+          "price": 17,
+          "cuisine": "asian",
+          "chef": "Chef Morgan",
+          "spiciness": 3
+        },
+        "D004": {
+          "dish_id": "D004",
+          "name": "Roast Tray 103",
+          "calories": 887,
+          "protein": 58,
+          "price": 24,
+          "cuisine": "american",
+          "chef": "Chef Rossi",
+          "spiciness": 2
+        },
+        "D010": {
+          "dish_id": "D010",
+          "name": "Taco Plate 109",
+          "calories": 454,
+          "protein": 8,
+          "price": 35,
+          "cuisine": "mexican",
+          "chef": "Chef Baker",
+          "spiciness": 2
         },
         "D017": {
           "dish_id": "D017",
@@ -20334,6 +20404,36 @@
           "chef": "Chef Morgan",
           "spiciness": 5
         },
+        "D008": {
+          "dish_id": "D008",
+          "name": "Quesadilla Set 107",
+          "calories": 744,
+          "protein": 21,
+          "price": 7,
+          "cuisine": "mexican",
+          "chef": "Chef Carter",
+          "spiciness": 1
+        },
+        "D015": {
+          "dish_id": "D015",
+          "name": "Salad Plate 114",
+          "calories": 657,
+          "protein": 57,
+          "price": 6,
+          "cuisine": "mediterranean",
+          "chef": "Chef Patel",
+          "spiciness": 2
+        },
+        "D035": {
+          "dish_id": "D035",
+          "name": "Roast Tray 134",
+          "calories": 833,
+          "protein": 22,
+          "price": 29,
+          "cuisine": "american",
+          "chef": "Chef Morgan",
+          "spiciness": 4
+        },
         "D023": {
           "dish_id": "D023",
           "name": "Grill Platter 122",
@@ -20343,6 +20443,16 @@
           "cuisine": "mediterranean",
           "chef": "Chef Lin",
           "spiciness": 3
+        },
+        "D013": {
+          "dish_id": "D013",
+          "name": "Taco Plate 112",
+          "calories": 495,
+          "protein": 38,
+          "price": 18,
+          "cuisine": "mexican",
+          "chef": "Chef Morgan",
+          "spiciness": 2
         },
         "D031": {
           "dish_id": "D031",
@@ -20354,13 +20464,33 @@
           "chef": "Chef Lin",
           "spiciness": 3
         },
-        "D014": {
-          "dish_id": "D014",
-          "name": "Dumpling Set 113",
-          "calories": 845,
-          "protein": 55,
-          "price": 11,
-          "cuisine": "asian",
+        "D028": {
+          "dish_id": "D028",
+          "name": "Seasonal Plate 127",
+          "calories": 207,
+          "protein": 13,
+          "price": 8,
+          "cuisine": "fusion",
+          "chef": "Chef Patel",
+          "spiciness": 4
+        },
+        "D012": {
+          "dish_id": "D012",
+          "name": "Burger Plate 111",
+          "calories": 766,
+          "protein": 29,
+          "price": 20,
+          "cuisine": "american",
+          "chef": "Chef Gomez",
+          "spiciness": 5
+        },
+        "D018": {
+          "dish_id": "D018",
+          "name": "Risotto Plate 117",
+          "calories": 559,
+          "protein": 36,
+          "price": 34,
+          "cuisine": "italian",
           "chef": "Chef Patel",
           "spiciness": 2
         },
@@ -20374,145 +20504,15 @@
           "chef": "Chef Lin",
           "spiciness": 3
         },
-        "D008": {
-          "dish_id": "D008",
-          "name": "Quesadilla Set 107",
-          "calories": 744,
-          "protein": 21,
-          "price": 7,
-          "cuisine": "mexican",
-          "chef": "Chef Carter",
-          "spiciness": 1
-        },
-        "D013": {
-          "dish_id": "D013",
-          "name": "Taco Plate 112",
-          "calories": 495,
+        "D022": {
+          "dish_id": "D022",
+          "name": "Power Bowl 121",
+          "calories": 362,
           "protein": 38,
-          "price": 18,
-          "cuisine": "mexican",
-          "chef": "Chef Morgan",
-          "spiciness": 2
-        },
-        "D036": {
-          "dish_id": "D036",
-          "name": "Dumpling Set 135",
-          "calories": 700,
-          "protein": 53,
-          "price": 33,
-          "cuisine": "asian",
-          "chef": "Chef Morgan",
-          "spiciness": 1
-        },
-        "D021": {
-          "dish_id": "D021",
-          "name": "Noodle Bowl 120",
-          "calories": 361,
-          "protein": 7,
-          "price": 25,
-          "cuisine": "asian",
-          "chef": "Chef Morgan",
-          "spiciness": 2
-        },
-        "D028": {
-          "dish_id": "D028",
-          "name": "Seasonal Plate 127",
-          "calories": 207,
-          "protein": 13,
-          "price": 8,
-          "cuisine": "fusion",
-          "chef": "Chef Patel",
-          "spiciness": 4
-        },
-        "D003": {
-          "dish_id": "D003",
-          "name": "Noodle Bowl 102",
-          "calories": 737,
-          "protein": 20,
-          "price": 10,
-          "cuisine": "asian",
-          "chef": "Chef Carter",
-          "spiciness": 5
-        },
-        "D006": {
-          "dish_id": "D006",
-          "name": "Salsa Meal 105",
-          "calories": 793,
-          "protein": 12,
-          "price": 26,
-          "cuisine": "mexican",
-          "chef": "Chef Morgan",
-          "spiciness": 5
-        },
-        "D037": {
-          "dish_id": "D037",
-          "name": "Noodle Bowl 136",
-          "calories": 564,
-          "protein": 25,
-          "price": 29,
-          "cuisine": "asian",
-          "chef": "Chef Baker",
-          "spiciness": 2
-        },
-        "D020": {
-          "dish_id": "D020",
-          "name": "Seasonal Plate 119",
-          "calories": 368,
-          "protein": 37,
-          "price": 29,
-          "cuisine": "fusion",
-          "chef": "Chef Lin",
-          "spiciness": 1
-        },
-        "D010": {
-          "dish_id": "D010",
-          "name": "Taco Plate 109",
-          "calories": 454,
-          "protein": 8,
-          "price": 35,
-          "cuisine": "mexican",
-          "chef": "Chef Baker",
-          "spiciness": 2
-        },
-        "D004": {
-          "dish_id": "D004",
-          "name": "Roast Tray 103",
-          "calories": 887,
-          "protein": 58,
-          "price": 24,
-          "cuisine": "american",
-          "chef": "Chef Rossi",
-          "spiciness": 2
-        },
-        "D024": {
-          "dish_id": "D024",
-          "name": "Burger Plate 123",
-          "calories": 557,
-          "protein": 46,
           "price": 12,
-          "cuisine": "american",
-          "chef": "Chef Gomez",
-          "spiciness": 3
-        },
-        "D035": {
-          "dish_id": "D035",
-          "name": "Roast Tray 134",
-          "calories": 833,
-          "protein": 22,
-          "price": 29,
-          "cuisine": "american",
+          "cuisine": "fusion",
           "chef": "Chef Morgan",
-          "spiciness": 4
-        },
-        "D005": {
-          "dish_id": "D005",
-          "name": "Dumpling Set 104",
-          "calories": 900,
-          "protein": 5,
-          "price": 18,
-          "cuisine": "asian",
-          "chef": "Chef Morgan",
-          "spiciness": 1
+          "spiciness": 2
         },
         "D038": {
           "dish_id": "D038",
@@ -28846,34 +28846,44 @@
         "same_chef_max": 21
       },
       "item_pool": {
-        "D015": {
-          "dish_id": "D015",
-          "name": "Rice Plate 114",
-          "calories": 653,
-          "protein": 21,
-          "price": 21,
-          "cuisine": "asian",
-          "chef": "Chef Morgan",
-          "spiciness": 1
-        },
-        "D027": {
-          "dish_id": "D027",
-          "name": "Wrap Meal 126",
-          "calories": 822,
-          "protein": 13,
-          "price": 29,
-          "cuisine": "mediterranean",
-          "chef": "Chef Rivera",
+        "D005": {
+          "dish_id": "D005",
+          "name": "Taco Plate 104",
+          "calories": 678,
+          "protein": 18,
+          "price": 22,
+          "cuisine": "mexican",
+          "chef": "Chef Carter",
           "spiciness": 3
         },
-        "D026": {
-          "dish_id": "D026",
-          "name": "Burger Plate 125",
-          "calories": 738,
-          "protein": 56,
-          "price": 24,
-          "cuisine": "american",
-          "chef": "Chef Morgan",
+        "D007": {
+          "dish_id": "D007",
+          "name": "Power Bowl 106",
+          "calories": 279,
+          "protein": 16,
+          "price": 21,
+          "cuisine": "fusion",
+          "chef": "Chef Patel",
+          "spiciness": 4
+        },
+        "D038": {
+          "dish_id": "D038",
+          "name": "Grill Platter 137",
+          "calories": 206,
+          "protein": 54,
+          "price": 31,
+          "cuisine": "mediterranean",
+          "chef": "Chef Rossi",
+          "spiciness": 5
+        },
+        "D006": {
+          "dish_id": "D006",
+          "name": "Pizza Slice 105",
+          "calories": 704,
+          "protein": 47,
+          "price": 10,
+          "cuisine": "italian",
+          "chef": "Chef Gomez",
           "spiciness": 2
         },
         "D016": {
@@ -28886,23 +28896,33 @@
           "chef": "Chef Rossi",
           "spiciness": 2
         },
-        "D039": {
-          "dish_id": "D039",
-          "name": "Rice Plate 138",
-          "calories": 528,
-          "protein": 22,
-          "price": 11,
+        "D032": {
+          "dish_id": "D032",
+          "name": "Curry Dish 131",
+          "calories": 614,
+          "protein": 50,
+          "price": 14,
           "cuisine": "asian",
-          "chef": "Chef Carter",
-          "spiciness": 2
+          "chef": "Chef Patel",
+          "spiciness": 3
         },
-        "D040": {
-          "dish_id": "D040",
-          "name": "Burrito Bowl 139",
-          "calories": 261,
-          "protein": 14,
-          "price": 34,
-          "cuisine": "mexican",
+        "D021": {
+          "dish_id": "D021",
+          "name": "Grill Platter 120",
+          "calories": 388,
+          "protein": 26,
+          "price": 12,
+          "cuisine": "mediterranean",
+          "chef": "Chef Rossi",
+          "spiciness": 4
+        },
+        "D037": {
+          "dish_id": "D037",
+          "name": "Curry Dish 136",
+          "calories": 273,
+          "protein": 54,
+          "price": 15,
+          "cuisine": "asian",
           "chef": "Chef Morgan",
           "spiciness": 1
         },
@@ -28916,224 +28936,14 @@
           "chef": "Chef Lin",
           "spiciness": 1
         },
-        "D018": {
-          "dish_id": "D018",
-          "name": "Salad Plate 117",
-          "calories": 804,
-          "protein": 34,
-          "price": 20,
-          "cuisine": "mediterranean",
-          "chef": "Chef Rossi",
-          "spiciness": 4
-        },
-        "D019": {
-          "dish_id": "D019",
-          "name": "Seasonal Plate 118",
-          "calories": 644,
-          "protein": 53,
-          "price": 16,
-          "cuisine": "fusion",
-          "chef": "Chef Morgan",
-          "spiciness": 5
-        },
-        "D032": {
-          "dish_id": "D032",
-          "name": "Curry Dish 131",
-          "calories": 614,
-          "protein": 50,
-          "price": 14,
+        "D024": {
+          "dish_id": "D024",
+          "name": "Rice Plate 123",
+          "calories": 624,
+          "protein": 52,
+          "price": 33,
           "cuisine": "asian",
-          "chef": "Chef Patel",
-          "spiciness": 3
-        },
-        "D007": {
-          "dish_id": "D007",
-          "name": "Power Bowl 106",
-          "calories": 279,
-          "protein": 16,
-          "price": 21,
-          "cuisine": "fusion",
-          "chef": "Chef Patel",
-          "spiciness": 4
-        },
-        "D023": {
-          "dish_id": "D023",
-          "name": "Roast Tray 122",
-          "calories": 758,
-          "protein": 51,
-          "price": 14,
-          "cuisine": "american",
-          "chef": "Chef Rivera",
-          "spiciness": 4
-        },
-        "D002": {
-          "dish_id": "D002",
-          "name": "Pasta Dish 101",
-          "calories": 359,
-          "protein": 55,
-          "price": 35,
-          "cuisine": "italian",
-          "chef": "Chef Morgan",
-          "spiciness": 5
-        },
-        "D034": {
-          "dish_id": "D034",
-          "name": "Salsa Meal 133",
-          "calories": 681,
-          "protein": 58,
-          "price": 28,
-          "cuisine": "mexican",
-          "chef": "Chef Lin",
-          "spiciness": 2
-        },
-        "D031": {
-          "dish_id": "D031",
-          "name": "Salsa Meal 130",
-          "calories": 451,
-          "protein": 35,
-          "price": 12,
-          "cuisine": "mexican",
-          "chef": "Chef Morgan",
-          "spiciness": 1
-        },
-        "D014": {
-          "dish_id": "D014",
-          "name": "Mix Grill 113",
-          "calories": 778,
-          "protein": 48,
-          "price": 32,
-          "cuisine": "fusion",
-          "chef": "Chef Rivera",
-          "spiciness": 2
-        },
-        "D009": {
-          "dish_id": "D009",
-          "name": "Noodle Bowl 108",
-          "calories": 671,
-          "protein": 30,
-          "price": 11,
-          "cuisine": "asian",
-          "chef": "Chef Gomez",
-          "spiciness": 1
-        },
-        "D025": {
-          "dish_id": "D025",
-          "name": "Chef Special 124",
-          "calories": 622,
-          "protein": 43,
-          "price": 25,
-          "cuisine": "fusion",
-          "chef": "Chef Baker",
-          "spiciness": 2
-        },
-        "D013": {
-          "dish_id": "D013",
-          "name": "Lasagna Tray 112",
-          "calories": 419,
-          "protein": 54,
-          "price": 13,
-          "cuisine": "italian",
-          "chef": "Chef Gomez",
-          "spiciness": 2
-        },
-        "D036": {
-          "dish_id": "D036",
-          "name": "Chef Special 135",
-          "calories": 159,
-          "protein": 40,
-          "price": 11,
-          "cuisine": "fusion",
-          "chef": "Chef Rossi",
-          "spiciness": 3
-        },
-        "D021": {
-          "dish_id": "D021",
-          "name": "Grill Platter 120",
-          "calories": 388,
-          "protein": 26,
-          "price": 12,
-          "cuisine": "mediterranean",
-          "chef": "Chef Rossi",
-          "spiciness": 4
-        },
-        "D041": {
-          "dish_id": "D041",
-          "name": "Burger Plate 140",
-          "calories": 781,
-          "protein": 39,
-          "price": 20,
-          "cuisine": "american",
-          "chef": "Chef Morgan",
-          "spiciness": 5
-        },
-        "D003": {
-          "dish_id": "D003",
-          "name": "Grill Platter 102",
-          "calories": 884,
-          "protein": 14,
-          "price": 12,
-          "cuisine": "mediterranean",
-          "chef": "Chef Gomez",
-          "spiciness": 4
-        },
-        "D033": {
-          "dish_id": "D033",
-          "name": "Chef Special 132",
-          "calories": 876,
-          "protein": 36,
-          "price": 35,
-          "cuisine": "fusion",
           "chef": "Chef Carter",
-          "spiciness": 4
-        },
-        "D006": {
-          "dish_id": "D006",
-          "name": "Pizza Slice 105",
-          "calories": 704,
-          "protein": 47,
-          "price": 10,
-          "cuisine": "italian",
-          "chef": "Chef Gomez",
-          "spiciness": 2
-        },
-        "D037": {
-          "dish_id": "D037",
-          "name": "Curry Dish 136",
-          "calories": 273,
-          "protein": 54,
-          "price": 15,
-          "cuisine": "asian",
-          "chef": "Chef Morgan",
-          "spiciness": 1
-        },
-        "D020": {
-          "dish_id": "D020",
-          "name": "Lasagna Tray 119",
-          "calories": 648,
-          "protein": 10,
-          "price": 28,
-          "cuisine": "italian",
-          "chef": "Chef Morgan",
-          "spiciness": 4
-        },
-        "D001": {
-          "dish_id": "D001",
-          "name": "Grill Platter 100",
-          "calories": 324,
-          "protein": 12,
-          "price": 9,
-          "cuisine": "mediterranean",
-          "chef": "Chef Carter",
-          "spiciness": 4
-        },
-        "D010": {
-          "dish_id": "D010",
-          "name": "Grill Platter 109",
-          "calories": 606,
-          "protein": 53,
-          "price": 27,
-          "cuisine": "mediterranean",
-          "chef": "Chef Morgan",
           "spiciness": 2
         },
         "D042": {
@@ -29146,34 +28956,214 @@
           "chef": "Chef Gomez",
           "spiciness": 5
         },
-        "D024": {
-          "dish_id": "D024",
-          "name": "Rice Plate 123",
-          "calories": 624,
-          "protein": 52,
-          "price": 33,
+        "D014": {
+          "dish_id": "D014",
+          "name": "Mix Grill 113",
+          "calories": 778,
+          "protein": 48,
+          "price": 32,
+          "cuisine": "fusion",
+          "chef": "Chef Rivera",
+          "spiciness": 2
+        },
+        "D003": {
+          "dish_id": "D003",
+          "name": "Grill Platter 102",
+          "calories": 884,
+          "protein": 14,
+          "price": 12,
+          "cuisine": "mediterranean",
+          "chef": "Chef Gomez",
+          "spiciness": 4
+        },
+        "D036": {
+          "dish_id": "D036",
+          "name": "Chef Special 135",
+          "calories": 159,
+          "protein": 40,
+          "price": 11,
+          "cuisine": "fusion",
+          "chef": "Chef Rossi",
+          "spiciness": 3
+        },
+        "D020": {
+          "dish_id": "D020",
+          "name": "Lasagna Tray 119",
+          "calories": 648,
+          "protein": 10,
+          "price": 28,
+          "cuisine": "italian",
+          "chef": "Chef Morgan",
+          "spiciness": 4
+        },
+        "D027": {
+          "dish_id": "D027",
+          "name": "Wrap Meal 126",
+          "calories": 822,
+          "protein": 13,
+          "price": 29,
+          "cuisine": "mediterranean",
+          "chef": "Chef Rivera",
+          "spiciness": 3
+        },
+        "D019": {
+          "dish_id": "D019",
+          "name": "Seasonal Plate 118",
+          "calories": 644,
+          "protein": 53,
+          "price": 16,
+          "cuisine": "fusion",
+          "chef": "Chef Morgan",
+          "spiciness": 5
+        },
+        "D009": {
+          "dish_id": "D009",
+          "name": "Noodle Bowl 108",
+          "calories": 671,
+          "protein": 30,
+          "price": 11,
+          "cuisine": "asian",
+          "chef": "Chef Gomez",
+          "spiciness": 1
+        },
+        "D026": {
+          "dish_id": "D026",
+          "name": "Burger Plate 125",
+          "calories": 738,
+          "protein": 56,
+          "price": 24,
+          "cuisine": "american",
+          "chef": "Chef Morgan",
+          "spiciness": 2
+        },
+        "D001": {
+          "dish_id": "D001",
+          "name": "Grill Platter 100",
+          "calories": 324,
+          "protein": 12,
+          "price": 9,
+          "cuisine": "mediterranean",
+          "chef": "Chef Carter",
+          "spiciness": 4
+        },
+        "D041": {
+          "dish_id": "D041",
+          "name": "Burger Plate 140",
+          "calories": 781,
+          "protein": 39,
+          "price": 20,
+          "cuisine": "american",
+          "chef": "Chef Morgan",
+          "spiciness": 5
+        },
+        "D010": {
+          "dish_id": "D010",
+          "name": "Grill Platter 109",
+          "calories": 606,
+          "protein": 53,
+          "price": 27,
+          "cuisine": "mediterranean",
+          "chef": "Chef Morgan",
+          "spiciness": 2
+        },
+        "D039": {
+          "dish_id": "D039",
+          "name": "Rice Plate 138",
+          "calories": 528,
+          "protein": 22,
+          "price": 11,
           "cuisine": "asian",
           "chef": "Chef Carter",
           "spiciness": 2
         },
-        "D005": {
-          "dish_id": "D005",
-          "name": "Taco Plate 104",
-          "calories": 678,
-          "protein": 18,
-          "price": 22,
-          "cuisine": "mexican",
+        "D033": {
+          "dish_id": "D033",
+          "name": "Chef Special 132",
+          "calories": 876,
+          "protein": 36,
+          "price": 35,
+          "cuisine": "fusion",
           "chef": "Chef Carter",
-          "spiciness": 3
+          "spiciness": 4
         },
-        "D038": {
-          "dish_id": "D038",
-          "name": "Grill Platter 137",
-          "calories": 206,
+        "D008": {
+          "dish_id": "D008",
+          "name": "Taco Plate 107",
+          "calories": 766,
+          "protein": 42,
+          "price": 23,
+          "cuisine": "mexican",
+          "chef": "Chef Rivera",
+          "spiciness": 1
+        },
+        "D015": {
+          "dish_id": "D015",
+          "name": "Rice Plate 114",
+          "calories": 653,
+          "protein": 21,
+          "price": 21,
+          "cuisine": "asian",
+          "chef": "Chef Morgan",
+          "spiciness": 1
+        },
+        "D040": {
+          "dish_id": "D040",
+          "name": "Burrito Bowl 139",
+          "calories": 261,
+          "protein": 14,
+          "price": 34,
+          "cuisine": "mexican",
+          "chef": "Chef Morgan",
+          "spiciness": 1
+        },
+        "D023": {
+          "dish_id": "D023",
+          "name": "Roast Tray 122",
+          "calories": 758,
+          "protein": 51,
+          "price": 14,
+          "cuisine": "american",
+          "chef": "Chef Rivera",
+          "spiciness": 4
+        },
+        "D013": {
+          "dish_id": "D013",
+          "name": "Lasagna Tray 112",
+          "calories": 419,
           "protein": 54,
-          "price": 31,
+          "price": 13,
+          "cuisine": "italian",
+          "chef": "Chef Gomez",
+          "spiciness": 2
+        },
+        "D031": {
+          "dish_id": "D031",
+          "name": "Salsa Meal 130",
+          "calories": 451,
+          "protein": 35,
+          "price": 12,
+          "cuisine": "mexican",
+          "chef": "Chef Morgan",
+          "spiciness": 1
+        },
+        "D018": {
+          "dish_id": "D018",
+          "name": "Salad Plate 117",
+          "calories": 804,
+          "protein": 34,
+          "price": 20,
           "cuisine": "mediterranean",
           "chef": "Chef Rossi",
+          "spiciness": 4
+        },
+        "D002": {
+          "dish_id": "D002",
+          "name": "Pasta Dish 101",
+          "calories": 359,
+          "protein": 55,
+          "price": 35,
+          "cuisine": "italian",
+          "chef": "Chef Morgan",
           "spiciness": 5
         },
         "D030": {
@@ -29186,15 +29176,25 @@
           "chef": "Chef Morgan",
           "spiciness": 4
         },
-        "D008": {
-          "dish_id": "D008",
-          "name": "Taco Plate 107",
-          "calories": 766,
-          "protein": 42,
-          "price": 23,
+        "D025": {
+          "dish_id": "D025",
+          "name": "Chef Special 124",
+          "calories": 622,
+          "protein": 43,
+          "price": 25,
+          "cuisine": "fusion",
+          "chef": "Chef Baker",
+          "spiciness": 2
+        },
+        "D034": {
+          "dish_id": "D034",
+          "name": "Salsa Meal 133",
+          "calories": 681,
+          "protein": 58,
+          "price": 28,
           "cuisine": "mexican",
-          "chef": "Chef Rivera",
-          "spiciness": 1
+          "chef": "Chef Lin",
+          "spiciness": 2
         },
         "D043": {
           "dish_id": "D043",

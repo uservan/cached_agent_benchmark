@@ -2,12 +2,12 @@
 
 ## Dataset Generation
 
-数据生成器在 `data_generation/generate_dataset.py`，生成出的 JSON 默认保存在项目根目录下的 `data/`。
+数据生成器在 `data_generation/generate.py`，生成出的 JSON 默认保存在项目根目录下的 `data/`。
 
 单个领域的生成例子：
 
 ```bash
-python data_generation/generate_dataset.py --domain course --num-instances 1 --rows 5 --cols 2 3 4 5 6 7 --candidates-per-slot 24 --valid-options 2 --seed 42
+python data_generation/generate.py --domain course --num-instances 1 --rows 5 --cols 2 3 4 5 6 7 --candidates-per-slot 24 --valid-options 2 --seed 42
 ```
 
 这条命令表示：
@@ -31,7 +31,7 @@ python data_generation/generate_dataset.py --domain course --num-instances 1 --r
 如果想一次生成所有场景，也可以用同样的尺寸设置：
 
 ```bash
-python data_generation/generate_dataset.py --all-domains --num-instances 1 --rows 5 --cols 2 3 4 5 6 7 --candidates-per-slot 24 --valid-options 2 --seed 42
+python data_generation/generate.py --all-domains --num-instances 1 --rows 5 --cols 2 3 4 5 6 7 --candidates-per-slot 24 --valid-options 2 --seed 42
 ```
 
 同一个 domain 的多个尺寸组合会被整合到同一个 JSON 文件里，顶层结构仍然是 `domain`、`num_instances`、`instances`。不同尺寸组合的实例会一起放在 `instances` 中，每个实例自己的 `meta` 里保留对应的 `rows` 和 `cols`。
