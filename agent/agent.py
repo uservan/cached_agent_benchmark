@@ -5,30 +5,13 @@ from typing import Any, Optional
 
 from litellm import completion
 
-from agent.utils import get_response_cost, get_response_usage
-from cached_datasets import MergedTask
+from .utils import get_response_cost, get_response_usage
+from .task import Task, RunResult
 
 logger = logging.getLogger(__name__)
 
 DEFAULT_MAX_RETRIES = 3
 ALLOW_SONNET_THINKING = False
-
-
-class AssistantMessage:
-    """助手消息。"""
-
-    def __init__(
-        self,
-        content: str,
-        usage: Optional[dict[str, Any]] = None,
-        raw_messages: Optional[list[dict[str, Any]]] = None,
-    ):
-        self.content = content
-        self.usage = usage or {}
-        self.raw_messages = raw_messages or []
-
-    def set_score(self, score: Any):
-        self.usage["score"] = score
 
 
 class Agent:
@@ -41,14 +24,15 @@ class Agent:
 
     def generate(
         self,
-        task: MergedTask,
+        task: Task,
         **kwargs: Any,
-    ) -> AssistantMessage:
+    ) -> RunResult:
         """
         根据 task 组装消息并调用模型；如果触发工具，则执行工具并继续生成。
+        参数基本从 task 获取，kwargs 保留以便后续扩展。
         """
-        max_steps = kwargs.pop("max_steps", None)
-        tool_failure_rate = kwargs.pop("tool_failure_rate", 0.0)
+        if "seed" not in kwargs and task.seed is not None:
+            kwargs["seed"] = task.seed
 
         tool_schemas = task.get_tool_schemas()
         litellm_messages = task.build_initial_messages()
@@ -58,96 +42,110 @@ class Agent:
             request_params["num_retries"] = DEFAULT_MAX_RETRIES
         if self.model.startswith("claude") and not ALLOW_SONNET_THINKING:
             request_params["thinking"] = {"type": "disabled"}
-        
         if tool_schemas and request_params.get("tool_choice") is None:
             request_params["tool_choice"] = "auto"
 
-       
-        total_usage = {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0, 
+        total_usage = {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0,
                        "cost": 0.0, "time": 0.0}
-        start_time = time.perf_counter()
         step_count = 0
         raw_messages = []
-        used_write_tools = []
+        status = "succeed"
+        reason: Optional[str] = None
 
-        while True:
-            if max_steps is not None and step_count >= max_steps:
-                logger.warning("Max steps reached for task: %s", getattr(task, "task_name", ""))
-                break
-            if task.is_finished(litellm_messages[-2:]):
-                break
-            try:
-                response = completion(
-                    model=self.model,
-                    messages=litellm_messages,
-                    tools=tool_schemas,
-                    **request_params,
-                )
-            except Exception as e:
-                logger.error(e)
-                continue
-            step_count += 1
-            cost = get_response_cost(response)
-            usage = get_response_usage(response)
+        start_time = time.perf_counter()
+        try:
+            while True:
+                if step_count >= task.max_steps:
+                    status = "error"
+                    reason = "Max steps reached for task"
+                    logger.warning("Max steps reached for task: %s", getattr(task.dataset_object, "instance_id", ""))
+                    break
+                if task.is_finished(litellm_messages[-2:]):
+                    break
+                try:
+                    response = completion(
+                        model=self.model,
+                        messages=litellm_messages,
+                        tools=tool_schemas,
+                        **request_params,
+                    )
+                except Exception as e:
+                    logger.error(e)
+                    continue
+                step_count += 1
+                cost = get_response_cost(response)
+                usage = get_response_usage(response)
+                total_usage["prompt_tokens"] += usage.get("prompt_tokens", 0)
+                total_usage["completion_tokens"] += usage.get("completion_tokens", 0)
+                total_usage["total_tokens"] += usage.get("total_tokens", 0)
+                total_usage["cost"] += cost
 
-            # usage = self._get_response_usage(response)
-            total_usage["prompt_tokens"] += usage.get("prompt_tokens", 0)
-            total_usage["completion_tokens"] += usage.get("completion_tokens", 0)
-            total_usage["total_tokens"] += usage.get("total_tokens", 0)
-            total_usage["cost"] += cost
+                response = response.choices[0]
+                raw_messages.append(response.to_dict())
+                response_message = response.message
+                try:
+                    finish_reason = response.finish_reason
+                    if finish_reason == "length":
+                        logger.warning("Output might be incomplete due to token limit!")
+                except Exception as e:
+                    logger.error(e)
+                    raise e
+                assert response_message.role == "assistant", ("The response should be an assistant message")
 
-            response = response.choices[0]
-            raw_messages.append(response.to_dict())
-            response_message = response.message
-            try:
-                finish_reason = response.finish_reason
-                if finish_reason == "length":
-                    logger.warning("Output might be incomplete due to token limit!")
-            except Exception as e:
-                logger.error(e)
-                raise e
-            assert response_message.role == "assistant", ("The response should be an assistant message")
-            
-            assistant_content = response_message.content or ""
-            assistant_message = {
+                assistant_content = response_message.content or ""
+                assistant_message = {
                     "role": "assistant",
                     "content": assistant_content,
                     "tool_calls": None
                 }
-            tool_calls = response_message.tool_calls or []
-            if tool_calls:
-                assistant_message["tool_calls"] = [
-                    {
-                        "id": tool_call.id,
-                        "type": "function",
-                        "function": {
-                            "name": tool_call.function.name,
-                            "arguments": json.dumps(tool_call.function.arguments),
-                        },
-                    }
-                    for tool_call in tool_calls
-                ]
-            litellm_messages.append(assistant_message)
+                tool_calls = response_message.tool_calls or []
+                if tool_calls:
+                    assistant_message["tool_calls"] = [
+                        {
+                            "id": tool_call.id,
+                            "type": "function",
+                            "function": {
+                                "name": tool_call.function.name,
+                                "arguments": json.dumps(tool_call.function.arguments),
+                            },
+                        }
+                        for tool_call in tool_calls
+                    ]
+                litellm_messages.append(assistant_message)
 
-            for tool_call in tool_calls:
-                tool_name = tool_call.function.name
-                tool_args = json.loads(tool_call.function.arguments or "{}")
-                tool_result = task.call_tool(tool_name, tool_args, used_write_tools, tool_failure_rate=tool_failure_rate)
-                litellm_messages.append(
-                    {
+                for tool_call in tool_calls:
+                    tool_name = tool_call.function.name
+                    tool_args = json.loads(tool_call.function.arguments or "{}")
+                    tool_result = task.call_tool(tool_name, tool_args)
+                    litellm_messages.append(
+                        {
+                            "role": "tool",
+                            "tool_call_id": tool_call.id,
+                            "name": tool_name,
+                            "content": self._stringify(tool_result),
+                        }
+                    )
+                    raw_messages.append({
                         "role": "tool",
                         "tool_call_id": tool_call.id,
                         "name": tool_name,
                         "content": self._stringify(tool_result),
-                    }
-                )
+                        "timestamp": time.perf_counter(),
+                    })  
+        except Exception as e:
+            status = "error"
+            reason = str(e)
+            logger.error("Generate failed: %s", e)
 
         elapsed_time = time.perf_counter() - start_time
         total_usage["time"] = elapsed_time
-        return AssistantMessage(
+        return RunResult(
+            task=task,
             content=litellm_messages,
             usage=total_usage,
             raw_messages=raw_messages,
+            status=status,
+            reason=reason,
         )
 
     def _build_messages(
