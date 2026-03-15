@@ -191,6 +191,6 @@ class Task:
         try:
             from tools import get_saved_dataset_tool_schemas
             domain = self.dataset_object.domain if self.tools_domain_only else None
-            return get_saved_dataset_tool_schemas(domain=domain)
+            return [tool.openai_schema for tool in get_saved_dataset_tool_schemas(domain=domain)]
         except ImportError:
             return []

@@ -13,6 +13,8 @@ from loguru import logger
 from pydantic import BaseModel, ConfigDict, Field, create_model, field_serializer
 from typing_extensions import override
 
+DYNAMIC_MODEL_CONFIG = ConfigDict(arbitrary_types_allowed=True)
+
 
 class BaseTool(BaseModel, ABC):
     """The base class for a Tool that can be called by LLMs."""
@@ -111,7 +113,7 @@ class Tool(BaseTool):
                 anno = Any
             if name not in predefined:
                 params[name] = (anno, default)
-        data["params"] = create_model("parameters", **params)  # type: ignore
+        data["params"] = create_model("parameters", __config__=DYNAMIC_MODEL_CONFIG, **params)  # type: ignore
 
         # build returns
         anno = sig.return_annotation
@@ -125,7 +127,7 @@ class Tool(BaseTool):
         if doc.returns is not None:
             # fill in desc for the return
             default = Field(..., description=doc.returns.description)
-        data["returns"] = create_model("returns", returns=(anno, default))
+        data["returns"] = create_model("returns", __config__=DYNAMIC_MODEL_CONFIG, returns=(anno, default))
 
         # build raises
         data["raises"] = [

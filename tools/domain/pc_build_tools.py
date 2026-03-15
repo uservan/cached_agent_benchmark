@@ -20,34 +20,34 @@ class PcBuildToolsHandler(BaseToolsHandler):
         })
 
     def query_pc_build_slot_candidates(self, row: int, col: int) -> Messages:
-        """根据 slot 提供对应的 candidate 的 ids、name、category。
+        """Return candidate ids, names, and categories for a PC build slot.
 
-        row: 行索引
-        col: 列索引
+        row: Row index as an integer.
+        col: Column index as an integer.
         """
         return self._query_slot_candidates(row, col, summary_fields=["name", "category"])
 
     def get_pc_build_item_info(self, ids: list[str]) -> Messages:
-        """根据 id 提供 item 的所有属性信息，一次性最多输入三个 id。
+        """Return full PC build item information for up to three ids.
 
-        ids: 要查询的 id 列表，最多 3 个
+        ids: List of PC build item ids as strings, with at most 3 items.
         """
         return self._get_item_info(ids, max_items=3)
 
     def check_pc_build_row_constraints(self, row: int) -> Messages:
-        """检查行坐标是否符合限制。
+        """Check whether a row satisfies the PC build row constraints.
 
-        row: 行索引
+        row: Row index as an integer.
         """
         return self._check_row_constraints(row)
 
     def check_pc_build_col_constraints(self, col: int) -> Messages:
-        """检查列坐标是否符合限制。
+        """Check whether a column satisfies the PC build column constraints.
 
-        col: 列索引
+        col: Column index as an integer.
         """
         return self._check_col_constraints(col)
 
     def check_pc_build_global_constraints(self) -> Messages:
-        """检查总限制是否符合。"""
+        """Check whether the current PC build grid satisfies the global constraints."""
         return self._check_global_constraints()

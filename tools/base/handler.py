@@ -215,11 +215,11 @@ class BaseToolsHandler:
         return Messages(status="success", messages=self.STOP_TOKEN, data={})
 
     def set_slot(self, row: int, col: int, id: str | None = None) -> Messages:
-        """在指定 slot 填写或清空。
+        """Fill or clear a specific slot.
 
-        row: 行索引
-        col: 列索引
-        id: 要填写的 id，传空或省略则清空该 slot
+        row: Row index as an integer.
+        col: Column index as an integer.
+        id: Item id as a string. Pass null or an empty string to clear the slot.
         """
         task = self.current_task
         if task is None:
@@ -238,17 +238,17 @@ class BaseToolsHandler:
         return Messages.build_success_message({"row": row, "col": col, "id": solution[row][col]})
 
     def check_all_slots(self) -> Messages:
-        """返回全部 slot 上的 id（当前 agent_solution 完整状态）。"""
+        """Return the full current grid state."""
         task = self.current_task
         if task is None:
             return Messages.build_failure_message(ErrorType.INVALID_ARGUMENTS, "No current task")
         return Messages.build_success_message({"slots": task.agent_solution})
 
     def get_slot_id(self, row: int, col: int) -> Messages:
-        """查询某个 slot 的 id。
+        """Get the item id currently stored in a slot.
 
-        row: 行索引
-        col: 列索引
+        row: Row index as an integer.
+        col: Column index as an integer.
         """
         task = self.current_task
         if task is None:

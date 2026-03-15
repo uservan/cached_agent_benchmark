@@ -20,34 +20,34 @@ class MealToolsHandler(BaseToolsHandler):
         })
 
     def query_meal_slot_candidates(self, row: int, col: int) -> Messages:
-        """根据 slot 提供对应的 candidate 的 ids、name、cuisine。
+        """Return candidate ids, names, and cuisines for a meal slot.
 
-        row: 行索引
-        col: 列索引
+        row: Row index as an integer.
+        col: Column index as an integer.
         """
         return self._query_slot_candidates(row, col, summary_fields=["name", "cuisine"])
 
     def get_meal_item_info(self, ids: list[str]) -> Messages:
-        """根据 id 提供 item 的所有属性信息，一次性最多输入三个 id。
+        """Return full meal item information for up to three ids.
 
-        ids: 要查询的 id 列表，最多 3 个
+        ids: List of meal item ids as strings, with at most 3 items.
         """
         return self._get_item_info(ids, max_items=3)
 
     def check_meal_row_constraints(self, row: int) -> Messages:
-        """检查行坐标是否符合限制。
+        """Check whether a row satisfies the meal row constraints.
 
-        row: 行索引
+        row: Row index as an integer.
         """
         return self._check_row_constraints(row)
 
     def check_meal_col_constraints(self, col: int) -> Messages:
-        """检查列坐标是否符合限制。
+        """Check whether a column satisfies the meal column constraints.
 
-        col: 列索引
+        col: Column index as an integer.
         """
         return self._check_col_constraints(col)
 
     def check_meal_global_constraints(self) -> Messages:
-        """检查总限制是否符合。"""
+        """Check whether the current meal grid satisfies the global constraints."""
         return self._check_global_constraints()

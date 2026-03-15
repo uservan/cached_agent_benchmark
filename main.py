@@ -5,6 +5,7 @@ import random
 from agent.agent import Agent
 from agent.cache_env import CacheEnv
 from load_datasets.loader import DEFAULT_DATA_DIR, load_all_dataset_objects
+from utils.console_display import ConsoleDisplay
 
 
 HIDDEN_RATE_CHOICES = [0.1, 0.3, 0.5, 0.7, 0.9]
@@ -127,6 +128,43 @@ def main(
     data_dir = data_dir or DEFAULT_DATA_DIR
     all_objects = load_all_dataset_objects(data_dir=data_dir)
     dataset_objects = [obj for obj in all_objects if obj.domain in domain]
+    if not dataset_objects:
+        raise ValueError(f"No dataset objects found for domains: {domain}")
+
+    ConsoleDisplay.print_kv_panel(
+        title="[bold green]Benchmark Run Configuration[/bold green]",
+        items=[
+            ("Model", model),
+            ("Data Dir", data_dir),
+            ("Domains", ", ".join(domain)),
+            ("Hidden Rates", hidden_rates if hidden_rates is not None else HIDDEN_RATE_CHOICES),
+            ("Tool Failure Rates", tool_failure_rates or [0.0]),
+            ("Num Trials", num_trials),
+            ("Max Steps", max_steps),
+            ("Tools Domain Only", tools_domain_only),
+            ("Save Path", save_path),
+            ("Seed", seed),
+            ("Dataset Objects", len(dataset_objects)),
+        ],
+        border_style="green",
+    )
+
+    ConsoleDisplay.print_table(
+        title="Selected dataset objects",
+        headers=("Domain", "Instance ID", "Source File", "Rows", "Cols"),
+        rows=[
+            (
+                obj.domain,
+                obj.instance_id,
+                obj.source_filename,
+                obj.meta.get("rows"),
+                obj.meta.get("cols"),
+            )
+            for obj in dataset_objects
+        ],
+        panel_title="[bold blue]Datasets To Run[/bold blue]",
+        border_style="blue",
+    )
 
     cache_env = CacheEnv(
         dataset_objects=dataset_objects,
@@ -138,8 +176,56 @@ def main(
         hidden_rates=hidden_rates,
     )
     agent = Agent(model=model, **(agent_params or {}))
+    total_runs = cache_env.get_total_runs()
 
-    return cache_env.run(agent=agent, save_path=save_path)
+    ConsoleDisplay.print_kv_panel(
+        title="[bold yellow]Benchmark Execution[/bold yellow]",
+        items=[
+            ("Stage", "Starting benchmark tasks"),
+            ("Total Runs", total_runs),
+            ("Datasets", len(dataset_objects)),
+            ("Save Path", save_path),
+        ],
+        border_style="yellow",
+    )
+
+    with ConsoleDisplay.create_progress() as progress:
+        task_id = progress.add_task("Running benchmark tasks", total=total_runs)
+        
+        def on_progress(event: dict[str, object]) -> None:
+            description = (
+                "Running "
+                f"{event.get('domain', '-')}/"
+                f"{event.get('instance_id', '-')}"
+                f" | hidden={event.get('hidden_rate', '-')}"
+                f" | fail={event.get('tool_failure_rate', '-')}"
+                f" | trial={event.get('trial_index', '-')}/{event.get('num_trials', '-')}"
+            )
+            if event.get("stage") == "start":
+                progress.update(task_id, description=description)
+                return
+            progress.update(
+                task_id,
+                advance=1,
+                description=description,
+            )
+
+        result = cache_env.run(agent=agent, save_path=save_path, progress_callback=on_progress)
+        progress.update(task_id, completed=total_runs, description="Benchmark tasks completed")
+
+    ConsoleDisplay.print_kv_panel(
+        title="[bold green]Benchmark Run Finished[/bold green]",
+        items=[
+            ("Model", model),
+            ("Domains", ", ".join(domain)),
+            ("Dataset Objects", len(dataset_objects)),
+            ("Total Runs", total_runs),
+            ("Save Path", save_path),
+            ("Status", "[green]Completed[/green]"),
+        ],
+        border_style="green",
+    )
+    return result
 
 if __name__ == "__main__":
     args = parse_args()

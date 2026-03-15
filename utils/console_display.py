@@ -4,11 +4,35 @@ from typing import Iterable, Sequence
 
 from rich.console import Console
 from rich.panel import Panel
+from rich.progress import (
+    BarColumn,
+    MofNCompleteColumn,
+    Progress,
+    SpinnerColumn,
+    TaskProgressColumn,
+    TextColumn,
+    TimeElapsedColumn,
+    TimeRemainingColumn,
+)
 from rich.table import Table
 
 
 class ConsoleDisplay:
     console = Console()
+
+    @classmethod
+    def create_progress(cls) -> Progress:
+        return Progress(
+            SpinnerColumn(),
+            TextColumn("[bold blue]{task.description}"),
+            BarColumn(),
+            TaskProgressColumn(),
+            MofNCompleteColumn(),
+            TimeElapsedColumn(),
+            TimeRemainingColumn(),
+            console=cls.console,
+            transient=False,
+        )
 
     @classmethod
     def print_kv_panel(cls, title: str, items: Sequence[tuple[str, object]], border_style: str = "blue") -> None:
