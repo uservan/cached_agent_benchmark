@@ -166,6 +166,13 @@ OPENAI_API_KEY=EMPTY python main.py \
 - 每个 task 最多执行 `200` 步
 - 多 item 属性查询工具一次最多查询 `5` 个 id、最多查询 `6` 个属性
 - `--hidden-slots` 和 `--branch-budget` 为白名单列表，不传时表示不过滤；传入时只跑对应值在列表内的数据集（如 `--hidden-slots 5` 只跑 hidden_slots=5，`--hidden-slots 1 3 5` 跑 hidden_slots 为 1/3/5 的数据集）
+- 默认 `check_include_reason=False`，即 `check_*_slot_constraints` 和 `check_*_global_constraints` 默认只返回 `is_valid`，不返回 `reason`；如果想返回原因，可加 `--check-include-reason`
+- `--global-check-alpha` 默认是 `1`，用于限制全局约束检查次数，budget = `floor(alpha * hidden_slots)`
+- alpha 难度可按下面理解：
+- `0`：不允许调用 global check
+- `0.5`：很严格
+- `1`：默认值，大约每个 hidden slot 一次
+- `2`：比较宽松
 - tool 失败率为 `0.0`
 - 每个实例只跑 `1` 次
 - 结果保存到 `results/`
@@ -201,6 +208,17 @@ OPENAI_API_KEY=EMPTY python main.py \
   --num-trials 1 \
   --save-path results/ \
   --seed 42
+
+# 如果希望 check tool 额外返回 reason，可以显式打开
+OPENAI_API_KEY=EMPTY python main.py \
+  --model openai/Qwen/Qwen3-8B \
+  --domain course \
+  --agent-params '{"api_base":"http://localhost:8001/v1","temperature":0.6}' \
+  --check-include-reason \
+  --global-check-alpha 2 \
+  --hidden-slots 5 \
+  --branch-budget 4 \
+  ...
 
 # 跑 hidden_slots 为 1/3/5、branch_budget 为 0/2/4 的数据集
 OPENAI_API_KEY=EMPTY python main.py \

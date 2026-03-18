@@ -50,6 +50,8 @@ class Task:
         tools_domain_only: bool = True,
         max_query_ids: int = DEFAULT_MAX_QUERY_IDS,
         max_query_fields: int = DEFAULT_MAX_QUERY_FIELDS,
+        check_include_reason: bool = False,
+        global_check_alpha: float | None = 1,
         seed: int | None = None,
     ):
         self.dataset_object: SavedDatasetObject = dataset_object
@@ -58,6 +60,8 @@ class Task:
         self.tools_domain_only = tools_domain_only
         self.max_query_ids = max_query_ids
         self.max_query_fields = max_query_fields
+        self.check_include_reason = check_include_reason
+        self.global_check_alpha = global_check_alpha
         self.seed = seed
         self.hidden_slots = copy.deepcopy(getattr(dataset_object, "hidden_slots", []))
         self.branch_budget = getattr(dataset_object, "branch_budget", None)
@@ -80,6 +84,12 @@ class Task:
             for index, slot_position in enumerate(self.hidden_slot_path)
         }
         self.current_slot_index = 0
+        self.global_check_budget = (
+            None
+            if global_check_alpha is None
+            else max(0, int(global_check_alpha * len(self.hidden_slot_path)))
+        )
+        self.global_check_calls = 0
 
     def build_initial_messages(self) -> list[dict[str, Any]]:
         """构建初始消息列表。"""
@@ -230,6 +240,19 @@ class Task:
         if slot_index is None:
             return
         self.current_slot_index = slot_index
+
+    def can_call_global_check(self) -> bool:
+        if self.global_check_budget is None:
+            return True
+        return self.global_check_calls < self.global_check_budget
+
+    def record_global_check_call(self) -> None:
+        self.global_check_calls += 1
+
+    def get_remaining_global_checks(self) -> int | None:
+        if self.global_check_budget is None:
+            return None
+        return max(0, self.global_check_budget - self.global_check_calls)
 
     def call_tool(
         self,

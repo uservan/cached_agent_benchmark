@@ -20,6 +20,9 @@ class CacheEnv:
         tools_domain_only: bool = True,
         max_query_ids: int = 5,
         max_query_fields: int = 6,
+        check_include_reason: bool = False,
+        global_check_alpha: float | None = 1,
+        benchmark_config: dict[str, Any] | None = None,
         overwrite_results: bool = False,
         seed: int = 42,
     ):
@@ -30,6 +33,9 @@ class CacheEnv:
         self.tools_domain_only = tools_domain_only
         self.max_query_ids = max_query_ids
         self.max_query_fields = max_query_fields
+        self.check_include_reason = check_include_reason
+        self.global_check_alpha = global_check_alpha
+        self.benchmark_config = dict(benchmark_config or {})
         self.overwrite_results = overwrite_results
         random.seed(seed)
         self.seeds = [random.randint(0, 1000000) for _ in range(num_trials)]
@@ -88,6 +94,8 @@ class CacheEnv:
                         tools_domain_only=self.tools_domain_only,
                         max_query_ids=self.max_query_ids,
                         max_query_fields=self.max_query_fields,
+                        check_include_reason=self.check_include_reason,
+                        global_check_alpha=self.global_check_alpha,
                         seed=seed,
                     )
                     if progress_callback is not None:
@@ -113,6 +121,8 @@ class CacheEnv:
                             instance_id=getattr(dataset_obj, "instance_id", ""),
                             max_query_ids=self.max_query_ids,
                             max_query_fields=self.max_query_fields,
+                            check_include_reason=self.check_include_reason,
+                            global_check_alpha=self.global_check_alpha,
                             tool_failure_rate=tool_failure_rate,
                             trial_index=trial_index,
                             seed=seed,
@@ -153,6 +163,8 @@ class CacheEnv:
                         instance_id=getattr(dataset_obj, "instance_id", ""),
                         max_query_ids=task.max_query_ids,
                         max_query_fields=task.max_query_fields,
+                        check_include_reason=task.check_include_reason,
+                        global_check_alpha=task.global_check_alpha,
                         model_name=agent.model,
                         tool_failure_rate=tool_failure_rate,
                         trial_index=trial_index,
@@ -234,6 +246,8 @@ class CacheEnv:
         instance_id: str,
         max_query_ids: int,
         max_query_fields: int,
+        check_include_reason: bool,
+        global_check_alpha: float | None,
         model_name: str,
         tool_failure_rate: float,
         trial_index: int,
@@ -250,8 +264,11 @@ class CacheEnv:
             "model_name": model_name,
             "instance_id": instance_id,
             "result_instance_id": result_instance_id,
+            "benchmark_config": self.benchmark_config,
             "max_query_ids": max_query_ids,
             "max_query_fields": max_query_fields,
+            "check_include_reason": check_include_reason,
+            "global_check_alpha": global_check_alpha,
             "tool_failure_rate": tool_failure_rate,
             "trial_index": trial_index,
             "seed": seed,
@@ -273,6 +290,8 @@ class CacheEnv:
         instance_id: str,
         max_query_ids: int,
         max_query_fields: int,
+        check_include_reason: bool,
+        global_check_alpha: float | None,
         tool_failure_rate: float,
         trial_index: int,
         seed: int,
@@ -282,6 +301,8 @@ class CacheEnv:
             and cached_payload.get("instance_id") == instance_id
             and cached_payload.get("max_query_ids") == max_query_ids
             and cached_payload.get("max_query_fields") == max_query_fields
+            and cached_payload.get("check_include_reason", False) == check_include_reason
+            and cached_payload.get("global_check_alpha") == global_check_alpha
             and cached_payload.get("tool_failure_rate") == tool_failure_rate
             and cached_payload.get("trial_index") == trial_index
             and cached_payload.get("seed") == seed

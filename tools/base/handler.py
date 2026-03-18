@@ -124,6 +124,25 @@ class BaseToolsHandler:
             return []
         return sorted(key for key in sample_item.keys() if key != "id")
 
+    def _build_check_response(
+        self,
+        *,
+        is_valid: bool | None,
+        reason: str | None = None,
+        row: int | None = None,
+        col: int | None = None,
+    ) -> Messages:
+        task = self.current_task
+        include_reason = False if task is None else task.check_include_reason
+        payload: dict[str, Any] = {"is_valid": is_valid}
+        if row is not None:
+            payload["row"] = row
+        if col is not None:
+            payload["col"] = col
+        if include_reason:
+            payload["reason"] = reason
+        return Messages.build_success_message(payload)
+
     def _get_allowed_lookup_item_ids(self) -> tuple[set[str], Messages | None]:
         dataset, error = self._get_current_dataset()
         if error is not None:
@@ -376,12 +395,12 @@ class BaseToolsHandler:
                 "Slot constraint checks are only allowed for hidden slots.",
             )
         if self.current_task.agent_solution[row][col] is None:
-            return Messages.build_success_message({
-                "row": row,
-                "col": col,
-                "is_valid": None,
-                "reason": "This hidden slot is still empty, so it cannot be checked yet.",
-            })
+            return self._build_check_response(
+                row=row,
+                col=col,
+                is_valid=None,
+                reason="This hidden slot is still empty, so it cannot be checked yet.",
+            )
 
         is_valid, reason = validate_slot_constraints(
             solution=self.current_task.agent_solution,
@@ -393,23 +412,35 @@ class BaseToolsHandler:
             slots=dataset.slots,
             truth_solution=dataset.truth_solution,
         )
-        return Messages.build_success_message({
-            "row": row,
-            "col": col,
-            "is_valid": is_valid,
-            "reason": reason,
-        })
+        return self._build_check_response(
+            row=row,
+            col=col,
+            is_valid=is_valid,
+            reason=reason,
+        )
 
     def _check_global_constraints(self) -> Messages:
         dataset, error = self._get_current_dataset()
         if error is not None:
             return error
+        task = self.current_task
+        if task is None:
+            return Messages.build_failure_message(ErrorType.INVALID_ARGUMENTS, "No current task")
+        if not task.can_call_global_check():
+            return Messages.build_failure_message(
+                ErrorType.INVALID_ARGUMENTS,
+                (
+                    "Global constraint check budget exhausted. "
+                    f"Used {task.global_check_calls}/{task.global_check_budget} calls."
+                ),
+            )
+        task.record_global_check_call()
         solution = self.current_task.agent_solution
         if any(item_id is None for row in solution for item_id in row):
-            return Messages.build_success_message({
-                "is_valid": False,
-                "reason": "The current grid is not fully filled yet.",
-            })
+            return self._build_check_response(
+                is_valid=False,
+                reason="The current grid is not fully filled yet.",
+            )
 
         try:
             from data_generation.validation import validate_global_constraints
@@ -424,10 +455,10 @@ class BaseToolsHandler:
             slots=dataset.slots,
             truth_solution=dataset.truth_solution,
         )
-        return Messages.build_success_message({
-            "is_valid": is_valid,
-            "reason": reason,
-        })
+        return self._build_check_response(
+            is_valid=is_valid,
+            reason=reason,
+        )
 
     def done(self) -> Messages:
         """Call this function when you are done with the task."""

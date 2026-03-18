@@ -57,6 +57,8 @@ def main(
     overwrite_results=DEFAULT_OVERWRITE_RESULTS,
     hidden_slots=None,
     branch_budget=None,
+    check_include_reason=False,
+    global_check_alpha=1,
     seed=DEFAULT_SEED,
 ):
     """
@@ -84,6 +86,8 @@ def main(
         raise ValueError("max_query_ids must be positive")
     if max_query_fields <= 0:
         raise ValueError("max_query_fields must be positive")
+    if global_check_alpha is not None and global_check_alpha < 0:
+        raise ValueError("global_check_alpha must be non-negative")
 
     ConsoleDisplay.print_kv_panel(
         title="[bold green]Benchmark Run Configuration[/bold green]",
@@ -100,6 +104,8 @@ def main(
             ("Overwrite Results", overwrite_results),
             ("Hidden Slots Filter", str(hidden_slots) if hidden_slots else "-"),
             ("Branch Budget Filter", str(branch_budget) if branch_budget else "-"),
+            ("Check Include Reason", check_include_reason),
+            ("Global Check Alpha", global_check_alpha),
             ("Save Path", save_path),
             ("Seed", seed),
             ("Dataset Objects", len(dataset_objects)),
@@ -134,6 +140,27 @@ def main(
         tools_domain_only=tools_domain_only,
         max_query_ids=max_query_ids,
         max_query_fields=max_query_fields,
+        check_include_reason=check_include_reason,
+        global_check_alpha=global_check_alpha,
+        benchmark_config={
+            "model": model,
+            "domain": list(domain),
+            "data_dir": data_dir,
+            "agent_params": agent_params or {},
+            "max_steps": max_steps,
+            "tool_failure_rates": list(tool_failure_rates or [0.0]),
+            "num_trials": num_trials,
+            "tools_domain_only": tools_domain_only,
+            "save_path": save_path,
+            "overwrite_results": overwrite_results,
+            "max_query_ids": max_query_ids,
+            "max_query_fields": max_query_fields,
+            "hidden_slots": list(hidden_slots) if hidden_slots else None,
+            "branch_budget": list(branch_budget) if branch_budget else None,
+            "check_include_reason": check_include_reason,
+            "global_check_alpha": global_check_alpha,
+            "seed": seed,
+        },
         overwrite_results=overwrite_results,
         seed=seed,
     )
@@ -151,6 +178,8 @@ def main(
             ("Overwrite Results", overwrite_results),
             ("Hidden Slots Filter", str(hidden_slots) if hidden_slots else "-"),
             ("Branch Budget Filter", str(branch_budget) if branch_budget else "-"),
+            ("Check Include Reason", check_include_reason),
+            ("Global Check Alpha", global_check_alpha),
             ("Save Path", save_path),
         ],
         border_style="yellow",
@@ -255,6 +284,8 @@ def main(
             ("Cached Runs", result.get("cached_runs", 0) if isinstance(result, dict) else 0),
             ("Hidden Slots Filter", str(hidden_slots) if hidden_slots else "-"),
             ("Branch Budget Filter", str(branch_budget) if branch_budget else "-"),
+            ("Check Include Reason", check_include_reason),
+            ("Global Check Alpha", global_check_alpha),
             ("Save Path", save_path),
             ("Status", "[green]Completed[/green]"),
         ],
@@ -350,6 +381,18 @@ def parse_args():
         default=None,
         help="仅测试 branch_budget 在该列表内的数据集；不传则不过滤",
     )
+    parser.add_argument(
+        "--check-include-reason",
+        action="store_true",
+        default=False,
+        help="若指定，则 check slot/global 返回 is_valid 之外也返回 reason；默认不返回 reason",
+    )
+    parser.add_argument(
+        "--global-check-alpha",
+        type=float,
+        default=1,
+        help="限制 global constraints 调用次数，budget = floor(alpha * hidden_slots)；默认 1",
+    )
     return parser.parse_args()
 
 
@@ -371,5 +414,7 @@ if __name__ == "__main__":
         overwrite_results=args.overwrite_results,
         hidden_slots=args.hidden_slots if args.hidden_slots else None,
         branch_budget=args.branch_budget if args.branch_budget else None,
+        check_include_reason=args.check_include_reason,
+        global_check_alpha=args.global_check_alpha,
         seed=args.seed,
     )

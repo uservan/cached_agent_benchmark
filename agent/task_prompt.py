@@ -97,6 +97,7 @@ def build_tool_usage_instruction(task: Any) -> str:
     previous_target_tool = "get_previous_target_slot"
     max_query_ids = getattr(task, "max_query_ids", 5)
     max_query_fields = getattr(task, "max_query_fields", 6)
+    global_check_budget = getattr(task, "global_check_budget", None)
     guidance_lines = [
         "Use the available tools instead of pretending to know hidden slot values.",
         f"Follow the hidden-slot path in order and complete the hidden slots one by one. Use `{current_target_tool}` to get the current hidden slot position, use `{previous_target_tool}` to get the previous hidden slot position when needed, and use `set_slot` to update the current hidden slot or clear the immediately previous hidden slot.",
@@ -105,6 +106,18 @@ def build_tool_usage_instruction(task: Any) -> str:
         f"When the grid is complete and you are satisfied with the result, call `{STOP_FUNCTION_NAME}`.",
         f"Your final action must be a single call to `{STOP_FUNCTION_NAME}` with no other tool calls in that message.",
     ]
+    if global_check_budget is None:
+        guidance_lines.append(
+            f"`{global_tool}` has no call-count limit in this task."
+        )
+    elif global_check_budget == 0:
+        guidance_lines.append(
+            f"`{global_tool}` is disabled in this task, so do not call it."
+        )
+    else:
+        guidance_lines.append(
+            f"`{global_tool}` may be called at most {global_check_budget} time(s) in this task."
+        )
     return "\n".join(guidance_lines)
 
 

@@ -30,7 +30,9 @@ if __name__ == "__main__":
         tools_domain_only=True,
         save_path="results/",
         overwrite_results=False,
+        check_include_reason=False,
+        global_check_alpha=1,
         seed=42,
         hidden_slots=[1,5,9,13],   # 先跑简单任务；h5_b8 等复杂任务会很慢
-        branch_budget=[0,4,8,10],
+        branch_budget=[0,2,4,8,10],
     )
