@@ -19,7 +19,7 @@ if __name__ == "__main__":
             "min_p": 0.0,
             "presence_penalty": 0.0,
             "repetition_penalty": 1.0,
-            "max_tokens": 4096,   # 限制单步输出，避免单次生成过长
+            "max_tokens": 8*1024,   # 限制单步输出，避免单次生成过长
             "timeout": 120,       # 单次请求超时（秒），防止卡死
         },
         max_steps=500,  # 复杂任务可降到 50

@@ -104,6 +104,61 @@ def assign_slot_rule_sets(domain: str, ordered_hidden_positions: list[int], pref
     return assignments
 
 
+def _remap_id_list(ids: list[str], id_mapping: dict[str, str]) -> list[str]:
+    return [id_mapping[item_id] for item_id in ids]
+
+
+def _remap_solution_ids(solution: list[list[str | None]], id_mapping: dict[str, str]) -> list[list[str | None]]:
+    return [
+        [id_mapping[item_id] if item_id is not None else None for item_id in row]
+        for row in solution
+    ]
+
+
+def _build_random_id_mapping(original_ids: list[str]) -> dict[str, str]:
+    if not original_ids:
+        return {}
+    sample_id = original_ids[0]
+    prefix = "".join(ch for ch in sample_id if not ch.isdigit())
+    digit_width = max(3, len(sample_id) - len(prefix))
+    upper_bound = max(len(original_ids) * 20, 10 ** digit_width)
+    sampled_numbers = random.sample(range(1, upper_bound + 1), len(original_ids))
+    random.shuffle(sampled_numbers)
+    return {
+        old_id: f"{prefix}{number:0{digit_width}d}"
+        for old_id, number in zip(original_ids, sampled_numbers)
+    }
+
+
+def _shuffle_instance_item_ids(instance: dict) -> dict:
+    domain = instance["domain"]
+    id_key = DOMAIN_SPECS[domain]["id_key"]
+    original_ids = list(instance["item_pool"].keys())
+    id_mapping = _build_random_id_mapping(original_ids)
+
+    remapped_item_pool = {}
+    for old_id, item in instance["item_pool"].items():
+        new_id = id_mapping[old_id]
+        remapped_item = dict(item)
+        remapped_item[id_key] = new_id
+        remapped_item_pool[new_id] = remapped_item
+
+    remapped_slots = []
+    for slot in instance["slots"]:
+        remapped_slot = dict(slot)
+        remapped_slot["truth_id"] = id_mapping[slot["truth_id"]]
+        remapped_slot["candidate_ids"] = _remap_id_list(slot["candidate_ids"], id_mapping)
+        remapped_slot["decoy_ids"] = _remap_id_list(slot.get("decoy_ids", []), id_mapping)
+        remapped_slot["filter_candidate_ids"] = _remap_id_list(slot.get("filter_candidate_ids", []), id_mapping)
+        remapped_slots.append(remapped_slot)
+
+    instance["item_pool"] = remapped_item_pool
+    instance["truth_solution"] = _remap_solution_ids(instance["truth_solution"], id_mapping)
+    instance["partial_solution"] = _remap_solution_ids(instance["partial_solution"], id_mapping)
+    instance["slots"] = remapped_slots
+    return instance
+
+
 def build_instance_scaffold(
     domain,
     rows=DEFAULT_ROWS,
@@ -238,6 +293,7 @@ def build_instance_from_scaffold(scaffold):
         "hidden_slots": hidden_slot_entries,
         "slots": slots,
     }
+    instance = _shuffle_instance_item_ids(instance)
     instance["task_instruction"] = build_task_instruction_from_instance(instance)
     return instance
 
