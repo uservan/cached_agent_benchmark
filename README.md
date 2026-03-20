@@ -7,7 +7,7 @@
 单个领域的生成例子：
 
 ```bash
-python data_generation/generate.py --domain course --rows 5 --cols 5 --hidden-slots 1 3 5 7 9 13 17 --branch-budget 0 2 4 6 8 10 --candidates-per-slot 15 --max-retries 250 --candidate-resample-retries 12 --open-valid-preference-tries 30 60 100 --seed 42
+python data_generation/generate.py --domain course --rows 5 --cols 10 --hidden-slots 1 3 5 7 9 13 17 20 --branch-budget 0 2 4 6 8 10 13 15 19 21 25 --candidates-per-slot 25 --max-retries 250 --candidate-resample-retries 20 --open-valid-preference-tries 50 100 150 --seed 42
 ```
 
 这条命令表示：

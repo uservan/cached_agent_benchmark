@@ -64,6 +64,7 @@ def main(
     extra_query_num=DEFAULT_EXTRA_QUERY_NUM,
     seed=DEFAULT_SEED,
     max_workers=DEFAULT_MAX_WORKERS,
+    max_length_truncations=3,
 ):
     """
     组装 dataset、agent、cache env，并执行完整流程。
@@ -90,10 +91,10 @@ def main(
         raise ValueError("max_query_ids must be positive")
     if max_query_fields <= 0:
         raise ValueError("max_query_fields must be positive")
-    if global_check_alpha is not None and global_check_alpha < 0:
-        raise ValueError("global_check_alpha must be non-negative")
-    if extra_query_num < 0:
-        raise ValueError("extra_query_num must be non-negative")
+    if global_check_alpha is not None and global_check_alpha < 0 and global_check_alpha != -1:
+        raise ValueError("global_check_alpha must be non-negative (or -1 for unlimited)")
+    if extra_query_num < 0 and extra_query_num != -1:
+        raise ValueError("extra_query_num must be non-negative (or -1 for unlimited)")
 
     ConsoleDisplay.print_kv_panel(
         title="[bold green]Benchmark Run Configuration[/bold green]",
@@ -174,6 +175,7 @@ def main(
         overwrite_results=overwrite_results,
         seed=seed,
         max_workers=max_workers,
+        max_length_truncations=max_length_truncations,
     )
     agent = Agent(model=model, **(agent_params or {}))
     total_runs = cache_env.get_total_runs()
@@ -405,14 +407,20 @@ def parse_args():
         "--global-check-alpha",
         type=float,
         default=1,
-        help="限制 global constraints 调用次数，budget = floor(alpha * hidden_slots)；默认 1",
+        help=(
+            "限制 global constraints 调用次数，budget = floor(alpha * hidden_slots)；默认 1。"
+            "传 -1 表示不限制调用次数；传 None（不传此参数）等同于不限制。"
+        ),
     )
     parser.add_argument(
         "--extra-query-num",
         dest="extra_query_num",
         type=int,
         default=DEFAULT_EXTRA_QUERY_NUM,
-        help="每个 hidden slot 的 attribute query 次数在 (slot_constraints + hidden_slots) 基础上额外增加的数量；默认 2",
+        help=(
+            "每个 hidden slot 的 attribute query 次数在 (slot_constraints + hidden_slots) 基础上额外增加的数量；默认 2。"
+            "传 -1 表示该 slot 的 attribute query 次数不限制。"
+        ),
     )
     parser.add_argument(
         "--max-workers",
@@ -420,6 +428,15 @@ def parse_args():
         type=int,
         default=DEFAULT_MAX_WORKERS,
         help="并行运行的最大 task 数量；默认 25",
+    )
+    parser.add_argument(
+        "--max-length-truncations",
+        dest="max_length_truncations",
+        type=int,
+        default=3,
+        help=(
+            "单次任务中，因输出超过 max_tokens 被截断的最大允许次数；超过后任务标记为 error 并终止。默认 3。"
+        ),
     )
     return parser.parse_args()
 
@@ -447,4 +464,5 @@ if __name__ == "__main__":
         extra_query_num=args.extra_query_num,
         seed=args.seed,
         max_workers=args.max_workers,
+        max_length_truncations=args.max_length_truncations,
     )

@@ -73,13 +73,23 @@ def build_agent_instruction(task: Any) -> str:
     )
     item_attributes = DOMAIN_ITEM_ATTRIBUTES.get(domain, ["name"])
     item_attributes_text = ", ".join(item_attributes)
+    slot_unlimited = getattr(task, "extra_query_num", 0) == -1
+    global_unlimited = getattr(task, "global_check_budget", None) is None
+    if slot_unlimited and global_unlimited:
+        query_limit_line = "Attribute queries per hidden slot and global check have no call-count limits in this task."
+    elif slot_unlimited:
+        query_limit_line = "Attribute queries per hidden slot have no call-count limit; global check has a limited call count—plan your usage carefully."
+    elif global_unlimited:
+        query_limit_line = "Attribute queries per hidden slot have a limited call count—plan your usage carefully; global check has no call-count limit."
+    else:
+        query_limit_line = "Both attribute queries (per hidden slot) and global check have limited call counts—plan your usage carefully."
     return "\n".join(
         [
             domain_intro,
             "Follow the task policy exactly.",
             f"Each item in this domain has attributes such as: {item_attributes_text}.",
             "Use tools to inspect the current grid, reason about candidate ids, and update slots.",
-            "Both attribute queries (per hidden slot) and global check have limited call counts—plan your usage carefully.",
+            query_limit_line,
             "You may inspect and fill hidden slots in any order.",
             "Assume all pre-filled non-null slots are already correct, valid, and fixed.",
             "You must make sure the final solution satisfies every hidden-slot constraint and the global constraints.",
@@ -104,7 +114,8 @@ def build_tool_usage_instruction(task: Any) -> str:
         f"Use `set_slot` to fill or clear any hidden slot directly by row and col.",
         f"Each hidden slot has multiple options. Your choice for each slot must satisfy the corresponding slot constraints, and the completed grid must satisfy the global constraints. Use `{slot_tool}` when needed for any filled hidden slot, and use `{global_tool}` only after all slots are filled.",
         f"Use `{attribute_query_tool}` when you want to filter one hidden slot's candidates by one attribute condition. Item info tools (single-item info and `{multi_attr_tool}`) can only query non-hidden item ids—i.e., ids that are already visible in pre-filled slots. Use the single-item info tool for one such id; use `{multi_attr_tool}` for up to {max_query_fields} selected attributes for up to {max_query_ids} such ids at once.",
-        "Use `get_hidden_slot_query_budget` with row and col to query the remaining attribute-query count for a specific hidden slot (e.g. before deciding whether to make more attribute queries for that slot).",
+        *([] if getattr(task, "extra_query_num", 0) == -1 else
+          ["Use `get_hidden_slot_query_budget` with row and col to query the remaining attribute-query count for a specific hidden slot (e.g. before deciding whether to make more attribute queries for that slot)."]),
         f"When the grid is complete and you are satisfied with the result, call `{STOP_FUNCTION_NAME}`.",
         f"Your final action must be a single call to `{STOP_FUNCTION_NAME}` with no other tool calls in that message.",
     ]

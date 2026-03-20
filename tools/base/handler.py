@@ -674,13 +674,16 @@ class BaseToolsHandler:
                 ErrorType.INVALID_ARGUMENTS,
                 "Hidden-slot query budget is only available for hidden slots.",
             )
+        budget = task.hidden_slot_query_budget.get((slot["row"], slot["col"]), 0)
+        remaining = task.get_remaining_hidden_slot_queries(slot["row"], slot["col"])
         return Messages.build_success_message(
             {
                 "row": slot["row"],
                 "col": slot["col"],
-                "query_budget": task.hidden_slot_query_budget.get((slot["row"], slot["col"]), 0),
+                "unlimited": budget is None,
+                "query_budget": "unlimited" if budget is None else budget,
                 "query_calls": task.hidden_slot_query_calls.get((slot["row"], slot["col"]), 0),
-                "remaining_queries": task.get_remaining_hidden_slot_queries(slot["row"], slot["col"]),
+                "remaining_queries": "unlimited" if remaining is None else remaining,
             }
         )
 

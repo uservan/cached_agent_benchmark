@@ -61,6 +61,7 @@ class Task:
         global_check_alpha: float | None = 1,
         extra_query_num: int = 2,
         seed: int | None = None,
+        max_length_truncations: int = 3,
     ):
         self.dataset_object: SavedDatasetObject = dataset_object
         self.max_steps = max_steps
@@ -72,6 +73,7 @@ class Task:
         self.global_check_alpha = global_check_alpha
         self.extra_query_num = extra_query_num
         self.seed = seed
+        self.max_length_truncations = max_length_truncations
         self.hidden_slots = copy.deepcopy(getattr(dataset_object, "hidden_slots", []))
         self.branch_budget = getattr(dataset_object, "branch_budget", None)
         self.branch_slot_count = getattr(dataset_object, "branch_slot_count", None)
@@ -94,11 +96,11 @@ class Task:
         }
         self.global_check_budget = (
             None
-            if global_check_alpha is None
+            if global_check_alpha is None or global_check_alpha == -1
             else max(0, int(global_check_alpha * len(self.hidden_slot_path)))
         )
         self.global_check_calls = 0
-        self.hidden_slot_query_budget: dict[tuple[int, int], int] = {}
+        self.hidden_slot_query_budget: dict[tuple[int, int], int | None] = {}
         self.hidden_slot_query_calls: dict[tuple[int, int], int] = {}
         total_hidden_slot_count = len(self.hidden_slot_path)
         for slot in getattr(dataset_object, "slots", []):
@@ -107,7 +109,10 @@ class Task:
             if not isinstance(row, int) or not isinstance(col, int):
                 continue
             slot_position = (row, col)
-            budget = max(0, _count_slot_query_budget(slot, total_hidden_slot_count, extra_query_num))
+            if extra_query_num == -1:
+                budget = None
+            else:
+                budget = max(0, _count_slot_query_budget(slot, total_hidden_slot_count, extra_query_num))
             self.hidden_slot_query_budget[slot_position] = budget
             self.hidden_slot_query_calls[slot_position] = 0
 
@@ -186,7 +191,10 @@ class Task:
         slot_position = (row, col)
         if slot_position not in self.hidden_slot_query_budget:
             return False
-        return self.hidden_slot_query_calls.get(slot_position, 0) < self.hidden_slot_query_budget[slot_position]
+        budget = self.hidden_slot_query_budget[slot_position]
+        if budget is None:
+            return True
+        return self.hidden_slot_query_calls.get(slot_position, 0) < budget
 
     def record_hidden_slot_query_call(self, row: int, col: int) -> None:
         slot_position = (row, col)
@@ -198,10 +206,10 @@ class Task:
         slot_position = (row, col)
         if slot_position not in self.hidden_slot_query_budget:
             return None
-        return max(
-            0,
-            self.hidden_slot_query_budget[slot_position] - self.hidden_slot_query_calls.get(slot_position, 0),
-        )
+        budget = self.hidden_slot_query_budget[slot_position]
+        if budget is None:
+            return None  # unlimited
+        return max(0, budget - self.hidden_slot_query_calls.get(slot_position, 0))
 
     def get_global_check_budget_status(self) -> dict[str, int | None]:
         return {

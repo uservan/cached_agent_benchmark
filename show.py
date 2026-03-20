@@ -15,13 +15,67 @@ from show.view_results import (
 )
 
 
+DEFAULT_DATASET_PATH = "data/course_dataset_r5_c5_h1-3-5-7-9-13-17_cand15_budget0-2-4-6-8-10_seed42.json"
+
+
 def validate_dataset() -> None:
-    """Validate dataset. Logic placeholder, to be implemented later."""
-    ConsoleDisplay.print_kv_panel(
-        title="[bold yellow]Validate Dataset[/bold yellow]",
-        items=[("Status", "[yellow]Not implemented yet[/yellow]")],
-        border_style="yellow",
+    """Validate a dataset file using data_generation/validation.py."""
+    from data_generation.validation import (
+        _load_payload,
+        _summarize_instance,
+        _choose_representative_instances,
+        _print_instance_summary,
+        _build_truth_report,
+        _print_decoy_stage_report,
+        _print_truth_decoy_combination_stats,
+        _print_representative_cases,
+        validate_dataset as _validate_dataset,
     )
+
+    while True:
+        ConsoleDisplay.console.print(f"\n[bold]Enter dataset file path[/bold] [dim](default: {DEFAULT_DATASET_PATH})[/dim]")
+        ConsoleDisplay.console.print("  [dim]0 = back[/dim]")
+        inp = ConsoleDisplay.console.input("[bold cyan]> [/bold cyan]").strip()
+        if inp == "0":
+            return
+        path = inp or DEFAULT_DATASET_PATH
+
+        try:
+            payload = _load_payload(path)
+        except FileNotFoundError:
+            ConsoleDisplay.console.print(f"[red]File not found: {path}. Please try again.[/red]")
+            continue
+        except Exception as e:
+            ConsoleDisplay.console.print(f"[red]Failed to load file: {e}. Please try again.[/red]")
+            continue
+
+        instances = payload["instances"]
+        summaries = []
+        failed = []
+        for dataset in instances:
+            summaries.append(_summarize_instance(dataset))
+            if not _validate_dataset(dataset):
+                failed.append(dataset.get("instance_id", "-"))
+
+        ConsoleDisplay.print_dataset_summary_report(payload["domain"], summaries)
+
+        if failed:
+            ConsoleDisplay.console.print(f"[red]Validation FAILED for instances: {', '.join(failed)}[/red]")
+        else:
+            ConsoleDisplay.console.print("[green]All instances passed validation.[/green]")
+
+        for dataset in _choose_representative_instances(instances):
+            ConsoleDisplay.print_validation_summary(
+                dataset.get("instance_id", "-"),
+                dataset["domain"],
+                True,
+            )
+            _print_instance_summary(dataset)
+            ConsoleDisplay.print_solution_report("Truth solution report", _build_truth_report(dataset))
+            _print_decoy_stage_report(dataset)
+            _print_truth_decoy_combination_stats(dataset)
+            _print_representative_cases(dataset)
+        return
 
 
 def view_eval_results() -> None:

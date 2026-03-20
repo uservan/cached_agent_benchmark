@@ -29,6 +29,7 @@ class CacheEnv:
         overwrite_results: bool = False,
         seed: int = 42,
         max_workers: int = 25,
+        max_length_truncations: int = 3,
     ):
         self.dataset_objects = dataset_objects
         self.max_steps = max_steps
@@ -40,6 +41,7 @@ class CacheEnv:
         self.check_include_reason = check_include_reason
         self.global_check_alpha = global_check_alpha
         self.extra_query_num = extra_query_num
+        self.max_length_truncations = max_length_truncations
         self.benchmark_config = dict(benchmark_config or {})
         self.overwrite_results = overwrite_results
         self.max_workers = max_workers
@@ -115,6 +117,7 @@ class CacheEnv:
                 global_check_alpha=self.global_check_alpha,
                 extra_query_num=self.extra_query_num,
                 seed=seed,
+                max_length_truncations=self.max_length_truncations,
             )
             event_base = {
                 "run_index": run_idx,

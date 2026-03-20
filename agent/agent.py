@@ -57,6 +57,7 @@ class Agent:
             "step_num": 0,
         }
         step_count = 0
+        length_truncation_count = 0
         raw_messages = []
         status = "succeed"
         reason: Optional[str] = None
@@ -117,6 +118,12 @@ class Agent:
                 }
                 litellm_messages.append(assistant_message)
                 if finish_reason == "length":
+                    length_truncation_count += 1
+                    if length_truncation_count >= task.max_length_truncations:
+                        status = "error"
+                        reason = f"Task failed: output truncated due to max_tokens limit {length_truncation_count} times"
+                        logger.warning(reason)
+                        break
                     max_tokens = request_params.get("max_tokens")
                     max_tokens_text = (
                         f"max_tokens={max_tokens}"
