@@ -15,7 +15,7 @@ from show.view_results import (
 )
 
 
-DEFAULT_DATASET_PATH = "data/course_dataset_r5_c5_h1-3-5-7-9-13-17_cand15_budget0-2-4-6-8-10_seed42.json"
+DEFAULT_DATASET_DIR = "data/5x10"
 
 
 def validate_dataset() -> None:
@@ -33,49 +33,70 @@ def validate_dataset() -> None:
     )
 
     while True:
-        ConsoleDisplay.console.print(f"\n[bold]Enter dataset file path[/bold] [dim](default: {DEFAULT_DATASET_PATH})[/dim]")
+        ConsoleDisplay.console.print(f"\n[bold]Enter dataset directory[/bold] [dim](default: {DEFAULT_DATASET_DIR})[/dim]")
         ConsoleDisplay.console.print("  [dim]0 = back[/dim]")
         inp = ConsoleDisplay.console.input("[bold cyan]> [/bold cyan]").strip()
         if inp == "0":
             return
-        path = inp or DEFAULT_DATASET_PATH
+        dir_path = Path(inp or DEFAULT_DATASET_DIR)
 
-        try:
-            payload = _load_payload(path)
-        except FileNotFoundError:
-            ConsoleDisplay.console.print(f"[red]File not found: {path}. Please try again.[/red]")
-            continue
-        except Exception as e:
-            ConsoleDisplay.console.print(f"[red]Failed to load file: {e}. Please try again.[/red]")
+        if not dir_path.is_dir():
+            ConsoleDisplay.console.print(f"[red]Directory not found: {dir_path}. Please try again.[/red]")
             continue
 
-        instances = payload["instances"]
-        summaries = []
-        failed = []
-        for dataset in instances:
-            summaries.append(_summarize_instance(dataset))
-            if not _validate_dataset(dataset):
-                failed.append(dataset.get("instance_id", "-"))
+        json_files = sorted(dir_path.glob("*.json"))
+        if not json_files:
+            ConsoleDisplay.console.print(f"[red]No JSON files found in {dir_path}. Please try again.[/red]")
+            continue
 
-        ConsoleDisplay.print_dataset_summary_report(payload["domain"], summaries)
+        while True:
+            ConsoleDisplay.console.print(f"\n[bold]Select a dataset file[/bold] [dim]({dir_path})[/dim]")
+            for i, f in enumerate(json_files, 1):
+                ConsoleDisplay.console.print(f"  {i}. {f.name}")
+            ConsoleDisplay.console.print("  [dim]0 = back[/dim]")
 
-        if failed:
-            ConsoleDisplay.console.print(f"[red]Validation FAILED for instances: {', '.join(failed)}[/red]")
-        else:
-            ConsoleDisplay.console.print("[green]All instances passed validation.[/green]")
+            sel = ConsoleDisplay.console.input("[bold cyan]> [/bold cyan]").strip()
+            if sel == "0":
+                break
+            if not sel.isdigit() or not (1 <= int(sel) <= len(json_files)):
+                ConsoleDisplay.console.print("[red]Invalid selection. Please try again.[/red]")
+                continue
 
-        for dataset in _choose_representative_instances(instances):
-            ConsoleDisplay.print_validation_summary(
-                dataset.get("instance_id", "-"),
-                dataset["domain"],
-                True,
-            )
-            _print_instance_summary(dataset)
-            ConsoleDisplay.print_solution_report("Truth solution report", _build_truth_report(dataset))
-            _print_decoy_stage_report(dataset)
-            _print_truth_decoy_combination_stats(dataset)
-            _print_representative_cases(dataset)
-        return
+            path = json_files[int(sel) - 1]
+
+            try:
+                payload = _load_payload(str(path))
+            except Exception as e:
+                ConsoleDisplay.console.print(f"[red]Failed to load file: {e}. Please try again.[/red]")
+                continue
+
+            instances = payload["instances"]
+            summaries = []
+            failed = []
+            for dataset in instances:
+                summaries.append(_summarize_instance(dataset))
+                if not _validate_dataset(dataset):
+                    failed.append(dataset.get("instance_id", "-"))
+
+            ConsoleDisplay.print_dataset_summary_report(payload["domain"], summaries)
+
+            if failed:
+                ConsoleDisplay.console.print(f"[red]Validation FAILED for instances: {', '.join(failed)}[/red]")
+            else:
+                ConsoleDisplay.console.print("[green]All instances passed validation.[/green]")
+
+            for dataset in _choose_representative_instances(instances):
+                ConsoleDisplay.print_validation_summary(
+                    dataset.get("instance_id", "-"),
+                    dataset["domain"],
+                    True,
+                )
+                _print_instance_summary(dataset)
+                ConsoleDisplay.print_solution_report("Truth solution report", _build_truth_report(dataset))
+                _print_decoy_stage_report(dataset)
+                _print_truth_decoy_combination_stats(dataset)
+                _print_representative_cases(dataset)
+            # validation done, return to file list
 
 
 def view_eval_results() -> None:
