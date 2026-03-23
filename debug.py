@@ -9,11 +9,11 @@ from main import main
 if __name__ == "__main__":
     # 最小配置：单 domain、单 trial、少量步数，使用本地 vLLM
     main(
-        model="openai/Qwen/Qwen3.5-0.8B", # Qwen3.5-9B   Qwen3-8B
+        model="openai/Qwen/Qwen3.5-27B", # Qwen3.5-9B   Qwen3-8B
         domain="all", # ["course"]
         data_dir="data/5x7",
         agent_params={
-            "api_base": "http://localhost:8003/v1",
+            "api_base": "http://localhost:8004/v1",
             "temperature": 0.6,
             "top_p": 0.95,
             "top_k": 20,
@@ -21,7 +21,7 @@ if __name__ == "__main__":
             "presence_penalty": 0.0,
             "repetition_penalty": 1.0,
             "max_tokens": 16*1024,   # 限制单步输出，避免单次生成过长
-            "timeout": 60*30,       # 单次请求超时（秒），防止卡死
+            "timeout": 60*60,       # 单次请求超时（秒），防止卡死
             "num_retries": 1,
         },
         max_steps=500,  # 复杂任务可降到 50
@@ -38,6 +38,6 @@ if __name__ == "__main__":
         seed=42,
         hidden_slots=None, # [1,5,9,13],   # 先跑简单任务；h5_b8 等复杂任务会很慢
         branch_budget=None, #[0,4,8,10],
-        max_workers=48,
+        max_workers=64,
         max_length_truncations=3,
     )

@@ -98,6 +98,8 @@ class CacheEnv:
             output_path = self._build_output_path(
                 save_root=output_root,
                 model_name=agent.model,
+                rows=dataset_obj.rows,
+                cols=dataset_obj.cols,
                 domain=dataset_obj.domain,
                 instance_id=getattr(dataset_obj, "instance_id", ""),
                 tool_failure_rate=tool_failure_rate,
@@ -132,7 +134,9 @@ class CacheEnv:
 
             if not self.overwrite_results and os.path.exists(output_path):
                 cached_payload = self._load_cached_run_payload(output_path)
-                if self._is_matching_cached_payload(
+                if self._is_internal_server_error(cached_payload):
+                    pass  # re-run regardless of overwrite_results
+                elif self._is_matching_cached_payload(
                     cached_payload=cached_payload,
                     model_name=agent.model,
                     instance_id=getattr(dataset_obj, "instance_id", ""),
@@ -231,6 +235,8 @@ class CacheEnv:
         self,
         save_root: str,
         model_name: str,
+        rows: int | None,
+        cols: int | None,
         domain: str,
         instance_id: str,
         tool_failure_rate: float,
@@ -239,8 +245,9 @@ class CacheEnv:
         model_dir_name = self._get_model_dir_name(model_name)
         alpha_str = "none" if self.global_check_alpha is None else str(self.global_check_alpha)
         config_dir = f"ids{self.max_query_ids}_fields{self.max_query_fields}_eq{self.extra_query_num}_alpha{alpha_str}"
+        size_dir = f"{rows}x{cols}" if rows is not None and cols is not None else "unknown"
         file_name = f"fail-{tool_failure_rate}_trial-{trial_index}.json"
-        return os.path.join(save_root, config_dir, model_dir_name, domain, instance_id, file_name)
+        return os.path.join(save_root, size_dir, config_dir, model_dir_name, domain, instance_id, file_name)
 
     def _save_run_result(
         self,
@@ -316,6 +323,13 @@ class CacheEnv:
             and cached_payload.get("seed") == seed
             and isinstance(cached_payload.get("run_result"), dict)
         )
+
+    def _is_internal_server_error(self, cached_payload: dict[str, Any]) -> bool:
+        run_result = cached_payload.get("run_result", {})
+        if not isinstance(run_result, dict):
+            return False
+        reason = run_result.get("reason") or ""
+        return "InternalServerError" in str(reason)
 
     def _get_model_dir_name(self, model_name: str) -> str:
         normalized = model_name.rstrip("/").split("/")

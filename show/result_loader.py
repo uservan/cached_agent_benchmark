@@ -6,7 +6,7 @@ from typing import Any
 
 # result_instance_id format: {domain}_r{rows}_c{cols}_h{hidden}_b{branch}_ids{ids}_fields{fields}_eq{eq}
 _RESULT_INSTANCE_PATTERN = re.compile(
-    r"^(\w+)_r\d+_c\d+_h(\d+)_b(\d+)_ids\d+_fields\d+_eq\d+$"
+    r"^(\w+)_r\d+_c\d+_h(\d+)_b(\d+)_ids\d+_fields\d+_eq-?\d+$"
 )
 
 

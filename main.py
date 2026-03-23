@@ -21,7 +21,7 @@ DEFAULT_SAVE_PATH = "output.json"
 DEFAULT_OVERWRITE_RESULTS = False
 DEFAULT_DOMAIN = ["all"]
 DEFAULT_DOMAIN_FALLBACK = ["course"]
-DEFAULT_EXTRA_QUERY_NUM = 2
+DEFAULT_EXTRA_QUERY_NUM = -1
 DEFAULT_MAX_WORKERS = 25
 
 
@@ -409,9 +409,9 @@ def parse_args():
     parser.add_argument(
         "--global-check-alpha",
         type=float,
-        default=1,
+        default=-1,
         help=(
-            "限制 global constraints 调用次数，budget = floor(alpha * hidden_slots)；默认 1。"
+            "限制 global constraints 调用次数，budget = floor(alpha * hidden_slots)；默认 -1。"
             "传 -1 表示不限制调用次数；传 None（不传此参数）等同于不限制。"
         ),
     )
@@ -421,7 +421,7 @@ def parse_args():
         type=int,
         default=DEFAULT_EXTRA_QUERY_NUM,
         help=(
-            "每个 hidden slot 的 attribute query 次数在 (slot_constraints + hidden_slots) 基础上额外增加的数量；默认 2。"
+            "每个 hidden slot 的 attribute query 次数在 (slot_constraints + hidden_slots) 基础上额外增加的数量；默认 -1。"
             "传 -1 表示该 slot 的 attribute query 次数不限制。"
         ),
     )
