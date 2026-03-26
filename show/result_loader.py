@@ -114,3 +114,17 @@ def compute_average_matrix(
             if vals:
                 out[m][key] = sum(vals) / len(vals)
     return out
+
+
+def compute_overall_average(
+    agg: dict[tuple[int, int], list[dict[str, Any]]],
+) -> dict[str, float]:
+    """Compute overall average across all runs for each metric."""
+    metrics = ["score", "completion_tokens", "cost", "time", "tool_calls_num", "step_num"]
+    all_runs = [run for runs in agg.values() for run in runs]
+    out: dict[str, float] = {}
+    for metric in metrics:
+        vals = [run.get(metric) for run in all_runs if run.get(metric) is not None]
+        if vals:
+            out[metric] = sum(vals) / len(vals)
+    return out

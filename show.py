@@ -7,6 +7,7 @@ from utils.console_display import ConsoleDisplay
 from show.view_results import (
     BACK,
     MAIN,
+    compare_model_results,
     get_domains,
     prompt_model,
     prompt_path,
@@ -169,18 +170,23 @@ def main() -> None:
         ConsoleDisplay.console.print("[bold]Choose an option:[/bold]")
         ConsoleDisplay.console.print("  1. Validate dataset")
         ConsoleDisplay.console.print("  2. View eval results")
-        ConsoleDisplay.console.print("  3. Exit")
+        ConsoleDisplay.console.print("  3. Compare model results")
+        ConsoleDisplay.console.print("  4. Exit")
         inp = ConsoleDisplay.console.input("[bold cyan]> [/bold cyan]").strip() or "2"
 
-        if inp == "3":
+        if inp == "4":
             ConsoleDisplay.console.print("[green]Goodbye.[/green]")
             break
         if inp == "1":
             validate_dataset()
         elif inp == "2":
             view_eval_results()
+        elif inp == "3":
+            base_path = prompt_path(default="results/5x7/ids5_fields5_eq-1_alpha-1")
+            if base_path != MAIN:
+                compare_model_results(base_path)
         else:
-            ConsoleDisplay.console.print("[red]Invalid option. Please enter 1, 2, or 3.[/red]")
+            ConsoleDisplay.console.print("[red]Invalid option. Please enter 1, 2, 3, or 4.[/red]")
 
 
 if __name__ == "__main__":

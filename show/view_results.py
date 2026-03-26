@@ -1,14 +1,21 @@
 """Interactive logic for viewing eval results."""
+import math
 import re
 from pathlib import Path
 from typing import Any
 
 from utils.console_display import ConsoleDisplay
 
-from .display import print_average_matrices, print_single_result
+from .display import (
+    print_average_matrices,
+    print_metric_ranking,
+    print_overall_average,
+    print_single_result,
+)
 from .result_loader import (
     aggregate_by_hidden_branch,
     collect_json_files,
+    compute_overall_average,
     compute_average_matrix,
     extract_run_result,
     load_json,
@@ -148,8 +155,121 @@ def run_average_results(base_path: str, model: str, domain: str | None) -> None:
 
     hidden_set = sorted({k[0] for k in agg})
     branch_set = sorted({k[1] for k in agg})
+    overall_avg = compute_overall_average(agg)
     avg_data = compute_average_matrix(agg)
+    print_overall_average(overall_avg)
     print_average_matrices(avg_data, hidden_set, branch_set)
+
+
+def _build_model_average_summary(base_path: str, model: str) -> dict[str, Any] | None:
+    """Build aggregated average summary for a single model."""
+    model_path = Path(base_path) / model
+    if not model_path.is_dir():
+        return None
+
+    items = collect_json_files(model_path, domain=None)
+    if not items:
+        return None
+
+    agg = aggregate_by_hidden_branch(items)
+    if not agg:
+        return None
+
+    return {
+        "model": model,
+        "item_count": len(items),
+        "group_count": len(agg),
+        "agg": agg,
+        "hidden_set": sorted({k[0] for k in agg}),
+        "branch_set": sorted({k[1] for k in agg}),
+        "overall_avg": compute_overall_average(agg),
+        "avg_data": compute_average_matrix(agg),
+    }
+
+
+def _model_ranking_key(model_summary: dict[str, Any]) -> tuple[float, float, float, float, str]:
+    """Sort by score desc, then cost/time/tokens asc, then model name."""
+    overall = model_summary["overall_avg"]
+    score = overall.get("score")
+    cost = overall.get("cost")
+    time = overall.get("time")
+    completion_tokens = overall.get("completion_tokens")
+    return (
+        -(score if score is not None else -math.inf),
+        cost if cost is not None else math.inf,
+        time if time is not None else math.inf,
+        completion_tokens if completion_tokens is not None else math.inf,
+        model_summary["model"],
+    )
+
+
+def _metric_ranking_key(metric: str, descending: bool) -> Any:
+    """Build a sort key for one metric."""
+    def sort_key(model_summary: dict[str, Any]) -> tuple[float, str]:
+        value = model_summary["overall_avg"].get(metric)
+        if descending:
+            primary = -(value if value is not None else -math.inf)
+        else:
+            primary = value if value is not None else math.inf
+        return (primary, model_summary["model"])
+
+    return sort_key
+
+
+def _print_model_loading_status(index: int, total: int, model: str, summary: dict[str, Any] | None) -> None:
+    """Print loading status while collecting model summaries."""
+    if summary is None:
+        ConsoleDisplay.console.print(
+            f"[yellow][{index}/{total}] {model}: no valid result files found, skipped[/yellow]"
+        )
+        return
+
+    ConsoleDisplay.console.print(
+        "[cyan]"
+        f"[{index}/{total}] {model}: loaded {summary['item_count']} files, "
+        f"{summary['group_count']} hidden/budget groups"
+        "[/cyan]"
+    )
+
+
+def compare_model_results(base_path: str) -> None:
+    """Compare all models under a result path and display ranked summaries."""
+    models = _get_models(base_path)
+    if not models:
+        path = Path(base_path)
+        if not path.exists():
+            ConsoleDisplay.console.print(f"[red]Path does not exist: {base_path}[/red]")
+        else:
+            ConsoleDisplay.console.print(f"[red]No model directory found under: {base_path}[/red]")
+        return
+
+    ConsoleDisplay.console.print(
+        f"\n[bold]Loading model results[/bold] [dim]({base_path})[/dim]"
+    )
+
+    summaries = []
+    total_models = len(models)
+    for index, model in enumerate(models, 1):
+        summary = _build_model_average_summary(base_path, model)
+        _print_model_loading_status(index, total_models, model, summary)
+        if summary is not None:
+            summaries.append(summary)
+
+    if not summaries:
+        ConsoleDisplay.console.print("[red]No matching JSON files found for any model.[/red]")
+        return
+
+    metric_orders = [
+        ("score", True),
+        ("completion_tokens", False),
+        ("cost", False),
+        ("time", False),
+        ("tool_calls_num", False),
+        ("step_num", False),
+    ]
+    for metric, descending in metric_orders:
+        metric_ranked = sorted(summaries, key=_metric_ranking_key(metric, descending))
+        print_metric_ranking(metric, metric_ranked, descending=descending)
 
 
 def run_specific_results(base_path: str, model: str) -> str | None:
