@@ -107,15 +107,22 @@ class Agent:
                     raise e
                 assert response_message.role == "assistant", ("The response should be an assistant message")
 
-                assistant_content = (
-                        (getattr(response_message, "reasoning_content", None) or "") + ""
-                        + (getattr(response_message, "content", None) or "")
-                    ).strip()
-                assistant_message = {
-                    "role": "assistant",
-                    "content": assistant_content,
-                    "tool_calls": None
-                }
+                reasoning_content = getattr(response_message, "reasoning_content", None) or ""
+                actual_content = (getattr(response_message, "content", None) or "").strip()
+                if "deepseek" in self.model.lower() and reasoning_content:
+                    assistant_message = {
+                        "role": "assistant",
+                        "content": actual_content,
+                        "reasoning_content": reasoning_content,
+                        "tool_calls": None,
+                    }
+                else:
+                    assistant_content = (reasoning_content + " " + actual_content).strip()
+                    assistant_message = {
+                        "role": "assistant",
+                        "content": assistant_content,
+                        "tool_calls": None,
+                    }
                 litellm_messages.append(assistant_message)
                 if finish_reason == "length":
                     length_truncation_count += 1
@@ -173,7 +180,19 @@ class Agent:
                             litellm_messages.append(r)
                             raw_r.append(r)
                             continue
-                        tool_result = task.call_tool(tool_name, tool_args)
+                        try:
+                            tool_result = task.call_tool(tool_name, tool_args)
+                        except TypeError as e:
+                            logger.warning("Tool %s call failed: %s", tool_name, e)
+                            r = {
+                                "role": "tool",
+                                "tool_call_id": tool_call["id"],
+                                "name": tool_name,
+                                "content": f"Tool call failed (invalid arguments): {e}",
+                            }
+                            litellm_messages.append(r)
+                            raw_r.append(r)
+                            continue
                         total_usage["tool_calls_num"] += 1
                         r = {
                                 "role": "tool",

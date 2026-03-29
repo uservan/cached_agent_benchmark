@@ -1,5 +1,6 @@
 test/__pycache__/
 __pycache__/
 debug_vllm/
+debug_vllm2/
 **/*.pyc
 results/

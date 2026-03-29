@@ -26,6 +26,7 @@ class TravelToolsHandler(BaseToolsHandler):
         field: str,
         operator: str,
         value: str | int | float | list[str],
+        **kwargs,
     ) -> Messages:
         """Filter current-slot travel candidates by one attribute condition.
 
@@ -37,14 +38,14 @@ class TravelToolsHandler(BaseToolsHandler):
         """
         return self._query_candidate_from_attribute(row, col, field, operator, value)
 
-    def get_travel_item_info(self, id: str) -> Messages:
+    def get_travel_item_info(self, id: str, **kwargs) -> Messages:
         """Return full travel item information for one id.
 
         id: Travel item id as a string.
         """
         return self._get_item_info(id)
 
-    def get_travel_item_attributes(self, ids: list[str], field: str | list[str]) -> Messages:
+    def get_travel_item_attributes(self, ids: list[str], field: str | list[str], **kwargs) -> Messages:
         """Return selected attribute value(s) for a batch of travel item ids.
 
         ids: List of travel item ids as strings, up to the current task limit.
@@ -52,7 +53,7 @@ class TravelToolsHandler(BaseToolsHandler):
         """
         return self._get_item_attribute_values(ids, field)
 
-    def check_travel_slot_constraints(self, row: int, col: int) -> Messages:
+    def check_travel_slot_constraints(self, row: int, col: int, **kwargs) -> Messages:
         """Check whether a hidden slot satisfies its slot constraints.
 
         row: Row index as an integer.
@@ -60,6 +61,6 @@ class TravelToolsHandler(BaseToolsHandler):
         """
         return self._check_slot_constraints(row, col)
 
-    def check_travel_global_constraints(self) -> Messages:
+    def check_travel_global_constraints(self, **kwargs) -> Messages:
         """Check whether the current travel grid satisfies the global constraints."""
         return self._check_global_constraints()

@@ -328,8 +328,8 @@ class CacheEnv:
         run_result = cached_payload.get("run_result", {})
         if not isinstance(run_result, dict):
             return False
-        reason = run_result.get("reason") or ""
-        return "InternalServerError" in str(reason)
+        reason = str(run_result.get("reason") or "")
+        return "InternalServerError" in reason or "APITimeoutError" in reason
 
     def _get_model_dir_name(self, model_name: str) -> str:
         normalized = model_name.rstrip("/").split("/")

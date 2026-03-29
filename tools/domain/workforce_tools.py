@@ -26,6 +26,7 @@ class WorkforceToolsHandler(BaseToolsHandler):
         field: str,
         operator: str,
         value: str | int | float | list[str],
+        **kwargs,
     ) -> Messages:
         """Filter current-slot workforce candidates by one attribute condition.
 
@@ -37,14 +38,14 @@ class WorkforceToolsHandler(BaseToolsHandler):
         """
         return self._query_candidate_from_attribute(row, col, field, operator, value)
 
-    def get_workforce_item_info(self, id: str) -> Messages:
+    def get_workforce_item_info(self, id: str, **kwargs) -> Messages:
         """Return full workforce item information for one id.
 
         id: Workforce item id as a string.
         """
         return self._get_item_info(id)
 
-    def get_workforce_item_attributes(self, ids: list[str], field: str | list[str]) -> Messages:
+    def get_workforce_item_attributes(self, ids: list[str], field: str | list[str], **kwargs) -> Messages:
         """Return selected attribute value(s) for a batch of workforce item ids.
 
         ids: List of workforce item ids as strings, up to the current task limit.
@@ -52,7 +53,7 @@ class WorkforceToolsHandler(BaseToolsHandler):
         """
         return self._get_item_attribute_values(ids, field)
 
-    def check_workforce_slot_constraints(self, row: int, col: int) -> Messages:
+    def check_workforce_slot_constraints(self, row: int, col: int, **kwargs) -> Messages:
         """Check whether a hidden slot satisfies its slot constraints.
 
         row: Row index as an integer.
@@ -60,6 +61,6 @@ class WorkforceToolsHandler(BaseToolsHandler):
         """
         return self._check_slot_constraints(row, col)
 
-    def check_workforce_global_constraints(self) -> Messages:
+    def check_workforce_global_constraints(self, **kwargs) -> Messages:
         """Check whether the current workforce grid satisfies the global constraints."""
         return self._check_global_constraints()

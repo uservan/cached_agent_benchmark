@@ -22,15 +22,15 @@ if __name__ == "__main__":
             "repetition_penalty": 1.0,
             "max_tokens": 16*1024,   # 限制单步输出，避免单次生成过长
             "timeout": 60*60,       # 单次请求超时（秒），防止卡死
-            "num_retries": 3,
+            "num_retries": 1,
         },
-        max_steps=1000,  # 复杂任务可降到 50
+        max_steps=600,  # 复杂任务可降到 50
         max_query_ids=5,
         max_query_fields=5,
         tool_failure_rates=[0.0],  # 模拟工具调用失败的概率
         num_trials=1,
         tools_domain_only=True,
-        save_path="results/",
+        save_path="/scratch/pioneer/jobs/wxy320/save/cached_results/",
         overwrite_results=False,
         check_include_reason=False,
         global_check_alpha=-1,

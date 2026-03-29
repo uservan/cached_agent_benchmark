@@ -583,11 +583,11 @@ class BaseToolsHandler:
             reason=reason,
         )
 
-    def done(self) -> Messages:
+    def done(self, **kwargs) -> Messages:
         """Call this function when you are done with the task."""
         return Messages(status="success", messages=self.STOP_TOKEN, data={})
 
-    def set_slot(self, row: int, col: int, id: str | None = None) -> Messages:
+    def set_slot(self, row: int, col: int, id: str | None = None, **kwargs) -> Messages:
         """Fill or clear a specific slot.
 
         row: Row index as an integer.
@@ -650,14 +650,14 @@ class BaseToolsHandler:
             }
         )
 
-    def get_current_grid_state(self) -> Messages:
+    def get_current_grid_state(self, **kwargs) -> Messages:
         """Return the full current grid state."""
         task = self.current_task
         if task is None:
             return Messages.build_failure_message(ErrorType.INVALID_ARGUMENTS, "No current task")
         return Messages.build_success_message({"slots": task.agent_solution})
 
-    def get_hidden_slot_query_budget(self, row: int, col: int) -> Messages:
+    def get_hidden_slot_query_budget(self, row: int, col: int, **kwargs) -> Messages:
         """Get the remaining attribute-query budget for one hidden slot.
 
         row: Row index as an integer.
@@ -687,14 +687,14 @@ class BaseToolsHandler:
             }
         )
 
-    def get_global_check_budget(self) -> Messages:
+    def get_global_check_budget(self, **kwargs) -> Messages:
         """Get the remaining global-check budget."""
         task = self.current_task
         if task is None:
             return Messages.build_failure_message(ErrorType.INVALID_ARGUMENTS, "No current task")
         return Messages.build_success_message(task.get_global_check_budget_status())
 
-    def get_slot_id(self, row: int, col: int) -> Messages:
+    def get_slot_id(self, row: int, col: int, **kwargs) -> Messages:
         """Get the item id currently stored in a slot.
 
         row: Row index as an integer.
