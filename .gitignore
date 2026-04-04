@@ -4,3 +4,4 @@ debug_vllm/
 debug_vllm2/
 **/*.pyc
 results/
+draw/
