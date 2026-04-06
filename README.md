@@ -1,7 +1,7 @@
 # cached_agent_benchmark
 
 ## Generating Datasets
-
+![Generation Overview](pics/agent2.png)
 To generate data for all domains:
 
 ```bash
@@ -28,6 +28,9 @@ Pre-generated datasets for three grid sizes are already available under `data/` 
 | 5×7  | 1, 5, 7, 11, 15, 21 | 0, 2, 4, 8, 10, 15, 19, 21, 25 | `data/5x7/` |
 | 5×10 | 1, 3, 5, 7, 11, 15, 19, 21, 25 | 0, 2, 4, 8, 10, 15, 19, 21, 25, 30 | `data/5x10/` |
 
+python data_generation/generate.py --domain travel  --rows 5 --cols 10 --hidden-slots 1 3 5 7 11 15 19 21 25 --branch-budget 0 2 4 8 10 15 19 21 25 30 --candidates-per-slot 25 --max-retries 260 --candidate-resample-retries 12 --open-valid-preference-tries 50 100 150 --seed 42 --max-workers 36
+course
+
 ---
 
 ## Running the Benchmark
@@ -44,6 +47,8 @@ For detailed usage and parameter descriptions, see [debug_vllm/README.md](debug_
 ---
 
 ## Analyzing Results
+
+![Results Overview](pics/agent1.png)
 
 Run the interactive result viewer:
 
