@@ -3,6 +3,14 @@
  
 **A**gent **C**onfigurable **E**valuation with Scalable Horizons and Controllable Difficulty under Lightweight Environments
 
+## Installation
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
 ## Generating Datasets
 ![Generation Overview](pics/agent2.png)
 
@@ -53,8 +61,11 @@ For detailed usage and parameter descriptions, see [debug_vllm/README.md](debug_
 
 ## Analyzing Results
 
+
 ![Results Overview](pics/agent3.png)
 ![All Results Overview](pics/agent1.png)
+
+For heatmap visualization of model and domain scores, refer to [draw.ipynb](draw.ipynb).
 
 Run the interactive result viewer:
 

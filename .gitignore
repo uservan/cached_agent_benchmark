@@ -6,3 +6,5 @@ debug_vllm2/
 results/
 draw/
 test/
+.claude/
+.vscode/

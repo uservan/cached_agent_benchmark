@@ -95,6 +95,33 @@ main(
 )
 ```
 
+### Example: Running Specific Hidden Slots and Branch Budgets
+
+To run evaluation only on instances with specific hidden slots (e.g., 1 and 3) and branch budgets (e.g., 0 and 2), modify the `hidden_slots` and `branch_budget` parameters:
+
+```python
+cfg = MODELS["qwen35_9b"]   # change to the target key
+main(
+    model=cfg["model"],
+    agent_params=cfg["agent_params"],
+    domain=["course"],        # specify domain, or "all"
+    data_dir="data/5x7",
+    max_steps=2000,
+    max_query_ids=5,
+    max_query_fields=5,
+    tool_failure_rates=[0.0, 0.1, 0.3],
+    num_trials=1,
+    save_path="/scratch/pioneer/jobs/user/save/cached_results2/",
+    overwrite_results=False,
+    check_include_reason=False,
+    global_check_alpha=-1,
+    seed=42,
+    hidden_slots=[1, 3],   # only run instances with hidden slots 1 and 3
+    branch_budget=[0, 2],  # only run instances with branch budgets 0 and 2
+    max_workers=64,
+)
+```
+
 Commonly changed parameters:
 
 | Parameter | Description |
