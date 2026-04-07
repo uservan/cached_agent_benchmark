@@ -3,9 +3,9 @@ set -euo pipefail
 
 AGENT_DIR=/home/user/ondemand/program/cached_agent_benchmark/debug_vllm2/agent
 
-# 改这里来切换模型（取消注释对应行）：
+# Change this to switch models (uncomment the corresponding line):
 
-# === 小模型（单卡/4卡）===
+# === Small models (single GPU / 4 GPUs) ===
 # AGENT_SCRIPT=$AGENT_DIR/qwen35_0.8b.sh
 # AGENT_SCRIPT=$AGENT_DIR/qwen35_2b.sh
 # AGENT_SCRIPT=$AGENT_DIR/qwen35_4b.sh
@@ -14,7 +14,7 @@ AGENT_DIR=/home/user/ondemand/program/cached_agent_benchmark/debug_vllm2/agent
 # AGENT_SCRIPT=$AGENT_DIR/qwen35_35b_a3b.sh
 AGENT_SCRIPT=$AGENT_DIR/miro_thinker_1_7_mini.sh   # 31B
 
-# === 大模型（8卡，显存够用）===
+# === Large models (8 GPUs, sufficient VRAM) ===
 # AGENT_SCRIPT=$AGENT_DIR/minimax_m2.sh  
 # AGENT_SCRIPT=$AGENT_DIR/minimax_m21.sh                # 229B ~460GB
 # AGENT_SCRIPT=$AGENT_DIR/minimax_m25.sh              # 229B ~460GB
@@ -23,10 +23,10 @@ AGENT_SCRIPT=$AGENT_DIR/miro_thinker_1_7_mini.sh   # 31B
 # AGENT_SCRIPT=$AGENT_DIR/miro_thinker_1_7.sh         # 235B ~470GB
 # AGENT_SCRIPT=$AGENT_DIR/deepseek_v3_2.sh            # 671B FP8 ~671GB
 
-# === 不推荐（显存或存储不足）===
-# AGENT_SCRIPT=$AGENT_DIR/qwen35_397b_a17b.sh         # 397B ~800GB，KV cache空间不足
-# AGENT_SCRIPT=$AGENT_DIR/glm5.sh                     # 744B FP8，KV cache空间不足
-# AGENT_SCRIPT=$AGENT_DIR/kimi_k2_5.sh                # 1T，8xH200装不下
+# === Not recommended (insufficient VRAM or storage) ===
+# AGENT_SCRIPT=$AGENT_DIR/qwen35_397b_a17b.sh         # 397B ~800GB, insufficient KV cache space
+# AGENT_SCRIPT=$AGENT_DIR/glm5.sh                     # 744B FP8, insufficient KV cache space
+# AGENT_SCRIPT=$AGENT_DIR/kimi_k2_5.sh                # 1T, cannot fit in 8xH200
 
 nohup singularity exec --cleanenv --nv \
   --bind $HOME:$HOME \

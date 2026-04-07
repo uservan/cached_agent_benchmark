@@ -29,8 +29,8 @@ def _resolve_partial_solution(
     seed: int | None = None,
 ) -> list:
     """
-    新数据集直接使用数据文件中的 partial_solution。
-    对旧数据做兼容时，若缺失该字段，则退化为 truth_solution 的拷贝。
+    New datasets use partial_solution directly from the data file.
+    For backward compatibility with old data, falls back to a copy of truth_solution if the field is missing.
     """
     del seed
     partial_solution = getattr(dataset_object, "partial_solution", None)
@@ -47,7 +47,7 @@ def _count_slot_query_budget(
 
 
 class Task:
-    """Task 类，封装一次任务。"""
+    """Task class encapsulating a single task run."""
 
     def __init__(
         self,
@@ -117,18 +117,18 @@ class Task:
             self.hidden_slot_query_calls[slot_position] = 0
 
     def build_initial_messages(self) -> list[dict[str, Any]]:
-        """构建初始消息列表。"""
+        """Build the initial message list."""
         return build_initial_messages(self)
 
     def is_finished(self, messages) -> bool:
-        """根据消息判断任务是否完成。"""
+        """Determine whether the task is finished based on messages."""
         for msg in messages:
             if is_done_tool_message(msg):
                 return True
         return False
 
     def eval(self) -> Any:
-        """评估任务完成情况。"""
+        """Evaluate the task completion status."""
         try:
             from data_generation.validation import (
                 validate_global_constraints,
@@ -237,7 +237,7 @@ class Task:
         tool_args: dict[str, Any],
         **kwargs: Any,
     ) -> Any:
-        """调用工具，转发给 call_saved_dataset_tool。"""
+        """Call a tool and forward to call_saved_dataset_tool."""
         from tools import call_saved_dataset_tool
         return call_saved_dataset_tool(
             task=self,
@@ -248,7 +248,7 @@ class Task:
         )
 
     def get_tool_schemas(self) -> list[Any]:
-        """获取该任务领域的 tool schemas。"""
+        """Get the tool schemas for this task's domain."""
         try:
             from tools import get_saved_dataset_tool_schemas
             domain = self.dataset_object.domain if self.tools_domain_only else None

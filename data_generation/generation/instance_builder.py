@@ -18,7 +18,7 @@ from data_generation.generation.task_instruction import build_task_instruction_f
 def compute_effective_candidates_per_slot(hidden_slots: int, candidates_per_slot: int, branch_budget: int) -> int:
     if hidden_slots <= 0:
         return candidates_per_slot
-    # truth + decoys + 至少 1 个 filter
+    # truth + decoys + at least 1 filter
     return max(candidates_per_slot, branch_budget + 2)
 
 
@@ -86,7 +86,7 @@ def assign_slot_rule_sets(domain: str, ordered_hidden_positions: list[int], pref
     shuffled_rules = slot_rules[:]
     random.shuffle(shuffled_rules)
 
-    # 先保证所有 hidden slots 联合起来覆盖全部 slot 属性。
+    # First ensure all hidden slots together cover all slot attributes.
     for rule_index, rule in enumerate(shuffled_rules):
         slot_index = ordered_hidden_positions[rule_index % len(ordered_hidden_positions)]
         assignments[slot_index].append(rule)

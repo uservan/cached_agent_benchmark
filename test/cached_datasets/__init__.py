@@ -38,7 +38,7 @@ class BaseDataset:
         self.name = name
 
     def load_data(self):
-        # 加载数据的逻辑
+        # Data loading logic
         pass
 
     def _build_combined_tasks(self, tasks, together_task_size):
@@ -60,27 +60,27 @@ class BaseTask:
         self.tools = tools
 
     def call_tool(self, tool_name, tool_args, used_write_tools, tool_failure_rate=0.0):
-        # 具体的工具调用逻辑
+        # Tool invocation logic
         pass
 
     def eval(self, messages):
-        # 评估消息的好坏
+        # Evaluate the quality of messages
         pass
 
     def get_tool_schemas(self):
-        # 返回工具的 schema 定义
+        # Return the tool schema definitions
         pass
 
     def get_user_prompt(self):
-        # 返回用户提示
+        # Return the user prompt
         pass
 
     def build_system_prompt(self):
-        # 返回系统提示
+        # Return the system prompt
         pass
 
     def is_finished(self, messages):
-        # 根据消息判断任务是否完成
+        # Determine whether the task is finished based on messages
         pass
 
 
@@ -102,27 +102,27 @@ class MergedTask(BaseTask):
         pass
 
     def build_system_prompt(self):
-        # 返回系统提示
+        # Return the system prompt
         pass
 
     def get_tool_schemas(self):
         pass
 
-    def eval(self, messages):   
+    def eval(self, messages):
         pass
 
     def build_initial_messages(self):
         pass
 
     def is_finished(self, messages):
-        # 根据消息判断任务是否完成
+        # Determine whether the task is finished based on messages
         pass
 
     def __len__(self):
         return len(self.sub_tasks)
 
 class RunnableTask:
-    """对原始 task 做一层包装，兼容 dict task 和对象 task。"""
+    """A wrapper around a raw task, compatible with both dict-based and object-based tasks."""
 
     def __init__(self, raw_task):
         self.raw_task = raw_task
@@ -246,7 +246,7 @@ class RunnableTask:
 
 
 class CombinedTask:
-    """将多个 task 融合为一个可执行 task。"""
+    """Merge multiple tasks into a single executable task."""
 
     def __init__(self, tasks):
         self.tasks = tasks

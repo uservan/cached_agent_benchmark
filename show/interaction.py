@@ -1,5 +1,5 @@
 """
-show.interaction - 交互逻辑。
+show.interaction - interactive logic.
 """
 
 import os
@@ -8,35 +8,35 @@ DEFAULT_RESULTS_PATH = "results"
 
 
 def _validate_dataset():
-    """验证数据集。逻辑待后续补充。"""
-    print("\n[验证数据集] 功能待补充。\n")
+    """Validate the dataset. Logic to be added later."""
+    print("\n[Validate Dataset] Feature not yet implemented.\n")
 
 
 def _view_results(results_path: str) -> None:
-    """查看结果。"""
+    """View results."""
     if not os.path.isdir(results_path):
-        print(f"\n路径不存在或不是目录: {results_path}\n")
+        print(f"\nPath does not exist or is not a directory: {results_path}\n")
         return
-    # 后续可在此调用 plot_results 或展示结果列表
-    print(f"\n[查看结果] 路径: {results_path}")
-    print("（结果展示与画图逻辑待补充）\n")
+    # Can call plot_results or display a result list here later
+    print(f"\n[View Results] Path: {results_path}")
+    print("(Result display and plotting logic not yet implemented)\n")
 
 
 def run_interactive() -> None:
-    """运行交互式主菜单。"""
+    """Run the interactive main menu."""
     while True:
         print("\n" + "=" * 50)
-        print("  Cached Agent Benchmark - 交互界面")
+        print("  Cached Agent Benchmark - Interactive Menu")
         print("=" * 50)
-        print("  1. 验证数据集")
-        print("  2. 查看结果")
-        print("  q. 退出")
+        print("  1. Validate dataset")
+        print("  2. View results")
+        print("  q. Quit")
         print("=" * 50)
 
-        choice = input("请选择 [1/2/q]: ").strip().lower()
+        choice = input("Select [1/2/q]: ").strip().lower()
 
         if choice == "q":
-            print("\n再见。\n")
+            print("\nGoodbye.\n")
             break
 
         if choice == "1":
@@ -44,10 +44,10 @@ def run_interactive() -> None:
             continue
 
         if choice == "2":
-            default_hint = f"（直接回车使用默认: {DEFAULT_RESULTS_PATH}）"
-            path_input = input(f"\n请输入结果路径 {default_hint}: ").strip()
+            default_hint = f"(press Enter to use default: {DEFAULT_RESULTS_PATH})"
+            path_input = input(f"\nEnter results path {default_hint}: ").strip()
             results_path = path_input if path_input else DEFAULT_RESULTS_PATH
             _view_results(results_path)
             continue
 
-        print("\n无效选项，请重新选择。\n")
+        print("\nInvalid option, please try again.\n")

@@ -39,7 +39,7 @@ BENCHMARK_SYSTEM_PROMPT = """
 
 
 def build_initial_messages(task: Any) -> list[dict[str, Any]]:
-    """为 benchmark task 构建初始消息。"""
+    """Build initial messages for a benchmark task."""
     attribute_query_tool = f"query_{getattr(task.dataset_object, 'domain', 'course')}_candidate_from_attribute"
     system_content = BENCHMARK_SYSTEM_PROMPT.format(
         agent_instruction=build_agent_instruction(task),

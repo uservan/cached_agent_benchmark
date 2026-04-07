@@ -6,7 +6,7 @@ if TYPE_CHECKING:
 
 
 class RunResult:
-    """单次 run 的结果。"""
+    """Result of a single run."""
 
     def __init__(
         self,

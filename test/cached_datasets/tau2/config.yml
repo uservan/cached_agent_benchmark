@@ -1,23 +1,23 @@
-# Tau2 配置文件
+# Tau2 config file
 name: tau2
 description: "Tau2 Task Dataset"
 
-# HuggingFace 数据集配置
+# HuggingFace dataset configuration
 huggingface:
-  task_dataset_name: "your-org/tau2-tasks"  # 替换为实际的 HF 数据集名称
-  response_dataset_name: "your-org/tau2-responses"  # 替换为实际的响应数据集名称
+  task_dataset_name: "your-org/tau2-tasks"  # Replace with the actual HF dataset name
+  response_dataset_name: "your-org/tau2-responses"  # Replace with the actual response dataset name
   task_split: "train"
   response_split: "train"
   task_config: null
   response_config: null
 
-# 任务配置
+# Task configuration
 task:
   domain: "tau2"
   initial_state: {}
   tools: []
 
 
-# 1. task的描述都可以在数据中找到
-# 2. tool的描述和定义没有， 如何识别和调用tool？
-# 3. 评估方式，确定代码（我么统一采用action方式）
+# 1. Task descriptions can all be found in the data.
+# 2. Tool descriptions and definitions are absent — how to identify and call tools?
+# 3. Evaluation approach: confirm the code (we uniformly adopt the action-based method).

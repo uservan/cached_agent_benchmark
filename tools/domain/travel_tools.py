@@ -1,11 +1,11 @@
-"""Travel itinerary 领域的 tools。"""
+"""Tools for the travel itinerary domain."""
 
 from .. import BaseToolsHandler
 from ..base import Messages
 
 
 class TravelToolsHandler(BaseToolsHandler):
-    """Travel 领域工具总 handler。"""
+    """Main tool handler for the travel domain."""
 
     domain = "travel"
 

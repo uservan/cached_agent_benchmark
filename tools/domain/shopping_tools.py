@@ -1,11 +1,11 @@
-"""Grocery shopping 领域的 tools。"""
+"""Tools for the grocery shopping domain."""
 
 from .. import BaseToolsHandler
 from ..base import Messages
 
 
 class ShoppingToolsHandler(BaseToolsHandler):
-    """Shopping 领域工具总 handler。"""
+    """Main tool handler for the shopping domain."""
 
     domain = "shopping"
 

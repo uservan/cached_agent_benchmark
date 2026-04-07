@@ -11,7 +11,7 @@ from .messages import Messages
 
 
 class BaseToolsHandler:
-    """各领域 handler 的基类。"""
+    """Base class for domain-specific handlers."""
 
     domain: str = ""
     STOP_TOKEN: str = "###STOP###"
@@ -35,7 +35,7 @@ class BaseToolsHandler:
         **kwargs: Any,
     ) -> Any:
         self.current_task = task
-        """处理工具调用。task 为 Task 类实例。调用时暂存 task 到 self._current_task，工具函数仅接收 args。"""
+        """Handle a tool call. task is an instance of the Task class. Temporarily stores task in self._current_task; tool functions only receive args."""
         if tool_name not in self.tools:
             return Messages.build_failure_message(
                 ErrorType.UNKNOWN_TOOL,

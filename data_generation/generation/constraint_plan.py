@@ -11,7 +11,7 @@ def active_rules(rule_specs, constraint):
 
 
 def select_global_rules(spec):
-    # 新逻辑下 global 尽量覆盖全部属性，直接启用全部 global rules。
+    # Under the new logic, global rules cover all attributes; enable all global rules directly.
     return list(spec["global_rules"])
 
 

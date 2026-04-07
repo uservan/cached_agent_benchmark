@@ -1,4 +1,4 @@
-"""基类定义。"""
+"""Base class definitions."""
 
 from .error_type import ErrorType
 from .handler import BaseToolsHandler

@@ -11,7 +11,7 @@ from .task import Task
 
 
 class CacheEnv:
-    """CacheEnv 负责遍历 dataset、调用 agent，并基于 task 做评估。"""
+    """CacheEnv is responsible for iterating over datasets, calling agents, and evaluating based on tasks."""
 
     def __init__(
         self,
@@ -57,7 +57,7 @@ class CacheEnv:
 
     def run_task(self, task: Task, agent: Agent) -> RunResult:
         """
-        执行单个 task，拿到 messages，用 task.eval 打分，并把分数追加到 messages。
+        Execute a single task, obtain messages, score with task.eval, and append the score to messages.
         """
         run_result: RunResult = agent.generate(task)
         result = task.eval()
@@ -72,7 +72,7 @@ class CacheEnv:
         progress_callback: Callable[[dict[str, Any]], None] | None = None,
     ):
         """
-        遍历 dataset_objects，并行执行全部 task，汇总结果并保存到 JSON 文件。
+        Iterate over dataset_objects, execute all tasks in parallel, aggregate results, and save to a JSON file.
         """
         total_runs = self.get_total_runs()
         output_root = self._resolve_output_root(save_path)

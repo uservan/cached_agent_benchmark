@@ -17,7 +17,7 @@ ALLOW_SONNET_THINKING = False
 
 
 class Agent:
-    """一个轻量的 agent：接收 task，组装 messages，并完成生成。"""
+    """A lightweight agent: receives a task, assembles messages, and completes generation."""
 
     def __init__(self, model: str, **agent_params):
         self.model = model
@@ -30,8 +30,8 @@ class Agent:
         **kwargs: Any,
     ) -> RunResult:
         """
-        根据 task 组装消息并调用模型；如果触发工具，则执行工具并继续生成。
-        参数基本从 task 获取，kwargs 保留以便后续扩展。
+        Assemble messages from the task and call the model; if a tool is triggered, execute it and continue generating.
+        Parameters are primarily taken from the task; kwargs are reserved for future extensions.
         """
         if "seed" not in kwargs and task.seed is not None:
             kwargs["seed"] = task.seed
@@ -231,7 +231,7 @@ class Agent:
         messages: Optional[list[dict[str, Any]]] = None,
     ) -> list[dict[str, Any]]:
         """
-        基于 BaseTask 的字段组装初始 messages。
+        Build initial messages based on BaseTask fields.
         """
         if messages:
             return list(messages)
@@ -250,7 +250,7 @@ class Agent:
 
     def _build_system_prompt(self, task: Any) -> str:
         """
-        根据工具定义生成 system prompt。
+        Generate a system prompt based on tool definitions.
         """
         tools = getattr(task, "tools", []) or []
         tool_descs = []
@@ -298,7 +298,7 @@ class Agent:
         initial_state: Any,
     ) -> str:
         """
-        user prompt 只包含任务初始状态或任务描述。
+        The user prompt contains only the task's initial state or task description.
         """
         if isinstance(initial_state, str):
             return initial_state

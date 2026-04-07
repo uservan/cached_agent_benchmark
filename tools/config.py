@@ -1,4 +1,4 @@
-"""配置与属性。"""
+"""Configuration and attributes."""
 
 from . import domain
 

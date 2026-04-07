@@ -1,4 +1,4 @@
-"""工具调用相关函数。"""
+"""Functions related to tool invocation."""
 
 import random
 from typing import Any
@@ -8,8 +8,8 @@ from .config import DOMAIN_HANDLERS
 from agent.task import Task
 
 def get_saved_dataset_tool_schemas(domain: str | None = None) -> list[Any]:
-    """根据 domain 获取对应 handler，调用 get_tools()，将 values 转为 list 返回。
-    domain 为 None 时返回所有领域。先按 tool name 去重（如 done 在各领域重复，只保留一个）。"""
+    """Get the handler for the given domain, call get_tools(), and return its values as a list.
+    If domain is None, return tools for all domains. Deduplicated by tool name (e.g. done appears in multiple domains; only one is kept)."""
     if domain is None:
         handlers = list(DOMAIN_HANDLERS.values())
     else:
@@ -32,7 +32,7 @@ def call_saved_dataset_tool(
     tool_failure_rate: float = 0.0,
     **kwargs: Any,
 ) -> dict[str, Any]:
-    """调用工具，返回 Messages.to_dict() 的 JSON 格式数据。"""
+    """Call a tool and return JSON-formatted data from Messages.to_dict()."""
     if tool_failure_rate and random.random() < tool_failure_rate:
         msg = Messages.build_failure_message(ErrorType.TOOL_FAILURE)
         return msg.to_dict()

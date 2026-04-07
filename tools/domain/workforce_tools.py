@@ -1,11 +1,11 @@
-"""Workforce scheduling 领域的 tools。"""
+"""Tools for the workforce scheduling domain."""
 
 from .. import BaseToolsHandler
 from ..base import Messages
 
 
 class WorkforceToolsHandler(BaseToolsHandler):
-    """Workforce 领域工具总 handler。"""
+    """Main tool handler for the workforce domain."""
 
     domain = "workforce"
 

@@ -6,7 +6,7 @@ from .error_type import ErrorType
 
 
 class Messages:
-    """Tools 统一返回的消息类。"""
+    """Unified message class returned by all tools."""
 
     def __init__(
         self,
@@ -25,7 +25,7 @@ class Messages:
         detail: str = "",
         data: dict[str, Any] | None = None,
     ) -> Messages:
-        """根据 ErrorType 构建对应的失败消息。"""
+        """Build a failure message corresponding to the given ErrorType."""
         if detail:
             messages = f"{error_type.value}, {detail}"
         else:

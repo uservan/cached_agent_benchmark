@@ -1,11 +1,11 @@
-"""PC build 领域的 tools。"""
+"""Tools for the PC build domain."""
 
 from .. import BaseToolsHandler
 from ..base import Messages
 
 
 class PcBuildToolsHandler(BaseToolsHandler):
-    """PC build 领域工具总 handler。"""
+    """Main tool handler for the PC build domain."""
 
     domain = "pc_build"
 

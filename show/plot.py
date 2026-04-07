@@ -1,4 +1,4 @@
-"""画图方法：基于聚合数据绘制矩阵热力图等。"""
+"""Plotting utilities: draw matrix heatmaps and similar charts from aggregated data."""
 from typing import Any
 
 try:
@@ -18,11 +18,11 @@ def plot_score_heatmap(
     save_path: str | None = None,
 ) -> None:
     """
-    绘制 score 矩阵热力图。
-    hidden_list 为行（y），branch_list 为列（x）。
+    Draw a score matrix heatmap.
+    hidden_list defines rows (y-axis), branch_list defines columns (x-axis).
     """
     if not HAS_MATPLOTLIB:
-        print("需要安装 matplotlib: pip install matplotlib")
+        print("matplotlib is required: pip install matplotlib")
         return
 
     data = np.zeros((len(hidden_list), len(branch_list)))
@@ -51,7 +51,7 @@ def plot_score_heatmap(
     plt.tight_layout()
     if save_path:
         plt.savefig(save_path, dpi=150)
-        print(f"已保存: {save_path}")
+        print(f"Saved: {save_path}")
     else:
         plt.show()
     plt.close()
@@ -65,9 +65,9 @@ def plot_metric_heatmap(
     title: str | None = None,
     save_path: str | None = None,
 ) -> None:
-    """绘制指定 metric 的矩阵热力图。score 使用 0-1 色标，其他 metric 自动缩放。"""
+    """Draw a matrix heatmap for the specified metric. Score uses a 0-1 color scale; other metrics are auto-scaled."""
     if not HAS_MATPLOTLIB:
-        print("需要安装 matplotlib: pip install matplotlib")
+        print("matplotlib is required: pip install matplotlib")
         return
 
     matrix = avg_data.get(metric, {})
@@ -106,7 +106,7 @@ def plot_metric_heatmap(
     plt.tight_layout()
     if save_path:
         plt.savefig(save_path, dpi=150)
-        print(f"已保存: {save_path}")
+        print(f"Saved: {save_path}")
     else:
         plt.show()
     plt.close()

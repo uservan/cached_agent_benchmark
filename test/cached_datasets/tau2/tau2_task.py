@@ -39,28 +39,28 @@ class Tau2Dataset(BaseDataset):
     def __init__(self, config_path=None):
         super().__init__(name='Tau2')
         
-        # 如果没有指定配置路径，使用默认的 config.yml
+        # If no config path is specified, use the default config.yml
         if config_path is None:
             config_path = os.path.join(os.path.dirname(__file__), 'config.yml')
         
-        # 加载配置文件
+        # Load the config file
         self.config = self._load_config(config_path)
         
-        # 从 HuggingFace 加载数据集
+        # Load the dataset from HuggingFace
         self.tasks = self._load_and_assemble_tasks()
     
     def _load_config(self, config_path):
-        """从 YAML 配置文件加载配置"""
+        """Load configuration from a YAML config file"""
         with open(config_path, 'r', encoding='utf-8') as f:
             config = yaml.safe_load(f)
         return config
     
     def _load_and_assemble_tasks(self):
-        """从 HuggingFace 加载数据集并组装任务"""
+        """Load the dataset from HuggingFace and assemble tasks"""
         hf_config = self.config.get('huggingface', {})
         task_config = self.config.get('task', {})
         
-        # 加载任务和响应数据集
+        # Load the task and response datasets
         task_ds = load_dataset(
             hf_config.get('task_dataset_name'),
             hf_config.get('task_config'),
@@ -73,14 +73,14 @@ class Tau2Dataset(BaseDataset):
             split=hf_config.get('response_split', 'train')
         )
         
-        # 构建响应映射（key: (dataset, domain, task), value: {tool_name: response}）
+        # Build a response mapping (key: (dataset, domain, task), value: {tool_name: response})
         response_map = defaultdict(dict)
         for row in response_ds:
             key = (row.get('dataset'), row.get('domain'), row.get('task'))
             tool_name = row.get('tool')
             response_map[key][tool_name] = row.get('response')
         
-        # 组装任务列表
+        # Assemble the task list
         tasks = []
         for row in task_ds:
             key = (row.get('dataset'), row.get('domain'), row.get('task'))
@@ -100,7 +100,7 @@ class Tau2Dataset(BaseDataset):
         return tasks
     
     def load_data(self):
-        """返回已加载的任务数据"""
+        """Return the loaded task data"""
         return self.tasks
     
     def __len__(self):
@@ -117,7 +117,7 @@ class Tau2Task(BaseTask):
             tools=tools
         )
         self.domain_policy = domain_policy
-        # 其他初始化逻辑
+        # Other initialization logic
 
     def get_tool_schemas(self): 
         pass
@@ -126,7 +126,7 @@ class Tau2Task(BaseTask):
         return self.initial_state
     
     def is_finished(self, messages):
-        # 根据消息判断任务是否完成
+        # Determine whether the task is finished based on messages
         for msg in messages:
             if msg.get("role") == "tool" and msg.get("tool_name") == STOP_FUNCTION_NAME:
                 return True

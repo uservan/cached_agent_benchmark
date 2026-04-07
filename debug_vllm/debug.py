@@ -1,4 +1,4 @@
-# debug.py - 测试 cached_agent_benchmark 的 main
+# debug.py - test the main entry point of cached_agent_benchmark
 
 import os
 import sys
@@ -20,12 +20,13 @@ if __name__ == "__main__":
         domain=["course"], # "all",
         data_dir="data/5x7",
         max_steps=2000,
+        tool_failure_rates=[0.0], # [0.0,0.1,0.3],
+        save_path="/scratch/pioneer/jobs/user/save/cached_results2/",
+        max_workers=64,
+        num_trials=1,
         max_query_ids=5,
         max_query_fields=5,
-        tool_failure_rates=[0.0,0.1,0.3], # [0.0], #
-        num_trials=1,
         tools_domain_only=True,
-        save_path="/scratch/pioneer/jobs/user/save/cached_results2/",
         overwrite_results=False,
         check_include_reason=False,
         global_check_alpha=-1,
@@ -33,6 +34,5 @@ if __name__ == "__main__":
         seed=42,
         hidden_slots=None,
         branch_budget=None,
-        max_workers=64,
         max_length_truncations=3,
     )

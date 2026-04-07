@@ -50,28 +50,28 @@ def _print_generation_failure(
     candidate_retries: int,
     reason: str,
 ) -> None:
-    """在终端展示生成失败时的详细条件和原因。"""
+    """Print the detailed conditions and reason for a generation failure to the terminal."""
     ConsoleDisplay.console.print()
     ConsoleDisplay.console.print(
-        "[bold red]生成失败[/bold red] - 无法为该组合生成有效实例",
+        "[bold red]Generation Failed[/bold red] - Unable to generate a valid instance for this combination",
         style="red",
     )
     ConsoleDisplay.print_kv_panel(
-        title="[bold red]当前生成条件[/bold red]",
+        title="[bold red]Current Generation Conditions[/bold red]",
         items=[
             ("domain", domain),
             ("rows", rows),
             ("cols", cols),
             ("hidden_slots", hidden_slots),
             ("branch_budget", branch_budget),
-            ("实际 candidates_per_slot", effective_candidates),
-            ("scaffold 重试次数", scaffold_retries),
-            ("candidate 重采样次数", candidate_retries),
+            ("effective candidates_per_slot", effective_candidates),
+            ("scaffold retries", scaffold_retries),
+            ("candidate resample retries", candidate_retries),
         ],
         border_style="red",
     )
-    ConsoleDisplay.console.print(f"[bold red]失败原因:[/bold red] {reason}")
-    ConsoleDisplay.console.print("[yellow]建议: 可尝试重新运行，或调整参数。[/yellow]")
+    ConsoleDisplay.console.print(f"[bold red]Failure Reason:[/bold red] {reason}")
+    ConsoleDisplay.console.print("[yellow]Suggestion: try re-running or adjusting the parameters.[/yellow]")
     ConsoleDisplay.console.print()
 
 
@@ -177,7 +177,7 @@ def generate_dataset(
             )
             if scaffold is None:
                 last_failure_reason = (
-                    "scaffold 构建失败（truth/global/hidden_positions 无法满足当前分支预算）"
+                    "scaffold construction failed (truth/global/hidden_positions cannot satisfy the current branch budget)"
                 )
                 continue
             for candidate_try in range(1, candidate_resample_retries + 1):
@@ -204,13 +204,13 @@ def generate_dataset(
                 )
                 if candidate is None:
                     last_failure_reason = (
-                        "candidate_ids 重采样失败（无法为 hidden slots 构造满足多阶保证的 decoy/filter）"
+                        "candidate_ids resampling failed (unable to construct decoy/filter satisfying multi-order guarantees for hidden slots)"
                     )
                     continue
                 if validate_dataset(candidate):
                     dataset = candidate
                     break
-                last_failure_reason = "生成的实例未通过 branch-budget 结构校验"
+                last_failure_reason = "Generated instance failed branch-budget structural validation"
             if dataset is not None:
                 break
 
@@ -239,13 +239,13 @@ def generate_dataset(
                 effective_candidates=effective_candidates,
                 scaffold_retries=max_retries,
                 candidate_retries=candidate_resample_retries,
-                reason=last_failure_reason or "未知原因",
+                reason=last_failure_reason or "unknown reason",
             )
             raise RuntimeError(
                 "Failed to build a valid dataset for "
                 f"domain='{domain}', rows={row_count}, cols={col_count}, "
                 f"hidden_slots={hidden_slot_count}, branch_budget={branch_budget_value}. "
-                f"Reason: {last_failure_reason or '未知原因'}. 可尝试重新运行。"
+                f"Reason: {last_failure_reason or 'unknown reason'}. Try re-running."
             )
 
         dataset["instance_id"] = (

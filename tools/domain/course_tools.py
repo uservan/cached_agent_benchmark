@@ -1,11 +1,11 @@
-"""Course scheduling 领域的 tools。"""
+"""Tools for the course scheduling domain."""
 
 from .. import BaseToolsHandler
 from ..base import Messages
 
 
 class CourseToolsHandler(BaseToolsHandler):
-    """Course 领域工具总 handler。"""
+    """Main tool handler for the course domain."""
 
     domain = "course"
 

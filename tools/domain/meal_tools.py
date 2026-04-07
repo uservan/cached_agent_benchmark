@@ -1,11 +1,11 @@
-"""Meal planning 领域的 tools。"""
+"""Tools for the meal planning domain."""
 
 from .. import BaseToolsHandler
 from ..base import Messages
 
 
 class MealToolsHandler(BaseToolsHandler):
-    """Meal 领域工具总 handler。"""
+    """Main tool handler for the meal domain."""
 
     domain = "meal"
 
