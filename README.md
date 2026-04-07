@@ -15,7 +15,7 @@ Pre-generated datasets for three grid sizes are already available under `data/` 
 | 5×7  | 1, 5, 7, 11, 15, 21 | 0, 2, 4, 8, 10, 15, 19, 21, 25 | `data/5x7/` |
 | 5×10 | 1, 3, 5, 7, 11, 15, 19, 21, 25 | 0, 2, 4, 8, 10, 15, 19, 21, 25, 30 | `data/5x10/` |
 
-If you wanna generate data, you could try the following command for all domains:
+(Optional) If you wanna generate data, you could try the following command for all domains:
 ```bash
 python data_generation/generate.py \
   --all-domains \
