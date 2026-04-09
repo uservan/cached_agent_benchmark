@@ -3,7 +3,7 @@ import random
 from numbers import Number
 from typing import Any, Callable
 
-from agent.task import Task
+from env.agent.task import Task
 
 from ..utils import Tool, as_tool
 from .error_type import ErrorType

@@ -5,7 +5,7 @@ from typing import Any
 from .task_prompt import build_initial_messages, is_done_tool_message
 
 try:
-    from load_datasets.loader import SavedDatasetObject
+    from env.load_datasets.loader import SavedDatasetObject
 except ImportError:
     SavedDatasetObject = Any  # type: ignore
 
@@ -238,7 +238,7 @@ class Task:
         **kwargs: Any,
     ) -> Any:
         """Call a tool and forward to call_saved_dataset_tool."""
-        from tools import call_saved_dataset_tool
+        from env.tools import call_saved_dataset_tool
         return call_saved_dataset_tool(
             task=self,
             tool_name=tool_name,
@@ -250,7 +250,7 @@ class Task:
     def get_tool_schemas(self) -> list[Any]:
         """Get the tool schemas for this task's domain."""
         try:
-            from tools import get_saved_dataset_tool_schemas
+            from env.tools import get_saved_dataset_tool_schemas
             domain = self.dataset_object.domain if self.tools_domain_only else None
             tool_schemas = [tool.openai_schema for tool in get_saved_dataset_tool_schemas(domain=domain)]
             rng = random.Random(self.seed) if self.seed is not None else random.Random()

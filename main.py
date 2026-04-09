@@ -2,10 +2,10 @@ import argparse
 import json
 import random
 
-from agent.agent import Agent
-from agent.cache_env import CacheEnv
-from agent.task import DEFAULT_MAX_QUERY_FIELDS, DEFAULT_MAX_QUERY_IDS
-from load_datasets.loader import DEFAULT_DATA_DIR, load_all_dataset_objects
+from env.agent.agent import Agent
+from env.agent.cache_env import CacheEnv
+from env.agent.task import DEFAULT_MAX_QUERY_FIELDS, DEFAULT_MAX_QUERY_IDS
+from env.load_datasets.loader import DEFAULT_DATA_DIR, load_all_dataset_objects
 from utils.console_display import ConsoleDisplay
 
 

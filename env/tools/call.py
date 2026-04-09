@@ -5,7 +5,7 @@ from typing import Any
 
 from .base import ErrorType, Messages
 from .config import DOMAIN_HANDLERS
-from agent.task import Task
+from env.agent.task import Task
 
 def get_saved_dataset_tool_schemas(domain: str | None = None) -> list[Any]:
     """Get the handler for the given domain, call get_tools(), and return its values as a list.

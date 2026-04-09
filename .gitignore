@@ -5,6 +5,6 @@ debug_vllm2/
 **/*.pyc
 results/
 draw/
-test/
+test2/
 .claude/
 .vscode/

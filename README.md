@@ -1,5 +1,5 @@
 
-# ACE-Bench
+# AgentCE-Bench
  
 **A**gent **C**onfigurable **E**valuation with Scalable Horizons and Controllable Difficulty under Lightweight Environments
 
@@ -11,16 +11,32 @@ pip install -r requirements.txt
 
 ---
 
+## Project Structure
+
+```
+.
+├── env/                    # Core benchmark environment
+│   ├── agent/              # Agent loop and task abstraction
+│   ├── load_datasets/      # Dataset loading utilities
+│   └── tools/              # Tool schemas and invocation handlers
+├── data/                   # Pre-generated datasets
+├── data_generation/        # Dataset generation scripts
+├── debug_vllm/             # vLLM evaluation entry point
+├── utils/                  # Display and helper utilities
+├── draw.ipynb              # Heatmap visualization notebook
+├── show.py                 # Interactive result viewer
+└── main.py                 # Benchmark runner
+```
+
+---
+
 ## Generating Datasets
-![Generation Overview](pics/agent2.png)
-
-
 Pre-generated datasets for three grid sizes are already available under `data/` and can be used directly:
 
 | Size | Hidden slots | Decoy budget | Directory |
 |------|--------------|-----------------------|-----------|
 | 5×5  | 1, 5, 7, 11, 15 | 0, 2, 4, 8, 10, 15, 19 | `data/5x5/` |
-| 5×7  | 1, 5, 7, 11, 15, 21 | 0, 2, 4, 8, 10, 15, 19, 21, 25 | `data/5x7/` |
+| 5×7(Recommand)  | 1, 5, 7, 11, 15, 21 | 0, 2, 4, 8, 10, 15, 19, 21, 25 | `data/5x7/` |
 | 5×10 | 1, 3, 5, 7, 11, 15, 19, 21, 25 | 0, 2, 4, 8, 10, 15, 19, 21, 25, 30 | `data/5x10/` |
 
 (Optional) If you wanna generate data, you could try the following command for all domains:
