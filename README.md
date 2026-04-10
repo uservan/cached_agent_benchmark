@@ -63,7 +63,7 @@ For heatmap visualization of model and domain scores, refer to [draw.ipynb](draw
 Run the interactive result viewer:
 
 ```bash
-python show.py
+python data_generation/show.py
 ```
 
 Four options are available:
@@ -74,3 +74,5 @@ Four options are available:
 | **2. View model metric results** | Enter a model result directory (e.g. `results/5x7/.../GLM-4.7-FP8`) and view average score/token/cost metrics across hidden slot and branch budget (decoy) combinations |
 | **3. Compare model metric results** | Load all models under a result directory in parallel and display a ranked comparison across metrics (score, cost, time, etc.), broken down by branch budget (decoy) |
 | **4. View model messages** | Enter a single result JSON file path and display the full conversation between the agent and the environment in a two-column layout (assistant on the right, others on the left) |
+
+
