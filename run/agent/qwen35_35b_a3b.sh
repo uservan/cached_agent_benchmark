@@ -17,7 +17,7 @@ env | grep -E '^(CC|CXX|CUDA|CONDA|LD_LIBRARY_PATH|PATH)=' || true
 export HF_TOKEN=
 export HF_HOME=/scratch/pioneer/jobs/user/huggingface
 
-LOG_DIR=/home/user/ondemand/program/cached_agent_benchmark/debug_vllm2/log
+LOG_DIR="$(dirname "$0")/../log"
 LOG_FILE=$LOG_DIR/Qwen3.5-35B-A3B-8006.log
 
 CUDA_VISIBLE_DEVICES=0,1,2,3 vllm serve Qwen/Qwen3.5-35B-A3B \

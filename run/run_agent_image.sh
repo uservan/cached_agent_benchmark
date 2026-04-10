@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-AGENT_DIR=/home/user/ondemand/program/cached_agent_benchmark/debug_vllm2/agent
+AGENT_DIR=run/agent
 
 # Change this to switch models (uncomment the corresponding line):
 
@@ -9,10 +9,10 @@ AGENT_DIR=/home/user/ondemand/program/cached_agent_benchmark/debug_vllm2/agent
 # AGENT_SCRIPT=$AGENT_DIR/qwen35_0.8b.sh
 # AGENT_SCRIPT=$AGENT_DIR/qwen35_2b.sh
 # AGENT_SCRIPT=$AGENT_DIR/qwen35_4b.sh
-# AGENT_SCRIPT=$AGENT_DIR/qwen35_9b.sh
+AGENT_SCRIPT=$AGENT_DIR/qwen35_9b.sh
 # AGENT_SCRIPT=$AGENT_DIR/qwen35_27b.sh
 # AGENT_SCRIPT=$AGENT_DIR/qwen35_35b_a3b.sh
-AGENT_SCRIPT=$AGENT_DIR/miro_thinker_1_7_mini.sh   # 31B
+# AGENT_SCRIPT=$AGENT_DIR/miro_thinker_1_7_mini.sh   # 31B
 
 # === Large models (8 GPUs, sufficient VRAM) ===
 # AGENT_SCRIPT=$AGENT_DIR/minimax_m2.sh  
@@ -32,9 +32,9 @@ nohup singularity exec --cleanenv --nv \
   --bind $HOME:$HOME \
   --bind /scratch:/scratch \
   --bind /tmp:/tmp \
-  /scratch/pioneer/jobs/user/save/images/vllm_0.17.1.sif \
+  /scratch/pioneer/jobs/wxy320/save/images/vllm_0.17.1.sif \
   bash "$AGENT_SCRIPT" \
-  > /home/user/ondemand/program/cached_agent_benchmark/debug_vllm2/vllm_server.log 2>&1 &
+  > run/vllm_server.log 2>&1 &
 
 disown
 

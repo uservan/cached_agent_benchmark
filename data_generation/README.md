@@ -41,6 +41,21 @@ Instances are generated for every `hidden_slots × branch_budget` combination. O
 data/course_dataset_r5_c5_h1-3-5-7-9-13-17_cand15_budget0-2-4-6-8-10_seed42.json
 ```
 
+> **Note:** When `--hidden-slots` or `--branch-budget` values are large, generation may fail due to insufficient retries. Increase `--max-retries`, `--candidate-resample-retries`, and `--open-valid-preference-tries` accordingly. Example for large configurations:
+> ```bash
+> python data_generation/generate.py \
+>   --domain course \
+>   --rows 5 --cols 7 \
+>   --hidden-slots 15 21 \
+>   --branch-budget 19 21 25 \
+>   --candidates-per-slot 25 \
+>   --max-retries 350 \
+>   --candidate-resample-retries 30 \
+>   --open-valid-preference-tries 100 150 250 \
+>   --seed 42 \
+>   --max-workers 8
+> ```
+
 ### All Domains
 
 ```bash

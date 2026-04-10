@@ -5,7 +5,7 @@
 
 ### （1）Download the Singularity Image
 
-`run_agent_image.sh` runs the vLLM container via Singularity. The expected image path is:
+`run/run_agent_image.sh` runs the vLLM container via Singularity. The expected image path is:
 
 ```
 /scratch/pioneer/jobs/user/save/images/vllm_0.17.1.sif
@@ -30,7 +30,7 @@ singularity pull $IMAGE_DIR/vllm_0.17.1.sif docker://vllm/vllm-openai:v0.17.1
 
 ### （2）Select a Model
 
-Edit `run_agent_image.sh` and uncomment the line for the model you want to run:
+Edit `run/run_agent_image.sh` and uncomment the line for the model you want to run:
 
 ```bash
 # Small models (single GPU / 4 GPUs)
@@ -48,19 +48,19 @@ AGENT_SCRIPT=$AGENT_DIR/miro_thinker_1_7_mini.sh   # 31B (current default)
 # AGENT_SCRIPT=$AGENT_DIR/deepseek_v3_2.sh          # 671B FP8
 ```
 
-- Each model script lives under `agent/` (e.g. `agent/qwen35_9b.sh`) and starts `vllm serve` inside the container, listening on the corresponding port (see `config.py`).
+- Each model script lives under `run/agent/` (e.g. `run/agent/qwen35_9b.sh`) and starts `vllm serve` inside the container, listening on the corresponding port (see `run/config.py`).
 
-- To add a custom model, create a new `.sh` script in `agent/` based on an existing one, then add the corresponding key and value to the `MODELS` dict in `config.py`.
+- To add a custom model, create a new `.sh` script in `run/agent/` based on an existing one, then add the corresponding key and value to the `MODELS` dict in `run/config.py`.
 
 ### （3）Start the Server
 
 ```bash
-bash run_agent_image.sh
+bash run/run_agent_image.sh
 ```
 
 The server runs in the background. Logs are written to:
-- `vllm_server.log` — Singularity launch log
-- `log/<model_name>-<port>.log` — vLLM server detailed log
+- `run/vllm_server.log` — Singularity launch log
+- `run/log/<model_name>-<port>.log` — vLLM server detailed log
 
 Wait until `Application startup complete` appears in the log before proceeding.
 
@@ -70,7 +70,7 @@ Wait until `Application startup complete` appears in the log before proceeding.
 
 ### Edit debug.py
 
-Open `debug.py` and set `cfg` to the model key you want to test (must match the model started in Step 1):
+Open `run/debug.py` and set `cfg` to the model key you want to test (must match the model started in Step 1):
 
 ```python
 cfg = MODELS["qwen35_9b"]   # change to the target key
@@ -136,7 +136,7 @@ Commonly changed parameters:
 
 For all other parameters, run `python main.py --help` to see descriptions.
 
-### Available Model Keys (from config.py)
+### Available Model Keys (from run/config.py)
 
 | Key | Model | Port |
 |-----|-------|------|
@@ -161,14 +161,14 @@ For all other parameters, run `python main.py --help` to see descriptions.
 ### Run in Background (Recommended)
 
 ```bash
-nohup python debug_vllm2/debug.py > debug_vllm2/debug_log/qwen35_9b.log 2>&1 &
+nohup python run/debug.py > run/debug_log/qwen35_9b.log 2>&1 &
 disown
 ```
 
-Logs are written to `debug_log/`. Use `tail -f` to follow in real time:
+Logs are written to `run/debug_log/`. Use `tail -f` to follow in real time:
 
 ```bash
-tail -f debug_vllm2/debug_log/qwen35_9b.log
+tail -f run/debug_log/qwen35_9b.log
 ```
 
 ---

@@ -3,7 +3,7 @@
 import os
 import sys
 
-os.environ.setdefault("OPENAI_API_KEY", "EMPTY")
+os.environ["OPENAI_API_KEY"] = "EMPTY"
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from main import main
@@ -11,9 +11,9 @@ from config import MODELS
 
 if __name__ == "__main__":
     # sh command: 
-    #   nohup python debug_vllm2/debug.py > debug_vllm2/debug_log/qwen35_122b_a10b.log 2>&1 &
+    #   nohup python run/debug.py > run/debug_log/qwen35_9b.log 2>&1 &
     #   disown 
-    cfg = MODELS["qwen35_122b_a10b"]
+    cfg = MODELS["qwen35_9b"]
     main(
         model=cfg["model"],
         agent_params=cfg["agent_params"],
@@ -21,7 +21,7 @@ if __name__ == "__main__":
         data_dir="data/5x7",
         max_steps=2000,
         tool_failure_rates=[0.0], # [0.0,0.1,0.3],
-        save_path="/scratch/pioneer/jobs/user/save/cached_results2/",
+        save_path="cached_results/",
         max_workers=64,
         num_trials=1,
         max_query_ids=5,
